@@ -1,37 +1,16 @@
-Copyright (C) 2008-present Matt Jensen (to be signed over to a foundation)
+This project is in the public domain within the United States.
 
-This program is free software: you can redistribute it and/or  modify
-it under the terms of the GNU Affero General Public License, version 3,
-as published by the Free Software Foundation.
+Additionally, we waive copyright and related rights in the work worldwide through the CC0 1.0 Universal public domain dedication.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
+CC0 1.0 Universal Summary
+This is a human-readable summary of the Legal Code (read the full text).
 
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+No Copyright
+The person who associated a work with this deed has dedicated the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
 
-As a special exception, the copyright holders give permission to link the
-code of portions of this program with the OpenSSL library under certain
-conditions as described in each individual source file and distribute
-linked combinations including the program with the OpenSSL library. You
-must comply with the GNU Affero General Public License in all respects
-for all of the code used other than as permitted herein. If you modify
-file(s) with this exception, you may extend this exception to your
-version of the file(s), but you are not obligated to do so. If you do not
-wish to do so, delete this exception statement from your version. If you
-delete this exception statement from all source files in the program,
-then also delete it in the license file.
+You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
 
-The copyright holders provide the following statement as a clarification
-of the conditions of this License.  This statement is not a further
-restriction.  It will be deemed a legal notice allowed under Section 7b,
-and must accordingly be preserved in any redistribution of the Program.
-This clarification applies to the MongoDB Program licensed hereunder by
-MongoDB, Inc.  The Corresponding Source of the Program includes any
-software that interacts with the Program and contains functionality to
-provision or manage the Program for the purpose of enabling third-party
-users to interact with the Program remotely through a computer network,
-and any such software that is added to or combined with the Program
-constitutes modification that produces a work based on the Program.
+Other Information
+In no way are the patent or trademark rights of any person affected by CC0, nor are the rights that other persons may have in the work or in how the work is used, such as publicity or privacy rights.
+
+Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work, and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law. When using or citing the work, you should not imply endorsement by the author or the affirmer.
