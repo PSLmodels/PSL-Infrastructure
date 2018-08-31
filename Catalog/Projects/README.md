@@ -1,0 +1,1 @@
+This directory will contain catalog data for PSL projects. 

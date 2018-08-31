@@ -1,0 +1,1 @@
+This directory will contain tests that projects can incorporate into their own repositories to test their conformance to PSL standards and guidliens. 
