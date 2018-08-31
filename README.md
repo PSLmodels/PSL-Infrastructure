@@ -2,7 +2,7 @@ The Policy Simulation Library (PSL) is an open source software library for publi
 
 The PSL-Core project, which lives in this repository, sets PSL standards and develops infrastructure to support PSL. 
 
-PSL-Core infrastructure projects include:
+PSL-Core infrastructure projects under development include:
 
 - A PSL-Catalog of projects and their key attributes, which is automatically constructed by PSL-Core's Catalog-Builder tool. 
 - The policysimulationlibrary.org website to host general Library information and the PSL-Catalog.
