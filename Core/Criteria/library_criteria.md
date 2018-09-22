@@ -1,5 +1,5 @@
 
-Policy Simulation Library Project Standards
+Policy Simulation Library Project Criteria
 ============================================
 
 Summary
@@ -14,9 +14,9 @@ Introduction
 
 Open-source modeling ensures that model results are reproducible, that experts around the world can collaborate to make models better, and that users can explore the parameter space for themselves. These outcomes systematically improve public policy decisionmaking. 
 
-We have developed the standards and guidelines in this document to fascilitate the growth of an open source public policy modeling ecosystem.
+We have developed the criteria in this document to fascilitate the growth of an open source public policy modeling ecosystem.
 
-Standards for transparancy and quality
+Criteria for transparancy and quality
 ---------
 -------------------------
 
@@ -35,7 +35,7 @@ Standards for transparancy and quality
 1. Projects MUST have installation directions. 
 1. Project MUST be mirrored in the same GitHub organization as PSL-Core.
 
-Guidelines for community
+Criteria for community
 ------------------------
 
 1. Projects SHOULD have a public roadmap.
@@ -50,12 +50,12 @@ Guidelines for community
 1. Projects SHOULD have a changelog. 
 1. Projects MAY have a Stack Overflow channel. 
 1. Projects MAY include a "News" translation of the changelog for users. 
-1. Projects MAY include standards for participating in cross-model PSL initiatives. 
+1. Projects MAY include criteria for participating in cross-model PSL initiatives. 
 1. Projects MAY include a link to a webapp verison. 
 1. Projects MAY include a list of consultants. 
 
 
-Guidlines for interoperability
+Criteria for interoperability
 ------------- 
 
 1. The source code SHOULD be written in an open source language. 
