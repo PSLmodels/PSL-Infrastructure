@@ -16,9 +16,9 @@ Open-source modeling ensures that model results are reproducible, that experts a
 
 We have developed the criteria in this document to fascilitate the growth of an open source public policy modeling ecosystem.
 
-Criteria for transparancy and quality
----------
--------------------------
+Acceptance Criteria for Transparancy and Quality 
+--------------------------------------------
+--------------------------------------------
 
 1. Models MUST be released under an OSI-approved opens source license.   
 1. Data MUST be publicly available, unless release is restricted by a third party. 
@@ -35,8 +35,8 @@ Criteria for transparancy and quality
 1. Projects MUST have installation directions. 
 1. Project MUST be mirrored in the same GitHub organization as PSL-Core.
 
-Criteria for community
-------------------------
+Community Criteria
+-------------------
 
 1. Projects SHOULD have a public roadmap.
 1. Projects SHOULD have contributor documentation and guidelines. 
@@ -55,8 +55,8 @@ Criteria for community
 1. Projects MAY include a list of consultants. 
 
 
-Criteria for interoperability
-------------- 
+Interoperability Criteria
+--------------------------
 
 1. The source code SHOULD be written in an open source language. 
 1. All input and output variables SHOULD be documented like...
