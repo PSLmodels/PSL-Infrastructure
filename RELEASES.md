@@ -10,16 +10,16 @@ for a complete commit history.
 [#X](https://github.com/open-source-economics/PSL-core/pull/X))
 
 **API Changes**
-Includes substantive changes to standards or tooling capabilities and reports the loss of a model from the library.
+Includes substantive changes to criteria or tooling capabilities and reports the loss of a model from the library.
 - 
 
 **New Features**
 Include new tooling capabilities, new models, and model updates.
 - Initial directory structure [____ by Matt Jensen and]
-- Initial standards [____ by Matt Jensen and]
+- Initial criteria [____ by Matt Jensen and]
 - Initial roadmap [ ____ by Matt Jensen and]
 - Initial RELEASES.md structure [ ____ by Matt Jensen based on Tax-Calculator]
 
 **Bug Fixes**
-Includes substantive bug fixes to standards and tooling.
+Includes substantive bug fixes to criteria and tooling.
 - 

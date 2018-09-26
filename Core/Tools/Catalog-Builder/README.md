@@ -1,1 +1,1 @@
-This directory will contain the Catalog-Builder, which will automatically generate the PSL Catalog by relying on PSL interoperability guidlines.  
+This directory will contain the Catalog-Builder, which will automatically generate the PSL Catalog by relying on PSL interoperability criteria.  
