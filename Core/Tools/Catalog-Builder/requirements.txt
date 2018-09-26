@@ -2,3 +2,5 @@ markdown
 requests
 Jinja2
 beautifulsoup4
+requests_mock
+pytest
