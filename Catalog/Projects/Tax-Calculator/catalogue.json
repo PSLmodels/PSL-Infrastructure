@@ -1,5 +1,5 @@
 {
-    "preferred_citation": {
+    "citation": {
         "from_file": "README.md",
         "start_header": "Citing Tax-Calculator",
         "end_header": null
@@ -9,7 +9,7 @@
         "start_header": "What is Tax-Calculator?",
         "end_header": "Disclaimer"
     },
-    "changelog": {
+    "dev_changelog": {
         "from_file": "RELEASES.md",
         "start_header": null,
         "end_header": null

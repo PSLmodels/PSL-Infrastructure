@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Unit test / coverage reports
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Sphinx documentation
+read-the-docs/_build/
+
+# Mac OS X
+*.DS_Store

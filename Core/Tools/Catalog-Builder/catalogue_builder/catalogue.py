@@ -77,7 +77,7 @@ class CatalogueBuilder:
         self.projects = projects
         self.project_dir = (
             project_dir or
-            os.path.join(self.CURRENT_PATH, '../../../Catalog/Projects/'))
+            os.path.join(self.CURRENT_PATH, '../../../../Catalog/Projects/'))
         self.catalogue = defaultdict(dict)
 
     def load_catalogue(self):
@@ -87,7 +87,7 @@ class CatalogueBuilder:
         parsed via the `parse_section` function. The parsed data is saved
         to the `catalogue` attribute.
         """
-        for p in projects:
+        for p in self.projects:
             url_base = (f"https://raw.githubusercontent.com/"
                         f"{p['org']}/{p['repo']}/{p['branch']}/")
             cat_meta = os.path.join(self.project_dir, p['repo'],
@@ -115,11 +115,13 @@ class CatalogueBuilder:
 
         Data is written to the `Web/pages` directory
         """
-        models_path = os.path.join(self.CURRENT_PATH, 'models_template.html')
-        model_path = os.path.join(self.CURRENT_PATH, 'model_template.html')
+        models_path = os.path.join(self.CURRENT_PATH, '../templates',
+                                   'models_template.html')
+        model_path = os.path.join(self.CURRENT_PATH, '../templates',
+                                  'model_template.html')
 
         rendered = self.render_template(models_path, catalogue=self.catalogue)
-        pathout = os.path.join(self.CURRENT_PATH, '../Web/pages/models.html')
+        pathout = os.path.join(self.CURRENT_PATH, '../../Web/pages/models.html')
         with open(pathout, 'w') as out:
             out.write(rendered)
 
@@ -127,7 +129,7 @@ class CatalogueBuilder:
             rendered = self.render_template(model_path, project=project)
             pathout = os.path.join(
                 self.CURRENT_PATH,
-                f"../Web/pages/projects/{project['name']['value']}.html")
+                f"../../Web/pages/projects/{project['name']['value']}.html")
             with open(pathout, 'w') as out:
                 out.write(rendered)
 
