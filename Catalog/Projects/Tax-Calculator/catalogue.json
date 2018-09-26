@@ -1,34 +1,17 @@
 {
-    "mission": {
-        "value": "Transparent tax policy modeling",
-        "source": "https://github.com/open-source-economics/Tax-Calculator#getting-started"
+    "preferred_citation": {
+        "from_file": "README.md",
+        "start_header": "Citing Tax-Calculator",
+        "end_header": null
     },
-    "pslstandardslevel": {
-        "value": "beta",
-        "source": null
-    },
-    "preferredcitation": {
-        "value": "Please cite the source of your analysis as \"Tax-Calculator release #.#.#, author's calculations.\" If you wish to link to Tax-Calculator, http://open-source-economics.github.io/Tax-Calculator/ is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.",
-        "source": "https://github.com/open-source-economics/Tax-Calculator#getting-started"
-    },
-    "projectoverview": {
-        "value": "Tax-Calculator simulates the US federal individual income and payroll tax system. In conjunction with micro data that represent the US population and a set of behavioral assumptions, Tax-Calculator can be used to conduct revenue scoring and distributional analyses of tax policies. Tax-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.",
-        "source": "https://github.com/open-source-economics/Tax-Calculator#getting-started"
-    },
-    "tags": {
-        "value": ["tax", "fiscal", "python"],
-        "source": null
-    },
-    "whatsnew": {
-        "value": "http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew",
-        "source": "http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew"
+    "project_overview": {
+        "from_file": "README.md",
+        "start_header": "What is Tax-Calculator?",
+        "end_header": "Disclaimer"
     },
     "changelog": {
-        "value": "https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md",
-        "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md"
-    },
-    "name": {
-        "value": "Tax-Calculator",
-        "source": "https://github.com/open-source-economics/Tax-Calculator/"
+        "from_file": "RELEASES.md",
+        "start_header": null,
+        "end_header": null
     }
 }

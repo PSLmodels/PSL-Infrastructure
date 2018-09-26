@@ -30,28 +30,12 @@
         <div class="container">
             <div class="model-info">
                 <h1>Model: {{ project.name.value }}</h1>
-                <h4>Mission: </h4>
-                <p>{{ project.mission.value }} <a href={{project.mission.source}} >[source]</a></p>
                 <h4>Project Overview: </h4>
-                <p>{{ project.projectoverview.value }} <a href={{project.projectoverview.source}} >[source]</a></p>
-                <h4>What's New: </h4>
-                <p>{{ project.whatsnew.value }} <a href={{project.whatsnew.source}} >[source]</a></p>
+                <p>{{ project.project_overview.value }} <a href={{project.project_overview.source}} >[source]</a></p>
                 <h4>Preferred Citation: </h4>
-                <p>{{ project.preferredcitation.value }} <a href={{project.preferredcitation.source}} >[source]</a></p>
+                <p>{{ project.preferred_citation.value }} <a href={{project.preferred_citation.source}} >[source]</a></p>
                 <h4>Change Log: </h4>
                 <p>{{ project.changelog.value }} <a href={{project.changelog.source}} >[source]</a></p>
-                <!-- TODO: these tags should be clickable! -->
-                <!-- Tried to do bg-dark for the tags but it was too dark 
-                part of me is concerned because it's a little off the banner's
-                shade of grey-->
-                <h4>PSL Standards Level: </h4>
-                <p>{{ project.pslstandardslevel.value }} <a href={{project.pslstandardslevel.source}} >[source]</a></p>
-                <h4>PSL Standards Level: </h4>
-                <p><mark class="rounded" style="background-color:grey;">{{ project.pslstandardslevel.value }}</mark></p>
-                <h4>Tags: </h4>
-                {% for tag in project.tags.value %}
-                <p style="display:inline;"><mark class="rounded" style="background-color:grey;">{{ tag }}</mark></p>
-                {% endfor %}
             </div>
         </div>
     </body>
