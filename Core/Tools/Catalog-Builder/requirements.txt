@@ -1,0 +1,4 @@
+markdown
+requests
+Jinja2
+beautifulsoup4
