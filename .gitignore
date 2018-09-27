@@ -12,3 +12,5 @@ read-the-docs/_build/
 
 # Mac OS X
 *.DS_Store
+
+*.egg-info/

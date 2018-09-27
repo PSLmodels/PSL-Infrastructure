@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(
-    name='catalogue_builder',
+    name='catalog_builder',
     version='0.1.0',
-    packages=['catalogue_builder',],
+    packages=['catalog_builder',],
     license='',
-    long_description='Module for building the PSL catalogue',
+    long_description='Module for building the PSL catalog',
 )

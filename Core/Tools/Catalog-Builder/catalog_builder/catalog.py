@@ -40,16 +40,16 @@ def parse_section(doc, section_start, section_end):
     return ' '.join(data)
 
 
-class CatalogueBuilder:
+class CatalogBuilder:
     """
     Receives list of projects and an optional directory indicating where to look
     for the project metadata. This metadata tells the parser where to look
-    for the data to be gathered and written to the catalogue. Once the data
-    has been gathered, it is saved in a `catalogue` attribute. This data is
-    dumped into a JSON file `catalogue.json` and into HTML templates to be
+    for the data to be gathered and written to the catalog. Once the data
+    has been gathered, it is saved in a `catalog` attribute. This data is
+    dumped into a JSON file `catalog.json` and into HTML templates to be
     served on the web.
 
-    Catalogue schema:
+    Catalog schema:
 
     {
         'project1': {
@@ -78,23 +78,23 @@ class CatalogueBuilder:
         self.project_dir = (
             project_dir or
             os.path.join(self.CURRENT_PATH, '../../../../Catalog/Projects/'))
-        self.catalogue = defaultdict(dict)
+        self.catalog = defaultdict(dict)
 
-    def load_catalogue(self):
+    def load_catalog(self):
         """
         Read meta data from `project_dir` and collect the specified data
         accordingly. The data is retrieved using the raw GitHub links and
         parsed via the `parse_section` function. The parsed data is saved
-        to the `catalogue` attribute.
+        to the `catalog` attribute.
         """
         for p in self.projects:
             url_base = (f"https://raw.githubusercontent.com/"
                         f"{p['org']}/{p['repo']}/{p['branch']}/")
             cat_meta = os.path.join(self.project_dir, p['repo'],
-                                    'catalogue.json')
+                                    'catalog.json')
             with open(cat_meta, 'r') as f:
                 cat_meta = json.loads(f.read())
-            self.catalogue[p['repo']]['name'] = {'value': p['repo'],
+            self.catalog[p['repo']]['name'] = {'value': p['repo'],
                                                  'source': ''}
             for k, v in cat_meta.items():
                 url = os.path.join(url_base,
@@ -103,11 +103,11 @@ class CatalogueBuilder:
                 data = parse_section(resp.text, v['start_header'],
                                      v['end_header'])
                 res = {'source': url, 'value': data}
-                self.catalogue[p['repo']][k] = res
+                self.catalog[p['repo']][k] = res
 
     def write_html(self):
         """
-        Write HTML from the `catalogue` attribute to template files.
+        Write HTML from the `catalog` attribute to template files.
 
         models_template.html is the template for the /models.html page.
         model_template.html is the template for the
@@ -120,12 +120,12 @@ class CatalogueBuilder:
         model_path = os.path.join(self.CURRENT_PATH, '../templates',
                                   'model_template.html')
 
-        rendered = self.render_template(models_path, catalogue=self.catalogue)
+        rendered = self.render_template(models_path, catalog=self.catalog)
         pathout = os.path.join(self.CURRENT_PATH, '../../Web/pages/models.html')
         with open(pathout, 'w') as out:
             out.write(rendered)
 
-        for _, project in self.catalogue.items():
+        for _, project in self.catalog.items():
             rendered = self.render_template(model_path, project=project)
             pathout = os.path.join(
                 self.CURRENT_PATH,
@@ -146,16 +146,16 @@ class CatalogueBuilder:
         template = Template(template_str)
         return template.render(**render_kwargs)
 
-    def dump_catalogue(self, output_file=None):
+    def dump_catalog(self, output_file=None):
         """
-        Dumps `cataloguß` attribute to string. Optionally writes to the
+        Dumps `catalog` attribute to string. Optionally writes to the
         `output_file` location if provided.
 
         returns:
         --------
-        cat_str: JSON representation of `catalogue attribute
+        cat_str: JSON representation of `catalog` attribute
         """
-        cat_json = json.dumps(self.catalogue)
+        cat_json = json.dumps(self.catalog)
         if output_file is not None:
             with open(output_file, 'w') as f:
                 f.write(cat_json)
@@ -167,7 +167,7 @@ if __name__ == '__main__':
          'repo': 'Tax-Calculator',
          'branch': 'master'}
     ]
-    cb = CatalogueBuilder(projects)
-    cb.load_catalogue()
+    cb = CatalogBuilder(projects)
+    cb.load_catalog()
     cb.write_html()
-    cb.dump_catalogue(os.path.join(cb.project_dir, 'catalogue.json'))
+    cb.dump_catalog(os.path.join(cb.project_dir, 'catalog.json'))
