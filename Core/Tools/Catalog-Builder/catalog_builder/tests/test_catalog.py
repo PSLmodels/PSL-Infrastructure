@@ -24,6 +24,7 @@ def pages_dir(tmpdir_factory):
     tmpdir_factory.mktemp('projects', numbered=False)
     return tmpdir_factory.getbasetemp()
 
+
 @pytest.fixture
 def markdown_doc():
     current_path = os.path.abspath(os.path.dirname(__file__))
