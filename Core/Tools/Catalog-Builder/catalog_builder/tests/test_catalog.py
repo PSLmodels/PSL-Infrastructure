@@ -7,6 +7,24 @@ from catalog_builder.catalog import CatalogBuilder
 
 
 @pytest.fixture
+def current_path():
+    return os.path.abspath(os.path.dirname(__file__))
+
+
+@pytest.fixture(scope='session')
+def pages_dir(tmpdir_factory):
+    """
+    A temporary directory to write catalog output files to. This simulates
+    writing the files without cluttering up the production files or having to
+    setup/teardown our own tempfiles. This directory is available for
+    the entire session. A unique directory is provided each session.
+
+    returns: name of the path for the directory
+    """
+    tmpdir_factory.mktemp('projects', numbered=False)
+    return tmpdir_factory.getbasetemp()
+
+@pytest.fixture
 def markdown_doc():
     current_path = os.path.abspath(os.path.dirname(__file__))
     mpath = os.path.join(current_path, 'markdown.md')
@@ -16,12 +34,12 @@ def markdown_doc():
 
 
 @pytest.fixture
-def cb(markdown_doc):
-    current_path = os.path.abspath(os.path.dirname(__file__))
+def cb(markdown_doc, current_path, pages_dir):
     projects = [
         {'org': 'noorg', 'repo': 'TestProject', 'branch': 'master'},
     ]
-    cb = CatalogBuilder(projects, project_dir=current_path)
+    cb = CatalogBuilder(projects, project_dir=current_path,
+                        pages_dir=pages_dir)
     with requests_mock.Mocker() as mock:
         url = ('https://raw.githubusercontent.com/noorg/'
                 'TestProject/master/markdown.md')
@@ -30,8 +48,7 @@ def cb(markdown_doc):
     return cb
 
 
-def test_load_catalog(markdown_doc):
-    current_path = os.path.abspath(os.path.dirname(__file__))
+def test_load_catalog(markdown_doc, current_path):
     projects = [
         {'org': 'noorg', 'repo': 'TestProject', 'branch': 'master'},
     ]
@@ -42,7 +59,7 @@ def test_load_catalog(markdown_doc):
         mock.get(url, text=markdown_doc)
         cb.load_catalog()
 
-    assert cb.Catalog
+    assert cb.catalog
 
     assert 'TestProject' in cb.catalog
     assert 'project_overview' in cb.catalog['TestProject']

@@ -73,11 +73,14 @@ class CatalogBuilder:
 
     CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-    def __init__(self, projects, project_dir=None):
+    def __init__(self, projects, project_dir=None, pages_dir=None):
         self.projects = projects
         self.project_dir = (
             project_dir or
             os.path.join(self.CURRENT_PATH, '../../../../Catalog/Projects/'))
+        self.pages_dir = (
+            pages_dir or os.path.join(self.CURRENT_PATH, '../../Web/pages/'))
+
         self.catalog = defaultdict(dict)
 
     def load_catalog(self):
@@ -121,15 +124,15 @@ class CatalogBuilder:
                                   'model_template.html')
 
         rendered = self.render_template(models_path, catalog=self.catalog)
-        pathout = os.path.join(self.CURRENT_PATH, '../../Web/pages/models.html')
+        pathout = os.path.join(self.pages_dir, 'models.html')
         with open(pathout, 'w') as out:
             out.write(rendered)
 
         for _, project in self.catalog.items():
             rendered = self.render_template(model_path, project=project)
             pathout = os.path.join(
-                self.CURRENT_PATH,
-                f"../../Web/pages/projects/{project['name']['value']}.html")
+                self.pages_dir,
+                f"projects/{project['name']['value']}.html")
             with open(pathout, 'w') as out:
                 out.write(rendered)
 
@@ -146,7 +149,7 @@ class CatalogBuilder:
         template = Template(template_str)
         return template.render(**render_kwargs)
 
-    def dump_catalog(self, output_file=None):
+    def dump_catalog(self, output_path=None):
         """
         Dumps `catalog` attribute to string. Optionally writes to the
         `output_file` location if provided.
@@ -156,8 +159,8 @@ class CatalogBuilder:
         cat_str: JSON representation of `catalog` attribute
         """
         cat_json = json.dumps(self.catalog)
-        if output_file is not None:
-            with open(output_file, 'w') as f:
+        if output_path is not None:
+            with open(output_path, 'w') as f:
                 f.write(cat_json)
         return cat_json
 
