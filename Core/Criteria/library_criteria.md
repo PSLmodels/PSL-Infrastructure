@@ -20,7 +20,7 @@ Acceptance Criteria for Transparancy and Quality
 --------------------------------------------
 --------------------------------------------
 
-1. Models MUST be released under an OSI-approved opens source license.   
+1. Models MUST be released under an OSI-approved open source license.   
 1. Data MUST be publicly available, unless release is restricted by a third party. 
 1. For any data that SHOULD not be disclosed, provided MUST be:
 	- A complete descriptive list of all data variables; 
