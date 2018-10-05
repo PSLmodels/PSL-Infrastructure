@@ -2,42 +2,9 @@ import json
 import os
 from collections import defaultdict
 
-import requests
-import markdown
-from bs4 import BeautifulSoup
 from jinja2 import Template
 
-
-def parse_section(doc, section_start, section_end):
-    """
-    Parse section of Markdown text from `section_start` to `section_end`.
-    - If `section_start` is `None`, then the entire document is parsed to HTML
-        and returned.
-    - If `section_end` is `None`, then the entire document is parsed until
-        `section_end` is found.
-
-    Note: there's a case for parsing until `section_end` if `section_start` is
-        not specified but `section_end` is.
-
-    returns:
-    --------
-    HTML that was rendered from Markdown
-    """
-    html = markdown.markdown(doc)
-    if section_start is None:
-        return html
-    soup = BeautifulSoup(html, 'html.parser')
-    get_next = False
-    data = []
-    for node in soup.find_all():
-        if node.text == section_start:
-            get_next = True
-            continue
-        if get_next and node.text != section_end:
-            data.append(str(node))
-        else:
-            get_next = False
-    return ' '.join(data)
+from catalog_builder import utils
 
 
 class CatalogBuilder:
@@ -91,8 +58,6 @@ class CatalogBuilder:
         to the `catalog` attribute.
         """
         for p in self.projects:
-            url_base = (f"https://raw.githubusercontent.com/"
-                        f"{p['org']}/{p['repo']}/{p['branch']}/")
             cat_meta = os.path.join(self.project_dir, p['repo'],
                                     'catalog.json')
             with open(cat_meta, 'r') as f:
@@ -100,12 +65,24 @@ class CatalogBuilder:
             self.catalog[p['repo']]['name'] = {'value': p['repo'],
                                                  'source': ''}
             for k, v in cat_meta.items():
-                url = os.path.join(url_base,
-                                   v['from_file'])
-                resp = requests.get(url)
-                data = parse_section(resp.text, v['start_header'],
-                                     v['end_header'])
-                res = {'source': url, 'value': data}
+                if v['type'] == "github_file":
+                    url_base = (f"https://raw.githubusercontent.com/"
+                                f"{p['org']}/{p['repo']}/{p['branch']}/")
+                    source = os.path.join(url_base,
+                                          v['source'])
+                    value = utils.data_from_url(source, v['start_header'],
+                                                v['end_header'])
+                elif v['type'] == "url":
+                    source = v['source']
+                    value = utils.data_from_url(source, v['start_header'],
+                                                v['end_header'])
+                elif v['data'] is not None:
+                    source = None
+                    value = v['data']
+                else:
+                    print(f'No data specified for project, entry: {p}, {k}')
+                    source, value = None, None
+                res = {'source': source, 'value': value}
                 self.catalog[p['repo']][k] = res
 
     def write_html(self):

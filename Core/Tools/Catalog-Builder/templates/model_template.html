@@ -30,12 +30,135 @@
         <div class="container">
             <div class="model-info">
                 <h1>Model: {{ project.name.value }}</h1>
-                <h4>Project Overview: </h4>
-                <p>{{ project.project_overview.value }} <a href={{project.project_overview.source}} >[source]</a></p>
-                <h4>Preferred Citation: </h4>
-                <p>{{ project.citation.value }} <a href={{project.citation.source}} >[source]</a></p>
-                <h4>Change Log: </h4>
-                <p>{{ project.dev_changelog.value }} <a href={{project.dev_changelog.source}} >[source]</a></p>
+
+                {% if project.project_overview %}
+                    <h4>Project Overview: </h4>
+                    <p>{{ project.project_overview.value }} </p>
+                    {% if project.project_overview.source %}
+                        <p><a href={{project.project_overview.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.citation.value %}
+                    <h4>Preferred Citation: </h4>
+                    <p>{{ project.citation.value }}</p>
+                    {% if project.citation.source %}
+                        <p><a href={{project.dev_changelog.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.license.value %}
+                    <h4>License: </h4>
+                    <p>{{ project.license.value }}</p>
+                    {% if project.license.source %}
+                        <p><a href={{project.license.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.user_documentation.value %}
+                    <h4>User Documentation: </h4>
+                    <p>{{ project.user_documentation.value }}</p>
+                    {% if project.user_documentation.source %}
+                        <p><a href={{project.user_documentation.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.user_changelog.value %}
+                    <h4>User Change Log: </h4>
+                    <p>{{ project.user_changelog.value }}</p>
+                    {% if project.user_changelog.source %}
+                        <p><a href={{project.user_changelog.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.dev_changelog.value %}
+                    <h4>Developer Change Log: </h4>
+                    <p>{{ project.dev_changelog.value }}</p>
+                    {% if project.dev_changelog.source %}
+                        <p><a href={{project.dev_changelog.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.disclaimer.value %}
+                    <h4>Disclaimer: </h4>
+                    <p>{{ project.disclaimer.value }} </p>
+                    {% if project.disclaimer.source %}
+                        <p><a href={{project.disclaimer.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.user_case_studies.value %}
+                    <h4>User Case Studies: </h4>
+                    <p>{{ project.user_case_studies.value }} </p>
+                    {% if project.user_case_studies.source %}
+                        <p><a href={{project.disclaimer.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.project_roadmap.value %}
+                    <h4>Project Roadmap: </h4>
+                    <p>{{ project.project_roadmap.value }}</p>
+                    {% if project.project_roadmap.source %}
+                        <p><a href={{project.project_roadmap.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.contributor_overview.value %}
+                    <h4>Contributor Overview: </h4>
+                    <p>{{ project.contributor_overview.value }} </p>
+                    {% if project.contributor_overview.source %}
+                        <p><a href={{project.contributor_overview.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.contributor_guide.value %}
+                    <h4>Change Log: </h4>
+                    <p>{{ project.contributor_guide.value }} </p>
+                    {% if project.contributor_guide.source %}
+                        <p><a href={{project.contributor_guide.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.governance_overview.value %}
+                    <h4>Governance Overview: </h4>
+                    <p>{{ project.governance_overview.value }} </p>
+                    {% if project.governance_overview.source %}
+                        <p><a href={{project.governance_overview.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.public_funding.value %}
+                    <h4>Public Funding: </h4>
+                    <p>{{ project.public_funding.value }} </p>
+                    {% if project.public_funding.source %}
+                        <p><a href={{project.public_funding.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.link_to_webapp.value %}
+                    <h4>Webbapp Link: </h4>
+                    <p>{{ project.link_to_webapp.value }} </p>
+                    {% if project.link_to_webapp.source %}
+                        <p><a href={{project.link_to_webapp.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.public_issue_tracker.value %}
+                    <h4>Public Issue Tracker: </h4>
+                    <p>{{ project.public_issue_tracker.value }} </p>
+                    {% if project.public_issue_tracker.source %}
+                        <p><a href={{project.public_issue_tracker.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
+                {% if project.public_qanda.value %}
+                    <h4>Public Q&A: </h4>
+                    <p>{{ project.public_qanda.value }} </p>
+                    {% if project.public_qanda.source %}
+                        <p><a href={{project.public_qanda.source}} >[source]</a></p>
+                    {% endif %}
+                {% endif %}
+
             </div>
         </div>
     </body>

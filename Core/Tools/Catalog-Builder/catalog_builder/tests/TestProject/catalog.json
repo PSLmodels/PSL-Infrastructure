@@ -2,86 +2,120 @@
     "project_overview": {
         "start_header": "Project Overview",
         "end_header": "Key Features",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "key_features": {
         "start_header": "Key Features",
         "end_header": "Citation",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "citation": {
         "start_header": "Citation",
         "end_header": "License",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "license": {
         "start_header": "License",
         "end_header": "User Documentation",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "user_documentation": {
         "start_header": "User Documentation",
         "end_header": "User Changelog",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "user_changelog": {
         "start_header": "User Changelog",
         "end_header": "Dev Changelog",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "dev_changelog": {
         "start_header": "Dev Changelog",
         "end_header": "Disclaimer",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "disclaimer": {
         "start_header": "Disclaimer",
         "end_header": "User Case Studies",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "user_case_studies": {
         "start_header": "User Case Studies",
         "end_header": "Project Roadmap",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "project_roadmap": {
         "start_header": "Project Roadmap",
         "end_header": "Contributor Overview",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "contributor_overview": {
         "start_header": "Contributor Overview",
         "end_header": "Contributor Guide",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "contributor_guide": {
         "start_header": "Contributor Guide",
         "end_header": "Governance Overview",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "governance_overview": {
         "start_header": "Governance Overview",
         "end_header": "Public Funding",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "public_funding": {
         "start_header": "Public Funding",
         "end_header": "Link to webapp",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "link_to_webapp": {
         "start_header": "Link to webapp",
         "end_header": "Link to public issue tracker",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "public_issue_tracker": {
         "start_header": "Link to public issue tracker",
         "end_header": "Link to public question/answer site",
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     },
     "public_qanda": {
         "start_header": "Link to public question/answer site",
         "end_header": null,
-        "from_file": "markdown.md"
+        "source": "markdown.md",
+        "type": "github_file",
+        "data": null
     }
 }

@@ -1,17 +1,114 @@
 {
-    "citation": {
-        "from_file": "README.md",
-        "start_header": "Citing Tax-Calculator",
-        "end_header": null
-    },
     "project_overview": {
-        "from_file": "README.md",
         "start_header": "What is Tax-Calculator?",
-        "end_header": "Disclaimer"
+        "end_header": "Disclaimer",
+        "source": "README.md",
+        "type": "github_file",
+        "data": null
+    },
+    "citation": {
+        "start_header": "Citing Tax-Calculator",
+        "end_header": null,
+        "source": "README.md",
+        "type": "github_file",
+        "data": null
+    },
+    "license": {
+        "start_header": null,
+        "end_header": null,
+        "source": null,
+        "type": null,
+        "data": null
+    },
+    "user_documentation": {
+        "start_header": "Using Tax-Calculator",
+        "end_header": "What's New",
+        "source": "http://open-source-economics.github.io/Tax-Calculator/index.html",
+        "type": "url",
+        "data": null
+    },
+    "user_changelog": {
+        "start_header": "What's New",
+        "end_header": "Document Contents",
+        "source": "http://open-source-economics.github.io/Tax-Calculator/index.html",
+        "type": "url",
+        "data": null
     },
     "dev_changelog": {
-        "from_file": "RELEASES.md",
+        "start_header": "2018-09-11 Release 0.21.0 : first release compatible only with Python 3.6",
+        "end_header": "2018-09-06 Release 0.20.3 : LAST RELEASE COMPATIBLE WITH PYTHON 2.7",
+        "source": "RELEASES.md",
+        "type": "github_file",
+        "data": null
+    },
+    "disclaimer": {
+        "start_header": "Disclaimer",
+        "end_header": "Getting Started",
+        "source": "README.md",
+        "type": "github_file",
+        "data": null
+    },
+    "user_case_studies": {
+        "start_header": null,
+        "end_header": null,
+        "source": null,
+        "type": null,
+        "data": null
+    },
+    "project_roadmap": {
+        "start_header": null,
+        "end_header": null,
+        "source": null,
+        "type": null,
+        "data": null
+    },
+    "contributor_overview": {
+        "start_header": "Getting Started",
+        "end_header": "Citing Tax-Calculator",
+        "source": "README.md",
+        "type": "github_file",
+        "data": null
+    },
+    "contributor_guide": {
+        "start_header": "Tax-Calculator Coding Style",
+        "end_header": "pycodestype (the program formerly known as pep8)",
+        "source": "CODING.md",
+        "type": "github_file",
+        "data": null
+    },
+    "governance_overview": {
+        "start_header": null,
+        "end_header": null,
+        "source": null,
+        "type": null,
+        "data": null
+    },
+    "public_funding": {
+        "start_header": null,
+        "end_header": null,
+        "source": null,
+        "type": null,
+        "data": null
+    },
+    "link_to_webapp": {
+        "data": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>",
+        "source": null,
+        "type": null,
         "start_header": null,
         "end_header": null
+    },
+    "public_issue_tracker": {
+        "start_header": null,
+        "end_header": null,
+        "data": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>",
+        "source": null,
+        "type": null
+    },
+    "public_qanda": {
+        "start_header": null,
+        "end_header": null,
+        "data": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>",
+        "source": null,
+        "type": null
     }
 }

@@ -30,1213 +30,189 @@
         <div class="container">
             <div class="model-info">
                 <h1>Model: Tax-Calculator</h1>
+
+                
                 <h4>Project Overview: </h4>
                 <p><p>Tax-Calculator simulates the US federal individual income and payroll
 tax system.  In conjunction with micro data that represent the US
 population and a set of behavioral assumptions, Tax-Calculator can
 be used to conduct revenue scoring and distributional analyses of tax
 policies.  Tax-Calculator is written in Python, an interpreted
-language that can execute on Windows, Mac, or Linux.</p> <a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/README.md >[source]</a></p>
+language that can execute on Windows, Mac, or Linux.</p> </p>
+                
+                <p><a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/README.md >[source]</a></p>
+                
+                
+
+                
                 <h4>Preferred Citation: </h4>
-                <p><p>Please cite the source of your analysis as "Tax-Calculator release</p> <h1>.#.#, author's calculations." If you wish to link to Tax-Calculator,</h1> <p>http://open-source-economics.github.io/Tax-Calculator/ is
+                <p><p>Please cite the source of your analysis as "Tax-Calculator release
+#.#.#, author's calculations." If you wish to link to Tax-Calculator,
+http://open-source-economics.github.io/Tax-Calculator/ is
 preferred. Additionally, we strongly recommend that you describe the
 input data used, and provide a link to the materials required to
 replicate your analysis or, at least, note that those materials are
-available upon request.</p> <a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/README.md >[source]</a></p>
-                <h4>Change Log: </h4>
-                <p><h1>TAX-CALCULATOR RELEASE HISTORY</h1>
-<p>Go <a href="https://github.com/open-source-economics/Tax-Calculator/pulls?q=is%3Apr+is%3Aclosed">here</a>
-for a complete commit history.</p>
-<h2>2018-09-11 Release 0.21.0 : first release compatible only with Python 3.6</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2058">#2058</a>)</p>
-<p><strong>API Changes</strong>
+available upon request.</p></p>
+                
+                <p><a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/RELEASES.md >[source]</a></p>
+                
+                
+
+                
+
+                
+                <h4>User Documentation: </h4>
+                <p><style>
+div { max-width: 19cm }
+</style> <p>This document tells you how to use Tax-Calculator, an open-source
+federal income and payroll tax simulation model.  The two ways of
+using Tax-Calculator described here require no computer programming.
+If you are interested in Python programming with Tax-Calculator, you
+should read the tested recipes in our
+<a href="http://open-source-economics.github.io/Tax-Calculator/cookbook.html">
+Tax-Calculator Cookbook</a>. If you want to participate in the
+development of Tax-Calculator — by asking a question, reporting
+a bug, improving the documentation or making an enhancement to the
+Python source code — you should go to
+the <a href="https://github.com/open-source-economics/Tax-Calculator">
+developer website</a>.</p> <a href="http://open-source-economics.github.io/Tax-Calculator/cookbook.html">
+Tax-Calculator Cookbook</a> <a href="https://github.com/open-source-economics/Tax-Calculator">
+developer website</a> <p>Please cite the source of your analysis as <q>Tax-Calculator
+release \#.\#.\#, author's calculations.</q> If you wish to link to
+Tax-Calculator, this page is preferred.  Additionally, we strongly
+recommend that you describe the input data used, and provide a link to
+the materials required to replicate your analysis or, at least, note
+that those materials are available upon request.</p> <q>Tax-Calculator
+release \#.\#.\#, author's calculations.</q></p>
+                
+                <p><a href=http://open-source-economics.github.io/Tax-Calculator/index.html >[source]</a></p>
+                
+                
+
+                
+                <h4>User Change Log: </h4>
+                <p><p><i>Click your browser's Reload button to
+ensure you are viewing the most recent version of this page rather
+than an older version that your browser has saved in its cache of
+previously visited pages.</i></p> <i>Click your browser's Reload button to
+ensure you are viewing the most recent version of this page rather
+than an older version that your browser has saved in its cache of
+previously visited pages.</i></p>
+                
+                <p><a href=http://open-source-economics.github.io/Tax-Calculator/index.html >[source]</a></p>
+                
+                
+
+                
+                <h4>Developer Change Log: </h4>
+                <p><p>(last merged pull request is
+<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2058">#2058</a>)</p> <a href="https://github.com/open-source-economics/Tax-Calculator/pull/2058">#2058</a> <p><strong>API Changes</strong>
 - Require Python 3.6 to run Tax-Calculator source code or conda package
   [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2058">#2058</a>
   by Martin Holmer], which requires new <code>puf.csv</code> input file (see <a href="https://github.com/open-source-economics/taxdata/pull/283">taxdata pull request 283</a> for details) with this information:
-  * Byte size: 56415698<br />
-  * MD5 checksum: 3f1c7c2b16b6394a9148779db992bed1</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2018-09-06 Release 0.20.3 : LAST RELEASE COMPATIBLE WITH PYTHON 2.7</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2056">#2056</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Incorporate new PUF input data that include imputed values of itemizeable expenses for non-itemizers
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2052">#2052</a>
-  by Martin Holmer], which requires new <code>puf.csv</code> input file with this information:
-  * Byte size: 55104059
-  * MD5 checksum: 9929a03b2d93a628d5057cc17d032e52
-- Incorporate new CPS input data that include different <code>other_ben</code> values
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2055">#2055</a>
-  by Martin Holmer]
-- Incorporate new PUF input data that include imputed values of pension contributions
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2056">#2056</a>
-  by Martin Holmer], which requires new <code>puf.csv</code> input file with this information:
-  * Byte size: 56415698
-  * MD5 checksum: a10091a770472254c50f8985d8839162</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2018-08-10 Release 0.20.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2048">#2048</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add Calculator.n65() method that uses new <code>elderly_dependents</code> input variable
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2029">#2029</a>
-  by Martin Holmer at request of Max Ghenis]
-- Incorporate updated CPS and PUF input data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2032">#2032</a>
-  by Martin Holmer and Anderson Frailey]
-- Add policy parameters that allow many changes in tax treatment of charitable giving
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2037">#2037</a>
-  by Derrick Choe]
-- Extrapolate CPS benefit variables in the same way as other dollar variables are extrapolated to future years
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2041">#2041</a>
-  by Martin Holmer]
-- Incorporate most recent PUF input data fixing problem mentioned in <a href="https://github.com/open-source-economics/Tax-Calculator/pull/2032">#2032</a>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2047">#2047</a>
-  by Martin Holmer and Anderson Frailey], which requires new <code>puf.csv</code>
-  input file with this information:
-  * Byte size: 54341028
-  * MD5 checksum: b64b90884406dfcff85f2ac9ba79f9bf
-- Incorporate most recent CPS input data containing actuarial value of health insurance benefits
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2048">#2048</a>
-  by Martin Holmer and Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- Fix incorrect aging of <code>e00900</code> variable
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2027">#2027</a>
-  by Martin Holmer with bug reported by Max Ghenis]</p>
-<h2>2018-05-21 Release 0.20.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2005">#2005</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- Fix warning logic to exclude CPS data and to fix handling of changes in standard deduction amounts
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2005">#2005</a>
-  by Martin Holmer]</p>
-<h2>2018-05-18 Release 0.20.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2003">#2003</a>)</p>
-<p><strong>API Changes</strong>
-- Simplify table-creation Calculator methods and related utility functions
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1984">#1984</a>
-  by Martin Holmer]
-- Rename <code>Growfactors</code> class as <code>GrowFactors</code> and rename <code>Growdiff</code> class as <code>GrowDiff</code>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1996">#1996</a>
-  by Martin Holmer]
-- Add <code>quantity_response</code> utility function and remove obsolete charity and earnings response logic from Behavior class
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1997">#1997</a>
-  by Martin Holmer]
-- Add empty shell of <code>GrowModel</code> class that will eventually contain a simple macroeconomic growth model with annual feedback to the microeconomic simulation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1998">#1998</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Streamline logic that prevents disclosure of details of PUF filing units
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1979">#1979</a>
-  by Martin Holmer]
-- Add option to not include benefits in a Records object that uses CPS data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1985">#1985</a>
-  and
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1988">#1988</a>
-  by Martin Holmer]
-- Update CODING and TESTING documentation to reflect recommended usage of <code>pycodestyle</code> in place of <code>pep8</code>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1989">#1989</a>
-  by Martin Holmer]
-- Add validity checking for non-behavior assumption parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1992">#1992</a>
-  by Martin Holmer]
-- Add Tax-Calculator Cookbook recipe using Behavior class and its <code>response</code> method
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1993">#1993</a>
-  by Martin Holmer]
-- Add Tax-Calculator Cookbook recipe showing how to create a custom table
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1994">#1994</a>
-  by Martin Holmer]
-- Add Tax-Calculator Cookbook recipe showing how to use new <code>quantity_response</code> utility function
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/2002">#2002</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Fix mishandling of boolean policy parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1982">#1982</a>
-  by Hank Doupe]</p>
-<h2>2018-04-19 Release 0.19.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1977">#1977</a>)</p>
-<p><strong>API Changes</strong>
-- Improve data quality of several CPS age variables, which causes changes in CPS tax results
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1962">#1962</a>
-  by Anderson Frailey and Martin Holmer based on bug reported by Max Ghenis]</p>
-<p><strong>New Features</strong>
-- Add validity checking for revised values of behavioral response parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1952">#1952</a>
-  by Hank Doupe]
-- Strengthen logic that prevents disclosure of details of filing units in PUF
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1972">#1972</a>
-   <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1973">#1973</a>
-   <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1976">#1976</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Fix loose checking of the data type of parameters in reform dictionaries passed to the Policy class <code>implement_reform</code> method
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1960">#1960</a>
-  by Martin Holmer based on bug reported by Hank Doupe]
-- Fix diagnostic and distribution tables so that itemizers plus standard-deduction takers equals total returns
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1964">#1964</a>
-  by Martin Holmer]
-- Fix confusing documentation of the data type of parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1970">#1970</a>
-  by Martin Holmer as suggested by Hank Doupe]
-- Fix bug in TCJA tax calculations for those with large business losses
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1977">#1977</a>
-  by Martin Holmer based on bug report by Ernie Tedeschi]</p>
-<h2>2018-03-30 Release 0.18.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1942">#1942</a>)</p>
-<p><strong>API Changes</strong>
-- Remove redundant <code>_DependentCredit_c</code> policy parameter and fix dependent credit phase-out logic
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1937">#1937</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add memory management logic to reduce memory usage
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1942">#1942</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Replace monthly housing benefits with annual housing benefits in CPS data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1941">#1941</a>
-  by Anderson Frailey]</p>
-<h2>2018-03-16 Release 0.17.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1926">#1926</a>)</p>
-<p><strong>API Changes</strong>
-- Make <code>run_nth_year_tax_calc_model</code> function return tables with all rows
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1914">#1914</a>
-  by Martin Holmer]
-- Rename Calculator class <code>param</code> method as <code>policy_param</code>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1915">#1915</a>
-  by Martin Holmer]
-- Add notice of end of Python 2.7 support beginning in 2019
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1923">#1923</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add row names to distribution and difference tables
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1913">#1913</a>
-  by Martin Holmer]
-- Add row for those with zero income in distribution and difference tables
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1917">#1917</a>
-  by Martin Holmer]
-- Revise Calculator class decile_graph method to provide option for including those with zero income and/or those with negative income in the bottom decile
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1918">#1918</a>
-  by Martin Holmer]
-- Add UBI benefits statistic to distribution and difference tables
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1919">#1919</a>
-  by Killian Pinkelman]
-- Add two benefits statistics to distribution and difference tables
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1925">#1925</a>
-  by Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2018-03-09 Release 0.16.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1911">#1911</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add graph of percentage change in after-tax expanded income by baseline expanded-income percentile and include it in <code>tc --graphs</code> output and in the Cookbook's basic recipe
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1890">#1890</a>
-  by Martin Holmer]
-- Improve handling of those with negative or zero <code>expanded_income</code> in tables and graphs
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1902">#1902</a>
-  by Martin Holmer]
-- Add three new benefits and improve imputation of interest, dividend, and pension income in CPS data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1911">#1911</a>
-  by Anderson Frailey and Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Correct bottom bin name in distribution/difference tables exported to TaxBrain
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1889">#1889</a>
-  by Martin Holmer]
-- Add missing check of equality of <code>BEN_*_value</code> parameters in baseline and reform Calculator objects when using <code>expanded_income</code> in tables or graphs
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1894">#1894</a>
-  by Martin Holmer]
-- Correct and simplify calculation of <code>expanded_income</code>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1897">#1897</a>
-   <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1899">#1899</a>
-   <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1900">#1900</a>
-   <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1901">#1901</a>
-  by Martin Holmer and Anderson Frailey], which requires new <code>puf.csv</code>
-  input file with this information:
-  * Byte size: 54718219
-  * MD5 checksum: e22429702920a0d927a36ea1103ba067
-- Correct AGI concept used in EITC phase-out logic
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1907">#1907</a>
-  by Martin Holmer as reported by Max Ghenis]</p>
-<h2>2018-02-16 Release 0.16.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1886">#1886</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add graph of percentage change in after-tax expanded income by baseline expanded-income quintiles
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1880">#1880</a>
-  by Martin Holmer]
-- Improve consistency of UBI-related head-count-by-age values in the CPS data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1882">#1882</a>
-  by Anderson Frailey]
-- Add variable to <code>cps.csv.gz</code> that facilitates matching CPS data to Tax-Calculator filing units
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1885">#1885</a>
-  by Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- Fix lack of calculation of <code>benefit_cost_total</code> variable
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1886">#1886</a>
-  by Anderson Frailey]</p>
-<h2>2018-02-13 Release 0.16.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1871">#1871</a>)</p>
-<p><strong>API Changes</strong>
-- Improve data quality of several existing CPS variables, which causes changes in CPS tax results
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1853">#1853</a>
-  by Anderson Frailey with assistance from Martin Holmer]
-- Use 2011 PUF data (rather than the older 2009 PUF data), which causes changes in PUF tax results
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1871">#1871</a>
-  by Anderson Frailey and Martin Holmer], which requires new <code>puf.csv</code> input file with this information:
-  * Byte size: 54714632
-  * MD5 checksum: de4a59c9bce0a7d5e6c3110172237c9b</p>
-<p><strong>New Features</strong>
-- Add ability to extrapolate imputed benefits and benefit-related policy parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1719">#1719</a>
-  by Anderson Frailey]
-- Add ability to specify the consumption value of in-kind benefits to be less than the government cost of providing in-kind benefits
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1863">#1863</a>
-  by Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- Improve handling of very high marginal tax rates in the <code>Behavior.response</code> method
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1858">#1858</a>
-  by Martin Holmer with assistance from Matt Jensen]</p>
-<h2>2018-01-30 Release 0.15.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1851">#1851</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add ability to specify a compound reform in the tc <code>--reform</code> option
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1842">#1842</a>
-  by Martin Holmer as requested by Ernie Tedeschi]
-- Add compatible-data information for each policy parameter to user documentation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1844">#1844</a>
-  by Martin Holmer as requested by Matt Jensen]
-- Add tc <code>--baseline BASELINE</code> option that sets baseline policy equal to that specified in BASELINE reform file (rather than baseline policy being current-law poliy)
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1851">#1851</a>
-  by Martin Holmer as requested by Matt Jensen and Ernie Tedeschi]</p>
-<p><strong>Bug Fixes</strong>
-- Add error checking for Calculator misuse in presence of behavioral responses
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1848">#1848</a>
-  by Martin Holmer]
-- Add error checking for diagnostic_table misuse in presence of behavioral responses
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1849">#1849</a>
-  by Martin Holmer]</p>
-<h2>2018-01-20 Release 0.15.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1838">#1838</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add <code>cpi_inflatable</code> field for each parameter in the four JSON parameter files
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1838">#1838</a>
-  by Martin Holmer as requested by Hank Doupe]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2018-01-18 Release 0.15.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1834">#1834</a>)</p>
-<p><strong>API Changes</strong>
-- Make objects embedded in a Calculator object private and provide Calculator class access methods to manipulate the embedded objects
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1791">#1791</a>
-  by Martin Holmer]
-- Rename three UBI policy parameters to be more descriptive
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1813">#1813</a>
-  by Martin Holmer as suggested by Max Ghenis]</p>
-<p><strong>New Features</strong>
-- Add validity testing of compatible_data information in <code>current_law_policy.json</code>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1614">#1614</a>
-  by Matt Jensen with assistance from Hank Doupe]
-- Add <code>--outdir</code> option to command-line <code>tc</code> tool
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1801">#1801</a>
-  by Martin Holmer as suggested by Reuben Fischer-Baum]
-- Make TCJA policy current-law policy
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1803">#1803</a>
-  by Martin Holmer with assistance from Cody Kallen]
-- Change minimum required pandas version from 0.21.0 to 0.22.0 and remove zsum() pandas work-around
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1805">#1805</a>
-  by Martin Holmer]
-- Add policy parameter and logic needed to represent TCJA treatment of alimony received
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1818">#1818</a>
-  by Martin Holmer and Cody Kallen]
-- Add policy parameters and logic needed to represent TCJA limits on pass-through income and business losses
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1819">#1819</a>
-  by Cody Kallen]
-- Revise user documentation and Tax-Calculator Cookbook recipes to reflect TCJA as current-law policy
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1832">#1832</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Fix column order in distribution table
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1834">#1834</a>
-  by Martin Holmer and Hank Doupe]</p>
-<h2>2017-12-24 Release 0.14.3</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1796">#1796</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Change minimum required pandas version from 0.20.1 to 0.21.0
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1781">#1781</a>
-  by Martin Holmer]
-- Generalize validation of boolean policy parameter values in reforms
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1782">#1782</a>
-  by Martin Holmer as requested by Hank Doupe]
-- Handle small numerical differences in test results generated under Python 3.6
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1795">#1795</a>
-  by Martin Holmer with need pointed out by Matt Jensen]
-- Make the <code>_cpi_offset</code> policy parameter work like other policy parameters 
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1796">#1796</a>
-  by Martin Holmer with need pointed out by Matt Jensen and Hank Doupe]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-12-19 Release 0.14.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1775">#1775</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add two policy parameters that can be used to cap itemized SALT deductions as a fraction of AGI
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1711">#1711</a>
-  by Derrick Choe with assistance from Cody Kallen and Hank Doupe]
-- Update "notes" in <code>current_law_policy.json</code> for policy parameters first introduced in TCJA bills
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1765">#1765</a>
-  by Max Ghenis]</p>
-<p><strong>Bug Fixes</strong>
-- Standardize format of ValueError messages raised by Policy.implement_reform method
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1775">#1775</a>
-  by Martin Holmer, reported by Max Ghenis and diagnosed by Hank Doupe]</p>
-<h2>2017-12-15 Release 0.14.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1759">#1759</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add policy parameter that can cap the combined state and local income/sales and real-estate deductions
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1756">#1756</a>
-  by Cody Kallen with helpful discussion from Ernie Tedeschi and Matt Jensen]
-- Add percentage change in income by income decile graph to <code>tc --graphs</code> output
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1758">#1758</a>
-  by Martin Holmer]
-- Add JSON reform file for TCJA conference bill
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1759">#1759</a>
-  by Cody Kallen with review by Matt Jensen and Sean Wang]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-12-11 Release 0.14.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1742">#1742</a>)</p>
-<p><strong>API Changes</strong>
-- Add several Calculator table methods and revise table utilities to not use Calculator object(s)
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1718">#1718</a>
-  by Martin Holmer]
-- Add several Calculator graph methods and revise graph utilities to not use Calculator objects
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1722">#1722</a>
-  by Martin Holmer]
-- Add Calculator ce_aftertax_income method and revise corresponding utility to not use Calculator object
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1723">#1723</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add new policy parameter for refunding the new CTC against all payroll taxes
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1716">#1716</a>
-  by Matt Jensen as suggested by Ernie Tedeschi]
-- Remove calculation of AGI tables from the TaxBrain Interface, tbi
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1724">#1724</a>
-  by Martin Holmer as suggested by Matt Jensen and Hank Doupe]
-- Add ability to specify partial customized CLI <code>tc --dump</code> output
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1735">#1735</a>
-  by Martin Holmer as suggested by Sean Wang]
-- Add <em>Cookbook of Tested Recipes for Python Programming with Tax-Calculator</em>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1740">#1740</a>
-  by Martin Holmer]
-- Add calculation of two values on the ALL row of the difference table
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1741">#1741</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Fix Behavior.response method to handle very high marginal tax rates
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1698">#1698</a>
-  by Martin Holmer, reported by Richard Evans and Jason DeBacker]
-- Fix <code>create_distribution_table</code> to generate correct details for the top decile
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1712">#1712</a>
-  by Martin Holmer]</p>
-<h2>2017-11-17 Release 0.13.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1680">#1680</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add TCJA_House_Amended JSON policy reform file
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1664">#1664</a>
-  by Cody Kallen and Matt Jensen]
-- Add <code>_cpi_offset</code> policy parameter that can be used to specify chained CPI indexing reforms
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1667">#1667</a>
-  by Martin Holmer]
-- Add new policy parameter that changes the stacking order of child/dependent credits
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1676">#1676</a>
-  by Matt Jensen as suggested by Cody Kallen with need identified by Joint Economic Committee staff]
-- Add to several TCJA reform files the provision for chained CPI indexing
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1680">#1680</a>
-  by Matt Jensen]</p>
-<p><strong>Bug Fixes</strong>
-- Fix <code>_ACTC_ChildNum</code> policy parameter documentation and logic
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1666">#1666</a>
-  by Martin Holmer, reported by Ernie Tedeschi]
-- Fix documentation for mis-named <code>n1821</code> input variable
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1672">#1672</a>
-  by Martin Holmer, reported by Max Ghenis]
-- Fix logic of run_nth_year_gdp_elast_model function in the TaxBrainInterface
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1677">#1677</a>
-  by Martin Holmer, reported by Hank Doupe]</p>
-<h2>2017-11-10 Release 0.13.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1655">#1655</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add household and family identifiers from the CPS for the cps.csv.gz file that ships with taxcalc
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1635">#1635</a>
-  by Anderson Frailey]
-- Improved documentation for the cps.csv.gz file that ships with taxcalc
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1648">#1648</a>
-  by Martin Holmer]
-- Add parameter for the business income exclusion in the Senate TCJA Chairman's mark
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1648">#1651</a>
-  by Cody Kallen]
-- Add TCJA reform file for the Senate Chairman's mark
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1652">#1652</a>
-  by Cody Kallen]
-- Add FIPS state codes to the cps.csv.gz file that ships with taxcalc
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1653">#1653</a>
-  by Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- Fix an edge case related to new pass-through parameters that caused some extreme MTRs
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1645">#1645</a>
-  by Cody Kallen, reported by Richard Evans]</p>
-<h2>2017-11-07 Release 0.13.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1632">#1632</a>)</p>
-<p><strong>API Changes</strong>
-- Add new statistics and top-decile detail to distribution and difference tables
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1605">#1605</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add expanded_income and aftertax_income to distribution table
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1602">#1602</a>
-  by Martin Holmer]
-- Add utility functions that generate a change-in-aftertax-income-by-decile graph
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1606">#1606</a>
-  by Martin Holmer]
-- Add new dependent credits for children and non-children dependents
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1615">#1615</a>
-  by Cody Kallen]
-- Add new non-refundable credit for filer and spouse
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1618">#1618</a>
-  by Cody Kallen]
-- Add capability to model pass-through tax rate eligiblity rules in TCJA
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1620">#1620</a>
-  by Cody Kallen]
-- Make several Personal Nonrefundable Credit parameters available to external applications like TaxBrain
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1622">#1622</a>
-  by Matt Jensen]
-- Extend extrapolation to 2027 and update to June 2017 CBO baseline
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1624">#1624</a>
-  by Anderson Frailey]
-- Add new reform JSON file for the Tax Cuts and Jobs Act
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1625">#1625</a>
-  by Cody Kallen]</p>
-<p><strong>Bug Fixes</strong>
-- Resolve compatibility issues with Pandas 0.21.0
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1629">#1629</a>
-  by Hank Doupe]
-- Cleaner solution to compatibility issues with Pandas 0.21.0
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1634">#1634</a>
-  by Hank Doupe]</p>
-<h2>2017-10-20 Release 0.12.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1600">#1600</a>)</p>
-<p><strong>API Changes</strong>
-- Rename read_json_param_files as read_json_param_objects
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1563">#1563</a>
-  by Martin Holmer]
-- Remove arrays_not_lists argument from read_json_param_objects
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1568">#1568</a>
-  by Martin Holmer]
-- Rename dropq as tbi (taxbrain interface) and refactor run_nth_year_*_model functions so that either puf.csv or cps.csv can be used as input data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1577">#1577</a>
-  by Martin Holmer]
-- Change Calculator class constructor so that it makes a deep copy of each specified object for internal use
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1582">#1582</a>
-  by Martin Holmer]
-- Rename and reorder difference table columns
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1584">#1584</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add Calculator.reform_documentation that generates plain text documentation of a reform
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1564">#1564</a>
-  by Martin Holmer]
-- Enhance stats_summary.py script and its output
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1566">#1566</a>
-  by Amy Xu]
-- Add reform documentation as standard output from Tax-Calculator CLI, tc
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1567">#1567</a>
-  by Martin Holmer]
-- Add parameter type checking to Policy.implement_reform method
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1585">#1585</a>
-  by Martin Holmer]
-- Add <code>_CTC_new_for_all</code> policy parameter to allow credits for those with negative AGI
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1595">#1595</a>
-  by Martin Holmer]
-- Narrow range of legal values for <code>_CDCC_c</code> policy parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1597">#1597</a>
-  by Matt Jensen]
-- Make several UBI policy parameters available to external applications like TaxBrain
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1599">#1599</a>
-  by Matt Jensen]</p>
-<p><strong>Bug Fixes</strong>
-- Relax _STD and _STD_Dep minimum value warning logic
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1578">#1578</a>
-  by Martin Holmer]
-- Fix macro-elasticity model logic so that GDP change in year t depends on tax rate changes in year t-1
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1579">#1579</a>
-  by Martin Holmer]
-- Fix bugs in automatic generation of reform documentation having to do with policy parameters that are boolean scalars
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1596">#1596</a>
-  by Martin Holmer]</p>
-<h2>2017-09-21 Release 0.11.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1555">#1555</a>)</p>
-<p><strong>API Changes</strong>
-- Revise dropq distribution and difference tables used by TaxBrain
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1537">#1537</a>
-  by Anderson Frailey and Martin Holmer]
-- Make dropq run_nth_year_tax_calc_model return a dictionary of results
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1543">#1543</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add option to cap the amount of gross itemized deductions allowed as a decimal fraction of AGI
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1542">#1542</a>
-  by Matt Jensen]
-- Add dropq tables using AGI as income measure for TaxBrain use
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1544">#1544</a>
-  by Martin Holmer]
-- Add JSON reform file for Brown-Khanna GAIN Act that expands the EITC
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1555">#1555</a>
-  by Matt Jensen and Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-09-13 Release 0.10.2</h2>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- Allow policy parameter suffix logic to work even when there are reform errors
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/commit/34561ffdeb23c632e248d760c0e34417df0b41f3">34561ff</a>
-  by Martin Holmer]</p>
-<h2>2017-09-08 Release 0.10.1</h2>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- Fix vagueness of error/warning messages for non-scalar policy parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/commit/5536792538c3f3e687cccc9e38b20949ac68cb9a">5536792</a>
-  by Martin Holmer]</p>
-<h2>2017-08-28 Release 0.10.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1531">#1531</a>)</p>
-<p><strong>API Changes</strong>
-- Add dropq function that returns reform warnings and errors
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1524">#1524</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add option to use policy parameter suffixes in JSON reform files
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1505">#1505</a>
-  by Martin Holmer] and
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1520">#1520</a>
-  by Martin Holmer]
-- Add rounding of wage-inflated or price-inflated parameter values to nearest cent
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1506">#1506</a>
-  by Martin Holmer]
-- Add extensive checking of reform policy parameter names and values
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1524">#1524</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-07-26 Release 0.9.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1490">#1490</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add several taxcalc/reforms/earnings_shifting.* files that analyze the revenue implications of high-paid workers forming personal LLCs to contract with their former employers under the Trump2017.json reform
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1464">#1464</a>
-  by Martin Holmer]
-- Add ability to read and calculate taxes with new CPS input data for 2014 and subsequent years
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1484">#1484</a>
-  by Martin Holmer]
-- Add tests of ability to calculate taxes with new CPS input data
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1490">#1490</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Fix decorators bug that appeared when numpy 1.13.1, and pandas 0.20.2 that uses numpy 1.13, recently became available
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1470">#1470</a>
-  by T.J. Alumbaugh]
-- Fix records bug that appeared when numpy 1.13.1, and pandas 0.20.2 that uses numpy 1.13, recently became available
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1473">#1473</a>
-  by Martin Holmer]</p>
-<h2>2017-07-06 Release 0.9.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1438">#1438</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add Form 1065 Schedule K-1 self-employment earnings to calculation of self-employment payroll taxes
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1438">#1438</a>
-  by Martin Holmer],
-  which requires new <code>puf.csv</code> input file with this information:
-  * Byte size: 53743252
-  * MD5 checksum: ca0ad8bbb05ee15b1cbefc7f1fa1f965
-- Improve calculation of sub-sample weights
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1441">#1441</a>
-  by Hank Doupe]</p>
-<p><strong>Bug Fixes</strong>
-- Fix personal refundable credit bug and personal nonrefundable credit bug
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1450">#1450</a>
-  by Martin Holmer]</p>
-<h2>2017-06-14 Release 0.9.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1431">#1431</a>)</p>
-<p><strong>API Changes</strong>
-- Initial specification of public API removes several unused utility
-  functions and makes private several Tax-Calculator members whose
-  only role is to support public members
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1424">#1424</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add nonrefundable personal credit reform options
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1427">#1427</a>
-  by William Ensor]</p>
-<ul>
-<li>
-<p>Add repeal personal exemptions for dependents under age 18 reform option
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1428">#1428</a>
-  by Hank Doupe]</p>
-</li>
-<li>
-<p>Switch to use of new improved <code>puf.csv</code> input file that causes small
-  changes in tax results
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1429">#1429</a>
-  by Martin Holmer],
-  which requires new <code>puf.csv</code> input file with this information:</p>
-</li>
-<li>Byte size: 52486351</li>
-<li>MD5 checksum: d56b649c92049e32501b2d2fc5c36c92</li>
-</ul>
-<p><strong>Bug Fixes</strong>
-- Fix logic of gross casualty loss calculation by moving it out of
-  Tax-Calculator and into the taxdata repository
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1426">#1426</a>
-  by Martin Holmer]</p>
-<h2>2017-06-08 Release 0.8.5</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1416">#1416</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add column to differences table to show the change in tax liability
-  as percentage of pre-reform after tax income
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1375">#1375</a>
-  by Anderson Frailey]
-- Add policy reform file for the Renacci reform
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1376">#1376</a>,
-  <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1383">#1383</a>
-  and
-  <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1385">#1385</a>
-  by Hank Doupe]
-- Add separate ceiling for each itemized deduction parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1385">#1385</a>
-  by Hank Doupe]</p>
-<p><strong>Bug Fixes</strong>
-- Fix bug in add_weighted_income_bins utility function
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1387">#1387</a>
-  by Martin Holmer]</p>
-<h2>2017-05-12 Release 0.8.4</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1363">#1363</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add economic response assumption file template to documentation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1332">#1332</a>
-  by Cody Kallen]
-- Complete process of creating <a href="http://open-source-economics.github.io/Tax-Calculator/">user
-  documentation</a>
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1355">#1355</a>
-  by Martin Holmer]
-- Add Tax-Calculator conda package for Python 3.6
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1361">#1361</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-05-01 Release 0.8.3</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1328">#1328</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add --test installation option to Tax-Calculator CLI
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1306">#1306</a>
-  by Martin Holmer]
-- Add --sqldb SQLite3 database dump output option to CLI
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1312">#1312</a>
-  by Martin Holmer]
-- Add a reform preset for the April 2017 Trump tax plan
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1323">#1323</a>
-  by Cody Kallen]
-- Add Other Taxes to tables and clarify documentation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1328">#1328</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-04-13 Release 0.8.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1295">#1295</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- Minor edits to comments in Trump/Clinton policy reform files
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1295">#1295</a>
-  by Matt Jensen]</p>
-<h2>2017-04-13 Release 0.8.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1293">#1293</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add testing for notebooks, starting with the behavior_example and
-  10-minute notebooks
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1198">#1198</a>
-  by Peter Steinberg]
-- Add MTR with respect to spouse earnings
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1257">#1257</a>
-  by Anderson Frailey]
-- Add tax differences table to Tax-Calculator CLI --tables output
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1265">#1265</a>
-  by Martin Holmer]
-- Update Jupyter Notebooks to demonstrate the latest Python API
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1277">#1277</a>
-  by Matt Jensen]
-- Enable the charitable givings elasticity to vary by AGI value
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1278">#1278</a>
-  by Matt Jensen]
-- Introduce records_variables.json to serve as a single source of
-  truth for Records variables
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1179">#1179</a>
-  and
-  <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1285">#1285</a>
-  by Zach Risher]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-03-24 Release 0.8.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1260">#1260</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add ability to calculate, and possibly tax, UBI benefits
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1235">#1235</a>
-  by Anderson Frailey]
-- Add additional deduction and credit haircut policy parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1247">#1247</a>
-  by Anderson Frailey]
-- Add constant charitable giving elasticities to behavioral response
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1246">#1246</a>
-  by Matt Jensen]
-- Add another credit haircut policy parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1252">#1252</a>
-  by Anderson Frailey]
-- Make Tax-Calculator CLI an entry point to the taxcalc package
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1253">#1253</a>
-  by Martin Holmer]
-- Add --tables option to Tax-Calculator CLI
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1258">#1258</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-03-08 Release 0.7.9</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1228">#1228</a>)</p>
-<p><strong>API Changes</strong>
-- Move simtax.py to taxcalc/validation/taxsim directory
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1288">#1288</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Make import style more consistent
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1288">#1288</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Add growdiff.json to MANIFEST.in
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1217">#1217</a>
-  and
-  <a href="https://github.com/open-source-economics/Tax-Calculator/pull/1219">#1219</a>
-  by Peter Steinberg]</p>
-<h2>2017-03-01 Release 0.7.8</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1206">#1206</a>)</p>
-<p><strong>API Changes</strong>
-- Redesign Growth class to support more realistic growth responses
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1199">#1199</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add a policy reform file for key provisions of the Ryan-Brady Better
-  Way tax plan
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1204">#1204</a>
-  by Cody Kallen]
-- Add a policy reform file for select provisions of the Clinton 2016
-  campaign tax plan
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1206">#1206</a>
-  by Cody Kallen]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2017-02-16 Release 0.7.7</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1197">#1197</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- Add name of new Stage3 adjustment-ratios file to MANIFEST.in
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1197">#1197</a>
-  by Anderson Frailey]</p>
-<h2>2017-02-15 Release 0.7.6</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1192">#1192</a>)</p>
-<p><strong>API Changes</strong>
-- Add Stage3 adjustment ratios to target IRS-SOI data on the
-  distribution of interest income
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1193">#1193</a>
-  by Anderson Frailey],
-  which requires new <code>puf.csv</code> input file with this information:
-  * Byte size: 51470450
-  * MD5 checksum: 3a02e9909399ba85d0a7cf5e98149b90</p>
-<p><strong>New Features</strong>
-- Add to diagnostic table the number of tax units with non-positive
-  income and combined tax liability
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1170">#1170</a>
-  by Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- Correct Policy wage growth rates to agree with CBO projection
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1171">#1171</a>
-  by Martin Holmer]</p>
-<h2>2017-01-31 Release 0.7.5</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1169">#1169</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add a Trump 2016 policy reform JSON file
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1135">#1135</a>
-  by Matt Jensen]
-- Reduce size of input file by rounding weights
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1158">#1158</a>
-  by Anderson Frailey]
-- Update current-law policy parameters to 2017 IRS values
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1169">#1169</a>
-  by Anderson Frailey]</p>
-<p><strong>Bug Fixes</strong>
-- Index EITC investment income cap to inflation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1169">#1169</a>
-  by Anderson Frailey]</p>
-<h2>2017-01-24 Release 0.7.4</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1152">#1152</a>)</p>
-<p><strong>API Changes</strong>
-- Separate policy reforms and response assumptions into two separate
-  JSON files
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1148">#1148</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- New JSON reform file examples and capabilities
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1123">#1123</a>-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1131">#1131</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- Fix bugs in 10-minute notebook
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1152">#1152</a>
-  by Matt Jensen]</p>
-<h2>2017-01-24 Release 0.7.3</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1113">#1113</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add ability to use an expression to specify a policy parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1081">#1081</a>
-  by Martin Holmer]
-- Expand scope of JSON reform file to include non-policy parameters
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1083">#1083</a>
-  by Martin Holmer]
-- Add ability to conduct normative expected-utility analysis
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1098">#1098</a>
-  by Martin Holmer]
-- Add ability to compute MTR with respect to charitable cash
-  contributions
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1104">#1104</a>
-  by Cody Kallen]
-- Unify environment definition by removing requirements.txt
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1094">#1094</a>
-  by Zach Risher]
-- Reorganize current_law_policy.json and add section headers
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1109">#1109</a>
-  by Matt Jensen]
-- Add dollar limit on itemized deductions
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1084">#1084</a>
-  by Cody Kallen]
-- Add testing for Windows with Appveyor
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1111">#1111</a>
-  by T.J. Alumbaugh]</p>
-<p><strong>Bug Fixes</strong>
-- Fix capital-gains-reform bug reported by Cody Kallen
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1088">#1088</a>
-  by Martin Holmer]
-- Provide Pandas 0.19.1 compatibility by fixing DataFrame.to_csv()
-  usage
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1092">#1092</a>
-  by Zach Risher]</p>
-<h2>2016-12-05 Release 0.7.2</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1082">#1082</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add ability to simulate non-refundable dependent credit
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1069">#1069</a>
-  by Cody Kallen]
-- Add ability to narrow investment income exclusion base
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1072">#1072</a>
-  by Martin Holmer]
-- Replace use of two cmbtp_* variables with a single cmbtp variable
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1077">#1077</a>
-  by Martin Holmer],
-  which requires new <code>puf.csv</code> input file with this information:
-  * Byte size: 50953138
-  * MD5 checksum: acbf905c8b7d29fd4b06b13e1cc8a60c</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2016-11-15 Release 0.7.1</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1060">#1060</a>)</p>
-<p><strong>API Changes</strong>
-- Rename policy parameters for consistency
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1051">#1051</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- Add ability to simulate broader range of refundable CTC reforms
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1055">#1055</a>
-  by Matt Jensen]
-- Add more income items into expanded_income variable
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1057">#1057</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2016-11-09 Release 0.7.0</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1044">#1044</a>)</p>
-<p><strong>API Changes</strong>
-- Rename and refactor old add_weighted_decile_bins utility function
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1043">#1043</a>
-  by Martin Holmer]</p>
-<p><strong>New Features</strong>
-- None</p>
-<p><strong>Bug Fixes</strong>
-- Remove unused argument from means_and_comparisons utility function
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1044">#1044</a>
-  by Martin Holmer]</p>
-<h2>2016-11-09 Release 0.6.9</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1039">#1039</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add calculation of MTR wrt e26270, partnership &amp; S-corp income
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/987">#987</a>
-  by Cody Kallen]
-- Add utility function that plots marginal tax rates by percentile
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/948">#948</a>
-  by Sean Wang]
-- Add ability to simulate Trump-style dependent care credit
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/999">#999</a>
-  by Anderson Frailey]
-- Add ability to simulate Clinton-style NIIT reform
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1012">#1012</a>
-  by Martin Holmer]
-- Add ability to simulate Clinton-style CTC expansion
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1039">#1039</a>
-  by Matt Jensen]</p>
-<p><strong>Bug Fixes</strong>
-- Fix bug in TaxGains function
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/981">#981</a>
-  by Cody Kallen]
-- Fix bug in multiyear_diagnostic_table utility function
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/988">#988</a>
-  by Matt Jensen]
-- Fix AMT bug that ignored value of AMT_CG_rt1 parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1000">#1000</a>
-  by Martin Holmer]
-- Fix several other minor AMT CG bugs
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1001">#1001</a>
-  by Martin Holmer]
-- Move self-employment tax from income tax total to payroll tax total
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1021">#1021</a>
-  by Martin Holmer]
-- Add half of self-employment tax to expanded income
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/1032">#1032</a>
-  by Martin Holmer]</p>
-<h2>2016-10-07 Release 0.6.8</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/970">#970</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add ability to simulate reforms that limit benefit of itemized
-  deductions
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/867">#867</a>
-  by Matt Jensen]
-- Add investment income exclusion policy parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/972">#972</a>
-  by Cody Kallen]
-- Add ability to eliminate differential tax treatment of LTCG+QDIV
-  income
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/973">#973</a>
-  by Martin Holmer]</p>
-<p><strong>Bug Fixes</strong>
-- None</p>
-<h2>2016-09-29 Release 0.6.7</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/945">#945</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add extra income tax brackets and rates
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/858">#858</a>,
-  Sean Wang]
-- Add ability to simulate Fair Share Tax, or Buffet Rule, reforms
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/904">#904</a>
-  by Anderson Frailey]
-- Add ability to tax pass-through income at different rates
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/913">#913</a>
-  by Sean Wang]
-- Add itemized-deduction surtax exemption policy parameter
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/926">#926</a>
-  by Matt Jensen]
-- Add ability to simulate high-AGI surtax reforms
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/939">#939</a>
-  by Sean Wang]</p>
-<p><strong>Bug Fixes</strong>
-- Correct Net Investment Income Tax (NIIT) calculation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/874">#874</a>
-  by Martin Holmer]
-- Correct Schedule R credit calculation
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/898">#898</a>
-  by Martin Holmer]
-- Remove logic for expired First-Time Homebuyer Credit
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/914">#914</a>
-  by Martin Holmer]</p>
-<h2>2016-08-13 Release 0.6.6</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/844">#844</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Revise code to use smaller <code>puf.csv</code> input file and make changes to
-  create that input file
-- Remove debugging variables from functions.py reducing execution time
-  by 42 percent
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/833">#833</a>]
-- Add comments to show one way to use Python debugger to trace
-  Tax-Calculator code
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/835">#835</a>]
-- Add tests that confirm zeroing-out CALCULATED_VARS at start leaves
-  results unchanged
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/837">#837</a>]
-- Revise logic used to estimate behavioral responses to policy reforms
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/846">#846</a>,
-  <a href="https://github.com/open-source-economics/Tax-Calculator/pull/854">#854</a>
-  and
-  <a href="https://github.com/open-source-economics/Tax-Calculator/pull/857">#857</a>]</p>
-<p><strong>Bug Fixes</strong>
-- Make 2013-2016 medical deduction threshold for elderly be 7.5% of
-  AGI (not 10%)
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/839">#839</a>]
-- Fix typo so that two ways of limiting itemized deductions produce
-  the same results
-  [<a href="https://github.com/open-source-economics/Tax-Calculator/pull/842">#842</a>]</p>
-<h2>2016-07-12 Release 0.6.5</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/820">#820</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add --exact option to simtax.py and inctax.py scripts
-- Add calculation of Schedule R credit
-- Remove _cmp variable from functions.py code</p>
-<p><strong>Bug Fixes</strong>
-- Fix itemized deduction logic for charity
-- Remove Numba dependency</p>
-<h2>2016-06-17 Release 0.6.4</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/794">#794</a>)</p>
-<p><strong>API Changes</strong>
-- Create Consumption class used to compute "effective" marginal tax rates</p>
-<p><strong>New Features</strong>
-- Revise Behavior class logic
-- Add unit tests to increase code coverage to 98 percent
-- Add scripts to version and release</p>
-<p><strong>Bug Fixes</strong>
-- Test TaxBrain handling of delayed reforms
-- Move cmbtp calculation and earnings splitting logic from Records
-  class to <code>puf.csv</code> file preparation
-- Update Numpy and Pandas dependencies to latest versions to avoid a
-  bug in the Windows conda package for Pandas 0.16.2</p>
-<h2>2016-05-09 Release 0.6.3</h2>
-<p>(last merged pull request is
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/727">#727</a>)</p>
-<p><strong>API Changes</strong>
-- None</p>
-<p><strong>New Features</strong>
-- Add --records option to simtax.py
-- Add --csvdump option to inctax.py
-- Add three "d" samples to Tax-Calculator versus Internet-TAXSIM comparisons
-- Add first set of Tax-Calculator versus TaxBrain comparisons
-- Add data and logic to implement EITC age-eligibility rules
-- Update and fix 10_minutes_to_Tax-Calculator.ipynb
-- Update files in taxcalc/comparison</p>
-<p><strong>Bug Fixes</strong>
-- Fix Child Care Expense logic
-- Exclude dependents from EITC eligibility</p>
-<h2>Before Release 0.6.2</h2>
-<p>See commit history for pull requests before
-<a href="https://github.com/open-source-economics/Tax-Calculator/pull/650">#650</a></p> <a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/RELEASES.md >[source]</a></p>
+  * Byte size: 56415698<br/>
+  * MD5 checksum: 3f1c7c2b16b6394a9148779db992bed1</p> <strong>API Changes</strong> <a href="https://github.com/open-source-economics/Tax-Calculator/pull/2058">#2058</a> <code>puf.csv</code> <a href="https://github.com/open-source-economics/taxdata/pull/283">taxdata pull request 283</a> <br/> <p><strong>New Features</strong>
+- None</p> <strong>New Features</strong> <p><strong>Bug Fixes</strong>
+- None</p> <strong>Bug Fixes</strong></p>
+                
+                <p><a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/RELEASES.md >[source]</a></p>
+                
+                
+
+                
+                <h4>Disclaimer: </h4>
+                <p><p>Results will change as the underlying models improve. A fundamental
+reason for adopting open source methods in this project is so that
+people from all backgrounds can contribute to the models that our
+society uses to assess economic policy; when community-contributed
+improvements are incorporated, the model will produce different
+results.</p> </p>
+                
+                <p><a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/README.md >[source]</a></p>
+                
+                
+
+                
+
+                
+
+                
+                <h4>Contributor Overview: </h4>
+                <p><p>If you want to <strong>report a bug</strong>, create a new issue
+<a href="https://github.com/open-source-economics/Tax-Calculator/issues">here</a>
+providing details on what you think is wrong with Tax-Calculator.</p> <strong>report a bug</strong> <a href="https://github.com/open-source-economics/Tax-Calculator/issues">here</a> <p>If you want to <strong>request an enhancement</strong>, create a new issue
+<a href="https://github.com/open-source-economics/Tax-Calculator/issues">here</a>
+providing details on what you think should be added to Tax-Calculator.</p> <strong>request an enhancement</strong> <a href="https://github.com/open-source-economics/Tax-Calculator/issues">here</a> <p>If you want to <strong>propose code changes</strong>, follow the directions in the
+<a href="http://taxcalc.readthedocs.io/en/latest/contributor_guide.html">Contributor
+Guide</a>
+on how to clone the Tax-Calculator git repository.  Before developing
+any code changes be sure to read completely the Contributor Guide and
+then read about our <a href="CODING.md">coding style</a> and <a href="TESTING.md">testing
+procedures</a>.  The Tax-Calculator <a href="RELEASES.md">release
+history</a> provides a summary of past and current
+development work.</p> <strong>propose code changes</strong> <a href="http://taxcalc.readthedocs.io/en/latest/contributor_guide.html">Contributor
+Guide</a> <a href="CODING.md">coding style</a> <a href="TESTING.md">testing
+procedures</a> <a href="RELEASES.md">release
+history</a> <p>If you are relying on Tax-Calculator capabilities in your own project,
+be sure to read the definition of the <a href="http://taxcalc.readthedocs.io/en/latest/public_api.html">Tax-Calculator Public
+API</a>.</p> <a href="http://taxcalc.readthedocs.io/en/latest/public_api.html">Tax-Calculator Public
+API</a> </p>
+                
+                <p><a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/README.md >[source]</a></p>
+                
+                
+
+                
+                <h4>Change Log: </h4>
+                <p><p>This description of Tax-Calculator coding style is written for a
+person who wants to contribute changes to Tax-Calculator source code.
+It assumes that you have read the <a href="http://taxcalc.readthedocs.io/en/latest/contributor_guide.html">Contributor
+Guide</a>,
+have cloned the <a href="https://github.com/open-source-economics/Tax-Calculator">central GitHub Tax-Calculator
+repository</a>
+to your GitHub account and to your local computer, and are familiar
+with how to prepare a pull request for consideration by the core
+development team.  This document describes the coding style you should
+follow when preparing a pull request on your local computer.  By coding
+style we mean primarily the vertical and horizontal spacing of the
+code and the naming of new variables.</p> <a href="http://taxcalc.readthedocs.io/en/latest/contributor_guide.html">Contributor
+Guide</a> <a href="https://github.com/open-source-economics/Tax-Calculator">central GitHub Tax-Calculator
+repository</a> <p>You main objective is to write Python code that is indistinguishable
+in style from existing code in the repository.  In other words, after
+your new code is merged with existing code it should be difficult for
+somebody else to determine what you contributed.</p> <p>In order to achieve this objective any new policy parameter names must
+comply with the <a href="http://taxcalc.readthedocs.io/en/latest/parameter_naming.html">parameter naming and placement
+conventions</a>.</p> <a href="http://taxcalc.readthedocs.io/en/latest/parameter_naming.html">parameter naming and placement
+conventions</a> <p>In addition, any new or revised code must meet certain coding style
+guidelines.</p> <p>There are two recommended tools that can help you develop seamless and
+correct code enhancements.</p> </p>
+                
+                <p><a href=https://raw.githubusercontent.com/open-source-economics/Tax-Calculator/master/CODING.md >[source]</a></p>
+                
+                
+
+                
+
+                
+
+                
+                <h4>Webbapp Link: </h4>
+                <p><a href="https://www.ospc.org/taxbrain/">https://www.ospc.org/taxbrain/</a> </p>
+                
+                
+
+                
+                <h4>Public Issue Tracker: </h4>
+                <p><a href="https://github.com/open-source-economics/Tax-Calculator/issues">https://github.com/open-source-economics/Tax-Calculator/issues</a> </p>
+                
+                
+
+                
+                <h4>Public Q&A: </h4>
+                <p><a href="https://github.com/open-source-economics/Tax-Calculator/issues">https://github.com/open-source-economics/Tax-Calculator/issues</a> </p>
+                
+                
+
             </div>
         </div>
     </body>
