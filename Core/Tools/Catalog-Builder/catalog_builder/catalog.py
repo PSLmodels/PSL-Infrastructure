@@ -2,8 +2,6 @@ import json
 import os
 from collections import defaultdict
 
-from jinja2 import Template
-
 from catalog_builder import utils
 
 
@@ -109,31 +107,18 @@ class CatalogBuilder:
             self.CURRENT_PATH, "../templates", "model_template.html"
         )
 
-        rendered = self.render_template(models_path, catalog=self.catalog)
+        rendered = utils.render_template(models_path, catalog=self.catalog)
         pathout = os.path.join(self.pages_dir, "models.html")
         with open(pathout, "w") as out:
             out.write(rendered)
 
         for _, project in self.catalog.items():
-            rendered = self.render_template(model_path, project=project)
+            rendered = utils.render_template(model_path, project=project)
             pathout = os.path.join(
                 self.pages_dir, f"projects/{project['name']['value']}.html"
             )
             with open(pathout, "w") as out:
                 out.write(rendered)
-
-    def render_template(self, template_path, **render_kwargs):
-        """
-        Helper method to render the template file and context.
-
-        returns:
-        --------
-        rendered html
-        """
-        with open(template_path, "r") as f:
-            template_str = f.read()
-        template = Template(template_str)
-        return template.render(**render_kwargs)
 
     def dump_catalog(self, output_path=None):
         """
