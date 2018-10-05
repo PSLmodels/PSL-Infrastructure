@@ -18,11 +18,11 @@ def parse_section(doc, section_start, section_end):
     --------
     HTML that was rendered from Markdown
     """
-    doc = doc.replace('#.#.#', '\#.\#.\#')
+    doc = doc.replace("#.#.#", "\#.\#.\#")
     html = markdown.markdown(doc)
     if section_start is None:
         return html
-    soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, "html.parser")
     get_next = False
     data = []
     for node in soup.find_all():
@@ -33,7 +33,7 @@ def parse_section(doc, section_start, section_end):
             data.append(str(node))
         else:
             get_next = False
-    return ' '.join(data)
+    return " ".join(data)
 
 
 def data_from_url(url, start_header, end_header):

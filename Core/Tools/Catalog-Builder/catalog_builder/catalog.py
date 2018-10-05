@@ -42,11 +42,12 @@ class CatalogBuilder:
 
     def __init__(self, projects, project_dir=None, pages_dir=None):
         self.projects = projects
-        self.project_dir = (
-            project_dir or
-            os.path.join(self.CURRENT_PATH, '../../../../Catalog/Projects/'))
-        self.pages_dir = (
-            pages_dir or os.path.join(self.CURRENT_PATH, '../../Web/pages/'))
+        self.project_dir = project_dir or os.path.join(
+            self.CURRENT_PATH, "../../../../Catalog/Projects/"
+        )
+        self.pages_dir = pages_dir or os.path.join(
+            self.CURRENT_PATH, "../../Web/pages/"
+        )
 
         self.catalog = defaultdict(dict)
 
@@ -58,32 +59,38 @@ class CatalogBuilder:
         to the `catalog` attribute.
         """
         for p in self.projects:
-            cat_meta = os.path.join(self.project_dir, p['repo'],
-                                    'catalog.json')
-            with open(cat_meta, 'r') as f:
+            cat_meta = os.path.join(
+                self.project_dir, p["repo"], "catalog.json"
+            )
+            with open(cat_meta, "r") as f:
                 cat_meta = json.loads(f.read())
-            self.catalog[p['repo']]['name'] = {'value': p['repo'],
-                                                 'source': ''}
+            self.catalog[p["repo"]]["name"] = {
+                "value": p["repo"],
+                "source": "",
+            }
             for k, v in cat_meta.items():
-                if v['type'] == "github_file":
-                    url_base = (f"https://raw.githubusercontent.com/"
-                                f"{p['org']}/{p['repo']}/{p['branch']}/")
-                    source = os.path.join(url_base,
-                                          v['source'])
-                    value = utils.data_from_url(source, v['start_header'],
-                                                v['end_header'])
-                elif v['type'] == "url":
-                    source = v['source']
-                    value = utils.data_from_url(source, v['start_header'],
-                                                v['end_header'])
-                elif v['data'] is not None:
+                if v["type"] == "github_file":
+                    url_base = (
+                        f"https://raw.githubusercontent.com/"
+                        f"{p['org']}/{p['repo']}/{p['branch']}/"
+                    )
+                    source = os.path.join(url_base, v["source"])
+                    value = utils.data_from_url(
+                        source, v["start_header"], v["end_header"]
+                    )
+                elif v["type"] == "url":
+                    source = v["source"]
+                    value = utils.data_from_url(
+                        source, v["start_header"], v["end_header"]
+                    )
+                elif v["data"] is not None:
                     source = None
-                    value = v['data']
+                    value = v["data"]
                 else:
-                    print(f'No data specified for project, entry: {p}, {k}')
+                    print(f"No data specified for project, entry: {p}, {k}")
                     source, value = None, None
-                res = {'source': source, 'value': value}
-                self.catalog[p['repo']][k] = res
+                res = {"source": source, "value": value}
+                self.catalog[p["repo"]][k] = res
 
     def write_html(self):
         """
@@ -95,22 +102,24 @@ class CatalogBuilder:
 
         Data is written to the `Web/pages` directory
         """
-        models_path = os.path.join(self.CURRENT_PATH, '../templates',
-                                   'models_template.html')
-        model_path = os.path.join(self.CURRENT_PATH, '../templates',
-                                  'model_template.html')
+        models_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "models_template.html"
+        )
+        model_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "model_template.html"
+        )
 
         rendered = self.render_template(models_path, catalog=self.catalog)
-        pathout = os.path.join(self.pages_dir, 'models.html')
-        with open(pathout, 'w') as out:
+        pathout = os.path.join(self.pages_dir, "models.html")
+        with open(pathout, "w") as out:
             out.write(rendered)
 
         for _, project in self.catalog.items():
             rendered = self.render_template(model_path, project=project)
             pathout = os.path.join(
-                self.pages_dir,
-                f"projects/{project['name']['value']}.html")
-            with open(pathout, 'w') as out:
+                self.pages_dir, f"projects/{project['name']['value']}.html"
+            )
+            with open(pathout, "w") as out:
                 out.write(rendered)
 
     def render_template(self, template_path, **render_kwargs):
@@ -121,7 +130,7 @@ class CatalogBuilder:
         --------
         rendered html
         """
-        with open(template_path, 'r') as f:
+        with open(template_path, "r") as f:
             template_str = f.read()
         template = Template(template_str)
         return template.render(**render_kwargs)
@@ -137,17 +146,20 @@ class CatalogBuilder:
         """
         cat_json = json.dumps(self.catalog)
         if output_path is not None:
-            with open(output_path, 'w') as f:
+            with open(output_path, "w") as f:
                 f.write(cat_json)
         return cat_json
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     projects = [
-        {'org': 'open-source-economics',
-         'repo': 'Tax-Calculator',
-         'branch': 'master'}
+        {
+            "org": "open-source-economics",
+            "repo": "Tax-Calculator",
+            "branch": "master",
+        }
     ]
     cb = CatalogBuilder(projects)
     cb.load_catalog()
     cb.write_html()
-    cb.dump_catalog(os.path.join(cb.project_dir, 'catalog.json'))
+    cb.dump_catalog(os.path.join(cb.project_dir, "catalog.json"))
