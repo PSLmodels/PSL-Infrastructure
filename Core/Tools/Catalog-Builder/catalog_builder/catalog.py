@@ -88,34 +88,37 @@ class CatalogBuilder:
         parsed via the `parse_section` function. The parsed data is saved
         to the `catalog` attribute.
         """
-        for p in self.projects:
+        for project in self.projects:
             cat_meta = os.path.join(
-                self.project_dir, p["repo"], "catalog.json"
+                self.project_dir, project["repo"], "catalog.json"
             )
             with open(cat_meta, "r") as f:
                 cat_meta = json.loads(f.read())
-            self.catalog[p["repo"]]["name"] = {
-                "value": p["repo"],
+            self.catalog[project["repo"]]["name"] = {
+                "value": project["repo"],
                 "source": "",
             }
-            for k, v in cat_meta.items():
-                if v["type"] == "github_file":
-                    url_base = (
-                        f"https://raw.githubusercontent.com/"
-                        f"{p['org']}/{p['repo']}/{p['branch']}/"
+            for attr, config in cat_meta.items():
+                if config["type"] == "github_file":
+                    value = utils.get_from_github_api(project, config)
+                    source = (
+                        f"https://github.com/{project['org']}/"
+                        f"{project['repo']}/blob/{project['branch']}/"
+                        f"{config['source']}"
                     )
-                    source = os.path.join(url_base, v["source"])
-                    value = utils.data_from_url(
-                        source, v["start_header"], v["end_header"]
-                    )
-                elif v["type"] == "html":
-                    source = v["source"]
-                    value = v["data"]
+
+                elif config["type"] == "html":
+                    source = config["source"]
+                    value = config["data"]
                 else:
-                    print(f"No data specified for project, entry: {p}, {k}")
+                    msg = (
+                        f"No data specified for project, entry: "
+                        f"{attr}, {config}"
+                    )
+                    print(msg)
                     source, value = None, None
                 res = {"source": source, "value": value}
-                self.catalog[p["repo"]][k] = res
+                self.catalog[project["repo"]][attr] = res
 
     def write_html(self):
         """

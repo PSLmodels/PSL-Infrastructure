@@ -1,3 +1,6 @@
+import base64
+import json
+
 import markdown
 import requests
 from bs4 import BeautifulSoup
@@ -69,10 +72,25 @@ def render_template(template_path, **render_kwargs):
     return template.render(**render_kwargs)
 
 
-def data_from_url(url, start_header, end_header):
-    resp = requests.get(url)
-    text = resp.text
-    return parse_section(text, start_header, end_header)
+def get_from_github_api(project, config):
+    """
+    Read data from github api. Ht to @andersonfrailey for decoding the response
+    """
+    url = (
+        f"https://api.github.com/repos/{project['org']}/{project['repo']}/"
+        f"contents/{config['source']}"
+    )
+    response = requests.get(url)
+    try:
+        sanatized_content = response.json()["content"].replace("\n", "")
+        encoded_content = sanatized_content.encode()
+        decoded_bytes = base64.decodebytes(encoded_content)
+        text = decoded_bytes.decode()
+    # Test cases return a text document. A better (but more time demanding)
+    # solution would be to construct a mock GitHub response
+    except json.decoder.JSONDecodeError:
+        text = response.text
+    return parse_section(text, config["start_header"], config["end_header"])
 
 
 namemap = {
