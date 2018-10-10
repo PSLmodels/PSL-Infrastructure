@@ -17,6 +17,38 @@ class CatalogBuilder:
     Catalog schema:
 
     {
+        'attribute': {
+            'start_header': header signalling section start for pulling data
+            'end_header': header signalling section to stop pulling data
+            'type': 'github_file' or 'html'
+            'data': null or HTML string to be displayed in section
+            'source': information required to construct location of data
+        }
+    }
+        Allowed attributes:
+            - project_one_line: NA
+            - key_features: Key Features,
+            - project_overview: Project Overview,
+            - citation: Citation,
+            - license: License,
+            - user_documentation: User Documentation,
+            - user_changelog_recent: User Changelog Recent,
+            - user_changelog: User Changelog,
+            - dev_changelog: Developer Changelog,
+            - disclaimer: Disclaimer,
+            - user_case_studies: User Case Studies,
+            - project_roadmap: Project Roadmap,
+            - contributor_overview: Contributor Overview,
+            - contributor_guide: Contributor Guide,
+            - governance_overview: Governance Overview,
+            - public_funding: Public Funding,
+            - link_to_webapp: Link to webapp,
+            - public_issue_tracker: Public Issue Tracker,
+            - public_qanda: Public Q & A
+
+    Catalog schema:
+
+    {
         'project1': {
             'attribute1': {
                 'value': html data,
@@ -76,13 +108,8 @@ class CatalogBuilder:
                     value = utils.data_from_url(
                         source, v["start_header"], v["end_header"]
                     )
-                elif v["type"] == "url":
+                elif v["type"] == "html":
                     source = v["source"]
-                    value = utils.data_from_url(
-                        source, v["start_header"], v["end_header"]
-                    )
-                elif v["data"] is not None:
-                    source = None
                     value = v["data"]
                 else:
                     print(f"No data specified for project, entry: {p}, {k}")
@@ -113,7 +140,8 @@ class CatalogBuilder:
             out.write(rendered)
 
         for _, project in self.catalog.items():
-            rendered = utils.render_template(model_path, project=project)
+            rendered = utils.render_template(model_path, project=project,
+                                             namemap=utils.namemap)
             pathout = os.path.join(
                 self.pages_dir, f"projects/{project['name']['value']}.html"
             )

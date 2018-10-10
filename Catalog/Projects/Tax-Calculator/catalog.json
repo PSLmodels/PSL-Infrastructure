@@ -1,4 +1,18 @@
 {
+    "project_one_line": {
+        "start_header": null,
+        "end_header": null,
+        "source": "https://github.com/open-source-economics/Tax-Calculator",
+        "type": "html",
+        "data": "<p>Federal Individual Income and Payroll Tax Microsimulation Model</p>"
+    },
+    "key_features": {
+        "start_header": null,
+        "end_header": null,
+        "source": null,
+        "type": null,
+        "data": null
+    },
     "project_overview": {
         "start_header": "What is Tax-Calculator?",
         "end_header": "Disclaimer",
@@ -16,11 +30,18 @@
     "license": {
         "start_header": null,
         "end_header": null,
-        "source": null,
-        "type": null,
-        "data": null
+        "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/LICENSE.md",
+        "data": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+        "type": "html"
     },
     "user_documentation": {
+        "start_header": null,
+        "end_header": null,
+        "source": "http://open-source-economics.github.io/Tax-Calculator/index.html",
+        "type": "html",
+        "data": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html\">http://open-source-economics.github.io/Tax-Calculator/index.html</a>"
+    },
+    "user_changelog_recent": {
         "start_header": null,
         "end_header": null,
         "source": null,
@@ -30,9 +51,9 @@
     "user_changelog": {
         "start_header": null,
         "end_header": null,
-        "source": null,
-        "type": null,
-        "data": null
+        "source": "http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew",
+        "type": "html",
+        "data": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew\">http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew</a>"
     },
     "dev_changelog": {
         "start_header": "2018-09-11 Release 0.21.0 : first release compatible only with Python 3.6",
@@ -102,13 +123,13 @@
         "end_header": null,
         "data": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>",
         "source": null,
-        "type": null
+        "type": "html"
     },
     "public_qanda": {
         "start_header": null,
         "end_header": null,
         "data": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>",
         "source": null,
-        "type": null
+        "type": "html"
     }
 }
