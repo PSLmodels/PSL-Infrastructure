@@ -48,7 +48,6 @@ def parse_section(doc, section_start, section_end):
         raise SectionHeadersDoNotExist(
             f"{section_start} and/or {section_end} was not found."
         )
-    print(data)
     return " ".join(data)
 
 
