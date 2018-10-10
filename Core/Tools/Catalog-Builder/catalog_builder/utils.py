@@ -72,22 +72,26 @@ def render_template(template_path, **render_kwargs):
     return template.render(**render_kwargs)
 
 
-def get_from_github_api(project, config):
+def _get_from_github_api(org, repo, filename):
     """
     Read data from github api. Ht to @andersonfrailey for decoding the response
     """
-    url = (
-        f"https://api.github.com/repos/{project['org']}/{project['repo']}/"
-        f"contents/{config['source']}"
-    )
+    # TODO: incorporate master branch
+    url = f"https://api.github.com/repos/{org}/{repo}/" f"contents/{filename}"
     response = requests.get(url)
+    assert response.status_code == 200
+    sanatized_content = response.json()["content"].replace("\n", "")
+    encoded_content = sanatized_content.encode()
+    decoded_bytes = base64.decodebytes(encoded_content)
+    text = decoded_bytes.decode()
+    return text
+
+
+def get_from_github_api(project, config):
     try:
-        sanatized_content = response.json()["content"].replace("\n", "")
-        encoded_content = sanatized_content.encode()
-        decoded_bytes = base64.decodebytes(encoded_content)
-        text = decoded_bytes.decode()
-    # Test cases return a text document. A better (but more time demanding)
-    # solution would be to construct a mock GitHub response
+        text = _get_from_github_api(
+            project["org"], project["repo"], config["source"]
+        )
     except json.decoder.JSONDecodeError:
         text = response.text
     return parse_section(text, config["start_header"], config["end_header"])

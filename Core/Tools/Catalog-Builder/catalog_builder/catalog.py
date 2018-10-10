@@ -70,11 +70,20 @@ class CatalogBuilder:
 
     CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-    def __init__(self, projects, project_dir=None, pages_dir=None):
-        self.projects = projects
+    def __init__(self, projects=None, project_dir=None, pages_dir=None):
+        if projects is None:
+            p = os.path.join(
+                self.CURRENT_PATH, "../../../../Catalog/register.json"
+            )
+            with open(p, "r") as f:
+                self.projects = json.loads(f.read())
+        else:
+            self.projects = projects
+
         self.project_dir = project_dir or os.path.join(
             self.CURRENT_PATH, "../../../../Catalog/Projects/"
         )
+
         self.pages_dir = pages_dir or os.path.join(
             self.CURRENT_PATH, "../../Web/pages/"
         )
@@ -89,11 +98,10 @@ class CatalogBuilder:
         to the `catalog` attribute.
         """
         for project in self.projects:
-            cat_meta = os.path.join(
-                self.project_dir, project["repo"], "catalog.json"
+            text = utils._get_from_github_api(
+                project["org"], project["repo"], "psl_catalog.json"
             )
-            with open(cat_meta, "r") as f:
-                cat_meta = json.loads(f.read())
+            cat_meta = json.loads(text)
             self.catalog[project["repo"]]["name"] = {
                 "value": project["repo"],
                 "source": "",
@@ -120,7 +128,7 @@ class CatalogBuilder:
                 res = {"source": source, "value": value}
                 self.catalog[project["repo"]][attr] = res
 
-    def write_html(self):
+    def write_pages(self):
         """
         Write HTML from the `catalog` attribute to template files.
 
@@ -169,14 +177,7 @@ class CatalogBuilder:
 
 
 if __name__ == "__main__":
-    projects = [
-        {
-            "org": "open-source-economics",
-            "repo": "Tax-Calculator",
-            "branch": "master",
-        }
-    ]
-    cb = CatalogBuilder(projects)
+    cb = CatalogBuilder()
     cb.load_catalog()
-    cb.write_html()
+    cb.write_pages()
     cb.dump_catalog(os.path.join(cb.project_dir, "catalog.json"))

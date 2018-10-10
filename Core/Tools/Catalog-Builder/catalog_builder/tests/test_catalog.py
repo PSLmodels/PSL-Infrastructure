@@ -41,9 +41,7 @@ def cb(markdown_doc, current_path, pages_dir):
         projects, project_dir=current_path, pages_dir=pages_dir
     )
     with requests_mock.Mocker() as mock:
-        url = (
-            "https://api.github.com/repos/noorg/TestProject/contents/markdown.md"
-        )
+        url = "https://api.github.com/repos/noorg/TestProject/contents/markdown.md"
         mock.get(url, text=markdown_doc)
         cb.load_catalog()
     return cb
@@ -53,9 +51,7 @@ def test_load_catalog(markdown_doc, current_path):
     projects = [{"org": "noorg", "repo": "TestProject", "branch": "master"}]
     cb = CatalogBuilder(projects, project_dir=current_path)
     with requests_mock.Mocker() as mock:
-        url = (
-            "https://api.github.com/repos/noorg/TestProject/contents/markdown.md"
-        )
+        url = "https://api.github.com/repos/noorg/TestProject/contents/markdown.md"
         mock.get(url, text=markdown_doc)
         cb.load_catalog()
 
