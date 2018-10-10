@@ -114,7 +114,7 @@
     "link_to_webapp": {
         "data": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>",
         "source": null,
-        "type": null,
+        "type": "html",
         "start_header": null,
         "end_header": null
     },
