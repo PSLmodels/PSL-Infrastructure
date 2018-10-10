@@ -3,6 +3,12 @@ import requests
 from bs4 import BeautifulSoup
 from jinja2 import Template
 
+import re
+
+
+class SectionHeadersDoNotExist(Exception):
+    pass
+
 
 def parse_section(doc, section_start, section_end):
     """
@@ -27,7 +33,7 @@ def parse_section(doc, section_start, section_end):
         get_next = False
     soup = BeautifulSoup(html, "html.parser")
     data = []
-    for node in soup.find_all():
+    for node in soup.find_all(re.compile("p|h[1-6]")):
         if node.text == section_start:
             get_next = True
             continue
@@ -38,6 +44,11 @@ def parse_section(doc, section_start, section_end):
                 data.append(str(node))
             else:
                 break
+    if len(data) == 0:
+        raise SectionHeadersDoNotExist(
+            f"{section_start} and/or {section_end} was not found."
+        )
+    print(data)
     return " ".join(data)
 
 
