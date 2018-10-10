@@ -29,6 +29,11 @@ Super cool modeling feature goes here
 ### Version 0.1.0
 Some dev work goes here
 
+User Changelog Recent
+----------------------
+### Version 1.0.0
+Super cool modeling feature goes here
+
 Dev Changelog
 --------------
 ### Version 1.0.0
@@ -43,24 +48,24 @@ Disclaimer
 ----------
 This project is in development!
 
-User case studies
------------------
+User Case Studies
+--------------------
 Prominent/interesting case studies here
 
-Project roadmap
-----------------
+Project Roadmap
+------------------
 This is where we are going
 
-Contributor overview
----------------------
+Contributor Overview
+----------------------
 - Super Contributor
 - Great Contributor
 
-Contributor guide
--------------------
+Contributor Guide
+--------------------
 [ourproject.org/contributing](ourproject.org/contributing)
 
-Governance overview
+Governance Overview
 --------------------
 How we govern
 

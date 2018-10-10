@@ -18,8 +18,12 @@ def parse_section(doc, section_start, section_end):
     - If `section_end` is `None`, then the entire document is parsed until
         `section_end` is found.
 
-    Note: there's a case for parsing until `section_end` if `section_start` is
-        not specified but `section_end` is.
+    Note:
+    ------
+    If the `SectionHeadersDoNotExist` Exception is raised, check to make sure
+    the correct tag is compiled into the regex expression used in the
+    `soup.find_all` call.
+
 
     returns:
     --------
@@ -33,7 +37,8 @@ def parse_section(doc, section_start, section_end):
         get_next = False
     soup = BeautifulSoup(html, "html.parser")
     data = []
-    for node in soup.find_all(re.compile("p|h[1-6]")):
+    for node in soup.find_all(re.compile("p|h[1-6]|ul|li")):
+        print(node)
         if node.text == section_start:
             get_next = True
             continue
