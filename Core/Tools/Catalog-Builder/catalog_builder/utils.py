@@ -38,7 +38,6 @@ def parse_section(doc, section_start, section_end):
     soup = BeautifulSoup(html, "html.parser")
     data = []
     for node in soup.find_all(re.compile("p|h[1-6]|ul|li")):
-        print(node)
         if node.text == section_start:
             get_next = True
             continue
