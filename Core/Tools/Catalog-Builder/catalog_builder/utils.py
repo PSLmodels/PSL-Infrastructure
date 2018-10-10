@@ -89,5 +89,5 @@ namemap = {
     "public_funding": "Public Funding",
     "link_to_webapp": "Link to webapp",
     "public_issue_tracker": "Public Issue Tracker",
-    "public_qanda": "Public Q & A"
+    "public_qanda": "Public Q & A",
 }

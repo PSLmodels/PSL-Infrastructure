@@ -140,8 +140,9 @@ class CatalogBuilder:
             out.write(rendered)
 
         for _, project in self.catalog.items():
-            rendered = utils.render_template(model_path, project=project,
-                                             namemap=utils.namemap)
+            rendered = utils.render_template(
+                model_path, project=project, namemap=utils.namemap
+            )
             pathout = os.path.join(
                 self.pages_dir, f"projects/{project['name']['value']}.html"
             )
