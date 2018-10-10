@@ -14,7 +14,7 @@ class CatalogBuilder:
     dumped into a JSON file `catalog.json` and into HTML templates to be
     served on the web.
 
-    Catalog schema:
+    Catalog metadata schema:
 
     {
         'attribute': {
