@@ -41,14 +41,14 @@
         "type": "html",
         "data": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html\">http://open-source-economics.github.io/Tax-Calculator/index.html</a>"
     },
-    "user_changelog_recent": {
+    "user_changelog": {
         "start_header": null,
         "end_header": null,
         "source": null,
         "type": null,
         "data": null
     },
-    "user_changelog": {
+    "user_changelog_recent": {
         "start_header": null,
         "end_header": null,
         "source": "http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew",
