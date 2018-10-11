@@ -72,14 +72,17 @@ def render_template(template_path, **render_kwargs):
     return template.render(**render_kwargs)
 
 
-def _get_from_github_api(org, repo, filename):
+def _get_from_github_api(org, repo, branch, filename):
     """
     Read data from github api. Ht to @andersonfrailey for decoding the response
     """
     # TODO: incorporate master branch
-    url = f"https://api.github.com/repos/{org}/{repo}/" f"contents/{filename}"
+    url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
     response = requests.get(url)
+    print(f"GET: {url} {response.status_code}")
     assert response.status_code == 200
+    if response.status_code == 403:
+        assert "hit rate limit" == 403
     sanatized_content = response.json()["content"].replace("\n", "")
     encoded_content = sanatized_content.encode()
     decoded_bytes = base64.decodebytes(encoded_content)
@@ -88,12 +91,9 @@ def _get_from_github_api(org, repo, filename):
 
 
 def get_from_github_api(project, config):
-    try:
-        text = _get_from_github_api(
-            project["org"], project["repo"], config["source"]
-        )
-    except json.decoder.JSONDecodeError:
-        text = response.text
+    text = _get_from_github_api(
+        project["org"], project["repo"], project["branch"], config["source"]
+    )
     return parse_section(text, config["start_header"], config["end_header"])
 
 

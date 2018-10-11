@@ -20,7 +20,7 @@ class CatalogBuilder:
         'attribute': {
             'start_header': header signalling section start for pulling data
             'end_header': header signalling section to stop pulling data
-            'type': 'github_file' or 'html'
+            'type': 'github_file' or 'html', more can be added as necessary
             'data': null or HTML string to be displayed in section
             'source': information required to construct location of data
         }
@@ -98,10 +98,13 @@ class CatalogBuilder:
         to the `catalog` attribute.
         """
         for project in self.projects:
-            text = utils._get_from_github_api(
-                project["org"], project["repo"], "psl_catalog.json"
+            cat_meta = utils._get_from_github_api(
+                project["org"],
+                project["repo"],
+                project["branch"],
+                "psl_catalog.json",
             )
-            cat_meta = json.loads(text)
+            cat_meta = json.loads(cat_meta)
             self.catalog[project["repo"]]["name"] = {
                 "value": project["repo"],
                 "source": "",
@@ -120,7 +123,7 @@ class CatalogBuilder:
                     value = config["data"]
                 else:
                     msg = (
-                        f"No data specified for project, entry: "
+                        f"MISSING DATA: {project['repo']}, entry: "
                         f"{attr}, {config}"
                     )
                     print(msg)
