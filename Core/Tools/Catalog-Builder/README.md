@@ -44,6 +44,20 @@ Note: We can add support for other version control repositories upon request.
 }
 ```
 
+Different values should be set based on what type of data is being parsed:
+- "type" is "github_file"
+  - "source" is the name of the file in the project's GitHub repository. It should be a markdown file.
+  - "start_header" and "end_header" are the headers in the markdown file. Data between those headers will be parsed and rendered to HTML.
+    - If neither header is specified, the entire document will be parsed.
+    - If "start_header" is speecified and "end_header" is not specified, then data from "start_header" to the end of the file will be parsed.
+    - If "end_header" is specified and "start_header" is not specified, then data from the beginning of the file to "end_header" is parsed.
+    - If the parser cannot find these headers, then an error will be raised.
+  - "data" is ignored in this case.
+- "type" is "html"
+  - The "data" attribute should be either a plain-text string or an HTML string.
+  - "source" can optionally be set to a webpage where this data can be verified or more information about it can be found.
+  - "start_header" and "end_header" are ignored in this case.
+
 Allowed attributes and their display names:
   - `project_one_line`: NA
   - `key_features`: Key Features,
