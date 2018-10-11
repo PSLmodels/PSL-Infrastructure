@@ -44,7 +44,7 @@ Note: We can add support for other version control repositories upon request.
 }
 ```
 
-Allowed attributes:
+Allowed attributes and their display names:
   - `project_one_line`: NA
   - `key_features`: Key Features,
   - `project_overview`: Project Overview,
