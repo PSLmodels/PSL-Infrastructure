@@ -18,7 +18,7 @@ How to run tests
 
 `py.test tests/test_catalog.py`
 
-How to add projects to this repo
+How to add projects to the catalog
 ---------------------------------
 1. Append the project to the [`register.json`](../../../Catalog/register.json) file with the format:
 ```
