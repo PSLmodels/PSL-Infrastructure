@@ -16,24 +16,27 @@ Open-source modeling ensures that model results are reproducible, that experts a
 
 We have developed the criteria in this document to fascilitate the growth of an open source public policy modeling ecosystem.
 
+Criteria
+---------
+PSL-Core establishes three kinds of project Criteria. A project are required to (`MUST`) conform to `Acceptance Criteria` to be accepted in PSL. Projects are recommended to (`SHOULD`) or optionally (`MAY`) conform to various `Community Criteria` and `Interoperability Criteria`.
+
 Acceptance Criteria for Transparancy and Quality 
 --------------------------------------------
---------------------------------------------
 
-1. Models MUST be released under an OSI-approved open source license.   
+1. Models MUST be released under an OSI-approved open source license or the Creative Commons Public Domain Dedication (CC0).
 1. Data MUST be publicly available, unless release is restricted by a third party. 
 1. For any data that SHOULD not be disclosed, provided MUST be:
 	- A complete descriptive list of all data variables; 
 	- Descriptive statistics for all data variables for such data (including averages, standard deviations, number of observations, and correlations to other variables), to the extent that the descriptive statistics do not violate the rule against disclosure;
 	- Contact information for the individual or entity who has unrestricted access to the data. 
-1. At least one test MUST generate key outputs from source materials, the test MUST be run with every new version, and the outputs of the test MUST be checked into the repository.  
-1. Test coverage MUST be reported. 
-1. Projects MUST use [semantic versioning][1]. 
+1. At least one test MUST generate key outputs from source materials, the test MUST be run with every new version, and the outputs of the test MUST be checked into the repository. 
+1. Projects MUST have unit tests and SHOULD report code coverage. 
 1. Projects MUST report names and contact information for at least one maintainer. 
 1. Projects MUST have a suggested citation. 
 1. Projects MUST have a project overview. 
 1. Projects MUST have installation directions. 
-1. Project MUST be mirrored in the same GitHub organization as PSL-Core.
+1. Project MUST be mirrored in the same GitHub organization as PSL-Core, and therefore they MUST be under version control.
+1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning][1]. 
 
 Community Criteria
 -------------------
@@ -63,6 +66,7 @@ Interoperability Criteria
 1. All policy parameters and assumptions SHOULD be documented like...
 1. Meta information about your project SHOULD be documenteded like... 
 1. A configuration file, like...SHOULD identify the location of these materials in your repository. 
+
 
 
 
