@@ -21,15 +21,10 @@
 
         <div class="container">
             <h1>Models</h1>
-            
-                <h3><a href="projects/Tax-Calculator.html" style="color:inherit;">Tax-Calculator</a></h3>
-                <p><p>Tax-Calculator simulates the US federal individual income and payroll
-tax system.  In conjunction with micro data that represent the US
-population and a set of behavioral assumptions, Tax-Calculator can
-be used to conduct revenue scoring and distributional analyses of tax
-policies.  Tax-Calculator is written in Python, an interpreted
-language that can execute on Windows, Mac, or Linux.</p></p>
-            
+            {% for project, item in catalog.items() %}
+                <h3><a href="projects/{{item.name.value}}.html" style="color:inherit;">{{ item.name.value }}</a></h3>
+                <p>{{ item.project_overview.value }}</p>
+            {% endfor %}
         </div>
     </body>
 </html>
