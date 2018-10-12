@@ -5,6 +5,9 @@
         <title>PSL Home</title>
         <!-- include bootstrap -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            .card-link {color: black;}
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -14,13 +17,64 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="Core/Tools/Web/pages/about.html" class="nav-link">About PSL</a></li>
                 <li class="nav-item"><a href="Core/Tools/Web/pages/models.html" class="nav-link">Models</a></li>
-                <li class="nav-item"><a href="Core/Tools/Web/pages/donate.html" class="nav-link">Donate</a></li>
-                <li class="nav-item"><a href="Core/Tools/Web/pages/faq.html" class="nav-link">FAQ</a></li>
+                <!-- <li class="nav-item"><a href="Core/Tools/Web/pages/donate.html" class="nav-link">Donate</a></li>
+                <li class="nav-item"><a href="Core/Tools/Web/pages/faq.html" class="nav-link">FAQ</a></li> -->
             </ul>
         </nav>
         <div class="container">
-            <h1>Home</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, quo voluptatibus? Ea molestiae, nostrum esse magni dolore dolores minus atque ut at, est reiciendis, quam quasi nisi eos. Obcaecati, blanditiis!</p>
+            <div class="jumbotron" style="font-family:'Courier New', Courier, monospace">
+                <h1>Open Models == Better Policy</h1>
+                <a href="Core/Tools/Web/pages/about.html" class="btn btn-secondary btn-lg" id="aboutlink" style="font-family:'Courier New', Courier, monospace">About Us</a>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="Core/Tools/Web/pages/models.html" class="card-link">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Explore the Models
+                            </div>
+                            <div class="card-body">
+                                <p>Learn about our open source models.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="card-link">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                Contribute a Model
+                            </div>
+                            <div class="card-body">
+                                <p>Have a model you want to add to the library? See how to apply.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="col-lg-4">
+                    <a href="#" class="card-link">
+                        <div class="card text-center">
+                            <div class=card-header>
+                                Donate
+                            </div>
+                            <div class="card-body">
+                                Support open source policy analysis.
+                            </div>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="news-letter-email">Join our news letter</label>
+                    <input type="email" class="form-control" id="news-letter-email" placeholder="email">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="news-letter-check">
+                    <label for="news-letter-check" class="form-check-label">I agree to receive emails from PSL</label>
+                </div>
+                <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
         </div>
     </body>
 </html>
