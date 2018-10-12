@@ -31,20 +31,35 @@ How to add projects to the catalog
 
 Note: We can add support for other version control repositories upon request.
 
-2. Create a `psl-catalog.json` file with the following format:
+2. Create a `psl-catalog.json` file according to the schema below
+
+Catalog specification file: `psl_catalog.json`
+-----------------------------------------------
+The purpose of the project's `psl_catalog.json` file is to help the catalog builder locate information about the project. This information will be stored in the PSL-Core catalog and rendered on the project's PSL page. The basic layout of this file looks like this:
+
 ```
 {
-    'attribute': {
+    'project_one_line': {
         'start_header': header signalling section start for pulling data
         'end_header': header signalling section to stop pulling data
         'type': 'github_file' or 'html', more can be added as necessary
         'data': null or HTML string to be displayed in section
         'source': information required to construct location of data
-    }
+    },
+    'project_overview' : {
+        'start_header': ...
+        'end_header': ...
+        'type': ...
+        'data': ...
+        'source': ...
+    },
+    # other project attributes are listed out here
+    ...
 }
 ```
 
-Different values should be set based on what type of data is being parsed:
+Currently, data for each project attribute can be specified on github or directly in the "data" attribute of the `psl_catalog.json` file. If the data is specified on github, the attribute "type" should be set to "github_file." If the data is set directly in the `psl_catalog.json` file, the "type" should be set to "html." Here are more in depth descriptions for how to fill out the catalog in both of these cases:
+
 - "type" is "github_file"
   - "source" is the name of the file in the project's GitHub repository. It should be a markdown file.
   - "start_header" and "end_header" are the headers in the markdown file. Data between those headers will be parsed and rendered to HTML.
