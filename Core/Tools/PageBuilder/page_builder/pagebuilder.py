@@ -1,15 +1,5 @@
 import markdown
-from jinja2 import Template
-
-
-def render_template(template_path, **render_kwargs):
-    """
-    Render html template using jinja2
-    """
-    with open(template_path, 'r') as f:
-        template_str = f.read()
-    template = Template(template_str)
-    return template.render(**render_kwargs)
+import utils
 
 
 def write_page(md_path, template_path, pathout):
@@ -18,7 +8,7 @@ def write_page(md_path, template_path, pathout):
     with open(md_path, 'r') as f:
         md_txt = f.read()
     html = markdown.markdown(md_txt)
-    rendered = render_template(template_path, md_txt=html)
+    rendered = utils.render_template(template_path, md_txt=html)
     with open(pathout, 'w') as out:
         out.write(rendered)
 
