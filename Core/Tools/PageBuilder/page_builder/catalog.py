@@ -2,7 +2,7 @@ import json
 import os
 from collections import defaultdict
 
-from catalog_builder import utils
+import utils
 
 
 class CatalogBuilder:
