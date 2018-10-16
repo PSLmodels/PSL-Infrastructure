@@ -131,5 +131,26 @@
         "source": "markdown.md",
         "type": "github_file",
         "data": null
+    },
+    "core_maintainers": {
+        "start_header": null,
+        "end_header": null,
+        "data": "<ul><li>John Smith</li>",
+        "source": null,
+        "type": "html"
+    },
+    "unit_test": {
+        "start_header": null,
+        "end_header": null,
+        "data": "<a href=\"https://github.com/noorg/TestProject/tests\">https://github.com/noorg/TestProject/tests</a>",
+        "source": "https://github.com/noorg/TestProject/tests",
+        "type": "html"
+    },
+    "integration_test": {
+        "start_header": null,
+        "end_header": null,
+        "data": "<a href=\"https://github.com/noorg/TestProject/tests\">https://github.com/noorg/TestProject/tests</a>",
+        "source": "https://github.com/noorg/TestProject/tests",
+        "type": "html"
     }
 }

@@ -36,7 +36,7 @@ def mock_markdown_doc(current_path):
 
 @pytest.fixture
 def mock_catalog_meta(current_path):
-    mpath = os.path.join(current_path, "TestProject", "psl_catalog.json")
+    mpath = os.path.join(current_path, "TestProject", "PSL_catalog.json")
     with open(mpath, "r") as f:
         text = f.read()
     return text
@@ -59,7 +59,7 @@ def mock_gh_api(mock_markdown_doc, mock_catalog_meta, monkeypatch):
     with requests_mock.Mocker() as mock:
         url = "https://api.github.com/repos/noorg/TestProject/contents/markdown.md?ref=master"
         mock.get(url, text=mock_markdown_doc)
-        url = "https://api.github.com/repos/noorg/TestProject/contents/psl_catalog.json?ref=master"
+        url = "https://api.github.com/repos/noorg/TestProject/contents/PSL_catalog.json?ref=master"
         mock.get(url, text=mock_catalog_meta)
         yield
 
