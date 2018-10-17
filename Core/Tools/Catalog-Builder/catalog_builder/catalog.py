@@ -102,7 +102,7 @@ class CatalogBuilder:
                 project["org"],
                 project["repo"],
                 project["branch"],
-                "psl_catalog.json",
+                "PSL_catalog.json",
             )
             cat_meta = json.loads(cat_meta)
             self.catalog[project["repo"]]["name"] = {
