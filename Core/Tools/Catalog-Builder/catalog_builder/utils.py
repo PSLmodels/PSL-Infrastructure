@@ -38,17 +38,18 @@ def parse_section(doc, section_start, section_end):
         get_next = True
     else:
         get_next = False
-    soup = BeautifulSoup(html, "html.parser")
     data = []
-    for node in soup.find_all(re.compile("p|h[1-6]|ul|li")):
-        if node.text == section_start:
+    for line in html.split("\n"):
+        linesoup = BeautifulSoup(line, "html.parser")
+        text = linesoup.text
+        # set to -1 since section_start and section_end can be None
+        text = text.strip() if text is not None else -1
+        if section_start == text:
             get_next = True
             continue
         if get_next:
-            if section_end is None:
-                data.append(str(node))
-            elif section_end not in node.text:
-                data.append(str(node))
+            if section_end != text:
+                data.append(line)
             else:
                 break
     if len(data) == 0:
