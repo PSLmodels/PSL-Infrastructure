@@ -102,4 +102,4 @@ See examples here:
 
 
 [`TestProject/PSL_catalog.json`]: catalog_builder/tests/TestProject/PSL_catalog.json
-[`Tax-Calculator/PSL_catalog.json`]: https://github.com/hdoupe/Tax-Calculator/blob/PSL-catalog/PSL_catalog.json
+[`Tax-Calculator/PSL_catalog.json`]: https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/PSL_catalog.json
