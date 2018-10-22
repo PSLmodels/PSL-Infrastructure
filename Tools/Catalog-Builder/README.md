@@ -4,7 +4,7 @@ How to run this package
 ------------------------
 1. Set-up environment
 ```
-cd Core/Tools/Catalog-Builder
+cd Tools/Catalog-Builder
 pip install -r requirements.txt
 pip install -e .
 ```
