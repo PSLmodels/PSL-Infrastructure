@@ -4,7 +4,7 @@ How to run this package
 ------------------------
 1. Set-up environment
 ```
-cd Core/Tools/Catalog-Builder
+cd Tools/Catalog-Builder
 pip install -r requirements.txt
 pip install -e .
 ```
@@ -20,7 +20,7 @@ How to run tests
 
 How to add projects to the catalog
 ---------------------------------
-1. Append the project to the [`register.json`](../../../Catalog/register.json) file with the format:
+1. Append the project to the [`register.json`](../../Catalog/register.json) file with the format:
 ```
 {
     "org": the project's github organization name,
@@ -102,4 +102,4 @@ See examples here:
 
 
 [`TestProject/PSL_catalog.json`]: catalog_builder/tests/TestProject/PSL_catalog.json
-[`Tax-Calculator/PSL_catalog.json`]: https://github.com/hdoupe/Tax-Calculator/blob/PSL-catalog/PSL_catalog.json
+[`Tax-Calculator/PSL_catalog.json`]: https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/PSL_catalog.json
