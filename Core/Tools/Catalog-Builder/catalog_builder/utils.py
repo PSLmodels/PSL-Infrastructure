@@ -12,6 +12,32 @@ import re
 class SectionHeadersDoNotExist(Exception):
     pass
 
+def pre_parser(text):
+    """
+    Convert Github-Flavored markdown to Python markdown
+    for catalog builder to render text correctly
+
+    Namely, 1) add extra line before bullet points and
+    2) use four spaces instead of two to signal a sub-bullet point
+
+    """
+    doc_list = text.splitlines()
+
+    list_edit = doc_list
+
+    counter = -1
+
+    for line in doc_list:
+        counter += 1
+        if line.startswith("- "):
+            list_edit[counter - 1] = doc_list[counter - 1] + '\n'
+        elif line.startswith("  *"):
+            list_edit[counter] = "  " + doc_list[counter]
+
+    string_edit = "\n".join(list_edit)
+
+    return string_edit
+
 
 def parse_section(doc, section_start, section_end):
     """
@@ -33,7 +59,9 @@ def parse_section(doc, section_start, section_end):
     HTML that was rendered from Markdown
     """
     doc = doc.replace("#.#.#", "\#.\#.\#")
+    doc = pre_parser(doc)
     html = markdown.markdown(doc)
+    html = html.replace('<h2>', '<h5>')
     if section_start is None:
         get_next = True
     else:
