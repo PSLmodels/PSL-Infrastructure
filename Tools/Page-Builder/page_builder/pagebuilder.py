@@ -10,7 +10,7 @@ class PageBuilder():
     file should be saved, which HTML template to use, and where the markdown
     content for that page can be found.
 
-    Catalog metadata schema:
+    Page metadata schema:
     {
         'Page Title': {
             'template': either a path to the HTML template or null. If null,
