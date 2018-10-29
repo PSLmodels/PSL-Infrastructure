@@ -61,7 +61,7 @@ def parse_section(doc, section_start, section_end):
     doc = doc.replace("#.#.#", "\#.\#.\#")
     doc = pre_parser(doc)
     html = markdown.markdown(doc)
-    html = html.replace('<h2>', '<h5>')
+    html = html.replace('h2>', 'h5>')
     if section_start is None:
         get_next = True
     else:
