@@ -1,0 +1,12 @@
+{
+    "About": {
+        "template": null,
+        "content": "../content/about.md",
+        "pathout": "../../Web/pages/about.html"
+    },
+    "Criteria": {
+        "template": null,
+        "content": "../../../Criteria/library_criteria.md",
+        "pathout": "../../Web/pages/criteria.html"
+    }
+}
