@@ -1,13 +1,13 @@
-PSL-core RELEASE HISTORY
+PSLRELEASE HISTORY
 ==============================
-Go [here](https://github.com/open-source-economics/PSL-core/pulls?q=is%3Apr+is%3Aclosed)
+Go [here](https://github.com/open-source-economics/PSL/pulls?q=is%3Apr+is%3Aclosed)
 for a complete commit history.
 
 
 2018-09-XX Release 0.1.0
 -------------------------
 (last merged pull request is
-[#X](https://github.com/open-source-economics/PSL-core/pull/X))
+[#X](https://github.com/open-source-economics/PSL/pull/X))
 
 **API Changes**
 Includes substantive changes to criteria or tooling capabilities and reports the loss of a model from the library.

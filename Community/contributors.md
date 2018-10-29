@@ -1,14 +1,12 @@
-This document lists PSL-core contributors. For PSL Library contributors, please see the Catalog.
+This document lists contributors to the Policy Simulation library, but not to library models.
 
 Technical contributors
 ----------------------- 
 Technical contributors are individuals who have made significant contributions to the project.
 
 - Matt Jensen
-
-Financial contributors
------------------------ 
-Financial contributors are individuals and organizations who have given financial support to PSL-core, including direct grants or staff support.  
-
-- The Open Source Policy Center at the American Enterprise Institute - 2018/2019 Incubator Class
+- Anderson Frailey
+- Hank Doupe
+- Peter Metz
+- Martin Holmer
 

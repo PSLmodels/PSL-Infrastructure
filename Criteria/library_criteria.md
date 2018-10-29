@@ -18,7 +18,7 @@ We have developed the criteria in this document to fascilitate the growth of an 
 
 Criteria
 ---------
-PSL-Core establishes three kinds of project Criteria. A project are required to (`MUST`) conform to `Acceptance Criteria` to be accepted in PSL. Projects are recommended to (`SHOULD`) or optionally (`MAY`) conform to various `Community Criteria` and `Interoperability Criteria`.
+PSL establishes three kinds of project Criteria. A project are required to (`MUST`) conform to `Acceptance Criteria` to be accepted in PSL. Projects are recommended to (`SHOULD`) or optionally (`MAY`) conform to various `Community Criteria` and `Interoperability Criteria`.
 
 Acceptance Criteria for Transparancy and Quality 
 --------------------------------------------
@@ -35,7 +35,7 @@ Acceptance Criteria for Transparancy and Quality
 1. Projects MUST have a suggested citation. 
 1. Projects MUST have a project overview. 
 1. Projects MUST have installation directions. 
-1. Project MUST be mirrored in the same GitHub organization as PSL-Core, and therefore they MUST be under version control.
+1. Project MUST be mirrored in the same GitHub organization as PSL, and therefore they MUST be under version control.
 1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning][1]. 
 
 Community Criteria
