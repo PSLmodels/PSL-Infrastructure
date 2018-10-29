@@ -54,9 +54,6 @@ class PageBuilder():
             with open(content, 'r') as f:
                 md_text = f.read()
             html_text = markdown.markdown(md_text)
-            # replce <code> tages with <i> tags
-            html_text = html_text.replace('<code>', '<i>')
-            html_text = html_text.replace('</code>', '</i>')
             self.write_page(pathout, template,
                             title=title, content=html_text)
 
