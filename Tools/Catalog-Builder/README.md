@@ -35,7 +35,7 @@ Note: We can add support for other version control repositories upon request.
 
 Catalog specification file: `PSL_catalog.json`
 -----------------------------------------------
-The purpose of the project's `PSL_catalog.json` file is to help the catalog builder locate information about the project. This information will be stored in the PSL-Core catalog and rendered on the project's PSL page. The basic layout of this file looks like this:
+The purpose of the project's `PSL_catalog.json` file is to help the catalog builder locate information about the project. This information will be stored in the PSL catalog and rendered on the project's PSL page. The basic layout of this file looks like this:
 
 ```
 {
