@@ -2,6 +2,6 @@
     "Test Page": {
         "template": null,
         "content": "tests/TestFiles/testmd.md",
-        "pathout": "testpage.html"
+        "pathout": "testpage_actual.html"
     }
 }

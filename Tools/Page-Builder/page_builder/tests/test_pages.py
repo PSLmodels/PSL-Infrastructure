@@ -26,10 +26,16 @@ def test_page_builder(test_path, pages_json, cmp_file):
     pb = pagebuilder.PageBuilder(pages_json)
     pb.build_pages()
     # assert that a file was rendered and saved
-    assert os.path.isfile('testpage.html')
+    assert os.path.isfile('testpage_actual.html')
     # assert the file was rendered correctly
-    assert filecmp.cmp('testpage.html', cmp_file)
-    os.remove('testpage.html')
+    file_comp = filecmp.cmp('testpage_actual.html', cmp_file)
+    if file_comp:
+        os.remove('testpage_actual.html')
+    msg = ('Page builder generating unexpected results. '
+           'New results in testpage_actual.html. '
+           'If new page is ok, copy testpage_actual.html to '
+           'TestFiles/testpage.html')
+    assert file_comp, msg
 
 
 def test_incomplete_json():
