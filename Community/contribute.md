@@ -1,4 +1,4 @@
-This file will describe how to contribute to PSL-Core, and it will mention generally how to contribute to PSL projects. 
+This file will describe how to contribute to PSL, and it will mention generally how to contribute to PSL projects. 
 
 When you feel that you have made a valuable contribution, please add it to RELEASES.md. If you think PSL users should know about it, add it to NEWS.md. If your name is not already in contributors.md, add it. 
 

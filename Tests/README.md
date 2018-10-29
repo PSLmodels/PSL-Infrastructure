@@ -1,1 +1,1 @@
-This directory will contain tests for PSL-core. 
+This directory will contain tests for PSL. 
