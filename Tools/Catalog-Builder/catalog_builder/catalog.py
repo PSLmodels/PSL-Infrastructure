@@ -172,7 +172,7 @@ class CatalogBuilder:
         --------
         cat_str: JSON representation of `catalog` attribute
         """
-        cat_json = json.dumps(self.catalog)
+        cat_json = json.dumps(self.catalog, indent=4)
         if output_path is not None:
             with open(output_path, "w") as f:
                 f.write(cat_json)
