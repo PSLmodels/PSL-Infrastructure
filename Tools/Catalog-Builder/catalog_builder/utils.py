@@ -19,6 +19,7 @@ def pre_parser(text):
 
     Namely, 1) add extra line before bullet points and
     2) use four spaces instead of two to signal a sub-bullet point
+    3) add indent to signal third-tier bullet point
 
     """
     doc_list = text.splitlines()
@@ -29,10 +30,12 @@ def pre_parser(text):
 
     for line in doc_list:
         counter += 1
-        if line.startswith("- "):
+        if line.startswith("* ") or line.startswith("- "):
             list_edit[counter - 1] = doc_list[counter - 1] + '\n'
-        elif line.startswith("  *"):
+        elif line.startswith("  *") or line.startswith("  -"):
             list_edit[counter] = "  " + doc_list[counter]
+        elif line.startswith("    *") or line.startswith("    -"):
+            list_edit[counter] = '\t' + doc_list[counter]         
 
     string_edit = "\n".join(list_edit)
 
