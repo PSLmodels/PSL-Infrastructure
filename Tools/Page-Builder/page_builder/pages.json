@@ -2,11 +2,11 @@
     "About": {
         "template": null,
         "content": "../../../README.md",
-        "pathout": "../../Web/pages/about.html"
+        "pathout": "../../../about.html"
     },
     "News": {
         "template": null,
         "content": "../../../NEWS.md",
-        "pathout": "../../Web/pages/news.html"
-    },
+        "pathout": "../../../news.html"
+    }
 }
