@@ -1,22 +1,27 @@
 {
     "About": {
         "template": null,
-        "content": "../content/about.md",
+        "content": "../../../README.md",
         "pathout": "../../Web/pages/about.html"
     },
     "Criteria": {
         "template": null,
         "content": "../../../Criteria/library_criteria.md",
-        "pathout": "../../Web/pages/criteria.html"
-    },
-    "Contribute a Model": {
-        "template": null,
-        "content": "../content/contributemodel.md",
-        "pathout": "../../Web/pages/contribute-a-model.html"
+        "pathout": "../../Web/pages/library_criteria.html"
     },
     "Contribute to PSL": {
         "template": null,
         "content": "../../../Community/contribute.md",
         "pathout": "../../Web/pages/contribute.html"
+    },
+    "News": {
+        "template": null,
+        "content": "../../../NEWS.md",
+        "pathout": "../../Web/pages/news.html"
+    },
+    "Roadmap": {
+        "template": null,
+        "content": "../../../community/Roadmap.md",
+        "pathout": "../../Web/pages/roadmap.html"
     }
 }

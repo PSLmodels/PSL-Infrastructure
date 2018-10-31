@@ -6,7 +6,7 @@ web pages for PSL.
 ## Running the package
 
 ```bash
-cd Tools/Page-Builder/pagebuilder
+cd Tools/Page-Builder/page_builder
 python pagebuilder.py
 ```
 
