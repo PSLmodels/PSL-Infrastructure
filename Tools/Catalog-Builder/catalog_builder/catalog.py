@@ -73,7 +73,7 @@ class CatalogBuilder:
     def __init__(self, projects=None, project_dir=None, pages_dir=None):
         if projects is None:
             p = os.path.join(
-                self.CURRENT_PATH, "../../../Catalog/register.json"
+                self.CURRENT_PATH, "../register.json"
             )
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
@@ -81,11 +81,11 @@ class CatalogBuilder:
             self.projects = projects
 
         self.project_dir = project_dir or os.path.join(
-            self.CURRENT_PATH, "../../../Catalog/Projects/"
+            self.CURRENT_PATH, "../../../Catalog/"
         )
 
         self.pages_dir = pages_dir or os.path.join(
-            self.CURRENT_PATH, "../../Web/pages/"
+            self.CURRENT_PATH, "../../../Catalog/"
         )
 
         self.catalog = defaultdict(dict)
@@ -158,7 +158,7 @@ class CatalogBuilder:
                 model_path, project=project, namemap=utils.namemap
             )
             pathout = os.path.join(
-                self.pages_dir, f"projects/{project['name']['value']}.html"
+                self.pages_dir, f"{project['name']['value']}.html"
             )
             with open(pathout, "w") as out:
                 out.write(rendered)
