@@ -1,1 +1,190 @@
-{"Tax-Calculator": {"name": {"value": "Tax-Calculator", "source": ""}, "project_one_line": {"source": "https://github.com/open-source-economics/Tax-Calculator", "value": "<p>Federal Individual Income and Payroll Tax Microsimulation Model</p>"}, "key_features": {"source": null, "value": null}, "project_overview": {"source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md", "value": "<p>Tax-Calculator simulates the US federal individual income and payroll tax system.  In conjunction with micro data that represent the US population and a set of behavioral assumptions, Tax-Calculator can be used to conduct revenue scoring and distributional analyses of tax policies.  Tax-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p>"}, "citation": {"source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md", "value": "<p>Please cite the source of your analysis as \"Tax-Calculator release #.#.#, author's calculations.\" If you wish to link to Tax-Calculator, http://open-source-economics.github.io/Tax-Calculator/ is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"}, "license": {"source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/LICENSE.md", "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"}, "user_documentation": {"source": "http://open-source-economics.github.io/Tax-Calculator/index.html", "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html\">http://open-source-economics.github.io/Tax-Calculator/index.html</a>"}, "user_changelog": {"source": null, "value": null}, "user_changelog_recent": {"source": "http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew", "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew\">http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew</a>"}, "dev_changelog": {"source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/RELEASES.md", "value": "<p>Go <a href=\"https://github.com/open-source-economics/Tax-Calculator/pulls?q=is%3Apr+is%3Aclosed\">here</a> for a complete commit history.</p> <h5>2018-09-11 Release 0.21.0 : first release compatible only with Python 3.6</h5> <p>(last merged pull request is <a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2058\">#2058</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Require Python 3.6 to run Tax-Calculator source code or conda package   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2058\">#2058</a>   by Martin Holmer], which requires new <code>puf.csv</code> input file (see <a href=\"https://github.com/open-source-economics/taxdata/pull/283\">taxdata pull request 283</a> for details) with this information:<ul> <li>Byte size: 56415698</li> <li>MD5 checksum: 3f1c7c2b16b6394a9148779db992bed1</li> </ul> </li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul>"}, "disclaimer": {"source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md", "value": "<p>Results will change as the underlying models improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess economic policy; when community-contributed improvements are incorporated, the model will produce different results.</p>"}, "user_case_studies": {"source": null, "value": null}, "project_roadmap": {"source": null, "value": null}, "contributor_overview": {"source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md", "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">here</a> providing details on what you think is wrong with Tax-Calculator.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">here</a> providing details on what you think should be added to Tax-Calculator.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"http://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">Contributor Guide</a> on how to clone the Tax-Calculator git repository.  Before developing any code changes be sure to read completely the Contributor Guide and then read about our <a href=\"CODING.md\">coding style</a> and <a href=\"TESTING.md\">testing procedures</a>.  The Tax-Calculator <a href=\"RELEASES.md\">release history</a> provides a summary of past and current development work.</p> <p>If you are relying on Tax-Calculator capabilities in your own project, be sure to read the definition of the <a href=\"http://taxcalc.readthedocs.io/en/latest/public_api.html\">Tax-Calculator Public API</a>.</p>"}, "contributor_guide": {"source": null, "value": "<a href=\"https://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">https://taxcalc.readthedocs.io/en/latest/contributor_guide.html</a>"}, "governance_overview": {"source": null, "value": null}, "public_funding": {"source": null, "value": null}, "link_to_webapp": {"source": null, "value": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>"}, "public_issue_tracker": {"source": null, "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>"}, "public_qanda": {"source": null, "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>"}, "core_maintainers": {"source": null, "value": "<ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>"}, "unit_test": {"source": "https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests", "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests</a>"}, "integration_test": {"source": "https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests", "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests</a>"}}, "OG-USA": {"name": {"value": "OG-USA", "source": ""}, "project_one_line": {"source": "https://github.com/open-source-economics/OG-USA", "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"}, "key_features": {"source": null, "value": null}, "project_overview": {"source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md", "value": "<p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href=\"https://github.com/rickecon/OG-USA/blob/doc/documentation/OGUSAdoc.pdf\">here</a> and is regularly updated.</p>"}, "citation": {"source": "https://github.com/open-source-economics/OG-USA#citing-og-usa", "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/open-source-economics/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"}, "license": {"source": "https://github.com/open-source-economics/OG-USA/blob/master/LICENSE.md", "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"}, "user_documentation": {"source": "https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf", "value": "<a href=\"https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf\">Documentation</a>"}, "user_changelog": {"source": null, "value": null}, "user_changelog_recent": {"source": null, "value": null}, "dev_changelog": {"source": null, "value": null}, "disclaimer": {"source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md", "value": "<p>The model is currently under development. Users should be forewarned that the model components could change significantly. Therefore, there is NO GUARANTEE OF ACCURACY. THE CODE SHOULD NOT CURRENTLY BE USED FOR PUBLICATIONS, JOURNAL ARTICLES, OR RESEARCH PURPOSES. Essentially, you should assume the calculations are unreliable until we finish the code re-architecture and have checked the results against other existing implementations of the tax code. The package will have released versions, which will be checked against existing code prior to release. Stay tuned for an upcoming release!</p>"}, "user_case_studies": {"source": null, "value": null}, "project_roadmap": {"source": null, "value": null}, "contributor_overview": {"source": "https://github.com/open-source-economics/OG-USA#usingcontributing-to-og-usa", "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"}, "contributor_guide": {"source": null, "value": null}, "governance_overview": {"source": null, "value": null}, "public_funding": {"source": null, "value": null}, "link_to_webapp": {"source": null, "value": null}, "public_issue_tracker": {"source": null, "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"}, "public_qanda": {"source": null, "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"}, "core_maintainers": {"source": null, "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"}, "unit_test": {"source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests", "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"}, "integration_test": {"source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests", "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"}}}
+{
+    "Tax-Calculator": {
+        "name": {
+            "value": "Tax-Calculator",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": "https://github.com/open-source-economics/Tax-Calculator",
+            "value": "<p>Federal Individual Income and Payroll Tax Microsimulation Model</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md",
+            "value": "<p>Tax-Calculator simulates the US federal individual income and payroll tax system.  In conjunction with micro data that represent the US population and a set of behavioral assumptions, Tax-Calculator can be used to conduct revenue scoring and distributional analyses of tax policies.  Tax-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p>"
+        },
+        "citation": {
+            "source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md",
+            "value": "<p>Please cite the source of your analysis as \"Tax-Calculator release #.#.#, author's calculations.\" If you wish to link to Tax-Calculator, http://open-source-economics.github.io/Tax-Calculator/ is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
+        },
+        "license": {
+            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/LICENSE.md",
+            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+        },
+        "user_documentation": {
+            "source": "http://open-source-economics.github.io/Tax-Calculator/index.html",
+            "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html\">http://open-source-economics.github.io/Tax-Calculator/index.html</a>"
+        },
+        "user_changelog": {
+            "source": null,
+            "value": null
+        },
+        "user_changelog_recent": {
+            "source": "http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew",
+            "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew\">http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew</a>"
+        },
+        "dev_changelog": {
+            "source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/RELEASES.md",
+            "value": "<p>Go <a href=\"https://github.com/open-source-economics/Tax-Calculator/pulls?q=is%3Apr+is%3Aclosed\">here</a> for a complete commit history.</p> <h5>2018-10-26 Release 0.22.2</h5> <p>(last merged pull request is <a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2094\">#2094</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Add _EITC_basic_frac policy parameter so that an Earned and Basic Income Tax Credit (EBITC) reform can be analyzed.   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2094\">#2094</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul>"
+        },
+        "disclaimer": {
+            "source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md",
+            "value": "<p>Results will change as the underlying models improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess economic policy; when community-contributed improvements are incorporated, the model will produce different results.</p>"
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_overview": {
+            "source": "https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/README.md",
+            "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">here</a> providing details on what you think is wrong with Tax-Calculator.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">here</a> providing details on what you think should be added to Tax-Calculator.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"http://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">Contributor Guide</a> on how to fork and clone the Tax-Calculator git repository.  Before developing any code changes be sure to read completely the Contributor Guide and then read about the <a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/WORKFLOW.md#tax-calculator-pull-request-workflow\">pull-request workflow</a>. The Tax-Calculator <a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md#tax-calculator-release-history\">release history</a> provides a high-level summary of past pull requests and access to a complete list of merged, closed, and pending pull requests.</p> <p>If you are relying on Tax-Calculator capabilities in your own project, be sure to read the definition of the <a href=\"http://taxcalc.readthedocs.io/en/latest/public_api.html\">Tax-Calculator Public API</a>.</p>"
+        },
+        "contributor_guide": {
+            "source": null,
+            "value": "<a href=\"https://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">https://taxcalc.readthedocs.io/en/latest/contributor_guide.html</a>"
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>"
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>"
+        },
+        "unit_test": {
+            "source": "https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests",
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests</a>"
+        },
+        "integration_test": {
+            "source": "https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests",
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests</a>"
+        }
+    },
+    "OG-USA": {
+        "name": {
+            "value": "OG-USA",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": "https://github.com/open-source-economics/OG-USA",
+            "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md",
+            "value": "<p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href=\"https://github.com/rickecon/OG-USA/blob/doc/documentation/OGUSAdoc.pdf\">here</a> and is regularly updated.</p>"
+        },
+        "citation": {
+            "source": "https://github.com/open-source-economics/OG-USA#citing-og-usa",
+            "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/open-source-economics/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
+        },
+        "license": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/LICENSE.md",
+            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+        },
+        "user_documentation": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf",
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf\">Documentation</a>"
+        },
+        "user_changelog": {
+            "source": null,
+            "value": null
+        },
+        "user_changelog_recent": {
+            "source": null,
+            "value": null
+        },
+        "dev_changelog": {
+            "source": null,
+            "value": null
+        },
+        "disclaimer": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md",
+            "value": "<p>The model is currently under development. Users should be forewarned that the model components could change significantly. Therefore, there is NO GUARANTEE OF ACCURACY. THE CODE SHOULD NOT CURRENTLY BE USED FOR PUBLICATIONS, JOURNAL ARTICLES, OR RESEARCH PURPOSES. Essentially, you should assume the calculations are unreliable until we finish the code re-architecture and have checked the results against other existing implementations of the tax code. The package will have released versions, which will be checked against existing code prior to release. Stay tuned for an upcoming release!</p>"
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_overview": {
+            "source": "https://github.com/open-source-economics/OG-USA#usingcontributing-to-og-usa",
+            "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"
+        },
+        "contributor_guide": {
+            "source": null,
+            "value": null
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": null
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"
+        },
+        "unit_test": {
+            "source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests",
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
+        },
+        "integration_test": {
+            "source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests",
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
+        }
+    }
+}
