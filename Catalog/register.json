@@ -1,10 +1,5 @@
 [
     {
-        "org": "hdoupe",
-        "repo": "Tax-Calculator",
-        "branch": "psl-catalog"
-    },
-    {
         "org": "open-source-economics",
         "repo": "OG-USA",
         "branch": "master"
