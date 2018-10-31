@@ -135,7 +135,7 @@ class CatalogBuilder:
         """
         Write HTML from the `catalog` attribute to template files.
 
-        models_template.html is the template for the /models.html page.
+        models_template.html is the template for the /catalog.html page.
         model_template.html is the template for the
             /projects/{project name}.html page.
 
@@ -149,7 +149,7 @@ class CatalogBuilder:
         )
 
         rendered = utils.render_template(models_path, catalog=self.catalog)
-        pathout = os.path.join(self.pages_dir, "models.html")
+        pathout = os.path.join(self.pages_dir, "catalog.html")
         with open(pathout, "w") as out:
             out.write(rendered)
 
