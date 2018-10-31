@@ -8,5 +8,10 @@
         "org": "open-source-economics",
         "repo": "OG-USA",
         "branch": "master"
+    },
+    {
+        "org": "open-source-economics",
+        "repo": "B-Tax",
+        "branch": "master"
     }
 ]
