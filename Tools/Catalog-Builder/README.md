@@ -11,7 +11,7 @@ pip install -e .
 
 2. Run package
 
-`python catalog.py`
+`python catalog_builder/catalog.py`
 
 How to run tests
 ------------------

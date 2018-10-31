@@ -1,14 +1,13 @@
 # Contributing to PSL
 
-You can contribute to PSL by making a technical contribution to the website, adding
-a model to the library, or contributing to one of the models already in the library.
+You are welcome to contribute to PSL by making a technical contribution to PSL infrastructure like the website and Catalog-Builder, adding a model to the library, or contributing to one of the models already in the library.
 
-The PSL website is hosted on [GitHub](https://github.com/open-source-economics/PSL).
 When you feel that you have made a valuable contribution, please add it to RELEASES.md. If you think PSL users should know about it, add it to NEWS.md. If your name is not already in contributors.md, add it.
 
-Instructions on how to add a model to the library can be found [here](contribute-a-model.html),
+To nominate a model for the library, contact librarian Matt Jensen (matt.h.jensen@gmail.com). 
+
 while each model in the library will have its own set of instructions for contributing.
-You can view each model on the [models page](models.html) for
+You can view each model in the [catalog](catalog.html) for
 specific instructions on contributing.
 
 ## Office hours with the community
