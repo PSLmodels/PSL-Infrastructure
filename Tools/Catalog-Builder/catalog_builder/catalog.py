@@ -97,7 +97,7 @@ class CatalogBuilder:
         parsed via the `parse_section` function. The parsed data is saved
         to the `catalog` attribute.
         """
-        for project in self.projects:
+        for project in sorted(self.projects, key=lambda x: x['repo']):
             cat_meta = utils._get_from_github_api(
                 project["org"],
                 project["repo"],
