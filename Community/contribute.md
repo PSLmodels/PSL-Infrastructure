@@ -6,10 +6,6 @@ When you feel that you have made a valuable contribution, please add it to RELEA
 
 To submit a public policy simulation project to PSL, please bring your model or data preparation routine into compliance with [PSL Criteria](https://github.com/open-source-economics/PSL/blob/master/Criteria/library_criteria.md) and then open a pull request to PSL adding your model to the [PSL Catalog Register](https://github.com/open-source-economics/PSL/blob/master/Catalog/register.json). The PSL project will then review your PR. If you have a question about the process or are unsure of your project's relevance to PSL, please open an [issue](https://github.com/open-source-economics/PSL/issues). 
 
-while each model in the library will have its own set of instructions for contributing.
-You can view each model in the [catalog](www.policysimulationlibrary.org/catalog) for
-specific instructions on contributing.
-
 ## Office hours with the community
 
 --------------------------------
