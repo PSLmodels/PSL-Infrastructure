@@ -4,11 +4,10 @@ You are welcome to contribute to PSL by making a technical contribution to PSL i
 
 When you feel that you have made a valuable contribution, please add it to RELEASES.md. If you think PSL users should know about it, add it to NEWS.md. If your name is not already in contributors.md, add it.
 
-To nominate a model for the library, contact librarian Matt Jensen (matt.h.jensen@gmail.com). 
+To nominate a model for the library, contact librarian Matt Jensen (matt.h.jensen@gmail.com).
 
-while each model in the library will have its own set of instructions for contributing.
-You can view each model in the [catalog](catalog.html) for
-specific instructions on contributing.
+You can view a specific model's instructions on contributing in the
+[catalog](catalog.html).
 
 ## Office hours with the community
 
