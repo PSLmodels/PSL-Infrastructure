@@ -70,22 +70,22 @@ class CatalogBuilder:
 
     CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-    def __init__(self, projects=None, project_dir=None, pages_dir=None):
+    def __init__(self, projects=None, index_dir=None, card_dir=None):
         if projects is None:
             p = os.path.join(
-                self.CURRENT_PATH, "../../../Catalog/register.json"
+                self.CURRENT_PATH, "../register.json"
             )
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
             self.projects = projects
 
-        self.project_dir = project_dir or os.path.join(
-            self.CURRENT_PATH, "../../../Catalog/Projects/"
+        self.index_dir = index_dir or os.path.join(
+            self.CURRENT_PATH, "../../../Catalog/"
         )
 
-        self.pages_dir = pages_dir or os.path.join(
-            self.CURRENT_PATH, "../../Web/pages/"
+        self.card_dir = card_dir or os.path.join(
+            self.CURRENT_PATH, "../../../Catalog/"
         )
 
         self.catalog = defaultdict(dict)
@@ -142,14 +142,14 @@ class CatalogBuilder:
         Data is written to the `Web/pages` directory
         """
         models_path = os.path.join(
-            self.CURRENT_PATH, "../templates", "models_template.html"
+            self.CURRENT_PATH, "../templates", "catalog_template.html"
         )
         model_path = os.path.join(
-            self.CURRENT_PATH, "../templates", "model_template.html"
+            self.CURRENT_PATH, "../templates", "card_template.html"
         )
 
         rendered = utils.render_template(models_path, catalog=self.catalog)
-        pathout = os.path.join(self.pages_dir, "catalog.html")
+        pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
 
@@ -158,7 +158,7 @@ class CatalogBuilder:
                 model_path, project=project, namemap=utils.namemap
             )
             pathout = os.path.join(
-                self.pages_dir, f"projects/{project['name']['value']}.html"
+                self.card_dir, f"{project['name']['value']}.html"
             )
             with open(pathout, "w") as out:
                 out.write(rendered)
@@ -183,4 +183,4 @@ if __name__ == "__main__":
     cb = CatalogBuilder()
     cb.load_catalog()
     cb.write_pages()
-    cb.dump_catalog(os.path.join(cb.project_dir, "catalog.json"))
+    cb.dump_catalog(os.path.join(cb.card_dir, "catalog.json"))

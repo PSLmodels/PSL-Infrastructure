@@ -19,7 +19,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-header">
-                <a href="../../../index.html" class="navbar-brand">Policy Simulation Library</a>
+                <a href="index.html" class="navbar-brand">Policy Simulation Library</a>
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="catalog.html" class="nav-link">Catalog</a></li>
@@ -30,7 +30,7 @@
         <div class="container">
             <h1>Models</h1>
             {% for project, item in catalog.items() %}
-                <h3><a href="projects/{{item.name.value}}.html" style="color:inherit;">{{ item.name.value }}</a></h3>
+                <h3><a href="Catalog/{{item.name.value}}.html" style="color:inherit;">{{ item.name.value }}</a></h3>
                 <p>{{ item.project_overview.value }}</p>
             {% endfor %}
         </div>
