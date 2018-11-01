@@ -81,7 +81,7 @@ class CatalogBuilder:
             self.projects = projects
 
         self.index_dir = index_dir or os.path.join(
-            self.CURRENT_PATH, "../../../"
+            self.CURRENT_PATH, "../../../Catalog/"
         )
 
         self.card_dir = card_dir or os.path.join(
