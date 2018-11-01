@@ -30,7 +30,7 @@
         <div class="container">
             <h1>Models</h1>
             {% for project, item in catalog.items() %}
-                <h3><a href="Catalog/{{item.name.value}}.html" style="color:inherit;">{{ item.name.value }}</a></h3>
+                <h3><a href="{{item.name.value}}.html" style="color:inherit;">{{ item.name.value }}</a></h3>
                 <p>{{ item.project_overview.value }}</p>
             {% endfor %}
         </div>
