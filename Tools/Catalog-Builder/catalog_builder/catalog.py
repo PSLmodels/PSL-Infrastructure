@@ -149,7 +149,7 @@ class CatalogBuilder:
         )
 
         rendered = utils.render_template(models_path, catalog=self.catalog)
-        pathout = os.path.join(self.index_dir, "catalog.html")
+        pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
 
