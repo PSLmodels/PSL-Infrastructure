@@ -95,11 +95,11 @@ Allowed attributes and their display names:
   - `public_qanda`: Public Q & A
 
 See examples here:
-- [`TestProject/PSL_catalog.json`][]
+- [`OG-USA/PSL_catalog.json`][]
 - [`Tax-Calculator/PSL_catalog.json`][]
 
 
 
 
-[`TestProject/PSL_catalog.json`]: catalog_builder/tests/TestProject/PSL_catalog.json
-[`Tax-Calculator/PSL_catalog.json`]: https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/PSL_catalog.json
+[`OG-USA/PSL_catalog.json`]: https://github.com/open-source-economics/OG-USA/blob/master/PSL_catalog.json
+[`Tax-Calculator/PSL_catalog.json`]: https://github.com/open-source-economics/Tax-Calculator/blob/master/PSL_catalog.json

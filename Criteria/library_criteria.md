@@ -65,10 +65,11 @@ Interoperability Criteria
 1. All input and output variables SHOULD be documented like...
 1. All policy parameters and assumptions SHOULD be documented like...
 1. Meta information about your project SHOULD be documenteded like...
-1. A configuration file, like...SHOULD identify the location of these materials in your repository.
+1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specifc instructions for creating this file can be found in the [Catalog-Builder Documentation][2].
 
 
 
 
 
 [1]: https://semver.org/
+[2]: https://github.com/open-source-economics/PSL/tree/master/Tools/Catalog-Builder#catalog-specification-file-psl_catalogjson
