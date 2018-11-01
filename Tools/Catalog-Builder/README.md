@@ -73,10 +73,10 @@ Currently, data for each project attribute can be specified on github or directl
   - "source" can optionally be set to a webpage where this data can be verified or more information about it can be found.
   - "start_header" and "end_header" are ignored in this case.
 
-Allowed attributes and their display names:
+Attributes that MUST be included:
   - `project_one_line`: NA
-  - `key_features`: Key Features,
   - `project_overview`: Project Overview,
+  - `key_features`: Key Features
   - `citation`: Citation,
   - `license`: License,
   - `user_documentation`: User Documentation,
@@ -93,6 +93,9 @@ Allowed attributes and their display names:
   - `link_to_webapp`: Link to webapp,
   - `public_issue_tracker`: Public Issue Tracker,
   - `public_qanda`: Public Q & A
+  - `core_maintainers`: Core Maintainers
+  - `unit_test`: Unit Tests
+  - `integration_test`: Integration Tests
 
 See examples here:
 - [`OG-USA/PSL_catalog.json`][]
