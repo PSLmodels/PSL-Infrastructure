@@ -22,7 +22,7 @@ def pages_dir(tmpdir_factory):
 
     returns: name of the path for the directory
     """
-    tmpdir_factory.mktemp("projects", numbered=False)
+    tmpdir_factory.mktemp("Catalog", numbered=False)
     return tmpdir_factory.getbasetemp()
 
 
@@ -68,7 +68,9 @@ def mock_gh_api(mock_markdown_doc, mock_catalog_meta, monkeypatch):
 def cb(mock_gh_api, current_path, pages_dir):
     projects = [{"org": "noorg", "repo": "TestProject", "branch": "master"}]
     cb = catalog.CatalogBuilder(
-        projects, project_dir=current_path, pages_dir=pages_dir
+        projects,
+        index_dir=pages_dir,
+        card_dir=os.path.join(pages_dir, 'Catalog')
     )
     cb.load_catalog()
     return cb
@@ -76,7 +78,11 @@ def cb(mock_gh_api, current_path, pages_dir):
 
 def test_load_catalog(mock_gh_api, current_path):
     projects = [{"org": "noorg", "repo": "TestProject", "branch": "master"}]
-    cb = catalog.CatalogBuilder(projects, project_dir=current_path)
+    cb = catalog.CatalogBuilder(
+        projects,
+        index_dir=current_path,
+        card_dir=os.path.join(current_path, 'Catalog')
+    )
     cb.load_catalog()
     assert cb.catalog
     assert "TestProject" in cb.catalog
