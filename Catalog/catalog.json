@@ -1,98 +1,4 @@
 {
-    "OG-USA": {
-        "name": {
-            "value": "OG-USA",
-            "source": ""
-        },
-        "project_one_line": {
-            "source": "https://github.com/open-source-economics/OG-USA",
-            "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"
-        },
-        "key_features": {
-            "source": null,
-            "value": null
-        },
-        "project_overview": {
-            "source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md",
-            "value": "<p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href=\"https://github.com/rickecon/OG-USA/blob/doc/documentation/OGUSAdoc.pdf\">here</a> and is regularly updated.</p>"
-        },
-        "citation": {
-            "source": "https://github.com/open-source-economics/OG-USA#citing-og-usa",
-            "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/open-source-economics/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
-        },
-        "license": {
-            "source": "https://github.com/open-source-economics/OG-USA/blob/master/LICENSE.md",
-            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-        },
-        "user_documentation": {
-            "source": "https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf",
-            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf\">Documentation</a>"
-        },
-        "user_changelog": {
-            "source": null,
-            "value": null
-        },
-        "user_changelog_recent": {
-            "source": null,
-            "value": null
-        },
-        "dev_changelog": {
-            "source": null,
-            "value": null
-        },
-        "disclaimer": {
-            "source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md",
-            "value": "<p>The model is currently under development. Users should be forewarned that the model components could change significantly. Therefore, there is NO GUARANTEE OF ACCURACY. THE CODE SHOULD NOT CURRENTLY BE USED FOR PUBLICATIONS, JOURNAL ARTICLES, OR RESEARCH PURPOSES. Essentially, you should assume the calculations are unreliable until we finish the code re-architecture and have checked the results against other existing implementations of the tax code. The package will have released versions, which will be checked against existing code prior to release. Stay tuned for an upcoming release!</p>"
-        },
-        "user_case_studies": {
-            "source": null,
-            "value": null
-        },
-        "project_roadmap": {
-            "source": null,
-            "value": null
-        },
-        "contributor_overview": {
-            "source": "https://github.com/open-source-economics/OG-USA#usingcontributing-to-og-usa",
-            "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"
-        },
-        "contributor_guide": {
-            "source": null,
-            "value": null
-        },
-        "governance_overview": {
-            "source": null,
-            "value": null
-        },
-        "public_funding": {
-            "source": null,
-            "value": null
-        },
-        "link_to_webapp": {
-            "source": null,
-            "value": null
-        },
-        "public_issue_tracker": {
-            "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"
-        },
-        "public_qanda": {
-            "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"
-        },
-        "unit_test": {
-            "source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests",
-            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
-        },
-        "integration_test": {
-            "source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests",
-            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
-        }
-    },
     "B-Tax": {
         "name": {
             "value": "B-Tax",
@@ -185,6 +91,100 @@
         "integration_test": {
             "source": null,
             "value": "<a href=\"https://github.com/open-source-economics/B-Tax/tree/master/btax/tests\">https://github.com/open-source-economics/B-Tax/tree/master/btax/tests</a>"
+        }
+    },
+    "OG-USA": {
+        "name": {
+            "value": "OG-USA",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": "https://github.com/open-source-economics/OG-USA",
+            "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md",
+            "value": "<p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href=\"https://github.com/rickecon/OG-USA/blob/doc/documentation/OGUSAdoc.pdf\">here</a> and is regularly updated.</p>"
+        },
+        "citation": {
+            "source": "https://github.com/open-source-economics/OG-USA#citing-og-usa",
+            "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/open-source-economics/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
+        },
+        "license": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/LICENSE.md",
+            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+        },
+        "user_documentation": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf",
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf\">Documentation</a>"
+        },
+        "user_changelog": {
+            "source": null,
+            "value": null
+        },
+        "user_changelog_recent": {
+            "source": null,
+            "value": null
+        },
+        "dev_changelog": {
+            "source": null,
+            "value": null
+        },
+        "disclaimer": {
+            "source": "https://github.com/open-source-economics/OG-USA/blob/master/README.md",
+            "value": "<p>The model is currently under development. Users should be forewarned that the model components could change significantly. Therefore, there is NO GUARANTEE OF ACCURACY. THE CODE SHOULD NOT CURRENTLY BE USED FOR PUBLICATIONS, JOURNAL ARTICLES, OR RESEARCH PURPOSES. Essentially, you should assume the calculations are unreliable until we finish the code re-architecture and have checked the results against other existing implementations of the tax code. The package will have released versions, which will be checked against existing code prior to release. Stay tuned for an upcoming release!</p>"
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_overview": {
+            "source": "https://github.com/open-source-economics/OG-USA#usingcontributing-to-og-usa",
+            "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/open-source-economics/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"
+        },
+        "contributor_guide": {
+            "source": null,
+            "value": null
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": null
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/issues\">https://github.com/open-source-economics/OG-USA/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"
+        },
+        "unit_test": {
+            "source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests",
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
+        },
+        "integration_test": {
+            "source": "https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests",
+            "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
         }
     },
     "Tax-Calculator": {
