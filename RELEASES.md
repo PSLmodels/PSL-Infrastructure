@@ -7,7 +7,7 @@ for a complete commit history.
 2018-11-02 Release 0.1.0
 -------------------------
 (last merged pull request is
-[#X](https://github.com/open-source-economics/PSL/pull/X))
+[#57](https://github.com/open-source-economics/PSL/pull/57))
 
 **Major Features and Improvements**
 
