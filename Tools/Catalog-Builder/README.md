@@ -33,7 +33,7 @@ Note: We can add support for other version control repositories upon request.
 
 2. Create a `PSL_catalog.json` file according to the schema below
 
-Catalog specification file: `PSL_catalog.json`
+Catalog configuration file: `PSL_catalog.json`
 -----------------------------------------------
 The purpose of the project's `PSL_catalog.json` file is to help the catalog builder locate information about the project. This information will be stored in the PSL catalog and rendered on the project's PSL page. The basic layout of this file looks like this:
 
@@ -73,10 +73,10 @@ Currently, data for each project attribute can be specified on github or directl
   - "source" can optionally be set to a webpage where this data can be verified or more information about it can be found.
   - "start_header" and "end_header" are ignored in this case.
 
-Allowed attributes and their display names:
+Attributes that MUST be included:
   - `project_one_line`: NA
-  - `key_features`: Key Features,
   - `project_overview`: Project Overview,
+  - `key_features`: Key Features
   - `citation`: Citation,
   - `license`: License,
   - `user_documentation`: User Documentation,
@@ -93,13 +93,16 @@ Allowed attributes and their display names:
   - `link_to_webapp`: Link to webapp,
   - `public_issue_tracker`: Public Issue Tracker,
   - `public_qanda`: Public Q & A
+  - `core_maintainers`: Core Maintainers
+  - `unit_test`: Unit Tests
+  - `integration_test`: Integration Tests
 
 See examples here:
-- [`TestProject/PSL_catalog.json`][]
+- [`OG-USA/PSL_catalog.json`][]
 - [`Tax-Calculator/PSL_catalog.json`][]
 
 
 
 
-[`TestProject/PSL_catalog.json`]: catalog_builder/tests/TestProject/PSL_catalog.json
-[`Tax-Calculator/PSL_catalog.json`]: https://github.com/hdoupe/Tax-Calculator/blob/psl-catalog/PSL_catalog.json
+[`OG-USA/PSL_catalog.json`]: https://github.com/open-source-economics/OG-USA/blob/master/PSL_catalog.json
+[`Tax-Calculator/PSL_catalog.json`]: https://github.com/open-source-economics/Tax-Calculator/blob/master/PSL_catalog.json

@@ -14,7 +14,7 @@ class CatalogBuilder:
     dumped into a JSON file `catalog.json` and into HTML templates to be
     served on the web.
 
-    Catalog metadata schema:
+    Catalog configuration file (PSL_catalog.json) schema:
 
     {
         'attribute': {
