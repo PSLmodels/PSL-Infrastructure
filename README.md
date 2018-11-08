@@ -13,4 +13,4 @@ If you would like to learn more about PSL plans, see our [roadmap](https://githu
 
 If you would like to make a technical contribution to PSL, please review the [contributor guide](https://github.com/open-source-economics/PSL/blob/master/Community/contribute.md).
 
-You can reach PSL developers to discuss how to get started by opening an issue or joining the PSL Community [chat room](https://matrix.to/#/!oZnjlINzAXrgdzXEfZ:matrix.org).
+You can reach PSL developers and users to discuss how to get started by opening an issue or joining the PSL Community [chat room](https://matrix.to/#/!oZnjlINzAXrgdzXEfZ:matrix.org).
