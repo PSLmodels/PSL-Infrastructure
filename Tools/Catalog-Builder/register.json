@@ -13,5 +13,10 @@
         "org": "open-source-economics",
         "repo": "Tax-Calculator",
         "branch": "master"
+    },
+     {
+        "org": "open-source-economics",
+        "repo": "Behavioral-Responses",
+        "branch": "master"
     }
 ]
