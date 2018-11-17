@@ -4,6 +4,8 @@ You are welcome to contribute to PSL by making a technical contribution to PSL i
 
 When you feel that you have made a valuable contribution, please add it to RELEASES.md. If you think PSL users should know about it, add it to NEWS.md. If your name is not already in contributors.md, add it.
 
+## Submitting a project to PSL
+
 To submit a public policy simulation project to PSL, please bring your model or data preparation routine into compliance with [PSL Criteria](https://github.com/open-source-economics/PSL/blob/master/Criteria/library_criteria.md) and then open a pull request to PSL adding your model to the [PSL Catalog Register](https://github.com/open-source-economics/PSL/blob/master/Catalog/register.json). The PSL project will then review your PR. If you have a question about the process or are unsure of your project's relevance to PSL, please open an [issue](https://github.com/open-source-economics/PSL/issues). 
 
 ## Office hours with the community
