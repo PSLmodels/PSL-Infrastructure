@@ -36,7 +36,7 @@ Acceptance Criteria for Transparancy and Quality
 1. Projects MUST have a project overview.
 1. Projects MUST have installation directions.
 1. Project MUST be mirrored in the same GitHub organization as PSL, and therefore they MUST be under version control.
-1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning][1].
+1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning][1]. If projects want to use the PSL Package-Builder tool to distribute packages via the Anaconda Cloud PSLmodels channel, there are [additional MUST criteria][3].
 
 Community Criteria
 -------------------
@@ -72,4 +72,5 @@ Interoperability Criteria
 
 
 [1]: https://semver.org/
-[2]: https://github.com/open-source-economics/PSL/tree/master/Tools/Catalog-Builder#catalog-specification-file-psl_catalogjson
+[2]: https://github.com/open-source-economics/PSL/tree/master/Tools/Catalog-Builder#catalog-specification-file-psl_catalogjson]
+[3]: https://github.com/open-source-economics/Package-Builder#using-package-builders-pbrelease-tool
