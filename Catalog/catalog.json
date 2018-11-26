@@ -290,10 +290,6 @@
             "source": null,
             "value": "<p>USA federal individual income and payroll tax microsimulation model</p>"
         },
-        "key_features": {
-            "source": null,
-            "value": null
-        },
         "project_overview": {
             "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
             "value": "<p>Tax-Calculator simulates the USA federal individual income and payroll tax system.  In conjunction with micro data that represent the USA population, Tax-Calculator can be used to estimate the aggregate revenue and distributional effects of tax reforms under static analysis assumptions.  In conjunction with other modules, Tax-Calculator can be used to estimate reform effects under a range of non-static assumptions.  Tax-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p>"
@@ -308,31 +304,27 @@
         },
         "user_documentation": {
             "source": null,
-            "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html\">http://open-source-economics.github.io/Tax-Calculator/index.html</a>"
+            "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html\">User Documentation</a>"
         },
         "user_changelog": {
             "source": null,
-            "value": null
-        },
-        "user_changelog_recent": {
-            "source": null,
-            "value": "<a href=\"http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew\">http://open-source-economics.github.io/Tax-Calculator/index.html#whatsnew</a>"
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/CHANGES.md#tax-calculator-change-history\">Tax-Calculator Change History</a>"
         },
         "dev_changelog": {
-            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md",
-            "value": "<p>Go <a href=\"https://github.com/open-source-economics/Tax-Calculator/pulls?q=is%3Apr+is%3Aclosed\">here</a> for a complete commit history.</p> <h5>2018-11-13 Release 0.23.0</h5> <p>(last merged pull request is <a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2111\">#2111</a>)</p> <p><strong>API Changes</strong></p> <ul> <li> <p>Remove confusing <code>filer</code> variable from list of usable input variables   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2102\">#2102</a>   by Martin Holmer]</p> </li> <li> <p>Remove useless <code>start_year</code> and <code>num_years</code> arguments of constructor for the Policy, Consumption, and GrowDiff classes   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2103\">#2103</a>   by Martin Holmer]</p> </li> <li> <p>Add deprecated warning to Behavior class constructor and documentation because Behavior class will be removed from Tax-Calculator in a future release   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2105\">#2105</a>   by Martin Holmer]</p> </li> <li> <p>Remove <code>versioneer.py</code> and <code>taxcalc/_version.py</code> and related code now that Package-Builder is handling version specification   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2111\">#2111</a>   by Martin Holmer]</p> </li> </ul> <p><strong>New Features</strong></p> <ul> <li>Revise Cookbook recipe 2 to show use of new Behavioral-Responses behresp package as alternative to deprecated Behavior class   [<a href=\"https://github.com/open-source-economics/Tax-Calculator/pull/2107\">#2107</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul>"
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md#tax-calculator-release-history\">Tax-Calculator Release History</a>"
         },
         "disclaimer": {
             "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
             "value": "<p>Results will change as model data and logic improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess economic policy; when community-contributed improvements are incorporated, the model will produce different results.</p>"
         },
-        "user_case_studies": {
+        "core_maintainers": {
             "source": null,
-            "value": null
+            "value": "<ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>"
         },
         "project_roadmap": {
             "source": null,
-            "value": null
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/ROADMAP.md#plans-for-future-tax-calculator-development\">PLANS FOR FUTURE TAX-CALCULATOR DEVELOPMENT</a>"
         },
         "contributor_overview": {
             "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
@@ -340,7 +332,31 @@
         },
         "contributor_guide": {
             "source": null,
-            "value": "<a href=\"https://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">https://taxcalc.readthedocs.io/en/latest/contributor_guide.html</a>"
+            "value": "<a href=\"https://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">Contributor Guide</a>"
+        },
+        "unit_test": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\"><kbd>pytest</kbd> Unit Tests</a>"
+        },
+        "integration_test": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\"><kbd>pytest</kbd> Unit Tests</a>"
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": "<a href=\"https://www.ospc.org/taxbrain/\">TaxBrain</a>"
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">Issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">Issues</a>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
         },
         "governance_overview": {
             "source": null,
@@ -350,29 +366,13 @@
             "source": null,
             "value": null
         },
-        "link_to_webapp": {
+        "user_changelog_recent": {
             "source": null,
-            "value": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>"
+            "value": null
         },
-        "public_issue_tracker": {
+        "user_case_studies": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>"
-        },
-        "public_qanda": {
-            "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">https://github.com/open-source-economics/Tax-Calculator/issues</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>"
-        },
-        "unit_test": {
-            "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests</a>"
-        },
-        "integration_test": {
-            "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests</a>"
+            "value": null
         }
     }
 }
