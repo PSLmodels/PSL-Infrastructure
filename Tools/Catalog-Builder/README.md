@@ -13,6 +13,8 @@ pip install -e .
 
 `python catalog_builder/catalog.py`
 
+The results can be viewed locally by opening them in your web browser. Most browsers have a "File" option in the menu bar that can be used to open a local HTML file. Another option is to use the unix command `open` to open the file with the default browser. For example, run `open Catalog/index.html` from the command line to open the `Catalog/index.html` file.
+
 How to run tests
 ------------------
 
