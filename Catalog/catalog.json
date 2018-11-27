@@ -291,16 +291,16 @@
             "value": "<p>USA federal individual income and payroll tax microsimulation model</p>"
         },
         "project_overview": {
-            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
-            "value": "<p>Tax-Calculator simulates the USA federal individual income and payroll tax system.  In conjunction with micro data that represent the USA population, Tax-Calculator can be used to estimate the aggregate revenue and distributional effects of tax reforms under static analysis assumptions.  In conjunction with other modules, Tax-Calculator can be used to estimate reform effects under a range of non-static assumptions.  Tax-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p>"
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md#what-is-tax-calculator\">What is Tax-Calculator?</a>"
         },
         "citation": {
-            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
-            "value": "<p>Please cite the source of your analysis as \"Tax-Calculator release #.#.#, author's calculations.\" If you wish to link to Tax-Calculator, https://open-source-economics.github.io/Tax-Calculator/ is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md#citing-tax-calculator\">Citing Tax-Calculator</a>"
         },
         "license": {
-            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/LICENSE.md",
-            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</p>"
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/LICENSE.md#license\">Tax-Calculator Open-Source License</a>"
         },
         "user_documentation": {
             "source": null,
@@ -315,8 +315,8 @@
             "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md#tax-calculator-release-history\">Tax-Calculator Release History</a>"
         },
         "disclaimer": {
-            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
-            "value": "<p>Results will change as model data and logic improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess economic policy; when community-contributed improvements are incorporated, the model will produce different results.</p>"
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md#disclaimer\">Disclaimer</a>"
         },
         "core_maintainers": {
             "source": null,
@@ -324,11 +324,11 @@
         },
         "project_roadmap": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/ROADMAP.md#plans-for-future-tax-calculator-development\">PLANS FOR FUTURE TAX-CALCULATOR DEVELOPMENT</a>"
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/ROADMAP.md#plans-for-future-tax-calculator-development\">Plans for Future Tax-Calculator Development</a>"
         },
         "contributor_overview": {
-            "source": "https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md",
-            "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">here</a> providing details on what you think is wrong with Tax-Calculator.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/open-source-economics/Tax-Calculator/issues\">here</a> providing details on what you think should be added to Tax-Calculator.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"https://taxcalc.readthedocs.io/en/latest/contributor_guide.html\">Contributor Guide</a> on how to fork and clone the Tax-Calculator git repository.  Before developing any code changes be sure to read completely the Contributor Guide and then read about the <a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/WORKFLOW.md#tax-calculator-pull-request-workflow\">pull-request workflow</a>. The Tax-Calculator <a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/RELEASES.md#tax-calculator-release-history\">release history</a> provides a high-level summary of past pull requests and access to a complete list of merged, closed, and pending pull requests.</p> <p>If you are relying on Tax-Calculator capabilities in your own project, be sure to read the definition of the <a href=\"https://taxcalc.readthedocs.io/en/latest/public_api.html\">Tax-Calculator Public API</a>.</p>"
+            "source": null,
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/blob/master/README.md#getting-started\">Getting Started Contributing to Tax-Calculator</a>"
         },
         "contributor_guide": {
             "source": null,
@@ -336,11 +336,11 @@
         },
         "unit_test": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\"><kbd>pytest</kbd> Unit Tests</a>"
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">Unit testing with pytest</a>"
         },
         "integration_test": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\"><kbd>pytest</kbd> Unit Tests</a>"
+            "value": "<a href=\"https://github.com/open-source-economics/Tax-Calculator/tree/master/taxcalc/tests\">Integration testing with pytest</a>"
         },
         "link_to_webapp": {
             "source": null,
