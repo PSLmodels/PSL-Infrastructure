@@ -13,7 +13,7 @@ pip install -e .
 
 `python catalog_builder/catalog.py`
 
-The results can be viewed locally by opening them in your web browser. Most browsers have a "File" option in the menu bar that can be used to open a local HTML file. Another option is to use the unix command `open` to open the file with the default browser. For example, run `open Catalog/index.html` from the command line to open the `Catalog/index.html` file.
+The results are written to the `PSL/Catalog` directory. The `Catalog/index.html` file contains a list of the projects and an overview of they do. A card for each project is written to the `PSL/Catalog` directory and named according to the project's name. These files can be viewed locally by opening them in the web browser. Most browsers have a "File" option in the menu bar that can be used to open a local HTML file.
 
 How to run tests
 ------------------
