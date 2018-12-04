@@ -1,5 +1,6 @@
 import markdown
 import json
+from bs4 import BeautifulSoup
 from jinja2 import Template
 
 
@@ -53,7 +54,12 @@ class PageBuilder():
             # read and convert markdown content to HTML
             with open(content, 'r') as f:
                 md_text = f.read()
-            html_text = markdown.markdown(md_text)
+            if page == "Homepage":
+                html_text = markdown.markdown(md_text)
+                soup = BeautifulSoup(html_text, 'lxml')
+                html_text = soup.p
+            else:
+                html_text = markdown.markdown(md_text)
             self.write_page(pathout, template,
                             title=title, content=html_text)
 
