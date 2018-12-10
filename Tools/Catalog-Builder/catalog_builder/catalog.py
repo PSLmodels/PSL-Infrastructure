@@ -154,6 +154,8 @@ class CatalogBuilder:
             out.write(rendered)
 
         for _, project in self.catalog.items():
+            # This should now write their website? Or delete and do the web
+            # site all in a new module
             rendered = utils.render_template(
                 model_path, project=project, namemap=utils.namemap
             )

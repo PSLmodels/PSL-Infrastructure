@@ -101,6 +101,7 @@ def render_template(template_path, **render_kwargs):
     with open(template_path, "r") as f:
         template_str = f.read()
     template = Template(template_str)
+    template.globals['make_id'] = make_id
     return template.render(**render_kwargs)
 
 
@@ -127,6 +128,10 @@ def get_from_github_api(project, config):
         project["org"], project["repo"], project["branch"], config["source"]
     )
     return parse_section(text, config["start_header"], config["end_header"])
+
+
+def make_id(name):
+    return "-".join(name.split())
 
 
 namemap = {
