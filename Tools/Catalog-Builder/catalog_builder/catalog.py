@@ -144,9 +144,6 @@ class CatalogBuilder:
         models_path = os.path.join(
             self.CURRENT_PATH, "../templates", "catalog_template.html"
         )
-        model_path = os.path.join(
-            self.CURRENT_PATH, "../templates", "card_template.html"
-        )
         model_index_path = os.path.join(
             self.CURRENT_PATH, "../templates", "index_template.html"
         )
@@ -157,20 +154,13 @@ class CatalogBuilder:
             self.CURRENT_PATH, "../templates", "contribute_template.html"
         )
 
-        rendered = utils.render_template(models_path, catalog=self.catalog)
         pathout = os.path.join(self.index_dir, "index.html")
-        with open(pathout, "w") as out:
-            out.write(rendered)
+        utils.write_page(models_path, pathout, catalog=self.catalog)
 
         for _, project in self.catalog.items():
             # This loop is used to create individual websites for each project
             # in the catalog
-            rendered = utils.render_template(
-                model_path, project=project, namemap=utils.namemap
-            )
-            pathout = os.path.join(
-                self.card_dir, f"{project['name']['value']}.html"
-            )
+
             # path to where all the model directories will be stored
             proj_name = "-".join(project['name']['value'].split())
             dir_path = os.path.join(
@@ -182,38 +172,32 @@ class CatalogBuilder:
             # commit.
             if not os.path.isdir(dir_path):
                 os.mkdir(dir_path)
-            rendered = utils.render_template(
-                model_index_path, project=project
-            )
+
+            # write home page for each model
             pathout = os.path.join(
                 dir_path, "index.html"
             )
-            with open(pathout, "w") as out:
-                out.write(rendered)
+            utils.write_page(model_index_path, pathout, project=project)
 
+            # write about page
             about_attrs = OrderedDict({k: project[k]
                                        for k in utils.about_keys})
-            rendered = utils.render_template(
-                model_about_path, project=about_attrs, namemap=utils.namemap,
-                name=project["name"]["value"]
-            )
             pathout = os.path.join(
                 dir_path, 'about.html'
             )
-            with open(pathout, "w") as out:
-                out.write(rendered)
+            utils.write_page(model_about_path, pathout,
+                             namemap=utils.namemap, project=about_attrs,
+                             name=project["name"]["value"])
 
+            # write contributor page
             contributor_attrs = OrderedDict({k: project[k]
                                              for k in utils.contributor_keys})
-            rendered = utils.render_template(
-                model_contribute_path, project=contributor_attrs,
-                namemap=utils.namemap, name=project["name"]["value"]
-            )
             pathout = os.path.join(
                 dir_path, 'contribute.html'
             )
-            with open(pathout, "w") as out:
-                out.write(rendered)
+            utils.write_page(model_contribute_path, pathout,
+                             project=contributor_attrs, namemap=utils.namemap,
+                             name=project["name"]["value"])
 
     def dump_catalog(self, output_path=None):
         """

@@ -134,6 +134,15 @@ def make_id(name):
     return "-".join(name.split())
 
 
+def write_page(template_path, pathout, **kwargs):
+    """
+    Write the final webpage
+    """
+    rendered = render_template(template_path, **kwargs)
+    with open(pathout, "w") as out:
+        out.write(rendered)
+
+
 namemap = {
     "key_features": "Key Features",
     "project_overview": "Project Overview",
