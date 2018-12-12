@@ -1,6 +1,6 @@
 import json
 import os
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
 
 from catalog_builder import utils
 
@@ -147,6 +147,15 @@ class CatalogBuilder:
         model_path = os.path.join(
             self.CURRENT_PATH, "../templates", "card_template.html"
         )
+        model_index_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "index_template.html"
+        )
+        model_about_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "about_template.html"
+        )
+        model_contribute_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "contribute_template.html"
+        )
 
         rendered = utils.render_template(models_path, catalog=self.catalog)
         pathout = os.path.join(self.index_dir, "index.html")
@@ -154,13 +163,54 @@ class CatalogBuilder:
             out.write(rendered)
 
         for _, project in self.catalog.items():
-            # This should now write their website? Or delete and do the web
-            # site all in a new module
+            # This loop is used to create individual websites for each project
+            # in the catalog
             rendered = utils.render_template(
                 model_path, project=project, namemap=utils.namemap
             )
             pathout = os.path.join(
                 self.card_dir, f"{project['name']['value']}.html"
+            )
+            # path to where all the model directories will be stored
+            proj_name = "-".join(project['name']['value'].split())
+            dir_path = os.path.join(
+                self.CURRENT_PATH, f"../../../{proj_name}"
+            )
+            # create a new directory for the project if there isn't one
+            # already. This should only be needed by new projects. The user
+            # who runs this will need to add the new files to their Git
+            # commit.
+            if not os.path.isdir(dir_path):
+                os.mkdir(dir_path)
+            rendered = utils.render_template(
+                model_index_path, project=project
+            )
+            pathout = os.path.join(
+                dir_path, "index.html"
+            )
+            with open(pathout, "w") as out:
+                out.write(rendered)
+
+            about_attrs = OrderedDict({k: project[k]
+                                       for k in utils.about_keys})
+            rendered = utils.render_template(
+                model_about_path, project=about_attrs, namemap=utils.namemap,
+                name=project["name"]["value"]
+            )
+            pathout = os.path.join(
+                dir_path, 'about.html'
+            )
+            with open(pathout, "w") as out:
+                out.write(rendered)
+
+            contributor_attrs = OrderedDict({k: project[k]
+                                             for k in utils.contributor_keys})
+            rendered = utils.render_template(
+                model_contribute_path, project=contributor_attrs,
+                namemap=utils.namemap, name=project["name"]["value"]
+            )
+            pathout = os.path.join(
+                dir_path, 'contribute.html'
             )
             with open(pathout, "w") as out:
                 out.write(rendered)

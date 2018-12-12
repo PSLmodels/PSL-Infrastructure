@@ -157,3 +157,9 @@ namemap = {
     "public_issue_tracker": "Public Issue Tracker",
     "public_qanda": "Public Q & A",
 }
+about_keys = ["key_features", "user_documentation", "user_case_studies",
+              "user_changelog_recent",
+              "project_roadmap", "license", "core_maintainers",
+              "citation", "public_qanda", "public_funding"]
+
+contributor_keys = ["contributor_overview", "contributor_guide"]

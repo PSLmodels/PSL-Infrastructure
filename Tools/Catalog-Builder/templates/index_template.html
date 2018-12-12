@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ project["name"]["value"] }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-header">
+            <a href="../index.html" class="navbar-brand">Policy Simulation Library</a>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">{{ project.name.value }}</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contribute.html" class="nav-link">Contribute</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>{{ project.name.value }}</h1>
+        {% if project.project_one_line.value %}
+            <p><i>{{ project.project_one_line.value }}</i></p>
+        {% endif %}
+        {% if project.project_overview.value %}
+            <h3>Project Overview</h3>
+            {{ project.project_overview.value }}
+        {% endif %}
+    </div>
+</body>
+</html>
