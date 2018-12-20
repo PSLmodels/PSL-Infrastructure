@@ -1,5 +1,6 @@
 import json
 import os
+import argparse
 from collections import defaultdict, OrderedDict
 
 from catalog_builder import utils
@@ -70,7 +71,8 @@ class CatalogBuilder:
 
     CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-    def __init__(self, projects=None, index_dir=None, card_dir=None):
+    def __init__(self, projects=None, index_dir=None, card_dir=None,
+                 develop=False):
         if projects is None:
             p = os.path.join(
                 self.CURRENT_PATH, "../register.json"
@@ -89,6 +91,7 @@ class CatalogBuilder:
         )
 
         self.catalog = defaultdict(dict)
+        self.develop = develop
 
     def load_catalog(self):
         """
@@ -97,39 +100,48 @@ class CatalogBuilder:
         parsed via the `parse_section` function. The parsed data is saved
         to the `catalog` attribute.
         """
-        for project in sorted(self.projects, key=lambda x: x['repo']):
-            cat_meta = utils._get_from_github_api(
-                project["org"],
-                project["repo"],
-                project["branch"],
-                "PSL_catalog.json",
-            )
-            cat_meta = json.loads(cat_meta)
-            self.catalog[project["repo"]]["name"] = {
-                "value": project["repo"],
-                "source": "",
-            }
-            for attr, config in cat_meta.items():
-                if config["type"] == "github_file":
-                    value = utils.get_from_github_api(project, config)
-                    source = (
-                        f"https://github.com/{project['org']}/"
-                        f"{project['repo']}/blob/{project['branch']}/"
-                        f"{config['source']}"
-                    )
+        if not self.develop:
+            for project in sorted(self.projects, key=lambda x: x['repo']):
+                cat_meta = utils._get_from_github_api(
+                    project["org"],
+                    project["repo"],
+                    project["branch"],
+                    "PSL_catalog.json",
+                )
+                cat_meta = json.loads(cat_meta)
+                self.catalog[project["repo"]]["name"] = {
+                    "value": project["repo"],
+                    "source": "",
+                }
+                for attr, config in cat_meta.items():
+                    if config["type"] == "github_file":
+                        value = utils.get_from_github_api(project, config)
+                        source = (
+                            f"https://github.com/{project['org']}/"
+                            f"{project['repo']}/blob/{project['branch']}/"
+                            f"{config['source']}"
+                        )
 
-                elif config["type"] == "html":
-                    source = config["source"]
-                    value = config["data"]
-                else:
-                    msg = (
-                        f"MISSING DATA: {project['repo']}, entry: "
-                        f"{attr}, {config}"
-                    )
-                    print(msg)
-                    source, value = None, None
-                res = {"source": source, "value": value}
-                self.catalog[project["repo"]][attr] = res
+                    elif config["type"] == "html":
+                        source = config["source"]
+                        value = config["data"]
+                    else:
+                        msg = (
+                            f"MISSING DATA: {project['repo']}, entry: "
+                            f"{attr}, {config}"
+                        )
+                        print(msg)
+                        source, value = None, None
+                    res = {"source": source, "value": value}
+                    self.catalog[project["repo"]][attr] = res
+        else:
+            print('Develop mode. Loading Catalog from catalog.json')
+            json_path = os.path.join(
+                self.index_dir, "catalog.json"
+            )
+            with open(json_path) as f:
+                self.catalog = json.load(f)
+            print('Catalog Loaded')
 
     def write_pages(self):
         """
@@ -215,8 +227,18 @@ class CatalogBuilder:
         return cat_json
 
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--develop",
+                    help=("Optional argument indicating whether or not the "
+                          "CatalogBuilder package is being developed. "
+                          "Including this flag causes the catalog to be "
+                          "created from catalog.json, rather than pinging "
+                          "the GitHub API"),
+                    default=False,
+                    action="store_true")
+args = parser.parse_args()
 if __name__ == "__main__":
-    cb = CatalogBuilder()
+    cb = CatalogBuilder(develop=args.develop)
     cb.load_catalog()
     cb.write_pages()
     cb.dump_catalog(os.path.join(cb.card_dir, "catalog.json"))
