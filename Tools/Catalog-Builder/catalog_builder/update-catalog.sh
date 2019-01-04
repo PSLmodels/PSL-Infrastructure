@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $HOME/catalog_update/PSL-Core/Tools/Catalog-Builder/catalog_builder
 export DATE=`date +%Y-%m-%d`
 export BRANCH_NAME=catalog-$DATE
 git checkout -b $BRANCH_NAME
