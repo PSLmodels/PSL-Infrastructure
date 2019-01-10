@@ -115,9 +115,8 @@ class CatalogBuilder:
                 if config["type"] == "github_file":
                     value = utils.get_from_github_api(project, config)
                     source = (
-                        "https://github.com/{}".format(project['org'])
-                        f"{project['repo']}/blob/{project['branch']}/"
-                        f"{config['source']}"
+                        "https://github.com/{}/{}/blob/{}/{}"
+                        .format(project['org'], project['repo'], project['branch'], config['source'])
                     )
 
                 elif config["type"] == "html":
@@ -125,8 +124,8 @@ class CatalogBuilder:
                     value = config["data"]
                 else:
                     msg = (
-                        f"MISSING DATA: {project['repo']}, entry: "
-                        f"{attr}, {config}"
+                        "MISSING DATA: {}, entry: {}, {}"
+                        .format(project['repo'], attr, config)
                     )
                     print(msg)
                     source, value = None, None
