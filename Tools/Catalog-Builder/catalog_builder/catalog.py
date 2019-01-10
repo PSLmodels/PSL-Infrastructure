@@ -1,11 +1,8 @@
-import sys
 import json
 import os
 from collections import defaultdict
 
 from catalog_builder import utils
-
-print(sys.version)
 
 class CatalogBuilder:
     """
