@@ -4,7 +4,7 @@ cd $HOME/catalog_update/PSL-Core/Tools/Catalog-Builder/catalog_builder
 export DATE=`date +%Y-%m-%d`
 export BRANCH_NAME=catalog-$DATE
 git checkout -b $BRANCH_NAME
-python catalog.py 
+/Users/petermetz/anaconda3/bin/python catalog.py 
 git status
 git add -u
 git commit -m "Update catalog for date $DATE"
