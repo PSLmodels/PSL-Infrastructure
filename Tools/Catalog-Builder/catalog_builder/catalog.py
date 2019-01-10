@@ -159,7 +159,7 @@ class CatalogBuilder:
                 model_path, project=project, namemap=utils.namemap
             )
             pathout = os.path.join(
-                self.card_dir, f"{project['name']['value']}.html"
+                self.card_dir, "{}.html".format(project['name']['value'])
             )
             with open(pathout, "w") as out:
                 out.write(rendered)
