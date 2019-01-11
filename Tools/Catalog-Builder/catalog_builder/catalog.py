@@ -1,7 +1,7 @@
 import json
 import os
 import argparse
-from collections import defaultdict, OrderedDict
+from collections import defaultdict
 
 from catalog_builder import utils
 
