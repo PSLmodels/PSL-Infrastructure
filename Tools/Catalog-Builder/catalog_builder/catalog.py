@@ -164,7 +164,6 @@ class CatalogBuilder:
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
-        utils.write_page(models_path, pathout, catalog=self.catalog)
 
         for _, project in self.catalog.items():
             rendered = utils.render_template(
