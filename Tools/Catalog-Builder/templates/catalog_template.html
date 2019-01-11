@@ -65,13 +65,9 @@
                         </div>
                         <div class="collapse" id="{{ make_id(item.name.value) }}-collapse" aria-labelledby="{{ make_id(item.name.value) }}-heading" data-parent="#accordionParent">
                             <div class="container">
-                                <p><a href="../{{ item.name.value }}/index.html"><strong>Website</strong></a></p>
+                                <p><a href="{{ item.name.value }}.html"><strong>Website</strong></a></p>
                                 <h3>Overview</h3>
                                 {{ item.project_overview.value }}
-                                <h3>User Documentation</h3>
-                                {{ item.user_documentation.value }}
-                                <h3>Contribute</h3>
-                                {{ item.contributor_guide.value }}
                             </div>
                         </div>
                     </div>
