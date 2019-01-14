@@ -35,7 +35,7 @@ def pre_parser(text):
         elif line.startswith("  *") or line.startswith("  -"):
             list_edit[counter] = "  " + doc_list[counter]
         elif line.startswith("    *") or line.startswith("    -"):
-            list_edit[counter] = '\t' + doc_list[counter]         
+            list_edit[counter] = '\t' + doc_list[counter]
 
     string_edit = "\n".join(list_edit)
 
@@ -112,9 +112,9 @@ def _get_from_github_api(org, repo, branch, filename):
     url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
     response = requests.get(url)
     print(f"GET: {url} {response.status_code}")
-    assert response.status_code == 200
     if response.status_code == 403:
         assert "hit rate limit" == 403
+    assert response.status_code == 200
     sanatized_content = response.json()["content"].replace("\n", "")
     encoded_content = sanatized_content.encode()
     decoded_bytes = base64.decodebytes(encoded_content)
