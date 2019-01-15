@@ -62,12 +62,24 @@
                                         </button>
                                     </div>
                                 </h2>
+                                {{ item.project_one_line.value }}
                         </div>
                         <div class="collapse" id="{{ make_id(item.name.value) }}-collapse" aria-labelledby="{{ make_id(item.name.value) }}-heading" data-parent="#accordionParent">
                             <div class="container">
                                 <p><a href="{{ item.name.value }}.html"><strong>Website</strong></a></p>
-                                <h3>Overview</h3>
+                                {{ item.project_one_line.value }}
+                                <h2>Overview</h3>
                                 {{ item.project_overview.value }}
+                                <h2>Maintainers</h2>
+                                {{ item.core_maintainers.value }}
+                                <h2>Documentation</h2>
+                                {{ item.user_documentation.value }}
+                                <h2>Contribute</h2>
+                                {{ item.contributor_guide.value }}
+                                <h2>Recent Changes</h2>
+                                {{ item.user_changelog_recent.value }}
+                                <h2>Web App</h2>
+                                {{ item.link_to_webapp.value }}
                             </div>
                         </div>
                     </div>
