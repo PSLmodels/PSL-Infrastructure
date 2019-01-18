@@ -71,13 +71,6 @@
                                 {{ item.core_maintainers.value }}
                                 <p><a href="{{ item.name.value }}.html">Project Website</a></p>
                                 <p><a href="{{ repos[project] }}">Code Repository</a></p>
-                                <!-- <h2>Documentation</h2>
-                                {{ item.user_documentation.value }}
-                                <h2>Contribute</h2>
-                                {{ item.contributor_guide.value }}
-                                {{ item.user_changelog_recent.value }}
-                                <h2>Web App</h2>
-                                {{ item.link_to_webapp.value }} -->
                                 {{ make_links(item) }}
                             </div>
                         </div>
