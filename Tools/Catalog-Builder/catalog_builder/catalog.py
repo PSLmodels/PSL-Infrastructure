@@ -91,6 +91,7 @@ class CatalogBuilder:
         )
 
         self.catalog = defaultdict(dict)
+        self.repos = {}
         self.develop = develop
 
     def load_catalog(self):
@@ -100,6 +101,7 @@ class CatalogBuilder:
         parsed via the `parse_section` function. The parsed data is saved
         to the `catalog` attribute.
         """
+        repo_url = "https://github.com/{}/{}"  # Used to build repo links
         if not self.develop:
             for project in sorted(self.projects, key=lambda x: x['repo']):
                 cat_meta = utils._get_from_github_api(
@@ -113,6 +115,10 @@ class CatalogBuilder:
                     "value": project["repo"],
                     "source": "",
                 }
+                self.repos[project["repo"]] = repo_url.format(
+                    project["org"],
+                    project["repo"]
+                )
                 for attr, config in cat_meta.items():
                     if config["type"] == "github_file":
                         value = utils.get_from_github_api(project, config)
@@ -141,6 +147,11 @@ class CatalogBuilder:
             )
             with open(json_path) as f:
                 self.catalog = json.load(f)
+            for project in self.projects:
+                self.repos[project["repo"]] = repo_url.format(
+                    project["org"],
+                    project["repo"]
+                )
             print('Catalog Loaded')
 
     def write_pages(self):
@@ -160,7 +171,8 @@ class CatalogBuilder:
             self.CURRENT_PATH, "../templates", "card_template.html"
         )
 
-        rendered = utils.render_template(models_path, catalog=self.catalog)
+        rendered = utils.render_template(models_path, catalog=self.catalog,
+                                         repos=self.repos)
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
