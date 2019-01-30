@@ -14,18 +14,7 @@
         <title>PSL Home</title>
         <!-- include bootstrap -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <style>
-            .card-link {color: black;}
-            .jumbotron {background-color: #F0F0F0;}
-            .newsletter-input {border-radius: 5px;
-                               border-color: lightgrey;
-                               border-width: 1px;
-                               border-style: solid;
-                               margin-bottom: 5px;
-                               padding: 5px;}
-            #mc-embedded-subscribe {margin-bottom: 100px;}
-            .asterisk {color: red;}
-        </style>
+        <link rel="stylesheet" href="CSS/page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -39,10 +28,10 @@
             </ul>
         </nav>
         <div class="container">
-            <div class="jumbotron" style="font-family:'Courier New', Courier, monospace">
+            <div class="jumbotron">
                 <img src="imgs/PolicySimLibrary-1000px.png" class="img-fluid" alt="Responsive image">
-                <h1 style="font-size: 3.5vw;">Open Models == Better Policy</h1>
-                <a href="Catalog/index.html" class="btn btn-secondary btn-lg" id="aboutlink" style="font-family:'Courier New', Courier, monospace;">PSL Catalog</a>
+                <h1>Open Models == Better Policy</h1>
+                <a href="Catalog/index.html" class="btn btn-secondary btn-lg" id="aboutlink">PSL Catalog</a>
             </div>
             <div class="row">
                 <div class="col-lg-4">
@@ -86,12 +75,12 @@
             <div id="mc_embed_signup">
                 <form action="https://policysimulationlibrary.us19.list-manage.com/subscribe/post?u=a5800eed8cadff70bf999bc29&amp;id=8437c6ae2f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
-                                <h2 style="margin-top: 20px; font-size: 3.5vw;">Subscribe to our newsletter</h2>
+                                <h2 id="subscribe">Subscribe to our newsletter</h2>
                         <div class="mc-field-group">
-                            <input type="text" value="" name="MMERGE6" class="newsletter-input" id="mce-MMERGE6" placeholder="First Name" style="margin-bottom: 5px;">
+                            <input type="text" value="" name="MMERGE6" class="newsletter-input" id="mce-MMERGE6" placeholder="First Name">
                         </div>
                         <div class="mc-field-group">
-                            <input type="text" value="" name="LNAME" class="newsletter-input" id="mce-LNAME" placeholder="Last Name" style="margin-bottom: 5px;">
+                            <input type="text" value="" name="LNAME" class="newsletter-input" id="mce-LNAME" placeholder="Last Name">
                         </div>
                         <div class="mc-field-group">
                             <input type="email" value="" name="EMAIL" class="newsletter-input" id="mce-EMAIL" placeholder="Email">
