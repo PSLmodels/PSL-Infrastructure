@@ -10,9 +10,26 @@ code {
 .card-link{
     color: black;
 }
+a.btn:hover{
+    background-color: #6aa7d8;
+}
+.btn-lg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.img-fluid{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
 .jumbotron {
     background-color: #F0F0F0;
     font-family: 'Courier New', Courier, monospace;
+    gride-auto-flow: column;
 }
 .newsletter-input {
     border-radius: 5px;
@@ -21,6 +38,9 @@ code {
     border-style: solid;
     margin-bottom: 5px;
     padding: 5px;
+}
+.col-lg-4{
+    max-height: 200px;
 }
 #mc-embedded-subscribe {
     margin-bottom: 100px;
