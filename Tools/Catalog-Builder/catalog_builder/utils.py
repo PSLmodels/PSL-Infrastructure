@@ -101,6 +101,8 @@ def render_template(template_path, **render_kwargs):
     with open(template_path, "r") as f:
         template_str = f.read()
     template = Template(template_str)
+    template.globals["make_id"] = make_id
+    template.globals["make_links"] = make_links
     return template.render(**render_kwargs)
 
 
@@ -129,6 +131,42 @@ def get_from_github_api(project, config):
     return parse_section(text, config["start_header"], config["end_header"])
 
 
+def make_id(name):
+    return "-".join(name.split())
+
+
+def make_links(item):
+    """
+    Returns either an HTML link or an empty string
+    """
+    def is_html_link(value):
+        return value.startswith("<a") and value.endswith("/a>")
+
+    def create_link(info, section_name):
+        link_str = "<p><a href=\"{}\">{}</a>\n</p>"
+        if info["source"]:
+            if info["source"].startswith("http"):
+                return link_str.format(info["source"], section_name)
+        elif info["value"]:
+            if is_html_link(info["value"]):
+                linesoup = BeautifulSoup(info["value"], "html.parser")
+                a = linesoup.find('a')
+                href = a.attrs["href"]
+                return link_str.format(href, section_name)
+        else:
+            return ""
+
+    # list of sections to create links for
+    sections = [("user_documentation", "User documentation"),
+                ("contributor_overview", "Contributor documentation"),
+                ("user_changelog_recent", "Recent changes"),
+                ("link_to_webapp", "Link to webapp")]
+    links = ""
+    for key, section_name in sections:
+        links += create_link(item[key], section_name)
+    return links
+
+
 namemap = {
     "key_features": "Key Features",
     "project_overview": "Project Overview",
@@ -152,3 +190,9 @@ namemap = {
     "public_issue_tracker": "Public Issue Tracker",
     "public_qanda": "Public Q & A",
 }
+about_keys = ["key_features", "user_documentation", "user_case_studies",
+              "user_changelog_recent",
+              "project_roadmap", "license", "core_maintainers",
+              "citation", "public_qanda", "public_funding"]
+
+contributor_keys = ["contributor_overview", "contributor_guide"]

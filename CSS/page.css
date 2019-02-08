@@ -12,7 +12,6 @@ code {
 }
 .jumbotron {
     background-color: #F0F0F0;
-    font-family: 'Courier New', Courier, monospace;
 }
 .newsletter-input {
     border-radius: 5px;
@@ -37,4 +36,9 @@ h1 {
 #subscribe {
     margin-top: 20px;
     font-size: 3.5vw;
+}
+.model-info a {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
 }
