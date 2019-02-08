@@ -10,8 +10,20 @@ code {
 .card-link{
     color: black;
 }
+a.card-link:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #eff1f2;
+}
 a.btn:hover{
-    background-color: #6aa7d8;
+    background-color: #d3dded;
+    color: black;
+}
+.card-header:hover{
+    background-color:#dbe8fc;
+}
+.card:hover{
+    background-color: #dbe8fc;
 }
 .btn-lg{
     display: block;
@@ -19,7 +31,10 @@ a.btn:hover{
     margin-right: auto;
     width: 200px;
 }
-
+blockquote.twitter-tweet{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
 .img-fluid{
     display: block;
     margin-left: auto;
@@ -29,7 +44,7 @@ a.btn:hover{
 .jumbotron {
     background-color: #F0F0F0;
     font-family: 'Courier New', Courier, monospace;
-    gride-auto-flow: column;
+    grid-auto-flow: column;
 }
 .newsletter-input {
     border-radius: 5px;
@@ -38,9 +53,6 @@ a.btn:hover{
     border-style: solid;
     margin-bottom: 5px;
     padding: 5px;
-}
-.col-lg-4{
-    max-height: 200px;
 }
 #mc-embedded-subscribe {
     margin-bottom: 100px;
