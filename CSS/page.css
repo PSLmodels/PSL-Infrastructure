@@ -39,8 +39,6 @@ a.btn:hover{
 }
 .jumbotron {
     background-color: #F0F0F0;
-    font-family: 'Courier New', Courier, monospace;
-    grid-auto-flow: column;
 }
 .newsletter-input {
     border-radius: 5px;
