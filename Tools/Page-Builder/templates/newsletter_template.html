@@ -11,54 +11,25 @@
             gtag('config', 'UA-128365658-1');
         </script>
         <meta charset="utf-8">
-        <title>PSL Models</title>
+        <title>{{ title }}</title>
         <!-- include bootstrap -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <style>
-        .model-info a {
-            color:inherit;
-            text-decoration-line: underline;
-            text-decoration-style: solid;
-        }
-        .jumbotron {
-            background-color: transparent !important;
-        }
-        /* github style code highlighting */
-        code {
-            color: inherit;
-            background-color: rgba(27,31,35,0.05);
-        }
-    </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-header">
                 <a href="../index.html" class="navbar-brand">Policy Simulation Library</a>
             </div>
             <ul class="navbar-nav">
-                <!-- TODO: Need better solution to relative path here -->
-                <li class="nav-item"><a href="index.html" class="nav-link">Catalog</a></li>
+                <li class="nav-item"><a href="../Catalog/index.html" class="nav-link">Catalog</a></li>
                 <li class="nav-item"><a href="../about.html" class="nav-link">About PSL</a></li>
                 <li class="nav-item"><a href="../Newsletter/February.html" class="nav-link">Newsletter</a></li>
             </ul>
         </nav>
-
-        <div class="container">
-            <div class="jumbotron model-info">
-                <h1 class="display-4">{{ project.name.value }}</h1>
-                <p class="lead">{{ project.project_one_line.value }}</p>
-                <hr class="my-4">
-                {% for attr, name in namemap.items() %}
-                    {% if project[attr].value %}
-                        <h4> {{ name }}</h4>
-                        <p>{{ project[attr].value }} </p>
-                        {% if project[attr].source %}
-                            <p><a href={{project[attr].source}} >[source]</a></p>
-                        {% endif %}
-                    {% endif %}
-                {% endfor %}
-            </div>
+        <div class="container" id="content">
+            {{ content }}
         </div>
     </body>
 </html>
