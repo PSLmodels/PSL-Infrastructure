@@ -10,10 +10,14 @@
 
             gtag('config', 'UA-128365658-1');
         </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <meta charset="utf-8">
         <title>PSL Models</title>
         <!-- include bootstrap -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -24,25 +28,150 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="index.html" class="nav-link">Catalog</a></li>
                 <li class="nav-item"><a href="../about.html" class="nav-link">About PSL</a></li>
-                <li class="nav-item"><a href="Newsletter/February.html" class="nav-link">Newsletter</a></li>
+                <li class="nav-item"><a href="../Newsletter/February.html" class="nav-link">Newsletter</a></li>
             </ul>
         </nav>
 
-        <div class="container">
+        <div class="container" id="content">
             <h1>Models</h1>
-            
-                <h3><a href="B-Tax.html" style="color:inherit;">B-Tax</a></h3>
-                <p><p>B-Tax is a model that can be used to evaluate the effect of US federal taxes on the investment incentives of corporate and non-corporate businesses.  Specifically, B-Tax uses data on the business assets and financial policy, as well as microdata on individual tax filers, to compute marginal effective tax rates on new investments.  In modeling the effects of changes to the individual income tax code, B-Tax works with <a href="https://github.com/open-source-economics/tax-calculator">Tax-Calculator</a>, another open source model of US federal tax policy.  B-Tax is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p></p>
-            
-                <h3><a href="Behavioral-Responses.html" style="color:inherit;">Behavioral-Responses</a></h3>
-                <p><p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a></p></p>
-            
-                <h3><a href="OG-USA.html" style="color:inherit;">OG-USA</a></h3>
-                <p><p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href="https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf">here</a> and is regularly updated.</p></p>
-            
-                <h3><a href="Tax-Calculator.html" style="color:inherit;">Tax-Calculator</a></h3>
-                <p><a href="https://github.com/PSLmodels/Tax-Calculator/blob/master/README.md#what-is-tax-calculator">What is Tax-Calculator?</a></p>
-            
+            <div class="accordion" id="accordionParent">
+                <!-- Create a collapsible card for each model in PSL -->
+                
+                    <div class="card">
+                        <div class="card-header" id="B-Tax-heading">
+                                <h2>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#B-Tax-collapse">B-Tax</a>
+                                    <div class="float-right">
+                                        <button
+                                            class="btn collapse-button"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#B-Tax-collapse"
+                                            aria-expanded="false"
+                                            aria-controls="B-Tax-collapse"
+                                            style="margin-left:20px;">
+                                            <i class="far fa-plus-square" style="size:.5x;"></i>
+                                        </button>
+                                    </div>
+                                </h2>
+                                <p>Evaluates the effect of US federal taxes on businesses' investment incentives</p>
+                        </div>
+                        <div class="collapse" id="B-Tax-collapse" aria-labelledby="B-Tax-heading" data-parent="#accordionParent">
+                            <div class="container">
+                                <p><p>B-Tax is a model that can be used to evaluate the effect of US federal taxes on the investment incentives of corporate and non-corporate businesses.  Specifically, B-Tax uses data on the business assets and financial policy, as well as microdata on individual tax filers, to compute marginal effective tax rates on new investments.  In modeling the effects of changes to the individual income tax code, B-Tax works with <a href="https://github.com/open-source-economics/tax-calculator">Tax-Calculator</a>, another open source model of US federal tax policy.  B-Tax is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p></p>
+                                <h6>Maintainers</h6>
+                                <ul><li>Jason DeBacker</li></ul>
+                                <p><a href="B-Tax.html">Project Website</a></p>
+                                <p><a href="https://github.com/open-source-economics/B-Tax">Code Repository</a></p>
+                                <p><a href="https://github.com/open-source-economics/B-Tax/blob/master/Guides/CCC_Guide.pdf">User documentation</a>
+</p><p><a href="http://www.ospc.org/ccc/">Link to webapp</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header" id="Behavioral-Responses-heading">
+                                <h2>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Behavioral-Responses-collapse">Behavioral-Responses</a>
+                                    <div class="float-right">
+                                        <button
+                                            class="btn collapse-button"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#Behavioral-Responses-collapse"
+                                            aria-expanded="false"
+                                            aria-controls="Behavioral-Responses-collapse"
+                                            style="margin-left:20px;">
+                                            <i class="far fa-plus-square" style="size:.5x;"></i>
+                                        </button>
+                                    </div>
+                                </h2>
+                                <p>Partial-equilibrium behavioral-responses module that works with Tax-Calculator</p>
+                        </div>
+                        <div class="collapse" id="Behavioral-Responses-collapse" aria-labelledby="Behavioral-Responses-heading" data-parent="#accordionParent">
+                            <div class="container">
+                                <p><p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a></p></p>
+                                <h6>Maintainers</h6>
+                                <ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>
+                                <p><a href="Behavioral-Responses.html">Project Website</a></p>
+                                <p><a href="https://github.com/open-source-economics/Behavioral-Responses">Code Repository</a></p>
+                                <p><a href="http://PSLmodels.github.io/Behavioral-Responses/index.html">User documentation</a>
+</p><p><a href="https://github.com/open-source-economics/Behavioral-Responses/blob/master/README.md">Contributor documentation</a>
+</p><p><a href="https://www.ospc.org/taxbrain/">Link to webapp</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header" id="OG-USA-heading">
+                                <h2>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#OG-USA-collapse">OG-USA</a>
+                                    <div class="float-right">
+                                        <button
+                                            class="btn collapse-button"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#OG-USA-collapse"
+                                            aria-expanded="false"
+                                            aria-controls="OG-USA-collapse"
+                                            style="margin-left:20px;">
+                                            <i class="far fa-plus-square" style="size:.5x;"></i>
+                                        </button>
+                                    </div>
+                                </h2>
+                                <p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>
+                        </div>
+                        <div class="collapse" id="OG-USA-collapse" aria-labelledby="OG-USA-heading" data-parent="#accordionParent">
+                            <div class="container">
+                                <p><p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href="https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf">here</a> and is regularly updated.</p></p>
+                                <h6>Maintainers</h6>
+                                <ul><li><a href="https://sites.google.com/site/rickecon/">Richard Evans</a></li><li><a href="http://jasondebacker.com">Jason DeBacker</a></li></ul>
+                                <p><a href="OG-USA.html">Project Website</a></p>
+                                <p><a href="https://github.com/open-source-economics/OG-USA">Code Repository</a></p>
+                                <p><a href="https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf">User documentation</a>
+</p><p><a href="https://github.com/open-source-economics/OG-USA#usingcontributing-to-og-usa">Contributor documentation</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header" id="Tax-Calculator-heading">
+                                <h2>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Tax-Calculator-collapse">Tax-Calculator</a>
+                                    <div class="float-right">
+                                        <button
+                                            class="btn collapse-button"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#Tax-Calculator-collapse"
+                                            aria-expanded="false"
+                                            aria-controls="Tax-Calculator-collapse"
+                                            style="margin-left:20px;">
+                                            <i class="far fa-plus-square" style="size:.5x;"></i>
+                                        </button>
+                                    </div>
+                                </h2>
+                                <p>USA federal individual income and payroll tax microsimulation model</p>
+                        </div>
+                        <div class="collapse" id="Tax-Calculator-collapse" aria-labelledby="Tax-Calculator-heading" data-parent="#accordionParent">
+                            <div class="container">
+                                <p><a href="https://github.com/PSLmodels/Tax-Calculator/blob/master/README.md#what-is-tax-calculator">What is Tax-Calculator?</a></p>
+                                <h6>Maintainers</h6>
+                                <ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>
+                                <p><a href="Tax-Calculator.html">Project Website</a></p>
+                                <p><a href="https://github.com/open-source-economics/Tax-Calculator">Code Repository</a></p>
+                                <p><a href="http://PSLmodels.github.io/Tax-Calculator/index.html">User documentation</a>
+</p><p><a href="https://github.com/PSLmodels/Tax-Calculator/blob/master/README.md#getting-started">Contributor documentation</a>
+</p><p><a href="https://www.ospc.org/taxbrain/">Link to webapp</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
         </div>
     </body>
 </html>
