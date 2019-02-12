@@ -40,7 +40,7 @@ a.btn:hover{
 @media(min-width: 650px){
     .sidenav{
         height: 100%;
-        width: 300px;
+        width: 400px;
         float: right;
         margin-right: 50px;
     }
@@ -52,8 +52,8 @@ a.btn:hover{
 }
 @media(min-width: 650px){
     .container{
-        margin-right:350px;
-        width: 75%;
+        margin-right:450px;
+        width: 70%;
         max-width: 2000px;
     }
 }
