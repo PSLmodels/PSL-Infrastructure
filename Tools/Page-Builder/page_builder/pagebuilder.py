@@ -58,6 +58,8 @@ class PageBuilder():
                 html_text = markdown.markdown(md_text)
                 soup = BeautifulSoup(html_text, 'lxml')
                 html_text = soup.p
+            elif page == "Newsletter":
+                html_text = md_text
             else:
                 html_text = markdown.markdown(md_text)
             self.write_page(pathout, template,
