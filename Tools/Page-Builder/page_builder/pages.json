@@ -13,5 +13,10 @@
         "template": "../templates/index_template.html",
         "content": "../../../NEWS.md",
         "pathout": "../../../index.html"
+    },
+    "Newsletter": {
+        "template": "../templates/newsletter_template.html",
+        "content": "../../../Newsletter/raw/Feb_Newsletter.html",
+        "pathout": "../../../Newsletter/February.html"
     }
 }

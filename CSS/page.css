@@ -89,3 +89,8 @@ h1 {
     margin-top: 20px;
     font-size: 3.5vw;
 }
+.model-info a {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
