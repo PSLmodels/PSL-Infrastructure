@@ -20,10 +20,10 @@ a.btn:hover{
     color: black;
 }
 .card-header:hover{
-    background-color:#dbe8fc;
+    background-color:#f2f5fc;
 }
 .card:hover{
-    background-color: #dbe8fc;
+    background-color: #f2f5fc;
 }
 .btn-lg{
     display: block;
