@@ -10,6 +10,58 @@ code {
 .card-link{
     color: black;
 }
+a.card-link:hover{
+    color: black;
+    text-decoration: none;
+    background-color: #eff1f2;
+}
+a.btn:hover{
+    background-color: #d3dded;
+    color: black;
+}
+.card-header:hover{
+    background-color:#dbe8fc;
+}
+.card:hover{
+    background-color: #dbe8fc;
+}
+.btn-lg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+.img-fluid{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+@media(min-width: 650px){
+    .sidenav{
+        height: 100%;
+        width: 400px;
+        float: right;
+        margin-right: 50px;
+    }
+}
+@media (max-width: 650px) {
+    .sidenav{
+        display: none;
+    }
+}
+@media(min-width: 650px){
+    .container{
+        margin-right:450px;
+        width: 70%;
+        max-width: 2000px;
+    }
+}
+@media(min-width: 650px) {
+    .twitter-card{
+        display: none;
+    }
+}
 .jumbotron {
     background-color: #F0F0F0;
 }
