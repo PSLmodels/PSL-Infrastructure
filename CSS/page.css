@@ -37,6 +37,31 @@ a.btn:hover{
     margin-right: auto;
     width: 90%;
 }
+@media(min-width: 650px){
+    .sidenav{
+        height: 100%;
+        width: 300px;
+        float: right;
+        margin-right: 50px;
+    }
+}
+@media (max-width: 650px) {
+    .sidenav{
+        display: none;
+    }
+}
+@media(min-width: 650px){
+    .container{
+        margin-right:350px;
+        width: 75%;
+        max-width: 2000px;
+    }
+}
+@media(min-width: 650px) {
+    .twitter-card{
+        display: none;
+    }
+}
 .jumbotron {
     background-color: #F0F0F0;
 }
