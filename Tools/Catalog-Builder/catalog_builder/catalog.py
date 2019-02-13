@@ -5,7 +5,6 @@ from collections import defaultdict
 
 from catalog_builder import utils
 
-
 class CatalogBuilder:
     """
     Receives list of projects and an optional directory indicating where to look
@@ -182,7 +181,7 @@ class CatalogBuilder:
                 model_path, project=project, namemap=utils.namemap
             )
             pathout = os.path.join(
-                self.card_dir, f"{project['name']['value']}.html"
+                self.card_dir, "{}.html".format(project['name']['value'])
             )
             with open(pathout, "w") as out:
                 out.write(rendered)
