@@ -10,10 +10,14 @@
 
             gtag('config', 'UA-128365658-1');
         </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <meta charset="utf-8">
         <title>PSL Models</title>
         <!-- include bootstrap -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -24,15 +28,47 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="index.html" class="nav-link">Catalog</a></li>
                 <li class="nav-item"><a href="../about.html" class="nav-link">About PSL</a></li>
+                <li class="nav-item"><a href="Newsletter/February.html" class="nav-link">Newsletter</a></li>
             </ul>
         </nav>
 
-        <div class="container">
+        <div class="container" id="content">
             <h1>Models</h1>
-            {% for project, item in catalog.items() %}
-                <h3><a href="{{item.name.value}}.html" style="color:inherit;">{{ item.name.value }}</a></h3>
-                <p>{{ item.project_overview.value }}</p>
-            {% endfor %}
+            <div class="accordion" id="accordionParent">
+                <!-- Create a collapsible card for each model in PSL -->
+                {% for project, item in catalog.items() %}
+                    <div class="card">
+                        <div class="card-header" id="{{ make_id(item.name.value) }}-heading">
+                                <h2>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#{{ make_id(item.name.value) }}-collapse">{{ item.name.value }}</a>
+                                    <div class="float-right">
+                                        <button
+                                            class="btn collapse-button"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#{{ make_id(item.name.value) }}-collapse"
+                                            aria-expanded="false"
+                                            aria-controls="{{ make_id(item.name.value) }}-collapse"
+                                            style="margin-left:20px;">
+                                            <i class="far fa-plus-square" style="size:.5x;"></i>
+                                        </button>
+                                    </div>
+                                </h2>
+                                {{ item.project_one_line.value }}
+                        </div>
+                        <div class="collapse" id="{{ make_id(item.name.value) }}-collapse" aria-labelledby="{{ make_id(item.name.value) }}-heading" data-parent="#accordionParent">
+                            <div class="container">
+                                <p>{{ item.project_overview.value }}</p>
+                                <h6>Maintainers</h6>
+                                {{ item.core_maintainers.value }}
+                                <p><a href="{{ item.name.value }}.html">Project Website</a></p>
+                                <p><a href="{{ repos[project] }}">Code Repository</a></p>
+                                {{ make_links(item) }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </body>
 </html>

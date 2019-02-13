@@ -35,7 +35,7 @@ def pre_parser(text):
         elif line.startswith("  *") or line.startswith("  -"):
             list_edit[counter] = "  " + doc_list[counter]
         elif line.startswith("    *") or line.startswith("    -"):
-            list_edit[counter] = '\t' + doc_list[counter]         
+            list_edit[counter] = '\t' + doc_list[counter]
 
     string_edit = "\n".join(list_edit)
 
@@ -101,6 +101,8 @@ def render_template(template_path, **render_kwargs):
     with open(template_path, "r") as f:
         template_str = f.read()
     template = Template(template_str)
+    template.globals["make_id"] = make_id
+    template.globals["make_links"] = make_links
     return template.render(**render_kwargs)
 
 
@@ -112,9 +114,9 @@ def _get_from_github_api(org, repo, branch, filename):
     url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
     response = requests.get(url)
     print(f"GET: {url} {response.status_code}")
-    assert response.status_code == 200
     if response.status_code == 403:
         assert "hit rate limit" == 403
+    assert response.status_code == 200
     sanatized_content = response.json()["content"].replace("\n", "")
     encoded_content = sanatized_content.encode()
     decoded_bytes = base64.decodebytes(encoded_content)
@@ -127,6 +129,42 @@ def get_from_github_api(project, config):
         project["org"], project["repo"], project["branch"], config["source"]
     )
     return parse_section(text, config["start_header"], config["end_header"])
+
+
+def make_id(name):
+    return "-".join(name.split())
+
+
+def make_links(item):
+    """
+    Returns either an HTML link or an empty string
+    """
+    def is_html_link(value):
+        return value.startswith("<a") and value.endswith("/a>")
+
+    def create_link(info, section_name):
+        link_str = "<p><a href=\"{}\">{}</a>\n</p>"
+        if info["source"]:
+            if info["source"].startswith("http"):
+                return link_str.format(info["source"], section_name)
+        elif info["value"]:
+            if is_html_link(info["value"]):
+                linesoup = BeautifulSoup(info["value"], "html.parser")
+                a = linesoup.find('a')
+                href = a.attrs["href"]
+                return link_str.format(href, section_name)
+        else:
+            return ""
+
+    # list of sections to create links for
+    sections = [("user_documentation", "User documentation"),
+                ("contributor_overview", "Contributor documentation"),
+                ("user_changelog_recent", "Recent changes"),
+                ("link_to_webapp", "Link to webapp")]
+    links = ""
+    for key, section_name in sections:
+        links += create_link(item[key], section_name)
+    return links
 
 
 namemap = {
@@ -152,3 +190,9 @@ namemap = {
     "public_issue_tracker": "Public Issue Tracker",
     "public_qanda": "Public Q & A",
 }
+about_keys = ["key_features", "user_documentation", "user_case_studies",
+              "user_changelog_recent",
+              "project_roadmap", "license", "core_maintainers",
+              "citation", "public_qanda", "public_funding"]
+
+contributor_keys = ["contributor_overview", "contributor_guide"]
