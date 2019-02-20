@@ -281,6 +281,100 @@
             "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
         }
     },
+    "ParamTools": {
+        "name": {
+            "value": "ParamTools",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": "https://github.com/PSLmodels/ParamTools",
+            "value": "<p>Library for parameter processing and validation with a focus on computational modeling projects</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/PSLmodels/ParamTools/blob/master/README.md",
+            "value": "<p>ParamTools defines the parameter input space for computational modeling projects.</p> <ul> <li> <p>Defines the default parameter space.</p> </li> <li> <p>Facilitates adjusting that space.</p> </li> <li> <p>Performs validation on the default space and the adjusted space.</p> </li> </ul>"
+        },
+        "citation": {
+            "source": null,
+            "value": null
+        },
+        "license": {
+            "source": "https://github.com/PSLmodels/ParamTools/blob/master/LICENSE.txt",
+            "value": "<p>MIT</p>"
+        },
+        "user_documentation": {
+            "source": "https://paramtools.readthedocs.io/en/latest/",
+            "value": "<a href=\"https://paramtools.readthedocs.io/en/latest/\">https://paramtools.readthedocs.io/en/latest/</a>"
+        },
+        "user_changelog": {
+            "source": "https://github.com/PSLmodels/ParamTools/releases",
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/releases\">https://github.com/PSLmodels/ParamTools/releases</a>"
+        },
+        "user_changelog_recent": {
+            "source": "https://github.com/PSLmodels/ParamTools/releases/latest",
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/releases/latest\">https://github.com/PSLmodels/ParamTools/releases/latest</a>"
+        },
+        "dev_changelog": {
+            "source": "https://github.com/PSLmodels/ParamTools/releases",
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/releases\">https://github.com/PSLmodels/ParamTools/releases</a>"
+        },
+        "disclaimer": {
+            "source": null,
+            "value": null
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_overview": {
+            "source": "https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md",
+            "value": "<p>Contributions are welcome! Open a <a href=\"https://github.com/PSLmodels/ParamTools/pulls\">PR</a> with your changes (and tests to go along with them!). In this PR describe what your change does and link to any relevant issues.</p> <h5>Feature Requests</h5> <p>Please open an <a href=\"https://github.com/PSLmodels/ParamTools/issues\">issue</a> describing the feature and its potential use cases.</p> <h5>Bug Reports</h5> <p>Please open an <a href=\"https://github.com/PSLmodels/ParamTools/issues\">issue</a> describing the bug.</p>"
+        },
+        "contributor_guide": {
+            "source": "https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md",
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md\">https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md</a>"
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": null
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/issues\">https://github.com/PSLmodels/ParamTools/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/issues\">https://github.com/PSLmodels/ParamTools/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Hank Doupe</li></ul>"
+        },
+        "unit_test": {
+            "source": "https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests",
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests\">https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests</a>"
+        },
+        "integration_test": {
+            "source": "https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests",
+            "value": "<a href=\"https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests\">https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests</a>"
+        }
+    },
     "Tax-Calculator": {
         "name": {
             "value": "Tax-Calculator",
