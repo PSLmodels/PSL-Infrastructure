@@ -228,7 +228,7 @@ if __name__ == "__main__":
                             "the GitHub API."),
                         default=False,
                         action="store_true")
-    parser.add_argument("--build_one",
+    parser.add_argument("--build-one",
                         help=("Only build the catalog with the specified "
                               "project. This is helpful when you want to "
                               "run the catalog builder many times for the same "
