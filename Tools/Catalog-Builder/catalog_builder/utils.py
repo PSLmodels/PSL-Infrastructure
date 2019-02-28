@@ -12,6 +12,9 @@ import re
 class SectionHeadersDoNotExist(Exception):
     pass
 
+class URLFormatError(Exception):
+    pass
+
 def pre_parser(text):
     """
     Convert Github-Flavored markdown to Python markdown
@@ -111,6 +114,12 @@ def _get_from_github_api(org, repo, branch, filename):
     Read data from github api. Ht to @andersonfrailey for decoding the response
     """
     # TODO: incorporate master branch
+    if "http" in filename:
+        raise URLFormatError(
+            "A URL was entered for a 'github_file' type attribute. "
+            "For more information, check out the catalog configuration "
+            "docs: Tools/Catalog-Builder/README.md"
+        )
     url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
     response = requests.get(url)
     print(f"GET: {url} {response.status_code}")

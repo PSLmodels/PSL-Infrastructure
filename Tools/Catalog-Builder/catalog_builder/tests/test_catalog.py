@@ -103,11 +103,20 @@ def test_catalog_write_html(cb):
 def test_catalog_dumps(cb):
     assert cb.dump_catalog()
 
+def test_catalog_one_project(cb):
+    projects = [
+        {"org": "noorg", "repo": "TestProject", "branch": "master"},
+        {"org": "someorg", "repo": "NewProject", "branch": "master"}
+    ]
+    cb = catalog.CatalogBuilder(
+        projects,
+        build_one="NewProject",
+    )
+    assert len(cb.projects) == 1
+    assert cb.projects[0]["repo"] == "NewProject"
 
-def test_catalog_on_real_data():
-    cb = catalog.CatalogBuilder()
-    # only do the first project
-    cb.projects = [cb.projects[0]]
-    cb.load_catalog()
-    cb.write_pages()
-    cb.dump_catalog()
+    with pytest.raises(catalog.ProjectDoesNotExist):
+        cb = catalog.CatalogBuilder(
+            projects,
+            build_one="does not exist",
+        )
