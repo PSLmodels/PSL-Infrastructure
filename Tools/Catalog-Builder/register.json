@@ -14,9 +14,14 @@
         "repo": "Tax-Calculator",
         "branch": "master"
     },
-     {
+    {
         "org": "open-source-economics",
         "repo": "Behavioral-Responses",
+        "branch": "master"
+    },
+    {
+        "org": "PSLmodels",
+        "repo": "ParamTools",
         "branch": "master"
     }
 ]

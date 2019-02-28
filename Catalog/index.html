@@ -17,7 +17,7 @@
         <title>PSL Models</title>
         <!-- include bootstrap -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="../CSS/catalog.css">
+        <link rel="stylesheet" href="../CSS/page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -28,7 +28,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="index.html" class="nav-link">Catalog</a></li>
                 <li class="nav-item"><a href="../about.html" class="nav-link">About PSL</a></li>
-                <li class="nav-item"><a href="../Newsletter/February.html" class="nav-link">Newsletter</a></li>
+                <li class="nav-item"><a href="Newsletter/February.html" class="nav-link">Newsletter</a></li>
             </ul>
         </nav>
 
@@ -37,7 +37,7 @@
             <div class="accordion" id="accordionParent">
                 <!-- Create a collapsible card for each model in PSL -->
                 
-                    <div class="card catalog_card">
+                    <div class="card">
                         <div class="card-header" id="B-Tax-heading">
                                 <h2>
                                     <a href="" style="color:inherit;" data-toggle="collapse" data-target="#B-Tax-collapse">B-Tax</a>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 
-                    <div class="card catalog_card">
+                    <div class="card">
                         <div class="card-header" id="Behavioral-Responses-heading">
                                 <h2>
                                     <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Behavioral-Responses-collapse">Behavioral-Responses</a>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="collapse" id="Behavioral-Responses-collapse" aria-labelledby="Behavioral-Responses-heading" data-parent="#accordionParent">
                             <div class="container">
-                                <p><p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a></p></p>
+                                <p><p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a>.  It provides two ways of doing this: (1) the <code>response</code> function, which contains higher-level logic that supports the TaxBrain "Partial Equilibrium Simulation" capability and requires specification of only the elasticities, and (2) the <code>quantity_response</code> function, which contains lower-level logic that requires specification of the quantity whose response is to be estimated, requires specification of the marginal tax rates and elasticities to be used in the response calculation, and allows the response estimation to be conducted by subgroup with different elasticities for each subgroup.</p></p>
                                 <h6>Maintainers</h6>
                                 <ul><li>Martin Holmer</li><li>Matt Jensen</li></ul>
                                 <p><a href="Behavioral-Responses.html">Project Website</a></p>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 
-                    <div class="card catalog_card">
+                    <div class="card">
                         <div class="card-header" id="OG-USA-heading">
                                 <h2>
                                     <a href="" style="color:inherit;" data-toggle="collapse" data-target="#OG-USA-collapse">OG-USA</a>
@@ -137,7 +137,41 @@
                         </div>
                     </div>
                 
-                    <div class="card catalog_card">
+                    <div class="card">
+                        <div class="card-header" id="ParamTools-heading">
+                                <h2>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#ParamTools-collapse">ParamTools</a>
+                                    <div class="float-right">
+                                        <button
+                                            class="btn collapse-button"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#ParamTools-collapse"
+                                            aria-expanded="false"
+                                            aria-controls="ParamTools-collapse"
+                                            style="margin-left:20px;">
+                                            <i class="far fa-plus-square" style="size:.5x;"></i>
+                                        </button>
+                                    </div>
+                                </h2>
+                                <p>Library for parameter processing and validation with a focus on computational modeling projects</p>
+                        </div>
+                        <div class="collapse" id="ParamTools-collapse" aria-labelledby="ParamTools-heading" data-parent="#accordionParent">
+                            <div class="container">
+                                <p><p>ParamTools defines the parameter input space for computational modeling projects.</p> <ul> <li> <p>Defines the default parameter space.</p> </li> <li> <p>Facilitates adjusting that space.</p> </li> <li> <p>Performs validation on the default space and the adjusted space.</p> </li> </ul></p>
+                                <h6>Maintainers</h6>
+                                <ul><li>Hank Doupe</li></ul>
+                                <p><a href="ParamTools.html">Project Website</a></p>
+                                <p><a href="https://github.com/PSLmodels/ParamTools">Code Repository</a></p>
+                                <p><a href="https://paramtools.readthedocs.io/en/latest/">User documentation</a>
+</p><p><a href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md">Contributor documentation</a>
+</p><p><a href="https://github.com/PSLmodels/ParamTools/releases/latest">Recent changes</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
                         <div class="card-header" id="Tax-Calculator-heading">
                                 <h2>
                                     <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Tax-Calculator-collapse">Tax-Calculator</a>
