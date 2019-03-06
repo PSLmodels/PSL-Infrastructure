@@ -237,7 +237,7 @@ if __name__ == "__main__":
                               "tweak the appearance of its card and website."),
                         default=None)
     args = parser.parse_args()
-    cb = CatalogBuilder(develop=args.develop, project=args.build_one)
+    cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
     cb.load_catalog()
     cb.write_pages()
     cb.dump_catalog(os.path.join(cb.card_dir, "catalog.json"))
