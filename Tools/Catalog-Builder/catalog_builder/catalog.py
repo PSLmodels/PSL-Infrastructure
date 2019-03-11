@@ -5,6 +5,9 @@ from collections import defaultdict
 
 from catalog_builder import utils
 
+class ProjectDoesNotExist(Exception):
+    pass
+
 class CatalogBuilder:
     """
     Receives list of projects and an optional directory indicating where to look
@@ -71,7 +74,7 @@ class CatalogBuilder:
     CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
     def __init__(self, projects=None, index_dir=None, card_dir=None,
-                 develop=False):
+                 develop=False, build_one=None):
         if projects is None:
             p = os.path.join(
                 self.CURRENT_PATH, "../register.json"
@@ -92,6 +95,19 @@ class CatalogBuilder:
         self.catalog = defaultdict(dict)
         self.repos = {}
         self.develop = develop
+        if build_one is not None:
+            success = False
+            for project in self.projects:
+                if project["repo"] == build_one:
+                   self.projects = [project]
+                   success = True
+                   break
+            if not success:
+                raise ProjectDoesNotExist(
+                    ("{0} is not in register.json or "
+                     "projects if provided.").format(build_one)
+                )
+
 
     def load_catalog(self):
         """
@@ -202,18 +218,26 @@ class CatalogBuilder:
         return cat_json
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--develop",
-                    help=("Optional argument indicating whether or not the "
-                          "CatalogBuilder package is being developed. "
-                          "Including this flag causes the catalog to be "
-                          "created from catalog.json, rather than pinging "
-                          "the GitHub API"),
-                    default=False,
-                    action="store_true")
-args = parser.parse_args()
 if __name__ == "__main__":
-    cb = CatalogBuilder(develop=args.develop)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--develop",
+                        help=("Optional argument indicating whether or not the "
+                            "CatalogBuilder package is being developed. "
+                            "Including this flag causes the catalog to be "
+                            "created from catalog.json, rather than pinging "
+                            "the GitHub API."),
+                        default=False,
+                        action="store_true")
+    parser.add_argument("--build-one",
+                        help=("Only build the catalog with the specified "
+                              "project. This is helpful when you want to "
+                              "run the catalog builder many times for the same "
+                              "project. For example, you want to add a new "
+                              "project to the catalog and you are trying to "
+                              "tweak the appearance of its card and website."),
+                        default=None)
+    args = parser.parse_args()
+    cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
     cb.load_catalog()
     cb.write_pages()
     cb.dump_catalog(os.path.join(cb.card_dir, "catalog.json"))
