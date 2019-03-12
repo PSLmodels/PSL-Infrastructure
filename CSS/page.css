@@ -40,6 +40,7 @@ a.btn:hover{
 @media(min-width: 650px){
     .news-marg{
         margin-left: 300px;
+        position: absolute;
     }
 }
 @media (max-width: 650px) {
