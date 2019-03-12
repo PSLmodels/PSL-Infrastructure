@@ -16,7 +16,7 @@
     },
     "Newsletter": {
         "template": "../templates/newsletter_template.html",
-        "content": "../../../Newsletter/raw/Midyear_Report.html",
+        "content": "../../../Newsletter/raw/Mar_Newsletter.html",
         "pathout": "../../../Newsletter/archive.html"
     }
 }

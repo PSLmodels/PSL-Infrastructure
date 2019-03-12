@@ -38,6 +38,16 @@ a.btn:hover{
     width: 90%;
 }
 @media(min-width: 650px){
+    .news-marg{
+        margin-left: 300px;
+    }
+}
+@media (max-width: 650px) {
+    .news-marg{
+        margin-left: 0px;
+    }
+}
+@media(min-width: 650px){
     .sidenav{
         height: 100%;
         width: 400px;
