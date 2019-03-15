@@ -1,4 +1,8 @@
 /* CSS for the non-model pages */
+html {margin-left: 0px !important;} 
+ 
+ul, ol {margin-left: 8px !important;}
+
 #content a {
     color: black;
     text-decoration: underline;
