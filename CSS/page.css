@@ -37,27 +37,32 @@ a.btn:hover{
     margin-right: auto;
     width: 90%;
 }
-@media(min-width: 650px){
+@media(min-width: 900px){
     .sidenav{
         height: 100%;
-        width: 400px;
+        width: 25%;
         float: right;
         margin-right: 50px;
     }
 }
-@media (max-width: 650px) {
+@media (max-width: 900px) {
     .sidenav{
         display: none;
     }
 }
-@media(min-width: 650px){
+@media(min-width: 900px){
     .container{
-        margin-right:450px;
-        width: 70%;
+        margin-right:20%;
+        width: 75%;
         max-width: 2000px;
     }
 }
-@media(min-width: 650px) {
+@media(min-width: 900px){
+    .row{
+        margin-right:15%;
+    }
+}
+@media(min-width: 900px) {
     .twitter-card{
         display: none;
     }
