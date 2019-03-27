@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cd $HOME/build_catalog/PSL/Tools/Catalog-Builder/catalog_builder
+git fetch upstream
+git merge upstream/master
 export DATE=`date +%Y-%m-%d`
 export BRANCH_NAME=catalog-$DATE
 git checkout -b $BRANCH_NAME
