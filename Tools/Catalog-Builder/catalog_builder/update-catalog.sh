@@ -9,7 +9,7 @@ git checkout -b $BRANCH_NAME
 which /Users/petermetz/anaconda3/bin/python
 /Users/petermetz/anaconda3/bin/python catalog.py 
 git status
-git add -u
+git add -A
 git commit -m "Update catalog for date $DATE"
 git push origin catalog-$DATE
 git checkout master

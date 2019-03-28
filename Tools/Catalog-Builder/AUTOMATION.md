@@ -4,7 +4,7 @@ This document details the mechanisms for nightly automated updates to the PSL Ca
 
 `catalog_builder/update-catalog.sh` is a bash script that runs `catalog_builder/catalog.py`, commits changes to a new local branch, pushes the new local branch, pulls any changes from the new branch into the master branch, and finally deletes the new branch locally and remotely.
 
-`catalog_builder/update-catalog.sh` is run nightly with a program called [Launchd](http://www.launchd.info), an open-source service management framework for managing scripts. To use Launchd, the user creates an agent, a program that runs in the background without requiring user input, that is specified in an XML file called a property list (plist) and saves the plist in the follow folder: `~/Library/LaunchAgents`. If a Launchd job is set for when the user's computer is asleep or shut down, the job will run once the computer is awake. The plist should look similar to the following: 
+`catalog_builder/update-catalog.sh` is run nightly with a program called [Launchd](http://www.launchd.info), an open-source service management framework for managing scripts. To use Launchd, the user creates an agent, a program that runs in the background without requiring user input, that is specified in an XML file called a property list (plist) and saves the plist in the follow folder: `~/Library/LaunchAgents`. If the user's computer is asleep or shut down when the Launchd job is scheduled, the job will run once the computer is awake. To run the bash script every night at 1am, the plist should look similar to the following: 
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -18,7 +18,7 @@ This document details the mechanisms for nightly automated updates to the PSL Ca
     <string>[LOCATION OF BASH SCRIPT]</string>
   <key>ProgramArguments</key>
   <array>
-    <string>update-catalog.sh</string>
+    <string>./update-catalog.sh</string>
   </array>
   <key>StandardOutPath</key>
   <string>/tmp/stdout.log</string>
@@ -26,13 +26,11 @@ This document details the mechanisms for nightly automated updates to the PSL Ca
   <string>/tmp/stderr.log</string>
   <key>StartCalendarInterval</key>
   <dict>
-    <key>Minute</key>
-    <integer>00</integer>
     <key>Hour</key>
-    <integer>01</integer>
+    <integer>1</integer>
+    <key>Minute</key>
+    <integer>0</integer>
   </dict>
-  <key>RunAtLoad</key>
-  <false/>
 </dict>
 </plist>
 ```
