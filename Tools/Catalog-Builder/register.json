@@ -23,5 +23,10 @@
         "org": "PSLmodels",
         "repo": "ParamTools",
         "branch": "master"
+    },
+    {
+        "org": "PSLmodels",
+        "repo": "Tax-Brain",
+        "branch": "master"
     }
 ]
