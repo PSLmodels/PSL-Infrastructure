@@ -375,6 +375,100 @@
             "value": "<a href=\"https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests\">https://github.com/PSLmodels/ParamTools/tree/master/paramtools/tests</a>"
         }
     },
+    "Tax-Brain": {
+        "name": {
+            "value": "Tax-Brain",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": "https://github.com/PSLmodels/Tax-Brain",
+            "value": "<p>Integrator package for multiple open source tax models</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/README.md",
+            "value": "<p>Tax-Brain makes it easy for users to simulate the US tax system by providing a single interface for multiple tax models. Currently, Tax-Brain interfaces with <a href=\"https://github.com/PSLmodels/Tax-Calculator\">Tax-Calculator</a> and <a href=\"https://github.com/PSLmodels/Behavioral-Responses\">Behavior-Response</a>. Additional models will be added in the near future to expand Tax-Brain's capabilities to include modeling business taxation and running dynamic general equilibrium simulations.</p> <p>To learn more about how Tax-Brain works, see <a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/DOC.md\">this</a> document.</p>"
+        },
+        "citation": {
+            "source": null,
+            "value": null
+        },
+        "license": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/LICENSE.txt",
+            "value": "<p>MIT</p>"
+        },
+        "user_documentation": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md</a>"
+        },
+        "user_changelog": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/releases",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/releases\">https://github.com/PSLmodels/Tax-Brain/releases</a>"
+        },
+        "user_changelog_recent": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/RELEASES.md",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/releases/latest\">https://github.com/PSLmodels/Tax-Brain/releases/latest</a>"
+        },
+        "dev_changelog": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/releases",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/releases\">https://github.com/PSLmodels/Tax-Brain/releases</a>"
+        },
+        "disclaimer": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/README.md",
+            "value": "<p>Tax-brain and it's underlying models are constantly being improved upon. For that reason, the results output by Tax-Brain may differ over time. It is strongly suggested that the user make note of which version of Tax-Brain, they are using when reporting their results.</p>"
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/ROADMAP.md",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/ROADMAP.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/ROADMAP.md</a>"
+        },
+        "contributor_overview": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md",
+            "value": "<p>Contributions to Tax-Brain are always welcome. To contribute, open a <a href=\"https://github.com/PSLmodels/Tax-Brain/pulls\">pull request (PR)</a> with your changes and any associated tests. In this PR, please describe what your change does and link to any relevant issues and discussions.</p> <h5>Feature Requests</h5> <p>To request a feature, please open an <a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">issue</a> describing the desired feature and it's use cases.</p> <h5>Bug Reports</h5> <p>To report a bug in Tax-Brain, open an <a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">issue</a> describing the bug. Please include the code needed to reproduce the bug.</p> <h5>Developer Setup</h5> <p>Start by forking and cloning the Tax-Brain repo. Next, run the following commands in the terminal to create and activate the developer conda environment:</p> <p><code>bash cd Tax-Brain conda env create -f environment.yml conda activate taxbrain-dev</code></p>"
+        },
+        "contributor_guide": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md</a>"
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": "<a href=\"https://www.compmodels.com/PSLmodels/Tax-Brain/\">Tax-Brain</a>"
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">https://github.com/PSLmodels/Tax-Brain/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">https://github.com/PSLmodels/Tax-Brain/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Anderson Frailey</li></ul>"
+        },
+        "unit_test": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests\">https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests</a>"
+        },
+        "integration_test": {
+            "source": "https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests",
+            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests\">https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests</a>"
+        }
+    },
     "Tax-Calculator": {
         "name": {
             "value": "Tax-Calculator",
