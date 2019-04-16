@@ -1,15 +1,15 @@
-# PSL Leadership Council, Version 1.0.0
+# PSL Leadership Council, Version 1.1.0
 
 ## Council
 
-| Member         | Represented Project        | Email                    |
-|----------------|----------------------------|--------------------------|
-| Jason DeBacker | Cost-of-Capital-Calculator | jason.debacker@gmail.com |
-| Henry Doupe    | ParamTools                 | henrymdoupe@gmail.com    |
-| Richard Evans  | OG-USA                     | rickecon@gmail.com       |
-| Martin Holmer  | Tax-Calculator             | martin.holmer@gmail.com  |
-| Matt Jensen    | PSLmodels/PSL              | matt.h.jensen@gmail.com  |
-
+| Member          | Represented Project        | Email                    |
+|-----------------|----------------------------|--------------------------|
+| Jason DeBacker  | Cost-of-Capital-Calculator | jason.debacker@gmail.com |
+| Henry Doupe     | ParamTools                 | henrymdoupe@gmail.com    |
+| Richard Evans   | OG-USA                     | rickecon@gmail.com       |
+| Anderson Frailey| Tax-Brain                  | andersonfrailey@gmail.com|
+| Martin Holmer   | Tax-Calculator             | martin.holmer@gmail.com  |
+| Matt Jensen     | PSLmodels/PSL              | matt.h.jensen@gmail.com  |
 
 
 ## Bylaws 
