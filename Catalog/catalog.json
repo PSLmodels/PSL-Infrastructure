@@ -296,7 +296,7 @@
         },
         "project_overview": {
             "source": "https://github.com/PSLmodels/ParamTools/blob/master/README.md",
-            "value": "<p>ParamTools defines the parameter input space for computational modeling projects.</p> <ul> <li> <p>Defines the default parameter space.</p> </li> <li> <p>Facilitates adjusting that space.</p> </li> <li> <p>Performs validation on the default space and the adjusted space.</p> </li> </ul>"
+            "value": "<p>Define, update, and validate your model's parameters.</p>"
         },
         "citation": {
             "source": null,
@@ -307,8 +307,8 @@
             "value": "<p>MIT</p>"
         },
         "user_documentation": {
-            "source": "https://paramtools.readthedocs.io/en/latest/",
-            "value": "<a href=\"https://paramtools.readthedocs.io/en/latest/\">https://paramtools.readthedocs.io/en/latest/</a>"
+            "source": "https://paramtools.org",
+            "value": "<a href=\"https://paramtools.org\">https://paramtools.org</a>"
         },
         "user_changelog": {
             "source": "https://github.com/PSLmodels/ParamTools/releases",
