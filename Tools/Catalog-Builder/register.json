@@ -28,5 +28,10 @@
         "org": "PSLmodels",
         "repo": "Tax-Brain",
         "branch": "master"
+    },
+    {
+        "org": "PSLmodels",
+        "repo": "PCI",
+        "branch": "master"
     }
 ]

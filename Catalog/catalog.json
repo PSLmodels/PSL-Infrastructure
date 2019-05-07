@@ -281,6 +281,100 @@
             "value": "<a href=\"https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests\">https://github.com/open-source-economics/OG-USA/tree/master/ogusa/tests</a>"
         }
     },
+    "PCI": {
+        "name": {
+            "value": "PCI",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": null,
+            "value": "<p>A machine learning project that analyzes state-run media to predict policy changes.</p>"
+        },
+        "project_overview": {
+            "source": "https://github.com/PSLmodels/PCI/blob/master/README.md",
+            "value": "<p>China's industrialization process has long been a product of government direction, be it coercive central planning or ambitious industrial policy. For the first time in the literature, we develop a quantitative indicator of China's policy priorities over a long period of time, which we call the Policy Change Index (PCI) for China. The PCI is a leading indicator that runs from 1951 to the most recent quarter and can be updated in the future. In other words, the PCI not only helps us understand the past of China's industrialization but also allows us to make short-term predictions about its future directions.</p> <p>The design of the PCI has two building blocks: (1) it takes as input data the full text of the <em>People's Daily</em> --- the official newspaper of the Communist Party of China --- since it was founded in 1946; (2) it employs a set of machine learning techniques to \"read\" the articles and detect changes in the way the newspaper prioritizes policy issues.</p> <p>The source of the PCI's predictive power rests on the fact that the <em>People's Daily</em> is at the nerve center of the China's propaganda system and that propaganda changes often precede policy changes. Before the great transformation from the central planning under Mao to the economic reform program after Mao, for example, considerable efforts were made by the Chinese government to promote the idea of reform, move public opinion, and mobilize resources toward the new agenda. Therefore, by detecting (real-time) changes in propaganda, the PCI is, effectively, predicting (future) changes in policy.</p> <p>For details about the methodology and findings of this project, please see the following research paper:</p> <ul> <li>Chan, Julian TszKin and Weifeng Zhong. 2019. \"Reading China: Predicting Policy Change with Machine Learning.\" AEI Economics Working Paper <a href=\"http://www.aei.org/wp-content/uploads/2018/10/Reading-China-AEI-WP.pdf\">No. 2018-11</a> (latest version available <a href=\"https://policychangeindex.org/Reading_China.pdf\">here</a>).</li> </ul>"
+        },
+        "citation": {
+            "source": "https://github.com/PSLmodels/PCI/blob/master/README.md",
+            "value": "<p>Please cite the source of the latest Policy Change Index (PCI) for China by the website: https://policychangeindex.org.</p> <p>For academic work, please cite the following research paper:</p> <ul> <li>Chan, Julian TszKin and Weifeng Zhong. 2019. \"Reading China: Predicting Policy Change with Machine Learning.\" AEI Economics Working Paper <a href=\"http://www.aei.org/wp-content/uploads/2018/10/Reading-China-AEI-WP.pdf\">No. 2018-11</a> (latest version available <a href=\"https://policychangeindex.org/Reading_China.pdf\">here</a>).</li> </ul>"
+        },
+        "license": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/blob/master/LICENSE.md\">GNU Affero General Public License v3.0</a>"
+        },
+        "user_documentation": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/blob/master/README.md\">PCI User Documentation</a>"
+        },
+        "user_changelog": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/blob/master/CHANGES.md\">PCI Change History</a>"
+        },
+        "disclaimer": {
+            "source": "https://github.com/PSLmodels/PCI/blob/master/README.md",
+            "value": "<p>Results will change as the underlying models improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess and predict changes in public policy; when community-contributed improvements are incorporated, the model will produce better results.</p>"
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/issues\">Issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/issues\">Issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Julian TszKin Chan</li><li>Weifeng Zhong</li></ul>"
+        },
+        "unit_test": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/tree/master/PCI-China/tests\">PCI unit tests</a>"
+        },
+        "integration_test": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/PCI/tree/master/PCI-China/tests\">PCI integration test</a>"
+        },
+        "contributor_overview": {
+            "source": "https://github.com/PSLmodels/PCI/blob/master/README.md",
+            "value": "<p>The first step for everyone (users and developers) is to open a free GitHub account. And then you can specify how you want to \"watch\" the PCI repository by clicking on the Watch button in the upper-right corner of the repository's main page.</p> <p>The second step is to get familiar with the PCI repository by reading the documentation.</p> <p>If you want to ask a question or report a bug, create a new issue <a href=\"https://github.com/PSLmodels/PCI/issues\">here</a> and post your question or tell us what you think is wrong with the repository.</p> <p>If you want to request an enhancement, create a new issue <a href=\"https://github.com/PSLmodels/PCI/issues\">here</a> and provide details on what you think should be added to the repository.</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "user_changelog_recent": {
+            "source": null,
+            "value": null
+        },
+        "dev_changelog": {
+            "source": null,
+            "value": null
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_guide": {
+            "source": null,
+            "value": null
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": null
+        }
+    },
     "ParamTools": {
         "name": {
             "value": "ParamTools",
