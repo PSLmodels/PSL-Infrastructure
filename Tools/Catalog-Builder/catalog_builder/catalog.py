@@ -30,24 +30,12 @@ class CatalogBuilder:
     }
         Allowed attributes:
             - project_one_line: NA
-            - key_features: Key Features,
             - project_overview: Project Overview,
-            - citation: Citation,
-            - license: License,
             - user_documentation: User Documentation,
             - user_changelog_recent: User Changelog Recent,
-            - user_changelog: User Changelog,
-            - dev_changelog: Developer Changelog,
-            - disclaimer: Disclaimer,
-            - user_case_studies: User Case Studies,
-            - project_roadmap: Project Roadmap,
             - contributor_overview: Contributor Overview,
-            - contributor_guide: Contributor Guide,
-            - governance_overview: Governance Overview,
-            - public_funding: Public Funding,
-            - link_to_webapp: Link to webapp,
-            - public_issue_tracker: Public Issue Tracker,
-            - public_qanda: Public Q & A
+            - core_maintainers: Core Maintainers
+            - link_to_webapp: Link to webapp
 
     Catalog schema:
 
@@ -85,10 +73,6 @@ class CatalogBuilder:
             self.projects = projects
 
         self.index_dir = index_dir or os.path.join(
-            self.CURRENT_PATH, "../../../Catalog/"
-        )
-
-        self.card_dir = card_dir or os.path.join(
             self.CURRENT_PATH, "../../../Catalog/"
         )
 
@@ -182,25 +166,12 @@ class CatalogBuilder:
         models_path = os.path.join(
             self.CURRENT_PATH, "../templates", "catalog_template.html"
         )
-        model_path = os.path.join(
-            self.CURRENT_PATH, "../templates", "card_template.html"
-        )
 
         rendered = utils.render_template(models_path, catalog=self.catalog,
                                          repos=self.repos)
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
-
-        for _, project in self.catalog.items():
-            rendered = utils.render_template(
-                model_path, project=project, namemap=utils.namemap
-            )
-            pathout = os.path.join(
-                self.card_dir, "{}.html".format(project['name']['value'])
-            )
-            with open(pathout, "w") as out:
-                out.write(rendered)
 
     def dump_catalog(self, output_path=None):
         """
@@ -240,4 +211,4 @@ if __name__ == "__main__":
     cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
     cb.load_catalog()
     cb.write_pages()
-    cb.dump_catalog(os.path.join(cb.card_dir, "catalog.json"))
+    cb.dump_catalog(os.path.join(cb.index_dir, "catalog.json"))
