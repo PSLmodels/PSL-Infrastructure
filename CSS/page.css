@@ -58,7 +58,7 @@ a.btn:hover{
 }
 @media(min-width: 900px){
     .container{
-        margin-right:20%;
+        margin-right:25%;
         width: 75%;
         max-width: 2000px;
     }
