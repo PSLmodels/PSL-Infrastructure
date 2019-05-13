@@ -38,9 +38,9 @@
                 <!-- Create a collapsible card for each model in PSL -->
                 
                     <div class="card">
-                        <div class="card-header" id="Behavioral-Responses-heading">
+                        <div class="card-header" id="Behavioral-Responses">
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Behavioral-Responses-collapse">Behavioral-Responses</a>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Behavioral-Responses">Behavioral-Responses</a>
                                     <div class="float-right">
                                         <button
                                             class="btn collapse-button"
@@ -56,7 +56,7 @@
                                 </h2>
                                 <p>Partial-equilibrium behavioral-responses module that works with Tax-Calculator</p>
                         </div>
-                        <div class="collapse" id="Behavioral-Responses-collapse" aria-labelledby="Behavioral-Responses-heading" data-parent="#accordionParent">
+                        <div class="collapse" id="Behavioral-Responses-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p><p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a>.  It provides two ways of doing this: (1) the <code>response</code> function, which contains higher-level logic that supports the TaxBrain "Partial Equilibrium Simulation" capability and requires specification of only the elasticities, and (2) the <code>quantity_response</code> function, which contains lower-level logic that requires specification of the quantity whose response is to be estimated, requires specification of the marginal tax rates and elasticities to be used in the response calculation, and allows the response estimation to be conducted by subgroup with different elasticities for each subgroup.</p></p>
                                 <h6>Maintainers</h6>
@@ -67,13 +67,20 @@
 </p><p><a href="https://www.ospc.org/taxbrain/">Link to webapp</a>
 </p>
                             </div>
+                            <script type="text/javascript">
+                                var url = document.location.toString();
+                                if ( url.match('#') ) {
+                                    var section = $('#'+url.split('#')[1]+'-collapse');
+                                    section.collapse('show');
+                                }
+                            </script>
                         </div>
                     </div>
                 
                     <div class="card">
-                        <div class="card-header" id="Cost-of-Capital-Calculator-heading">
+                        <div class="card-header" id="Cost-of-Capital-Calculator">
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Cost-of-Capital-Calculator-collapse">Cost-of-Capital-Calculator</a>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Cost-of-Capital-Calculator">Cost-of-Capital-Calculator</a>
                                     <div class="float-right">
                                         <button
                                             class="btn collapse-button"
@@ -89,7 +96,7 @@
                                 </h2>
                                 <p>Evaluates the effect of US federal taxes on businesses' investment incentives</p>
                         </div>
-                        <div class="collapse" id="Cost-of-Capital-Calculator-collapse" aria-labelledby="Cost-of-Capital-Calculator-heading" data-parent="#accordionParent">
+                        <div class="collapse" id="Cost-of-Capital-Calculator-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p><p>Cost-of-Capital-Calculator is a model that can be used to evaluate the effect of US federal taxes on the investment incentives of corporate and non-corporate businesses.  Specifically, Cost-of-Capital-Calculator uses data on the business assets and financial policy, as well as microdata on individual tax filers, to compute marginal effective tax rates on new investments.  In modeling the effects of changes to the individual income tax code, Cost-of-Capital-Calculator works with <a href="https://github.com/open-source-economics/tax-calculator">Tax-Calculator</a>, another open source model of US federal tax policy.  Cost-of-Capital-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p></p>
                                 <h6>Maintainers</h6>
@@ -99,13 +106,20 @@
 </p><p><a href="http://www.ospc.org/ccc/">Link to webapp</a>
 </p>
                             </div>
+                            <script type="text/javascript">
+                                var url = document.location.toString();
+                                if ( url.match('#') ) {
+                                    var section = $('#'+url.split('#')[1]+'-collapse');
+                                    section.collapse('show');
+                                }
+                            </script>
                         </div>
                     </div>
                 
                     <div class="card">
-                        <div class="card-header" id="OG-USA-heading">
+                        <div class="card-header" id="OG-USA">
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#OG-USA-collapse">OG-USA</a>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#OG-USA">OG-USA</a>
                                     <div class="float-right">
                                         <button
                                             class="btn collapse-button"
@@ -121,7 +135,7 @@
                                 </h2>
                                 <p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>
                         </div>
-                        <div class="collapse" id="OG-USA-collapse" aria-labelledby="OG-USA-heading" data-parent="#accordionParent">
+                        <div class="collapse" id="OG-USA-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p><p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Careful documentation of the model--its output, and solution method--is available <a href="https://github.com/open-source-economics/OG-USA/blob/master/documentation/OGUSAdoc.pdf">here</a> and is regularly updated.</p></p>
                                 <h6>Maintainers</h6>
@@ -131,13 +145,20 @@
 </p><p><a href="https://github.com/open-source-economics/OG-USA#usingcontributing-to-og-usa">Contributor documentation</a>
 </p>
                             </div>
+                            <script type="text/javascript">
+                                var url = document.location.toString();
+                                if ( url.match('#') ) {
+                                    var section = $('#'+url.split('#')[1]+'-collapse');
+                                    section.collapse('show');
+                                }
+                            </script>
                         </div>
                     </div>
                 
                     <div class="card">
-                        <div class="card-header" id="ParamTools-heading">
+                        <div class="card-header" id="ParamTools">
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#ParamTools-collapse">ParamTools</a>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#ParamTools">ParamTools</a>
                                     <div class="float-right">
                                         <button
                                             class="btn collapse-button"
@@ -153,7 +174,7 @@
                                 </h2>
                                 <p>Library for parameter processing and validation with a focus on computational modeling projects</p>
                         </div>
-                        <div class="collapse" id="ParamTools-collapse" aria-labelledby="ParamTools-heading" data-parent="#accordionParent">
+                        <div class="collapse" id="ParamTools-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p><p>Define, update, and validate your model's parameters.</p></p>
                                 <h6>Maintainers</h6>
@@ -164,13 +185,20 @@
 </p><p><a href="https://github.com/PSLmodels/ParamTools/releases/latest">Recent changes</a>
 </p>
                             </div>
+                            <script type="text/javascript">
+                                var url = document.location.toString();
+                                if ( url.match('#') ) {
+                                    var section = $('#'+url.split('#')[1]+'-collapse');
+                                    section.collapse('show');
+                                }
+                            </script>
                         </div>
                     </div>
                 
                     <div class="card">
-                        <div class="card-header" id="Tax-Brain-heading">
+                        <div class="card-header" id="Tax-Brain">
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Tax-Brain-collapse">Tax-Brain</a>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Tax-Brain">Tax-Brain</a>
                                     <div class="float-right">
                                         <button
                                             class="btn collapse-button"
@@ -186,7 +214,7 @@
                                 </h2>
                                 <p>Integrator package for multiple open source tax models</p>
                         </div>
-                        <div class="collapse" id="Tax-Brain-collapse" aria-labelledby="Tax-Brain-heading" data-parent="#accordionParent">
+                        <div class="collapse" id="Tax-Brain-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p><p>Tax-Brain makes it easy for users to simulate the US tax system by providing a single interface for multiple tax models. Currently, Tax-Brain interfaces with <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a> and <a href="https://github.com/PSLmodels/Behavioral-Responses">Behavior-Response</a>. Additional models will be added in the near future to expand Tax-Brain's capabilities to include modeling business taxation and running dynamic general equilibrium simulations.</p> <p>To learn more about how Tax-Brain works, see <a href="https://github.com/PSLmodels/Tax-Brain/blob/master/DOC.md">this</a> document.</p></p>
                                 <h6>Maintainers</h6>
@@ -198,13 +226,20 @@
 </p><p><a href="https://www.compmodels.org/PSLmodels/Tax-Brain/">Link to webapp</a>
 </p>
                             </div>
+                            <script type="text/javascript">
+                                var url = document.location.toString();
+                                if ( url.match('#') ) {
+                                    var section = $('#'+url.split('#')[1]+'-collapse');
+                                    section.collapse('show');
+                                }
+                            </script>
                         </div>
                     </div>
                 
                     <div class="card">
-                        <div class="card-header" id="Tax-Calculator-heading">
+                        <div class="card-header" id="Tax-Calculator">
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Tax-Calculator-collapse">Tax-Calculator</a>
+                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Tax-Calculator">Tax-Calculator</a>
                                     <div class="float-right">
                                         <button
                                             class="btn collapse-button"
@@ -220,7 +255,7 @@
                                 </h2>
                                 <p>USA federal individual income and payroll tax microsimulation model</p>
                         </div>
-                        <div class="collapse" id="Tax-Calculator-collapse" aria-labelledby="Tax-Calculator-heading" data-parent="#accordionParent">
+                        <div class="collapse" id="Tax-Calculator-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p><a href="https://github.com/PSLmodels/Tax-Calculator/blob/master/README.md#what-is-tax-calculator">What is Tax-Calculator?</a></p>
                                 <h6>Maintainers</h6>
@@ -231,6 +266,13 @@
 </p><p><a href="https://www.ospc.org/taxbrain/">Link to webapp</a>
 </p>
                             </div>
+                            <script type="text/javascript">
+                                var url = document.location.toString();
+                                if ( url.match('#') ) {
+                                    var section = $('#'+url.split('#')[1]+'-collapse');
+                                    section.collapse('show');
+                                }
+                            </script>
                         </div>
                     </div>
                 
