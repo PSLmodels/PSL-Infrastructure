@@ -7,6 +7,16 @@ code {
     color: inherit;
     background-color: rgba(27,31,35,0.05);
 }
-h1 {
-    font-size: 3.5vw;
+.navbar{
+    background-color: white;
+    border-bottom: solid thin gray;
+    box-shadow: 0px 1px 0px #c7c8c9;
+}
+#page{
+    background-color: #f9f9f9;
+}
+@media (max-width: 900px) {
+    .navbar-text{
+        display: none;
+    }
 }
