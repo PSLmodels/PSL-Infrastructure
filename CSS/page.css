@@ -45,6 +45,10 @@ code {
         width: 73%;
         max-width: 2000px;
     }
+    .email-form{
+        width: 405px !important;
+        margin-left: 10px;
+    }
 }
 @media (max-width: 900px) {
     .archive{
@@ -55,6 +59,10 @@ code {
     }
     .navbar-text{
         display: none;
+    }
+    .email-form{
+        width: 200px;
+        margin-left: 10px;
     }
 }
 .navbar{
