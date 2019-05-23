@@ -1,29 +1,91 @@
 /* CSS for the non-model pages */
+a,p {
+    font-family: "Helvetica";
+}
 #content a {
     color: black;
     text-decoration: underline;
+}
+#page{
+    background-color: #f9f9f9;
 }
 code {
     color: inherit;
     background-color: rgba(27,31,35,0.05);
 }
+@media(min-width: 900px){
+    .sidenav{
+        width: 20%;
+        padding-right: 2%;
+        padding-left: 2%;
+        float: right;
+        background-color: #e4e9ec;
+        border-left: solid thin gray;
+        border-bottom: solid thin gray;
+    }
+    .archive{
+        width: 20%;
+        padding-right: 2%;
+        float: left;
+        border-right: solid thin gray;
+    }
+    .news-marg{
+        margin-left: 18%;
+        position: absolute;
+        margin-top:-20px;
+    }
+    .twitter-card{
+        display: none;
+    }
+    .row{
+        margin-right:15%;
+    }
+    .container{
+        margin-right:23%;
+        width: 73%;
+        max-width: 2000px;
+    }
+    .email-form{
+        width: 405px !important;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .archive{
+        display: none;
+    }
+    .sidenav{
+        display: none;
+    }
+    .navbar-text{
+        display: none;
+    }
+    .email-form{
+        width: 200px;
+        margin-left: 10px;
+    }
+}
+.navbar{
+    background-color: white;
+    border-bottom: solid thin gray;
+    box-shadow: 0px 1px 0px #c7c8c9;
+}
 .card-link{
     color: black;
+}
+.card-header{
+    background-color:#e4e9ec;
 }
 a.card-link:hover{
     color: black;
     text-decoration: none;
-    background-color: #eff1f2;
 }
 a.btn:hover{
     background-color: #d3dded;
     color: black;
 }
-.card-header:hover{
-    background-color:#f2f5fc;
-}
 .card:hover{
-    background-color: #f2f5fc;
+    background-color: #e4e9ec;
 }
 .btn-lg{
     display: block;
@@ -37,44 +99,8 @@ a.btn:hover{
     margin-right: auto;
     width: 90%;
 }
-@media(min-width: 900px){
-    .news-marg{
-        margin-left: 25%;
-        position: absolute;
-    }
-}
-@media(min-width: 900px){
-    .sidenav{
-        height: 100%;
-        width: 25%;
-        float: right;
-        margin-right: 50px;
-    }
-}
-@media (max-width: 900px) {
-    .sidenav{
-        display: none;
-    }
-}
-@media(min-width: 900px){
-    .container{
-        margin-right:25%;
-        width: 75%;
-        max-width: 2000px;
-    }
-}
-@media(min-width: 900px){
-    .row{
-        margin-right:15%;
-    }
-}
-@media(min-width: 900px) {
-    .twitter-card{
-        display: none;
-    }
-}
 .jumbotron {
-    background-color: #F0F0F0;
+    background-color: #f9f9f9;
 }
 .newsletter-input {
     border-radius: 5px;
@@ -89,9 +115,6 @@ a.btn:hover{
 }
 .asterisk {
     color: red;
-}
-h1 {
-    font-size: 3.5vw;
 }
 #aboutlink {
     font-family: 'Courier New', Courier, monospace;
