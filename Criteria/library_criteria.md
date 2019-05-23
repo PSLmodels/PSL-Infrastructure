@@ -62,9 +62,6 @@ Interoperability Criteria
 --------------------------
 
 1. The source code SHOULD be written in an open source language.
-1. All input and output variables SHOULD be documented like...
-1. All policy parameters and assumptions SHOULD be documented like...
-1. Meta information about your project SHOULD be documented like...
 1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation][2].
 
 

@@ -65,7 +65,7 @@ class CatalogBuilder:
                  develop=False, build_one=None):
         if projects is None:
             p = os.path.join(
-                self.CURRENT_PATH, "../register.json"
+                self.CURRENT_PATH, "../../../Catalog/register.json"
             )
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
