@@ -81,26 +81,11 @@ How to add projects to the catalog
     Attributes that MUST be included:
     - `project_one_line`: NA
     - `project_overview`: Project Overview,
-    - `key_features`: Key Features
-    - `citation`: Citation,
-    - `license`: License,
     - `user_documentation`: User Documentation,
     - `user_changelog_recent`: User Changelog Recent,
-    - `user_changelog`: User Changelog,
-    - `dev_changelog`: Developer Changelog,
-    - `disclaimer`: Disclaimer,
-    - `user_case_studies`: User Case Studies,
-    - `project_roadmap`: Project Roadmap,
     - `contributor_overview`: Contributor Overview,
-    - `contributor_guide`: Contributor Guide,
-    - `governance_overview`: Governance Overview,
-    - `public_funding`: Public Funding,
     - `link_to_webapp`: Link to webapp,
-    - `public_issue_tracker`: Public Issue Tracker,
-    - `public_qanda`: Public Q & A
     - `core_maintainers`: Core Maintainers
-    - `unit_test`: Unit Tests
-    - `integration_test`: Integration Tests
 
     See examples here:
     - [`OG-USA/PSL_catalog.json`][]

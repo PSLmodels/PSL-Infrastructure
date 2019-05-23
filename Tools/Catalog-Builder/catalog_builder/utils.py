@@ -174,34 +174,3 @@ def make_links(item):
     for key, section_name in sections:
         links += create_link(item[key], section_name)
     return links
-
-
-namemap = {
-    "key_features": "Key Features",
-    "project_overview": "Project Overview",
-    "citation": "Citation",
-    "license": "License",
-    "user_documentation": "User Documentation",
-    "user_changelog_recent": "User Changelog Recent",
-    "user_changelog": "User Changelog",
-    "dev_changelog": "Developer Changelog",
-    "disclaimer": "Disclaimer",
-    "user_case_studies": "User Case Studies",
-    "project_roadmap": "Project Roadmap",
-    "core_maintainers": "Core Maintainers",
-    "contributor_overview": "Contributor Overview",
-    "contributor_guide": "Contributor Guide",
-    "unit_test": "Unit Tests",
-    "integration_test": "Integration Tests",
-    "governance_overview": "Governance Overview",
-    "public_funding": "Public Funding",
-    "link_to_webapp": "Link to webapp",
-    "public_issue_tracker": "Public Issue Tracker",
-    "public_qanda": "Public Q & A",
-}
-about_keys = ["key_features", "user_documentation", "user_case_studies",
-              "user_changelog_recent",
-              "project_roadmap", "license", "core_maintainers",
-              "citation", "public_qanda", "public_funding"]
-
-contributor_keys = ["contributor_overview", "contributor_guide"]
