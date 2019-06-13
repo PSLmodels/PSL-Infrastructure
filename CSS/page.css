@@ -74,18 +74,18 @@ code {
     color: black;
 }
 .card-header{
-    background-color:#e4e9ec;
+    background-color:#faddb7;
 }
 a.card-link:hover{
     color: black;
     text-decoration: none;
 }
 a.btn:hover{
-    background-color: #d3dded;
+    background-color: #faddb7;
     color: black;
 }
 .card:hover{
-    background-color: #e4e9ec;
+    background-color: #faddb7;
 }
 .btn-lg{
     display: block;
