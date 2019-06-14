@@ -50,10 +50,15 @@ code {
         margin-left: 10px;
     }
     .event-col{
+        padding-left: 50px;
         margin-bottom: -50px;
         border-right-style: solid;
         border-right-color: lightgray;
         border-right-width: thin;
+    }
+    .event-banner{
+        padding-top: 50px;
+        padding-left: 50px;
     }
 }
 @media (max-width: 900px) {
@@ -93,6 +98,10 @@ a.event-link:hover{
 }
 a.event-link:visited{
     color:black;
+}
+.event-button{
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 .card-link{
     color: black;
