@@ -107,18 +107,18 @@ a.event-link:visited{
     color: black;
 }
 .card-header{
-    background-color:rgba(239, 146, 26, 0.81);
+    background-color: #e4e9ec;
 }
 a.card-link:hover{
     color: black;
     text-decoration: none;
 }
 a.btn:hover{
-    background-color: rgba(239, 146, 26, 0.81);
+    background-color: #d3dded;
     color: black;
 }
 .card:hover{
-    background-color: #faddb7;
+    background-color: #e4e9ec;
 }
 .btn-lg{
     display: block;
