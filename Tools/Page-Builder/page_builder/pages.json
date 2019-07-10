@@ -13,5 +13,10 @@
         "template": "../templates/newsletter_template.html",
         "content": "../../../Newsletter/raw/Jun19_Newsletter.html",
         "pathout": "../../../Newsletter/archive.html"
+    },
+    "Events": {
+        "template": "../templates/events_template.html",
+        "content": "../../../README.md",
+        "pathout": "../../../events.html"
     }
 }

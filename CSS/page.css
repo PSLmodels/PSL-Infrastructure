@@ -37,10 +37,10 @@ code {
     .twitter-card{
         display: none;
     }
-    .row{
+    .home-row{
         margin-right:15%;
     }
-    .container{
+    .home-container{
         margin-right:23%;
         width: 73%;
         max-width: 2000px;
@@ -49,8 +49,22 @@ code {
         width: 405px !important;
         margin-left: 10px;
     }
+    .event-col{
+        padding-left: 50px;
+        margin-bottom: -50px;
+        border-right-style: solid;
+        border-right-color: lightgray;
+        border-right-width: thin;
+    }
+    .event-banner{
+        padding-top: 50px;
+        padding-left: 50px;
+    }
 }
 @media (max-width: 900px) {
+    .event-picture{
+        display: none;
+    }
     .archive{
         display: none;
     }
@@ -64,17 +78,36 @@ code {
         width: 200px;
         margin-left: 10px;
     }
+    .event-col{
+        border-bottom-style: solid;
+        border-bottom-color: lightgray;
+        border-bottom-width: thin;
+    }
 }
 .navbar{
     background-color: white;
     border-bottom: solid thin gray;
     box-shadow: 0px 1px 0px #c7c8c9;
 }
+a.event-link:link{
+    color:black;
+}
+a.event-link:hover{
+    color:black;
+    text-decoration: underline;
+}
+a.event-link:visited{
+    color:black;
+}
+.event-button{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
 .card-link{
     color: black;
 }
 .card-header{
-    background-color:#e4e9ec;
+    background-color: #e4e9ec;
 }
 a.card-link:hover{
     color: black;
