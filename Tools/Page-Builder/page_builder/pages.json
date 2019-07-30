@@ -11,7 +11,7 @@
     },
     "Newsletter": {
         "template": "../templates/newsletter_template.html",
-        "content": "../../../Newsletter/raw/Jun19_Newsletter.html",
+        "content": "../../../Newsletter/raw/Jul19_Newsletter.html",
         "pathout": "../../../Newsletter/archive.html"
     },
     "Events": {
