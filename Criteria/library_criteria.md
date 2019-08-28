@@ -29,8 +29,8 @@ Acceptance Criteria for Transparency and Quality
 	- A complete descriptive list of all data variables;
 	- Descriptive statistics for all data variables for such data (including averages, standard deviations, number of observations, and correlations to other variables), to the extent that the descriptive statistics do not violate the rule against disclosure;
 	- Contact information for the individual or entity who has unrestricted access to the data.
-1. At least one test MUST generate key outputs from source materials, the test MUST be run with every new version, and the outputs of the test MUST be checked into the repository.
 1. Projects MUST have unit tests and SHOULD report code coverage.
+1. At least one test MUST generate key outputs from source materials, the test MUST be run with every new version, and the outputs of the test MUST be checked into the repository.
 1. Projects MUST report names and contact information for at least one maintainer.
 1. Projects MUST have a suggested citation.
 1. Projects MUST have a project overview.
