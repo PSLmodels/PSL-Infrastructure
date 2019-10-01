@@ -23,12 +23,6 @@ code {
         border-left: solid thin gray;
         border-bottom: solid thin gray;
     }
-    .archive{
-        width: 20%;
-        padding-right: 2%;
-        float: left;
-        border-right: solid thin gray;
-    }
     .news-marg{
         margin-left: 18%;
         position: absolute;
@@ -117,7 +111,7 @@ a.btn:hover{
     background-color: #d3dded;
     color: black;
 }
-.card:hover{
+.card-home:hover{
     background-color: #e4e9ec;
 }
 .btn-lg{
