@@ -10,6 +10,7 @@
 | Anderson Frailey| Tax-Brain                  | andersonfrailey@gmail.com|
 | Martin Holmer   | Tax-Calculator             | martin.holmer@gmail.com  |
 | Matt Jensen     | PSL-Infrastructure         | matt.h.jensen@gmail.com  |
+| Peter Metz      | Tax-Cruncher               | pmetzdc@gmail.com        |
 
 
 ## Bylaws 
