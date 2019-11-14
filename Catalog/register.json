@@ -33,5 +33,10 @@
         "org": "PSLmodels",
         "repo": "Tax-Cruncher",
         "branch": "master"
+    },
+    {
+        "org": "PSLmodels",
+        "repo": "PCI-China",
+        "branch": "master"
     }
 ]
