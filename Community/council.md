@@ -11,7 +11,7 @@
 | Martin Holmer   | Tax-Calculator             | martin.holmer@gmail.com  |
 | Matt Jensen     | PSL-Infrastructure         | matt.h.jensen@gmail.com  |
 | Peter Metz      | Tax-Cruncher               | pmetzdc@gmail.com        |
-| Weifeng Zhong   | Policy-Change-Index        | weifeng@weifengzhong.com |
+| Weifeng Zhong   | PCI-China                  | weifeng@weifengzhong.com |
 
 
 ## Bylaws 
