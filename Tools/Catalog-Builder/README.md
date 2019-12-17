@@ -1,4 +1,4 @@
-This directory will contain the Catalog-Builder, which will automatically generate the PSL Catalog by relying on PSL interoperability guidlines.
+This directory will contain the Catalog-Builder, which will automatically generate the PSL Catalog by relying on PSL interoperability guidelines.
 
 How to run this package
 ------------------------
@@ -69,7 +69,7 @@ How to add projects to the catalog
         - "source" is the name of the file in the project's GitHub repository. It should be a markdown file.
         - "start_header" and "end_header" are the headers in the markdown file. Data between those headers will be parsed and rendered to HTML.
             - If neither header is specified, the entire document will be parsed.
-            - If "start_header" is speecified and "end_header" is not specified, then data from "start_header" to the end of the file will be parsed.
+            - If "start_header" is specified and "end_header" is not specified, then data from "start_header" to the end of the file will be parsed.
             - If "end_header" is specified and "start_header" is not specified, then data from the beginning of the file to "end_header" is parsed.
             - If the parser cannot find these headers, then an error will be raised.
         - "data" is ignored in this case.
