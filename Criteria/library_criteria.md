@@ -54,7 +54,7 @@ Community Criteria
 1. Projects MAY have a Stack Overflow channel.
 1. Projects MAY include a "News" translation of the changelog for users.
 1. Projects MAY include criteria for participating in cross-model PSL initiatives.
-1. Projects MAY include a link to a webapp verison.
+1. Projects MAY include a link to a webapp version.
 1. Projects MAY include a list of consultants.
 
 
