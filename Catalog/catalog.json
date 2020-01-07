@@ -512,7 +512,7 @@
         },
         "disclaimer": {
             "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/README.md",
-            "value": "<p>Tax-brain and it's underlying models are constantly being improved upon. For that reason, the results output by Tax-Brain may differ over time. It is strongly suggested that the user make note of which version of Tax-Brain, they are using when reporting their results.</p>"
+            "value": "<p>Tax-brain and its underlying models are constantly being improved upon. For that reason, the results output by Tax-Brain may differ over time. It is strongly suggested that the user make note of which version of Tax-Brain, they are using when reporting their results.</p>"
         },
         "user_case_studies": {
             "source": null,
