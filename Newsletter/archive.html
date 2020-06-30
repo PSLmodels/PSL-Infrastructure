@@ -673,7 +673,7 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <h1>May 2020 Newsletter</h1>
+                            <h1>June 2020 Newsletter</h1>
 
 <p><span style="font-size:12px"><em>This is a monthly newsletter of PSL model releases, events, and updates.</em><br>
 <em>Subscribe at&nbsp;<a href="https://www.pslmodels.org" target="_blank">https://www.pslmodels.org</a>&nbsp;and follow us on Twitter&nbsp;<a href="http://www.twitter.com/pslmodels" target="_blank">@PSLModels</a></em></span></p>
@@ -713,11 +713,11 @@
                                     <td valign="top" class="mcnTextContent" style="padding: 18px;color: #222222;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: left;">
                                         <div style="text-align: left;"><strong><span style="font-size:24px">User&nbsp;Highlights</span></strong><br>
 <br>
-<strong style="font-size:12px">Tax-Calculator</strong><span style="font-size:12px">: Adopts ParamTools for parameter processing and validation.</span><br>
+<span style="font-size:12px"><strong>Cost-of-Capital-Calculator:</strong> Allows users to specify depreciation rules for specific assets.<br>
 <br>
-<strong style="font-size:12px">ParamTools</strong><span style="font-size:12px">: Release 0.14.0 adds&nbsp;flexibility for interacting with indexed parameter values.</span><br>
+<strong>OG-USA:</strong>&nbsp;Adds ability to analyze a universal basic income.</span><br>
 <br>
-<strong style="font-size:12px">Citations</strong><span style="font-size:12px">: </span><a href="https://twitter.com/kpomerleau/status/1258497005598453761" style="font-size: 12px;" target="_blank">Pomerleau</a><span style="font-size:12px"> (Cost-of-Capital-Calculator); </span><a href="https://www.aei.org/economics/eligible-dependents-in-the-cares-act-and-heroes-act-economic-relief-payments/" style="font-size: 12px;" target="_blank">Pomerleau</a><span style="font-size:12px"> (Tax-Calculator).</span></div>
+<strong style="font-size:12px">Citations</strong><span style="font-size:12px">: <a href="https://www.aei.org/research-products/report/an-analysis-of-joe-bidens-tax-proposals/" target="_blank">DeBacker, Evans, and Pomerleau</a> (OG-USA and Tax-Calculator)</span></div>
 
                                     </td>
                                 </tr>
@@ -756,10 +756,10 @@
                             <h1><a href="https://github.com/PSLmodels/Cost-of-Capital-Calculator" target="_blank"><strong>Cost-of-Capital-Calculator</strong></a></h1>
 
 <p dir="ltr" style="color: #222222;"><em><span style="font-size:12px">Evaluates the effect of US federal taxes on businesses' investment incentives</span></em></p>
-<span style="font-size:12px">General Updates</span>
+<span style="font-size:12px">Releases and new features</span>
 
 <ul>
-      <li><span style="font-size:12px">Kyle Pomerleau (AEI) uses Cost-of-Capital-Calculator to simulate the effect of lower capital gains tax rates on the marginal effective tax rate on new investment. <a href="https://twitter.com/kpomerleau/status/1258497005598453761" target="_blank">Link</a></span></li>
+      <li><span style="font-size:12px">A new parameters class allows users to specify depreciation rules for specific assets&nbsp;(<a href="https://github.com/PSLmodels/Cost-of-Capital-Calculator/pull/306" target="_blank">#306</a>).</span></li>
 </ul>
 
                         </td>
@@ -817,14 +817,13 @@
 <span style="font-size:12px">Releases and new features</span>
 
 <ul>
-      <li><a href="https://github.com/PSLmodels/OG-USA/releases/tag/0.6.2" target="_blank"><span style="font-size:12px">Release 0.6.2</span></a>
+      <li><span style="font-size:12px">Adds ability to analyze the macroeconomic effects a universal basic income (<a href="https://github.com/PSLmodels/OG-USA/pull/573" target="_blank">#573</a>).</span></li>
+      <li><span style="font-size:12px">Makes adjustments to decrease run time of web application hosted on Compute Studio (<a href="https://github.com/PSLmodels/OG-USA/pull/571" target="_blank">#571</a>).</span></li>
+</ul>
+<span style="font-size:12px">General updates</span>
 
-      <ul>
-            <li><span style="font-size:12px">Bug fixes for the the&nbsp;<code>baseline_spending=True</code>&nbsp;and open economy configurations.</span></li>
-            <li><span style="font-size:12px">Enhancements to output plots and tables.</span></li>
-            <li><span style="font-size:12px">More clear and concise source code.</span></li>
-      </ul>
-      </li>
+<ul>
+      <li><span style="font-size:12px">DeBacker, Evans, and Pomerleau use OG-USA and Tax-Calculator&nbsp;to analyze the revenue and macroeconomic effects of Joe Biden’s tax plan. <a href="https://www.aei.org/wp-content/uploads/2020/06/An-Analysis-of-Joe-Bidens-Tax-Proposals.pdf" target="_blank">Link</a></span></li>
 </ul>
 
                         </td>
@@ -876,22 +875,14 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px;color: #222222;">
                         
-                            <h1><a href="https://github.com/PSLmodels/ParamTools" target="_blank"><span style="font-size:24px"><strong>ParamTools</strong></span></a></h1>
+                            <h1><a href="https://github.com/PSLmodels/Tax-Brain" target="_blank"><span style="font-size:24px"><strong>Tax-Brain</strong></span></a></h1>
 
-<p dir="ltr" style="color: #222222;"><span style="font-size:13px"><em>A library for parameter processing and validation with a focus on computational modeling projects</em></span></p>
+<p dir="ltr" style="color: #222222;"><em><span style="font-size:12px">An integrator package for multiple open source tax models</span></em></p>
 
 <p dir="ltr" style="color: #222222;"><span style="font-size:12px">Releases and new features</span></p>
 
 <ul>
-      <li><span style="font-size:12px"><a href="https://github.com/PSLmodels/ParamTools/releases/tag/0.14.0" target="_blank">Release 0.14.0</a></span>
-
-      <ul>
-            <li><span style="font-size:12px">Add&nbsp;<code>_auto</code>&nbsp;attribute to parameter values that were extended automatically. This makes it possible to update the rules for how parameters should be extended, delete the extended values, and update with the new rules (<a aria-label="#102, Add internal attribute on all extend values" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/PSLmodels/ParamTools/pull/102/hovercard" data-id="605705429" data-permission-text="Title is private" href="https://github.com/PSLmodels/ParamTools/pull/102">#102</a>).</span></li>
-            <li><span style="font-size:12px">Add a&nbsp;<code>clobber</code>&nbsp;argument to the&nbsp;<code>adjust</code>&nbsp;method that allows you to toggle whether user-defined values should be overridden while doing an adjustment in extend mode&nbsp;(<a aria-label="#102, Add internal attribute on all extend values" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/PSLmodels/ParamTools/pull/102/hovercard" data-id="605705429" data-permission-text="Title is private" href="https://github.com/PSLmodels/ParamTools/pull/102">#102</a>).</span></li>
-            <li><span style="font-size:12px">API change in&nbsp;<code>extend</code>&nbsp;method to use more concise keyword arguments. The argument&nbsp;<code>label_to_extend</code>&nbsp;is now&nbsp;<code>label</code>&nbsp;and the&nbsp;<code>label_to_extend_values</code>&nbsp;is now&nbsp;<code>label_values</code>&nbsp;(<a aria-label="#103, Fixes to extend logic and label validation" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/PSLmodels/ParamTools/pull/103/hovercard" data-id="610281311" data-permission-text="Title is private" href="https://github.com/PSLmodels/ParamTools/pull/103">#103</a>).</span></li>
-            <li><span style="font-size:12px">Ability to specify the state to be used when converting between lists of value objects and arrays (<a aria-label="#105, Add labels key-word argument to to/from_array methods" data-error-text="Failed to load title" data-hovercard-type="pull_request" data-hovercard-url="/PSLmodels/ParamTools/pull/105/hovercard" data-id="610803177" data-permission-text="Title is private" href="https://github.com/PSLmodels/ParamTools/pull/105">#105</a>).</span></li>
-      </ul>
-      </li>
+      <li><span style="font-size:12px">A line item for&nbsp;total cost of benefits is now included in aggregate output tables (<a href="https://github.com/PSLmodels/Tax-Brain/pull/120" target="_blank">#120</a>).</span></li>
 </ul>
 
                         </td>
@@ -946,15 +937,10 @@
                             <h1><a href="https://github.com/PSLmodels/Tax-Calculator" target="_blank"><span style="font-size:24px"><strong>Tax-Calculator</strong></span></a></h1>
 
 <p dir="ltr" style="color: #222222;"><span style="font-size:13px"><em>A USA federal individual income and payroll tax microsimulation model</em></span></p>
-<span style="font-size:12px">Releases and New Features</span>
-
-<ul>
-      <li><span style="font-size:12px">Tax-Calculator adopts ParamTools for&nbsp;parameter processing and validation (<a href="https://github.com/PSLmodels/Tax-Calculator/pull/2401" target="_blank">#2401</a>).&nbsp;</span></li>
-</ul>
 <span style="font-size:12px">General Updates</span>
 
 <ul>
-      <li><span style="font-size:12px">Kyle Pomerleau (AEI)&nbsp;uses Tax-Calculator to analyze the HEROES Act rebates. <a href="https://www.aei.org/economics/eligible-dependents-in-the-cares-act-and-heroes-act-economic-relief-payments/" target="_blank">Link</a></span></li>
+      <li><span style="font-size:12px">DeBacker, Evans, and Pomerleau use OG-USA and Tax-Calculator&nbsp;to analyze the revenue and macroeconomic effects of Joe Biden’s tax plan. <a href="https://www.aei.org/wp-content/uploads/2020/06/An-Analysis-of-Joe-Bidens-Tax-Proposals.pdf" target="_blank">Link</a></span></li>
 </ul>
 
                         </td>
@@ -1183,8 +1169,27 @@
             </td>
         </tr>
     </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width: 100%; padding: 0px 18px;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top-width: 2px;border-top-style: solid;border-top-color: #EAEAEA;">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--            
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
 </table>
 </td></tr></table></td></tr></table></td></tr></table></center>
+
 
 
                      <!-- End Mailchimp HTML -->
@@ -1193,6 +1198,7 @@
                         <div class="card mt-4">
                            <h5 class="card-header">Archives</h5>
                            <div class="card-body">
+                              <a href="https://mailchi.mp/383abca5c48d/june-psl-newsletter-4816300">May 2020</a><br>
                               <a href="https://mailchi.mp/fde4c08187ad/june-psl-newsletter-4797332">April 2020</a><br>
                               <a href="https://mailchi.mp/6eb1651ec61f/june-psl-newsletter-4366823">March 2020</a><br>
                               <a href="https://mailchi.mp/b2e5f9f0d386/june-psl-newsletter-4337671">February 2020</a><br>
