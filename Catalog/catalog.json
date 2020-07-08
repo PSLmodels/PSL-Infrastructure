@@ -99,7 +99,7 @@
             "source": ""
         },
         "project_one_line": {
-            "source": "https://github.com/open-source-economics/Cost-of-Capital-Calculator",
+            "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator",
             "value": "<p>Evaluates the effect of US federal taxes on businesses' investment incentives</p>"
         },
         "key_features": {
@@ -115,12 +115,12 @@
             "value": "<p>Cost-of-Capital-Calculator (Version 0.1.5)[Source code], https://github.com/open-source-economics/Cost-of-Capital-Calculator</p>"
         },
         "license": {
-            "source": "https://github.com/open-source-economics/Cost-of-Capital-Calculator/blob/master/LICENSE.md",
+            "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/LICENSE.md",
             "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</p>"
         },
         "user_documentation": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Cost-of-Capital-Calculator/blob/master/Guides/CCC_Guide.pdf\">https://github.com/open-source-economics/Cost-of-Capital-Calculator/blob/master/Guides/CCC_Guide.pdf</a>"
+            "value": "<a href=\"https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/docs/CCCC_Guide.pdf\">https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/docs/CCCC_Guide.pdf</a>"
         },
         "user_changelog": {
             "source": null,
@@ -164,15 +164,15 @@
         },
         "link_to_webapp": {
             "source": null,
-            "value": "<a href=\"http://www.ospc.org/ccc/\">http://www.ospc.org/ccc/</a>"
+            "value": "<a href=\"https://compute.studio/PSLmodels/Cost-of-Capital-Calculator/\">https://compute.studio/PSLmodels/Cost-of-Capital-Calculator/</a>"
         },
         "public_issue_tracker": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Cost-of-Capital-Calculator/issues\">https://github.com/open-source-economics/Cost-of-Capital-Calculator/issues</a>"
+            "value": "<a href=\"https://github.com/PSLmodels/Cost-of-Capital-Calculator/issues\">https://github.com/PSLmodels/Cost-of-Capital-Calculator/issues</a>"
         },
         "public_qanda": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Cost-of-Capital-Calculator/issues\">https://github.com/open-source-economics/Cost-of-Capital-Calculator/issues</a>"
+            "value": "<a href=\"https://github.com/PSLmodels/Cost-of-Capital-Calculator/issues\">https://github.com/PSLmodels/Cost-of-Capital-Calculator/issues</a>"
         },
         "core_maintainers": {
             "source": null,
@@ -180,11 +180,11 @@
         },
         "unit_test": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Cost-of-Capital-Calculator/tree/master/ccc/tests\">https://github.com/open-source-economics/Cost-of-Capital-Calculator/tree/master/ccc/tests</a>"
+            "value": "<a href=\"https://github.com/PSLmodels/Cost-of-Capital-Calculator/tree/master/ccc/tests\">https://github.com/PSLmodels/Cost-of-Capital-Calculator/tree/master/ccc/tests</a>"
         },
         "integration_test": {
             "source": null,
-            "value": "<a href=\"https://github.com/open-source-economics/Cost-of-Capital-Calculator/tree/master/ccc/tests\">https://github.com/open-source-economics/Cost-of-Capital-Calculator/tree/master/ccc/tests</a>"
+            "value": "<a href=\"https://github.com/PSLmodels/Cost-of-Capital-Calculator/tree/master/ccc/tests\">https://github.com/PSLmodels/Cost-of-Capital-Calculator/tree/master/ccc/tests</a>"
         }
     },
     "OG-USA": {
@@ -401,8 +401,8 @@
             "value": "<p>MIT</p>"
         },
         "user_documentation": {
-            "source": "https://paramtools.org",
-            "value": "<a href=\"https://paramtools.org\">https://paramtools.org</a>"
+            "source": "https://paramtools.dev",
+            "value": "<a href=\"https://paramtools.dev\">https://paramtools.dev</a>"
         },
         "user_changelog": {
             "source": "https://github.com/PSLmodels/ParamTools/releases",
