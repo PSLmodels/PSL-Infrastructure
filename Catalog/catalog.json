@@ -586,11 +586,11 @@
         },
         "contributor_overview": {
             "source": null,
-            "value": "<a href=\"http://PSLmodels.github.io/Tax-Calculator/\"></a>"
+            "value": "<a href=\"https://pslmodels.github.io/Tax-Calculator/contributing/contributor_guide.html\"></a>"
         },
         "user_changelog_recent": {
             "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Calculator/blob/master/CHANGES.md#tax-calculator-change-history\"></a>"
+            "value": "<a href=\"https://pslmodels.github.io/Tax-Calculator/about/changes.html\"></a>"
         },
         "link_to_webapp": {
             "source": null,
