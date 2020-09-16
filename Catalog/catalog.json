@@ -630,5 +630,39 @@
             "source": null,
             "value": "<ul><li>Peter Metz</li></ul>"
         }
+    },
+    "microdf": {
+        "name": {
+            "value": "microdf",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": null,
+            "value": "<p>microdf is a Python package for analyzing economic microdata as pandas DataFrames, with special functions for Tax-Calculator.</p>"
+        },
+        "project_overview": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/microdf\">What is microdf?</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Max Ghenis</li><ul><li>email: max@ubicenter.org</li></ul>"
+        },
+        "user_documentation": {
+            "source": null,
+            "value": "<a href=\"http://pslmodels.github.io/microdf/\"></a>"
+        },
+        "contributor_overview": {
+            "source": null,
+            "value": "<a href=\"http://github.com/PSLmodels/microdf/\"></a>"
+        },
+        "user_changelog_recent": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/microdf/releases\"></a>"
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": null
+        }
     }
 }
