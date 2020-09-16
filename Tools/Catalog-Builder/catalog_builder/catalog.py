@@ -5,8 +5,10 @@ from collections import defaultdict
 
 from catalog_builder import utils
 
+
 class ProjectDoesNotExist(Exception):
     pass
+
 
 class CatalogBuilder:
     """
@@ -61,12 +63,16 @@ class CatalogBuilder:
 
     CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-    def __init__(self, projects=None, index_dir=None, card_dir=None,
-                 develop=False, build_one=None):
+    def __init__(
+        self,
+        projects=None,
+        index_dir=None,
+        card_dir=None,
+        develop=False,
+        build_one=None,
+    ):
         if projects is None:
-            p = os.path.join(
-                self.CURRENT_PATH, "../../../Catalog/register.json"
-            )
+            p = os.path.join(self.CURRENT_PATH, "../../../Catalog/register.json")
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
@@ -83,15 +89,15 @@ class CatalogBuilder:
             success = False
             for project in self.projects:
                 if project["repo"] == build_one:
-                   self.projects = [project]
-                   success = True
-                   break
+                    self.projects = [project]
+                    success = True
+                    break
             if not success:
                 raise ProjectDoesNotExist(
-                    ("{0} is not in register.json or "
-                     "projects if provided.").format(build_one)
+                    ("{0} is not in register.json or " "projects if provided.").format(
+                        build_one
+                    )
                 )
-
 
     def load_catalog(self):
         """
@@ -102,7 +108,7 @@ class CatalogBuilder:
         """
         repo_url = "https://github.com/{}/{}"  # Used to build repo links
         if not self.develop:
-            for project in sorted(self.projects, key=lambda x: x['repo']):
+            for project in sorted(self.projects, key=lambda x: x["repo"].upper()):
                 cat_meta = utils._get_from_github_api(
                     project["org"],
                     project["repo"],
@@ -115,8 +121,7 @@ class CatalogBuilder:
                     "source": "",
                 }
                 self.repos[project["repo"]] = repo_url.format(
-                    project["org"],
-                    project["repo"]
+                    project["org"], project["repo"]
                 )
                 for attr, config in cat_meta.items():
                     if config["type"] == "github_file":
@@ -140,18 +145,15 @@ class CatalogBuilder:
                     res = {"source": source, "value": value}
                     self.catalog[project["repo"]][attr] = res
         else:
-            print('Develop mode. Loading Catalog from catalog.json')
-            json_path = os.path.join(
-                self.index_dir, "catalog.json"
-            )
+            print("Develop mode. Loading Catalog from catalog.json")
+            json_path = os.path.join(self.index_dir, "catalog.json")
             with open(json_path) as f:
                 self.catalog = json.load(f)
             for project in self.projects:
                 self.repos[project["repo"]] = repo_url.format(
-                    project["org"],
-                    project["repo"]
+                    project["org"], project["repo"]
                 )
-            print('Catalog Loaded')
+            print("Catalog Loaded")
 
     def write_pages(self):
         """
@@ -167,8 +169,9 @@ class CatalogBuilder:
             self.CURRENT_PATH, "../templates", "catalog_template.html"
         )
 
-        rendered = utils.render_template(models_path, catalog=self.catalog,
-                                         repos=self.repos)
+        rendered = utils.render_template(
+            models_path, catalog=self.catalog, repos=self.repos
+        )
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
@@ -191,22 +194,30 @@ class CatalogBuilder:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--develop",
-                        help=("Optional argument indicating whether or not the "
-                            "CatalogBuilder package is being developed. "
-                            "Including this flag causes the catalog to be "
-                            "created from catalog.json, rather than pinging "
-                            "the GitHub API."),
-                        default=False,
-                        action="store_true")
-    parser.add_argument("--build-one",
-                        help=("Only build the catalog with the specified "
-                              "project. This is helpful when you want to "
-                              "run the catalog builder many times for the same "
-                              "project. For example, you want to add a new "
-                              "project to the catalog and you are trying to "
-                              "tweak the appearance of its card and website."),
-                        default=None)
+    parser.add_argument(
+        "--develop",
+        help=(
+            "Optional argument indicating whether or not the "
+            "CatalogBuilder package is being developed. "
+            "Including this flag causes the catalog to be "
+            "created from catalog.json, rather than pinging "
+            "the GitHub API."
+        ),
+        default=False,
+        action="store_true",
+    )
+    parser.add_argument(
+        "--build-one",
+        help=(
+            "Only build the catalog with the specified "
+            "project. This is helpful when you want to "
+            "run the catalog builder many times for the same "
+            "project. For example, you want to add a new "
+            "project to the catalog and you are trying to "
+            "tweak the appearance of its card and website."
+        ),
+        default=None,
+    )
     args = parser.parse_args()
     cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
     cb.load_catalog()
