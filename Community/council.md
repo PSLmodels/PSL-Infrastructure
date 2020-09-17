@@ -12,6 +12,7 @@
 | Matt Jensen     | PSL-Infrastructure         | matt.h.jensen@gmail.com  |
 | Peter Metz      | Tax-Cruncher               | pmetzdc@gmail.com        |
 | Weifeng Zhong   | PCI-China                  | weifeng@weifengzhong.com |
+| Max Ghenis      | microdf                    | mghenis@gmail.com        |
 
 
 ## Bylaws 
