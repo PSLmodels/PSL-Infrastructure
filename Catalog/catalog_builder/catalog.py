@@ -72,14 +72,14 @@ class CatalogBuilder:
         build_one=None,
     ):
         if projects is None:
-            p = os.path.join(self.CURRENT_PATH, "../../../Catalog/register.json")
+            p = os.path.join(self.CURRENT_PATH, "../register.json")
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
             self.projects = projects
 
         self.index_dir = index_dir or os.path.join(
-            self.CURRENT_PATH, "../../../Catalog/"
+            self.CURRENT_PATH, "../"
         )
 
         self.catalog = defaultdict(dict)
