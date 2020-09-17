@@ -94,5 +94,5 @@ How to add projects to the catalog
 
 
 
-[`OG-USA/PSL_catalog.json`]: https://github.com/open-source-economics/OG-USA/blob/master/PSL_catalog.json
-[`Tax-Calculator/PSL_catalog.json`]: https://github.com/open-source-economics/Tax-Calculator/blob/master/PSL_catalog.json
+[`OG-USA/PSL_catalog.json`]: https://github.com/PSLmodels/OG-USA/blob/master/PSL_catalog.json
+[`Tax-Calculator/PSL_catalog.json`]: https://github.com/PSLmodels/Tax-Calculator/blob/master/PSL_catalog.json

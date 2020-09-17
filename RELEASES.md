@@ -1,13 +1,13 @@
 PSL RELEASE HISTORY
 ==============================
-Go [here](https://github.com/open-source-economics/PSL/pulls?q=is%3Apr+is%3Aclosed)
+Go [here](https://github.com/PSLmodels/PSL-Infrastructure/pulls?q=is%3Apr+is%3Aclosed)
 for a complete commit history.
 
 
 2018-11-02 Release 0.1.0
 -------------------------
 (last merged pull request is
-[#57](https://github.com/open-source-economics/PSL/pull/57))
+[#57](https://github.com/PSLmodels/PSL-Infrastructure/pull/57))
 
 **Major Features and Improvements**
 

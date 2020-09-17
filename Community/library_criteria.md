@@ -36,7 +36,7 @@ Acceptance Criteria for Transparency and Quality
 1. Projects MUST have a project overview.
 1. Projects MUST have installation directions.
 1. Project MUST be mirrored in the same GitHub organization as PSL, and therefore they MUST be under version control.
-1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning][1]. If projects want to use the PSL Package-Builder tool to distribute packages via the Anaconda Cloud PSLmodels channel, there are [additional MUST criteria][3].
+1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning][1]. If projects want to use the PSL Package-Builder tool to distribute packages via the Anaconda Cloud PSLmodels channel, there are [additional MUST criteria][2].
 
 Community Criteria
 -------------------
@@ -62,12 +62,12 @@ Interoperability Criteria
 --------------------------
 
 1. The source code SHOULD be written in an open source language.
-1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation][2].
+1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation][3].
 
 
 
 
 
 [1]: https://semver.org/
-[2]: https://github.com/open-source-economics/PSL/tree/master/Tools/Catalog-Builder#catalog-specification-file-psl_catalogjson]
-[3]: https://github.com/open-source-economics/Package-Builder#using-package-builders-pbrelease-tool
+[2]: https://github.com/PSLmodels/Package-Builder#using-package-builders-pbrelease-tool
+[3]: https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog
