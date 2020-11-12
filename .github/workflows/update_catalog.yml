@@ -1,0 +1,47 @@
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%m-%d-%Y')"
+
+    - name: Checkout master
+      uses: actions/checkout@v2
+
+    - name: Pull upstream changes
+      id: sync
+      uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
+      with:
+        upstream_repository: PSLModels/PSL-Infrastructure
+        upstream_branch: master
+        target_branch: master
+        git_pull_args: --unshallow
+        git_push_args: -f
+
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2.0.0
+      with:
+        activate-environment: catalog-env
+        environment-file: environment.yml
+        python-version: 3.8
+        auto-activate-base: false
+
+    - name: run python script
+      working-directory: ./Tools/Catalog-Builder/catalog_builder
+      shell: bash -l {0}
+      run: |
+        python catalog.py
+
+    - name: Make new pull request
+      id: cpr
+      uses: peter-evans/create-pull-request@v3
+      with:
+        commit-message: Update catalog
+        branch: catalog_update_${{ steps.date.outputs.date }}
+        title: Update catalog on ${{ steps.date.outputs.date }}
+        body: _I am a Github Actions bot._ This PR updates the PSL catalog on ${{ steps.date.outputs.date }}
