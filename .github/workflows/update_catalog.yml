@@ -4,6 +4,7 @@ on:
       - master
     paths:
       - "Catalog/catalog.json"
+      - ".github/workflows/update_catalog.yml"
 
 jobs:
   build_catalog:
