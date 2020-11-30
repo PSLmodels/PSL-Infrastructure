@@ -20,7 +20,7 @@ jobs:
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
       with:
-        upstream_repository: PSLModels/PSL-Infrastructure
+        upstream_repository: chusloj/PSL-Infrastructure
         upstream_branch: master
         target_branch: master
         git_pull_args: --unshallow
