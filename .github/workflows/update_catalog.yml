@@ -15,14 +15,16 @@ jobs:
 
     - name: Checkout master
       uses: actions/checkout@v2
+      with:
+        ref: GH_action_catalog
 
     - name: Pull upstream changes
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
       with:
-        upstream_repository: chusloj/PSL-Infrastructure
+        upstream_repository: PSLmodels/PSL-Infrastructure
         upstream_branch: master
-        target_branch: master
+        target_branch: GH_action_catalog
         git_pull_args: --unshallow
         git_push_args: -f
 
