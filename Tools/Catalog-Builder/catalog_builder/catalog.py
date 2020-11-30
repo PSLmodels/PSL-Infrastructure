@@ -3,7 +3,7 @@ import os
 import argparse
 from collections import defaultdict
 
-import catalog_builder utils
+from catalog_builder import utils
 
 
 class ProjectDoesNotExist(Exception):
