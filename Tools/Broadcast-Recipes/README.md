@@ -1,1 +1,0 @@
-This directory will be the home of broadcast recipes for sharing model news through social media and email. 
