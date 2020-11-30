@@ -4,10 +4,6 @@ on:
       - master
     paths:
       - "Catalog/catalog.json"
-    # branches:
-      # - master
-    # paths:
-      # - "Catalog/catalog.json" 
 
 jobs:
   build_catalog:
