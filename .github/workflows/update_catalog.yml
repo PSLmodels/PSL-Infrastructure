@@ -16,7 +16,7 @@ jobs:
     - name: Checkout master
       uses: actions/checkout@v2
       with:
-        ref: GH_action_catalog
+        ref: master
 
     - name: Pull upstream changes
       id: sync
@@ -24,7 +24,7 @@ jobs:
       with:
         upstream_repository: PSLmodels/PSL-Infrastructure
         upstream_branch: master
-        target_branch: GH_action_catalog
+        target_branch: master
         git_pull_args: --unshallow
         git_push_args: -f
 
