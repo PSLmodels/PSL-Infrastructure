@@ -37,10 +37,11 @@ jobs:
         auto-activate-base: false
 
     - name: run python script
-      working-directory: ./Tools/Catalog-Builder/catalog_builder
+      working-directory: ./Tools/Catalog-Builder/
       shell: bash -l {0}
       run: |
         pip install -e .
+        cd catalog_builder
         python catalog.py
 
     - name: Make new pull request
