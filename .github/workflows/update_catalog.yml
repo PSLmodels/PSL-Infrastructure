@@ -2,8 +2,8 @@ on:
   push:
     # branches:
       # - master
-    paths:
-      - "Catalog/catalog.json"
+    # paths:
+      # - "Catalog/catalog.json"
 
 jobs:
   build_catalog:
