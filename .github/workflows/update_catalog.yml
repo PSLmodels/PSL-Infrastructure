@@ -1,5 +1,9 @@
 on:
   push:
+    branches:
+      - master
+    paths:
+      - "Catalog/catalog.json"
     # branches:
       # - master
     # paths:
