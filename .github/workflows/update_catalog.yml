@@ -3,7 +3,7 @@ on:
     # branches:
       # - master
     # paths:
-      # - "Catalog/catalog.json"
+      # - "Catalog/catalog.json" 
 
 jobs:
   build_catalog:
