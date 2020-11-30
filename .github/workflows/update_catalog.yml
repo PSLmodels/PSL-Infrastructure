@@ -1,10 +1,9 @@
 on:
   push:
-  branches:
-    - master
-  paths:
-    - "Catalog/catalog.json"
-  workflow_dispatch:
+    branches:
+      - master
+    paths:
+      - "Catalog/catalog.json"
 
 jobs:
   build_catalog:
