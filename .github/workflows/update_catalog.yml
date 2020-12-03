@@ -19,7 +19,7 @@ jobs:
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
       with:
-        upstream_repository: PSLmodels/PSL-Infrastructure
+        upstream_repository: chusloj/PSL-Infrastructure
         upstream_branch: master
         target_branch: GH_action_catalog
         git_pull_args: --unshallow
