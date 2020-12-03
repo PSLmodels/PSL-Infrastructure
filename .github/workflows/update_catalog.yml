@@ -1,28 +1,13 @@
 name: Update PSL catalog
 on:
-  schedule:
-    - cron: '0 1 * * *'
+  push:
 
 jobs:
   build_catalog:
     runs-on: ubuntu-latest
     steps:
-    - name: Get current date
-      id: date
-      run: echo "::set-output name=date::$(date +'%m-%d-%Y')"
-
     - name: Checkout repo
       uses: actions/checkout@v2
-
-    - name: Pull upstream changes
-      id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
-      with:
-        upstream_repository: PSLmodels/PSL-Infrastructure
-        upstream_branch: master
-        target_branch: master
-        git_pull_args: --unshallow
-        git_push_args: -f
 
     - name: Setup Miniconda
       uses: conda-incubator/setup-miniconda@v2.0.0
@@ -48,5 +33,5 @@ jobs:
         git config user.email github-actions@github.com
 
         git add -A
-        git commit -m "Update PSL-catalog on $(date +'%Y-%m-%d')"
+        git commit --allow-empty -m "Update PSL-catalog on $(date +'%Y-%m-%d')"
         git push
