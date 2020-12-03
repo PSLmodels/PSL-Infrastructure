@@ -1,7 +1,7 @@
 name: Update PSL catalog
 on:
   schedule:
-    - cron: '1 0 * * *'
+    - cron: '0 1 * * *'
 
 jobs:
   build_catalog:
