@@ -1,10 +1,6 @@
+name: Update PSL catalog
 on:
   push:
-    branches:
-      - master
-    paths:
-      - "Catalog/catalog.json"
-      - ".github/workflows/update_catalog.yml"
 
 jobs:
   build_catalog:
@@ -17,7 +13,7 @@ jobs:
     - name: Checkout master
       uses: actions/checkout@v2
       with:
-        ref: master
+        persist-credentials: false
 
     - name: Pull upstream changes
       id: sync
@@ -37,7 +33,7 @@ jobs:
         python-version: 3.8
         auto-activate-base: false
 
-    - name: run python script
+    - name: Run python script
       working-directory: ./Tools/Catalog-Builder/
       shell: bash -l {0}
       run: |
@@ -45,11 +41,13 @@ jobs:
         cd catalog_builder
         python catalog.py
 
-    - name: Make new pull request
-      id: cpr
-      uses: peter-evans/create-pull-request@v3
-      with:
-        commit-message: Update catalog
-        branch: catalog_update_${{ steps.date.outputs.date }}
-        title: Update catalog on ${{ steps.date.outputs.date }}
-        body: _I am a Github Actions bot._ This PR updates the PSL catalog on ${{ steps.date.outputs.date }}
+    - name: Commit new changes
+      working-directory: ./
+      shell: bash -l {0}
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+
+        git add -A
+        git commit -m "Update PSL-catalog on $(date +'%Y-%m-%d')"
+        git push
