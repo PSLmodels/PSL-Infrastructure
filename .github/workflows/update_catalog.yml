@@ -12,8 +12,6 @@ jobs:
 
     - name: Checkout master
       uses: actions/checkout@v2
-      with:
-        persist-credentials: false
 
     - name: Pull upstream changes
       id: sync
