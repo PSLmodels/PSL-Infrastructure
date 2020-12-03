@@ -21,7 +21,7 @@ jobs:
       with:
         upstream_repository: PSLmodels/PSL-Infrastructure
         upstream_branch: master
-        target_branch: master
+        target_branch: GH_action_catalog
         git_pull_args: --unshallow
         git_push_args: -f
 
