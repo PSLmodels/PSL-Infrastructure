@@ -1,6 +1,7 @@
 name: Update PSL catalog
 on:
-  push:
+  schedule:
+    - cron: '0 1 * * *'
 
 jobs:
   build_catalog:
