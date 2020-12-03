@@ -1,0 +1,7 @@
+name: catalog-env
+dependencies:
+  - python
+  - markdown
+  - bs4
+  - jinja2
+  - requests
