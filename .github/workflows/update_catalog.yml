@@ -1,6 +1,7 @@
 name: Update PSL catalog
 on:
-  push:
+  schedule:
+    - cron: '1 0 * * *'
 
 jobs:
   build_catalog:
@@ -10,16 +11,16 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +'%m-%d-%Y')"
 
-    - name: Checkout master
+    - name: Checkout repo
       uses: actions/checkout@v2
 
     - name: Pull upstream changes
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
       with:
-        upstream_repository: chusloj/PSL-Infrastructure
+        upstream_repository: PSLmodels/PSL-Infrastructure
         upstream_branch: master
-        target_branch: GH_action_catalog
+        target_branch: master
         git_pull_args: --unshallow
         git_push_args: -f
 
