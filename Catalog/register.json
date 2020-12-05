@@ -46,7 +46,7 @@
     },
     {
         "org": "PSLmodels",
-        "repo": "openfisca-uk",
+        "repo": "OpenFisca-UK",
         "branch": "master"
     }
 ]
