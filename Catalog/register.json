@@ -43,5 +43,10 @@
         "org": "PSLmodels",
         "repo": "microdf",
         "branch": "master"
+    },
+    {
+        "org": "PSLmodels",
+        "repo": "openfisca-uk",
+        "branch": "master"
     }
 ]
