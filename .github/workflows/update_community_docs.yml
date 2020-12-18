@@ -21,7 +21,7 @@ jobs:
         python-version: 3.8
         auto-activate-base: false
 
-    - name: Run python script
+    - name: Run shell script
       working-directory: ./Tools/Page-Builder/
       shell: bash -l {0}
       run: |
