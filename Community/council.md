@@ -13,6 +13,7 @@
 | Peter Metz      | Tax-Cruncher               | pmetzdc@gmail.com        |
 | Weifeng Zhong   | PCI-China                  | weifeng@weifengzhong.com |
 | Max Ghenis      | microdf                    | mghenis@gmail.com        |
+| Nikhil Woodruff | OpenFisca-UK               | nikhil.woodruff@outlook.com |
 
 
 ## Bylaws 
