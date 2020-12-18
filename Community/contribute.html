@@ -6,6 +6,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>contribute</title>
   <style>
+    html {
+      line-height: 1.7;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 40em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin-top: 1.7em;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.7em;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1.7em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1.7em 0 1.7em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      font-style: italic;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      background-color: #f0f0f0;
+      font-size: 85%;
+      margin: 0;
+      padding: .2em .4em;
+    }
+    pre {
+      line-height: 1.5em;
+      padding: 1em;
+      background-color: #f0f0f0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin-top: 1.7em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      border-bottom: 1px solid lightgray;
+      padding: 1em 3em 1em 0;
+    }
+    header {
+      margin-bottom: 6em;
+      text-align: center;
+    }
+    nav a:not(:hover) {
+      text-decoration: none;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
@@ -85,10 +191,8 @@
 <p>When you feel that you have made a valuable contribution, please add it to RELEASES.md. If you think PSL users should know about it, add it to NEWS.md. If your name is not already in contributors.md, add it.</p>
 <h2 id="submitting-a-project-to-psl">Submitting a project to PSL</h2>
 <p>To submit a public policy simulation project to PSL, please bring your model or data preparation routine into compliance with <a href="../Catalog/library_criteria.html">PSL Criteria</a> and then open a pull request to PSL adding your model to the <a href="https://github.com/PSLmodels/PSL-Infrastructure/blob/master/Catalog/register.json">PSL Catalog Register</a>. The PSL project will then review your PR for public policy relevance and conformance to the PSL Criteria. If you have a question about the process or are unsure of your project’s relevance to PSL, please open an <a href="https://github.com/PSLmodels/PSL-Infrastructure/issues">issue</a>.</p>
-<h2 id="office-hours-with-the-community">Office hours with the community</h2>
+<h2 id="open-community-calls">Open Community Calls</h2>
 <hr />
-<p>1 pm on Tuesdays</p>
-<p>Join Webex meeting https://ospc.my.webex.com/join/matt.jensen | 628 792 770</p>
-<p>Join by phone +1-510-338-9438 USA Toll Access code: 628 792 770 <a href="https://mail.aei.org/owa/redir.aspx?C=3bfxNY8Hq70WhitL40PkEkH-cY-nbyII6k1CpEi38L8HKLh7xg7WCA..&amp;URL=https%3a%2f%2fospc.my.webex.com%2fcmp3300%2fwebcomponents%2fwidget%2fglobalcallin%2fglobalcallin.do%3fsiteurl%3dospc.my%26serviceType%3dMC%26ED%3d712667622%26tollFree%3d0">Global call-in numbers</a></p>
+<p>If you are interested in becoming a contributor to the PSL community, we welcome you to join one of our community calls. Please see the <a href="http://pslmodels.org/events.html">PSL events page</a> for a calendar of upcoming meetings. General community calls and project-specific calls are held on a regular basis and are open to the public.</p>
 </body>
 </html>
