@@ -5,6 +5,7 @@ on:
       - master
     paths:
       - 'Community/**.md'
+      - 'Catalog/**.md'
 
 jobs:
   build_community_pages:
