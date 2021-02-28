@@ -8,16 +8,8 @@ When you feel that you have made a valuable contribution, please add it to RELEA
 
 To submit a public policy simulation project to PSL, please bring your model or data preparation routine into compliance with [PSL Criteria](../Catalog/library_criteria.html) and then open a pull request to PSL adding your model to the [PSL Catalog Register](https://github.com/PSLmodels/PSL-Infrastructure/blob/master/Catalog/register.json). The PSL project will then review your PR for public policy relevance and conformance to the PSL Criteria. If you have a question about the process or are unsure of your project's relevance to PSL, please open an [issue](https://github.com/PSLmodels/PSL-Infrastructure/issues). 
 
-## Office hours with the community
+## Open Community Calls
 
 --------------------------------
 
-1 pm on Tuesdays
-
-Join Webex meeting
-https://ospc.my.webex.com/join/matt.jensen  |  628 792 770
-
-Join by phone
-+1-510-338-9438 USA Toll
-Access code: 628 792 770
-[Global call-in numbers](https://mail.aei.org/owa/redir.aspx?C=3bfxNY8Hq70WhitL40PkEkH-cY-nbyII6k1CpEi38L8HKLh7xg7WCA..&URL=https%3a%2f%2fospc.my.webex.com%2fcmp3300%2fwebcomponents%2fwidget%2fglobalcallin%2fglobalcallin.do%3fsiteurl%3dospc.my%26serviceType%3dMC%26ED%3d712667622%26tollFree%3d0)
+If you are interested in becoming a contributor to the PSL community, we welcome you to join one of our community calls.  Please see the [PSL events page](http://pslmodels.org/events.html) for a calendar of upcoming meetings.  General community calls and project-specific calls are held on a regular basis and are open to the public.
