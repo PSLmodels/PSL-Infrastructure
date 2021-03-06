@@ -48,5 +48,10 @@
         "org": "PSLmodels",
         "repo": "openfisca-uk",
         "branch": "master"
+    },
+    {
+        "org": "PSLmodels",
+        "repo": "taxdata",
+        "branch": "master"
     }
 ]
