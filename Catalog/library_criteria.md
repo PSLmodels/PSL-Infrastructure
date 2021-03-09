@@ -50,6 +50,7 @@ Community Criteria
 1. Projects SHOULD include a disclaimer.
 1. Projects SHOULD have a public issues tracker.
 1. Projects SHOULD have a changelog.
+1. Projects SHOULD adopt a consistent code formatting scheme. Projects MAY use an automated code formatter like [Black](https://black.readthedocs.io/en/stable/).
 1. Projects MAY have a Stack Overflow channel.
 1. Projects MAY include a "News" translation of the changelog for users.
 1. Projects MAY include criteria for participating in cross-model PSL initiatives.
