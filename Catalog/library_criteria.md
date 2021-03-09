@@ -47,7 +47,6 @@ Community Criteria
 1. Projects SHOULD list technical contributors.
 1. Projects SHOULD list funders.
 1. Projects SHOULD list user citations and case studies.
-1. Projects SHOULD include subject matter tags, choosing from ...
 1. Projects SHOULD include a disclaimer.
 1. Projects SHOULD have a public issues tracker.
 1. Projects SHOULD have a changelog.
