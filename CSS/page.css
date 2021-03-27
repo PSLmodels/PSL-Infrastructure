@@ -156,3 +156,32 @@ a.btn:hover{
     text-decoration-line: underline;
     text-decoration-style: solid;
 }
+.fa {
+  padding: 30px;
+  font-size: 25px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  /*border-radius: 50%;*/
+}
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.fa-twitter {
+  color: #55ACEE;
+}
+
+.fa-linkedin {
+  color: #5D6D7E;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-youtube {
+  color: #D98880;
+}
