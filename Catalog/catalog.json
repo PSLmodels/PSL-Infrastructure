@@ -115,12 +115,12 @@
             "value": "<p>Cost-of-Capital-Calculator (Version 1.2.6)[Source code], https://github.com/PSLmodels/Cost-of-Capital-Calculator</p>"
         },
         "license": {
-            "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/LICENSE.md",
+            "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/docs/book/content/license.md",
             "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</p>"
         },
         "user_documentation": {
             "source": null,
-            "value": "<a href=\"https://pslmodels.github.io/Cost-of-Capital-Calculator/\">https://pslmodels.github.io/Cost-of-Capital-Calculator/</a>"
+            "value": "<a href=\"http://ccc.pslmodels.org/\">http://ccc.pslmodels.org/content/intro.html/</a>"
         },
         "user_changelog": {
             "source": null,
