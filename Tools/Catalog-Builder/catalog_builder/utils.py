@@ -141,6 +141,7 @@ def get_from_github_api(project, config):
 
 
 def make_id(name):
+    name = name.replace('.', '')
     return "-".join(name.split())
 
 
