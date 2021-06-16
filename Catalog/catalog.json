@@ -563,7 +563,7 @@
             "value": "<p>MIT</p>"
         },
         "user_documentation": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md",
+            "source": "http://taxbrain.pslmodels.org/content/intro.html",
             "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md</a>"
         },
         "user_changelog": {
