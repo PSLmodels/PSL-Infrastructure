@@ -25,7 +25,7 @@ Acceptance Criteria for Transparency and Quality
 
 1. Models MUST be released under an OSI-approved open source license or the Creative Commons Public Domain Dedication (CC0).
 1. Data MUST be publicly available, unless release is restricted by a third party.
-1. For any data that SHOULD not be disclosed, provided MUST be:
+1. For any data that should not be disclosed, the project MUST provide:
 	- A complete descriptive list of all data variables;
 	- Descriptive statistics for all data variables for such data (including averages, standard deviations, number of observations, and correlations to other variables), to the extent that the descriptive statistics do not violate the rule against disclosure;
 	- Contact information for the individual or entity who has unrestricted access to the data.
