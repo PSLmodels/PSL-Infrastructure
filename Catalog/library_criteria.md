@@ -1,26 +1,21 @@
 
-PSL Project Criteria
-============================================
+# PSL Project Criteria
 
-Summary
--------
+## Summary
 
 1. Models must be transparent.
 1. Interface recommendations facilitate interoperability.
 1. Organizational recommendations facilitate community.
 
-Introduction
--------------
+## Introduction
 
 Open-source modeling ensures that model results are reproducible, that experts around the world can collaborate to make models better, and that users can explore the parameter space for themselves. These outcomes systematically improve public policy decisionmaking.
 
 We have developed the criteria in this document to facilitate the growth of an open source public policy modeling ecosystem.
 
-Criteria
----------
+## Criteria
 
-Mandatory Criteria for Transparency and Quality
---------------------------------------------
+### Mandatory Criteria for Transparency and Quality
 
 1. Models MUST be released under an OSI-approved open source license or the Creative Commons Public Domain Dedication (CC0).
 1. Data MUST be publicly available, unless release is restricted by a third party.
@@ -39,8 +34,7 @@ Mandatory Criteria for Transparency and Quality
 1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation](https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog).
 
 
-Recommended Community Criteria
--------------------
+### Recommended Community Criteria
 
 1. Projects SHOULD report code coverage.
 1. Projects SHOULD have a public roadmap.
