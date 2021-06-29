@@ -18,9 +18,8 @@ We have developed the criteria in this document to facilitate the growth of an o
 
 Criteria
 ---------
-PSL establishes three kinds of project Criteria. A project are required to (`MUST`) conform to `Acceptance Criteria` to be accepted in PSL. Projects are recommended to (`SHOULD`) or optionally (`MAY`) conform to various `Community Criteria` and `Interoperability Criteria`.
 
-Acceptance Criteria for Transparency and Quality
+Mandatory Criteria for Transparency and Quality
 --------------------------------------------
 
 1. Models MUST be released under an OSI-approved open source license or the Creative Commons Public Domain Dedication (CC0).
@@ -37,8 +36,10 @@ Acceptance Criteria for Transparency and Quality
 1. Projects MUST have installation directions.
 1. Project MUST be mirrored in the same GitHub organization as PSL, and therefore they MUST be under version control.
 1. Projects MUST use a consistent versioning scheme, which SHOULD be [semantic versioning](https://semver.org/). If projects want to use the PSL Package-Builder tool to distribute packages via the Anaconda Cloud PSLmodels channel, there are [additional MUST criteria](https://github.com/PSLmodels/Package-Builder#using-package-builders-pbrelease-tool).
+1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation](https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog).
 
-Community Criteria
+
+Recommended Community Criteria
 -------------------
 
 1. Projects SHOULD report code coverage.
@@ -57,10 +58,4 @@ Community Criteria
 1. Projects MAY include criteria for participating in cross-model PSL initiatives.
 1. Projects MAY include a link to a webapp version.
 1. Projects MAY include a list of consultants.
-
-
-Interoperability Criteria
---------------------------
-
 1. The source code SHOULD be written in an open source language.
-1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation](https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog).
