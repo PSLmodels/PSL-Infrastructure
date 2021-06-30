@@ -45,9 +45,9 @@ We have developed the criteria in this document to facilitate the growth of an o
 1. Projects SHOULD include a disclaimer.
 1. Projects SHOULD have a public issues tracker.
 1. Projects SHOULD have a changelog.
+1. Projects SHOULD be written in an open source language.
 1. Projects MAY have a Stack Overflow channel.
 1. Projects MAY include a "News" translation of the changelog for users.
 1. Projects MAY include criteria for participating in cross-model PSL initiatives.
 1. Projects MAY include a link to a webapp version.
 1. Projects MAY include a list of consultants.
-1. The source code SHOULD be written in an open source language.
