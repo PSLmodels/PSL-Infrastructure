@@ -27,7 +27,7 @@ We have developed the criteria in this document to facilitate the growth of an o
 1. Projects MUST have a project overview.
 1. Projects MUST have installation directions.
 1. Project MUST be mirrored in the same GitHub organization as PSL, and therefore they MUST be under version control.
-1. Projects MUST use a consistent versioning scheme. If projects want to use the PSL Package-Builder tool to distribute packages via the Anaconda Cloud PSLmodels channel, there are [additional MUST criteria](https://github.com/PSLmodels/Package-Builder#using-package-builders-pbrelease-tool).
+1. Projects MUST use a consistent versioning scheme.
 1. A `PSL_catalog.json` configuration file to be used for cataloging these criteria MUST be included in the project's repository. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation](https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog).
 
 
