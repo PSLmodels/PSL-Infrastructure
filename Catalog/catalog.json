@@ -270,7 +270,7 @@
         },
         "project_overview": {
             "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
-            "value": "<p>OG-USA is an overlapping-generations (OG) model of the economy of the United States (USA) that allows for dynamic general equilibrium analysis of federal tax policy. The model output focuses changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available <a href=\"https://pslmodels.github.io/OG-USA\">here</a>.</p>"
+            "value": "<p>OG-USA is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for the United States.  OG-USA is build on the <a href=\"https://github.com/PSLmodels/OG-Core\">OG-Core</a> framework.  The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at <a href=\"https://pslmodels.github.io/OG-Core\">https://pslmodels.github.io/OG-Core</a> and documentation of the specific United States calibration of the model is available at <a href=\"https://pslmodels.github.io/OG-USA\">https://pslmodels.github.io/OG-USA</a>.</p>"
         },
         "citation": {
             "source": "https://github.com/PSLmodels/OG-USA#citing-og-usa",
@@ -281,8 +281,8 @@
             "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
         },
         "user_documentation": {
-            "source": "https://github.com/PSLmodels/OG-USA/blob/master/docs/OGUSAdoc.pdf",
-            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/blob/master/docs/OGUSAdoc.pdf\">User documentation</a>"
+            "source": "https://pslmodels.github.io/OG-USA/content/intro/intro.html",
+            "value": "<a href=\"https://pslmodels.github.io/OG-USA/content/intro/intro.html\">User documentation</a>"
         },
         "user_changelog": {
             "source": null,
@@ -298,7 +298,7 @@
         },
         "disclaimer": {
             "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
-            "value": "<p>The model is currently under development. Users should be forewarned that the model components could change significantly. Therefore, there is NO GUARANTEE OF ACCURACY. THE CODE SHOULD NOT CURRENTLY BE USED FOR PUBLICATIONS, JOURNAL ARTICLES, OR RESEARCH PURPOSES. Essentially, you should assume the calculations are unreliable until we finish the code re-architecture and have checked the results against other existing implementations of the tax code. The package will have released versions, which will be checked against existing code prior to release. Stay tuned for an upcoming release!</p>"
+            "value": "<p>The organization of this repository will be changing rapidly, but the <code>OG-USA/examples/run_og_usa.py</code> script will be kept up to date to run with the master branch of this repo.</p>"
         },
         "user_case_studies": {
             "source": null,
