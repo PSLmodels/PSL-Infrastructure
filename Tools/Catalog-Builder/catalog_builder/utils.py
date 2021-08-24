@@ -173,5 +173,8 @@ def make_links(item):
                 ("link_to_webapp", "Link to webapp")]
     links = ""
     for key, section_name in sections:
-        links += create_link(item[key], section_name)
+        try:
+            links += create_link(item[key], section_name)
+        except:
+            pass
     return links
