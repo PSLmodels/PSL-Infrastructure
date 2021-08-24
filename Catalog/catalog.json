@@ -93,6 +93,32 @@
             "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests\">https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests</a>"
         }
     },
+    "capital-cost-recovery": {
+        "name": {
+            "value": "capital-cost-recovery",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": null,
+            "value": "<p>capital-cost-recovery is an open-source model calculating and comparing capital allowances for investments in machinery, buildings, and intangibles in OECD countries.</p>"
+        },
+        "project_overview": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/capital-cost-recovery/\">What is capital-cost-recovery?</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Daniel Bunn</li></ul>"
+        },
+        "user_documentation": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/capital-cost-recovery/blob/master/README.md/\"></a>"
+        },
+        "source_documentation": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/capital-cost-recovery/blob/master/source_documentation.md\"></a>"
+        }
+    },
     "Cost-of-Capital-Calculator": {
         "name": {
             "value": "Cost-of-Capital-Calculator",
@@ -197,7 +223,7 @@
             "value": "<p>New York Fed DSGE Model</p>"
         },
         "project_overview": {
-            "source": "https://github.com/FRBNY-DSGE/DSGE.jl/blob/main/README.md",
+            "source": "https://github.com/PSLmodels/DSGE.jl/blob/main/README.md",
             "value": "<p><img alt=\"Build Status\" src=\"https://github.com/FRBNY-DSGE/DSGE.jl/workflows/build/badge.svg?branch=main\" /> <a href=\"https://frbny-dsge.github.io/DSGE.jl/stable\"><img alt=\"\" src=\"https://img.shields.io/badge/docs-stable-blue.svg\" /></a> <a href=\"https://frbny-dsge.github.io/DSGE.jl/latest\"><img alt=\"\" src=\"https://img.shields.io/badge/docs-dev-blue.svg\" /></a> <a href=\"https://codecov.io/gh/FRBNY-DSGE/DSGE.jl\"><img alt=\"codecov\" src=\"https://codecov.io/gh/FRBNY-DSGE/DSGE.jl/branch/main/graph/badge.svg\" /></a></p> <p>The <code>DSGE.jl</code> package implements the New York Fed dynamic stochastic general equilibrium (DSGE) model and provides general code to estimate many user-specified DSGE models. The package is introduced in the Liberty Street Economics blog post <a href=\"http://libertystreeteconomics.newyorkfed.org/2015/12/the-frbny-dsge-model-meets-julia.html\">The FRBNY DSGE Model Meets Julia</a>. (We previously referred to our model as the \"FRBNY DSGE Model.\")</p> <p>This Julia-language implementation mirrors the MATLAB code included in the Liberty Street Economics blog post <a href=\"http://libertystreeteconomics.newyorkfed.org/2015/05/the-frbny-dsge-model-forecast-april-2015.html\">The FRBNY DSGE Model Forecast</a>.</p> <p>Documentation for the <em>code</em> can be accessed by clicking on the <code>docs|dev</code> button above. For documentation about the most recent <em>model version</em>, read this <a href=\"https://github.com/FRBNY-DSGE/DSGE.jl/blob/main/docs/DSGE_Model_Documentation_1002.pdf\">pdf</a>.</p> <p>The New York Fed DSGE team is currently extending the code to solve and estimate heterogeneous agent models. Filtering and smoothing algorithms are available in the registered package <a href=\"https://github.com/FRBNY-DSGE/StateSpaceRoutines.jl\">StateSpaceRoutines.jl</a>. An implementation of Sequential Monte Carlo (SMC) sampling, used for the estimation of DSGE models, can be found in the registered package <a href=\"https://github.com/FRBNY-DSGE/SMC.jl\">SMC.jl</a>. The foundational <code>AbstractModel</code> type, from which the <code>AbstractDSGEModel</code> type derives, is defined in the registered package <a href=\"https://github.com/FRBNY-DSGE/ModelConstructors.jl\">ModelConstructors.jl</a>.</p> <p>Further extensions of the DSGE model code may be released at the discretion of the New York Fed.</p> <h5>Installation</h5> <p><code>DSGE.jl</code> is a registered Julia package in the <a href=\"https://github.com/JuliaRegistries/General\"><code>General</code></a> registry. To install it, open your Julia REPL, type <code>]</code> to enter the package manager, and run</p> <p><code>julia pkg&gt; add DSGE</code></p> <p>If you use any code that loads data (e.g. the example script <code>run_default.jl</code> and <code>make_packet.jl</code>), then you need make sure you have a FRED API key by following these <a href=\"https://github.com/micahjsmith/FredData.jl\">instructions for the FredData.jl package</a>.</p> <p>If you are using Windows OS and you encounter the error <code>AssertionError: length(dirs) == 1</code>, please see this <a href=\"https://github.com/JuliaLang/Pkg.jl/issues/1943\">issue</a>. Additionally, please do not run the <code>plot.jl</code> test if you are using Windows OS because the generated output will violate the default filename length restriction on Windows. If you want to run this test, then you need to enable <a href=\"https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#enable-long-paths-in-windows-10-version-1607-and-later\">long paths</a>.</p> <p><em>Note we do not test our code in Windows OS, so we cannot guarantee the code works properly in Windows.</em></p> <h5>Versioning</h5> <p><code>DSGE.jl</code> is currently compatible with Julia <code>v1.x</code> (as of <code>v1.1.6</code>).</p> <p>To use <code>DSGE.jl</code> with Julia <code>v0.7</code>, please check out tag <code>0.8.1</code>. To do this, click on the drop-down menu that reads <code>branch:main</code> on the left-hand side of the page. Select <code>tags</code>, then <code>v0.8.1</code>.  If you've already cloned the repo, you can simply run <code>git checkout v0.8.1</code>.</p> <p>To use <code>DSGE.jl</code> with Julia <code>v0.6</code>, please check out tag <code>0.4.1</code>.</p> <h5>Precompilation</h5> <p>The <code>DSGE.jl</code> package is not precompiled by default because when running code in parallel, we want to re-compile the copy of <code>DSGE.jl</code> on each processor to guarantee the right version of the code is being used. If users do not anticipate using parallelism, then users ought to change the first line of <code>src/DSGE.jl</code> from</p> <p><code>isdefined(Base, :__precompile__) &amp;&amp; __precompile__(false)</code></p> <p>to</p> <p><code>isdefined(Base, :__precompile__) &amp;&amp; __precompile__(true)</code></p> <h5>Citing DSGE.jl</h5> <p>DSGE.jl (Version 1.2.1)[Source code], https://github.com/PSLmodels/DSGE.jl</p>"
         },
         "user_documentation": {
