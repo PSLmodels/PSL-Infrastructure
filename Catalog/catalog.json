@@ -108,11 +108,11 @@
         },
         "project_overview": {
             "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/README.md",
-            "value": "<p>Cost-of-Capital-Calculator is a model that can be used to evaluate the effect of US federal taxes on the investment incentives of corporate and non-corporate businesses.  Specifically, Cost-of-Capital-Calculator uses data on the business assets and financial policy, as well as microdata on individual tax filers, to compute marginal effective tax rates on new investments.  In modeling the effects of changes to the individual income tax code, Cost-of-Capital-Calculator works with <a href=\"https://github.com/PSLmodels/tax-calculator\">Tax-Calculator</a>, another open source model of US federal tax policy.  Cost-of-Capital-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p>"
+            "value": "<p>Cost-of-Capital-Calculator is a model that can be used to evaluate the effect of US federal taxes on the investment incentives of corporate and non-corporate businesses.  Specifically, Cost-of-Capital-Calculator uses data on the business assets and financial policy, as well as microdata on individual tax filers, to compute marginal effective tax rates on new investments.  In modeling the effects of changes to the individual income tax code, Cost-of-Capital-Calculator works with <a href=\"https://github.com/PSLmodels/tax-calculator\">Tax-Calculator</a>, another open source model of US federal tax policy.  Cost-of-Capital-Calculator is written in Python, an interpreted language that can execute on Windows, Mac, or Linux.</p> <h5>Installation</h5> <p>The <code>ccc</code> package can be installed with Anaconda via:</p> <p><code>conda install -c conda-forge ccc</code></p> <p>or with PyPI via:</p> <p><code>pip install cost-of-capital-calculator</code></p>"
         },
         "citation": {
             "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/README.md",
-            "value": "<p>Cost-of-Capital-Calculator (Version 1.2.8)[Source code], https://github.com/PSLmodels/Cost-of-Capital-Calculator</p>"
+            "value": "<p>Cost-of-Capital-Calculator (Version 1.2.9)[Source code], https://github.com/PSLmodels/Cost-of-Capital-Calculator</p>"
         },
         "license": {
             "source": "https://github.com/PSLmodels/Cost-of-Capital-Calculator/blob/master/docs/book/content/license.md",
