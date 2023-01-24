@@ -22,7 +22,7 @@ Models must meet the following requirements for acceptance into the catalog:
 	- A complete descriptive list of all data variables;
 	- Descriptive statistics for all data variables for such data (including averages, standard deviations, number of observations, and correlations to other variables), to the extent that the descriptive statistics do not violate the rule against disclosure;
 	- Contact information for the individual or entity who has unrestricted access to the data.
-1. Have unit tests.
+1. Include unit tests and ensure that they sources code passes the tests.
 1. For at least one test, generate key outputs from source materials; the test must be run with every new version, and the outputs of the test must be checked into the repository.
 1. Report names and contact information for at least one maintainer.
 1. Have a suggested citation.
@@ -50,6 +50,9 @@ We also encourage, but do not require, projects to adopt the following practices
 1. Track issues publicly (e.g. on GitHub).
 1. Show a changelog.
 1. Be written in an open source language.
+2. Add a "psl-cataloged" tag to the About section of the project's GitHub repository.
+3. Follow a standard contributor workflow, such as [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow).
+4. Include continuous integration tests to ensure that tests are passing for proposed changes in pull requests and to document publicly that all unit tests are passing.
 
 ## Optional Additional Practices
 
