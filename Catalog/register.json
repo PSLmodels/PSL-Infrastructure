@@ -55,7 +55,7 @@
         "branch": "master"
     },
     {
-        "org": "PSLmodels",
+        "org": "FRBNY-DSGE",
         "repo": "DSGE.jl",
         "branch": "main"
     },
