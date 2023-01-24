@@ -63,5 +63,10 @@
         "org": "TaxFoundation",
         "repo": "capital-cost-recovery",
         "branch": "master"
-    }    
+    }
+    {
+        "org": "FRB-Atlanta-Advancing-Careers",
+        "repo": "policy-rules-database",
+        "branch": "main"
+    }
 ]
