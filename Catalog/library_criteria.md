@@ -28,7 +28,7 @@ Models must meet the following requirements for acceptance into the catalog:
 1. Have a suggested citation.
 1. Have a project overview.
 1. Have installation instructions.
-1. Version control in [github.com/PSLmodels](http://github.com/pslmodels), either as the primary location or as a mirror.
+1. Version control in [GitHub](http://github.com/).
 1. Adopt a consistent versioning scheme.
 1. Include a `PSL_catalog.json` configuration file in the project's repository for cataloging these criteria. Specific instructions for creating this file can be found in the [Catalog-Builder Documentation](https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog).
 
