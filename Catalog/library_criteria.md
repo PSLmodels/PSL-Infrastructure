@@ -53,6 +53,7 @@ We also encourage, but do not require, projects to adopt the following practices
 2. Add a "psl-cataloged" tag to the About section of the project's GitHub repository.
 3. Follow a standard contributor workflow, such as [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow).
 4. Include continuous integration tests to ensure that tests are passing for proposed changes in pull requests and to document publicly that all unit tests are passing.
+5. Adopt a consistent code formatting scheme, perhaps through an automated code formatter like [Black](https://black.readthedocs.io/en/stable/).
 
 ## Optional Additional Practices
 
