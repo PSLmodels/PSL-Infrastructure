@@ -3,6 +3,7 @@ import json
 
 import markdown
 import requests
+import time
 from bs4 import BeautifulSoup
 from jinja2 import Template
 
@@ -126,7 +127,12 @@ def _get_from_github_api(org, repo, branch, filename):
     response = requests.request('GET', url, headers=HEADER)
     print(f"GET: {url} {response.status_code}")
     if response.status_code == 403:
-        assert "hit rate limit" == 403
+        time.sleep(60.5)
+        response = requests.request('GET', url, headers=HEADER)
+        print(f"Second try at GET: {url} {response.status_code}")
+        if response.status_code == 403:
+            # if waiting a minute doesn't work, then we're probably rate limited
+            assert "hit rate limit" == 403
     assert response.status_code == 200
     sanatized_content = response.json()["content"].replace("\n", "")
     encoded_content = sanatized_content.encode()
