@@ -382,11 +382,11 @@
         },
         "project_one_line": {
             "source": null,
-            "value": "<p>OpenFisca-UK is a static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.</p>"
+            "value": "<p>PolicyEngine-UK is a static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.</p>"
         },
         "project_overview": {
             "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/openfisca-uk\">What is OpenFisca-UK?</a>"
+            "value": "<a href=\"https://github.com/PSLmodels/openfisca-uk\">What is PolicyEngine-UK?</a>"
         },
         "core_maintainers": {
             "source": null,
