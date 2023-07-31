@@ -1,0 +1,51 @@
+/* CSS for the non-model pages */
+#content a {
+    color: black;
+    text-decoration: underline;
+}
+code {
+    color: inherit;
+    background-color: rgba(27,31,35,0.05);
+}
+.navbar{
+    background-color: white;
+    border-bottom: solid thin gray;
+    box-shadow: 0px 1px 0px #c7c8c9;
+}
+#page{
+    background-color: #f9f9f9;
+}
+@media (max-width: 900px) {
+    .navbar-text{
+        display: none;
+    }
+}
+.fa {
+  padding: 30px;
+  font-size: 25px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  /*border-radius: 50%;*/
+}
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.fa-twitter {
+  color: #55ACEE;
+}
+
+.fa-linkedin {
+  color: #5D6D7E;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-youtube {
+  color: #D98880;
+}
