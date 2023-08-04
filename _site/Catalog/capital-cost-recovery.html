@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128365658-1');
+        </script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png"/>
+        <meta name="twitter:title" content="Catalog"/>
+        <title>PSL Models</title>
+        <!-- include bootstrap -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../CSS/catalog.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body id="page">
+        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:white">
+            <div>
+                <a href="../index.html" class="navbar-brand"><img src="../imgs/PSL.svg" height="40"></a>
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdownMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="dropdownMenu">
+        <ul class="navbar-nav">
+            <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Catalog
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                  <a class="dropdown-item" href="../Catalog/library_criteria.html">Criteria</a>  
+                  <a class="dropdown-item" href="../Catalog/index.html">Models</a>
+                </div>
+            </li>
+            <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Community
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                  <a class="dropdown-item" href="../Community/contribute.html">Contribute</a>  
+                  <a class="dropdown-item" href="http://discourse.pslmodels.org/">Forum</a>
+                  <a class="dropdown-item" href="../Community/initiatives.html">Initiatives</a>
+                  <a class="dropdown-item" href="../Community/council.html">Leadership Council</a>
+                  <a class="dropdown-item" href="../Newsletter/archive.html">Newsletter</a>
+                  <a class="dropdown-item" href="../Community/roadmap.html">Roadmap</a>
+                </div>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="../about.html">About</a></li>
+            <li class="nav-item active"><a class="nav-link" href="../events.html">Events</a></li>
+            <li class="nav-item active"><a class="nav-link" href="http://blog.pslmodels.org/">Blog</a></li>
+            <li class="nav-item active"><a class="nav-link" href="https://opencollective.com/psl">Donate</a></li>
+            <li class="nav-item active"><a class="nav-link" href="../shop.html">Shop</a></li>
+        </ul>
+            </div>
+            <span class="navbar-text" style="float:right; font-family:'Courier New', Courier, monospace; margin-right:2%">
+                Open Models == Better Policy
+            </span>
+        </nav>
+
+        <div class="container" id="content">
+            <h1 style="margin-top:20px">Models</h1>
+            <br>
+            <div class="accordion" id="accordionParent">
+                <!-- Create a collapsible card for each model in PSL -->
+                
+                <div class="card">
+                    <div class="card-header" id="capital-cost-recovery" style="background-color:#e4e9ec">
+                            <h2>
+                                <a href="" style="color:inherit;" data-toggle="collapse" data-target="#capital-cost-recovery-collapse">capital-cost-recovery</a>
+                                <div class="float-right">
+                                    <button
+                                        class="btn collapse-button"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#capital-cost-recovery-collapse"
+                                        aria-expanded="false"
+                                        aria-controls="capital-cost-recovery-collapse"
+                                        style="margin-left:20px;">
+                                        <i class="far fa-plus-square" style="size:.5x;"></i>
+                                    </button>
+                                </div>
+                            </h2>
+                            <p>capital-cost-recovery is an open-source model calculating and comparing capital allowances for investments in machinery, buildings, and intangibles in OECD countries.</p>
+                    </div>
+                    <div class="collapse" id="capital-cost-recovery-collapse" aria-labelledby="" data-parent="#accordionParent">
+                        <div class="container">
+                            <p><a href="https://github.com/PSLmodels/capital-cost-recovery/">What is capital-cost-recovery?</a></p>
+                            <h6>Maintainers</h6>
+                            <ul><li>Daniel Bunn</li></ul>
+                            <p><a href="https://github.com/TaxFoundation/capital-cost-recovery#readme">Code repository</a></p>
+                            <p><a href="https://github.com/PSLmodels/capital-cost-recovery/blob/master/README.md/">User documentation</a>
+</p>
+                        </div>
+                        <script type="text/javascript">
+                            var url = document.location.toString();
+                            if ( url.match('#') ) {
+                                var section = $('#'+url.split('#')[1]+'-collapse');
+                                section.collapse('show');
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <footer class="footer mt-auto py-2">
+        <div class="row mt-5 border-top">
+          <div class="col-sm"></div>
+          <div class="col-sm text-center">
+            <a href="https://twitter.com/pslmodels" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/company/policy-simulation-library/" class="fa fa-linkedin"></a>
+            <a href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q" class="fa fa-youtube"></a>
+            <a href="https://github.com/pslmodels" class="fa fa-github" aria-hidden="true"></a>
+          </div>
+          <div class="col-sm"></div>
+        </div>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

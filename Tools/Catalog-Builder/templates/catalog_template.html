@@ -69,14 +69,14 @@
         <div class="container" id="content">
             <h1 style="margin-top:20px">Models</h1>
             <br>
-            <div class="accordion" id="accordionParent">
+            <!-- <div class="accordion" id="accordionParent"> -->
                 <!-- Create a collapsible card for each model in PSL -->
                 {% for project, item in catalog.items() %}
-                    <div class="card">
-                        <div class="card-header" id="{{ make_id(item.name.value) }}" style="background-color:#e4e9ec">
+                    <!-- <div class="card"> -->
+                        <!-- <div class="card-header" id="{{ make_id(item.name.value) }}" style="background-color:#e4e9ec"> -->
                                 <h2>
-                                    <a href="" style="color:inherit;" data-toggle="collapse" data-target="#{{ make_id(item.name.value) }}-collapse">{{ item.name.value }}</a>
-                                    <div class="float-right">
+                                    <a href="./{{ item.name.value }}.html" >{{ item.name.value }}</a>
+                                    <!-- <div class="float-right">
                                         <button
                                             class="btn collapse-button"
                                             type="button"
@@ -87,10 +87,10 @@
                                             style="margin-left:20px;">
                                             <i class="far fa-plus-square" style="size:.5x;"></i>
                                         </button>
-                                    </div>
+                                    </div> -->
                                 </h2>
-                                {{ item.project_one_line.value }}
-                        </div>
+                                <!-- {{ item.project_one_line.value }} -->
+                        <!-- </div>
                         <div class="collapse" id="{{ make_id(item.name.value) }}-collapse" aria-labelledby="" data-parent="#accordionParent">
                             <div class="container">
                                 <p>{{ item.project_overview.value }}</p>
@@ -107,9 +107,9 @@
                                 }
                             </script>
                         </div>
-                    </div>
+                    </div> -->
                 {% endfor %}
-            </div>
+            <!-- </div> -->
         </div>
 
         <br><br>

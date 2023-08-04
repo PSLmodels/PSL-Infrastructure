@@ -169,12 +169,27 @@ class CatalogBuilder:
             self.CURRENT_PATH, "../templates", "catalog_template.html"
         )
 
+        model_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "model_template.html"
+        )
+
         rendered = utils.render_template(
             models_path, catalog=self.catalog, repos=self.repos
         )
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
+
+        for project in sorted(self.projects, key=lambda x: x["repo"].upper()):
+            rendered = utils.render_template(
+                model_path, catalog=self.catalog, repos=self.repos, project=project['repo']
+            )
+
+            pathout = os.path.join(self.index_dir, f"{project['repo']}.html")
+            with open(pathout, "w") as out:
+                out.write(rendered)
+
+            print(f"SUCCESSFULLY CREated {pathout}")
 
     def dump_catalog(self, output_path=None):
         """
