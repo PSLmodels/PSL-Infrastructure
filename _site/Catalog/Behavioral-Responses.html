@@ -1,131 +1,143 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png" />
+        <meta name="twitter:title" content="Catalog" />
+        <!-- Page Title -->
+        <title>PSL Models</title>
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
-
             gtag('config', 'UA-128365658-1');
         </script>
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <meta charset="utf-8">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png"/>
-        <meta name="twitter:title" content="Catalog"/>
-        <title>PSL Models</title>
-        <!-- include bootstrap -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../CSS/catalog.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body id="page">
-        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:white">
-            <div>
-                <a href="../index.html" class="navbar-brand"><img src="../imgs/PSL.svg" height="40"></a>
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top custom-navbar-bg">
+            <div class="navbar-brand-div">
+                <a href="../index.html" class="navbar-brand"><img src="../imgs/PSL.png" height="40"></a>
             </div>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdownMenu">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="dropdownMenu">
-        <ul class="navbar-nav">
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Catalog
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                  <a class="dropdown-item" href="../Catalog/library_criteria.html">Criteria</a>  
-                  <a class="dropdown-item" href="../Catalog/index.html">Models</a>
-                </div>
-            </li>
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Community
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                  <a class="dropdown-item" href="../Community/contribute.html">Contribute</a>  
-                  <a class="dropdown-item" href="http://discourse.pslmodels.org/">Forum</a>
-                  <a class="dropdown-item" href="../Community/initiatives.html">Initiatives</a>
-                  <a class="dropdown-item" href="../Community/council.html">Leadership Council</a>
-                  <a class="dropdown-item" href="../Newsletter/archive.html">Newsletter</a>
-                  <a class="dropdown-item" href="../Community/roadmap.html">Roadmap</a>
-                </div>
-            </li>
-            <li class="nav-item active"><a class="nav-link" href="../about.html">About</a></li>
-            <li class="nav-item active"><a class="nav-link" href="../events.html">Events</a></li>
-            <li class="nav-item active"><a class="nav-link" href="http://blog.pslmodels.org/">Blog</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://opencollective.com/psl">Donate</a></li>
-            <li class="nav-item active"><a class="nav-link" href="../shop.html">Shop</a></li>
-        </ul>
-            </div>
-            <span class="navbar-text" style="float:right; font-family:'Courier New', Courier, monospace; margin-right:2%">
-                Open Models == Better Policy
-            </span>
-        </nav>
-
-        <div class="container" id="content">
-            <h1 style="margin-top:20px">Models</h1>
-            <br>
-            <div class="accordion" id="accordionParent">
-                <!-- Create a collapsible card for each model in PSL -->
-                
-                <div class="card">
-                    <div class="card-header" id="Behavioral-Responses" style="background-color:#e4e9ec">
-                            <h2>
-                                <a href="" style="color:inherit;" data-toggle="collapse" data-target="#Behavioral-Responses-collapse">Behavioral-Responses</a>
-                                <div class="float-right">
-                                    <button
-                                        class="btn collapse-button"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#Behavioral-Responses-collapse"
-                                        aria-expanded="false"
-                                        aria-controls="Behavioral-Responses-collapse"
-                                        style="margin-left:20px;">
-                                        <i class="far fa-plus-square" style="size:.5x;"></i>
-                                    </button>
-                                </div>
-                            </h2>
-                            <p>Partial-equilibrium behavioral-responses module that works with Tax-Calculator</p>
-                    </div>
-                    <div class="collapse" id="Behavioral-Responses-collapse" aria-labelledby="" data-parent="#accordionParent">
-                        <div class="container">
-                            <p><p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by Tax-Calculator.  It provides two ways of doing this: (1) the <code>response</code> function, which contains higher-level logic that supports the Tax-Brain "Partial Equilibrium Simulation" capability and requires specification of only the elasticities, and (2) the <code>quantity_response</code> function, which contains lower-level logic that requires specification of the quantity whose response is to be estimated, requires specification of the marginal tax rates and elasticities to be used in the response calculation, and allows the response estimation to be conducted by subgroup with different elasticities for each subgroup.</p></p>
-                            <h6>Maintainers</h6>
-                            <ul><li>Matt Jensen</li></ul>
-                            <p><a href="https://github.com/PSLmodels/Behavioral-Responses#readme">Code repository</a></p>
-                            <p><a href="http://PSLmodels.github.io/Behavioral-Responses/index.html">User documentation</a>
-</p><p><a href="https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md">Contributor documentation</a>
-</p><p><a href="https://www.ospc.org/taxbrain/">Link to webapp</a>
-</p>
+                <ul class="navbar-nav">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catalog
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="../Catalog/library_criteria.html">Criteria</a>  
+                            <a class="dropdown-item" href="../Catalog/index.html">Models</a>
                         </div>
-                        <script type="text/javascript">
-                            var url = document.location.toString();
-                            if ( url.match('#') ) {
-                                var section = $('#'+url.split('#')[1]+'-collapse');
-                                section.collapse('show');
-                            }
-                        </script>
-                    </div>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Community
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="../Community/contribute.html">Contribute</a>  
+                            <a class="dropdown-item" href="http://discourse.pslmodels.org/">Forum</a>
+                            <a class="dropdown-item" href="../Community/initiatives.html">Initiatives</a>
+                            <a class="dropdown-item" href="../Community/council.html">Leadership Council</a>
+                            <a class="dropdown-item" href="../Newsletter/archive.html">Newsletter</a>
+                            <a class="dropdown-item" href="../Community/roadmap.html">Roadmap</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="../about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="../events.html">Events</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="http://blog.pslmodels.org/">Blog</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="https://opencollective.com/psl">Donate</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="../shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <span class="navbar-text" style="float:right; font-family:'Courier New', Courier, monospace; margin-right:2%">Open Models == Better Policy</span>
+        </nav>
+        <div class="banner">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h1>PolicyEngine UK</h1>
+                    <br>
+                    <h5>PolicyEngine-UK is a static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.</h5>
+                </div>
+                <div class="banner-image">
+                    <img src="../imgs/pe_test.png" alt="PolicyEngine UK">
                 </div>
             </div>
         </div>
-
-        <br><br>
-        <footer class="footer mt-auto py-2">
-        <div class="row mt-5 border-top">
-          <div class="col-sm"></div>
-          <div class="col-sm text-center">
-            <a href="https://twitter.com/pslmodels" class="fa fa-twitter"></a>
-            <a href="https://www.linkedin.com/company/policy-simulation-library/" class="fa fa-linkedin"></a>
-            <a href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q" class="fa fa-youtube"></a>
-            <a href="https://github.com/pslmodels" class="fa fa-github" aria-hidden="true"></a>
-          </div>
-          <div class="col-sm"></div>
+        <div class="text-box">
+            <div class="box-header"></div>
+            <div class="box-content">
+                <p>PolicyEngine UK is PolicyEngine's microsimulation model of the UK tax-benefit system. It uses the PolicyEngine Core microsimulation framework, which is based on OpenFisca.</p>
+                <p>The elements are described in different folders. All the modelling happens within the policyengine_uk folder.
+                <ul>
+                    <li> The rates and other system parameters are in the parameters folder.
+                    <li> The formulas and inputs are in the variables folder.
+                    <li> This country package comes also with reforms in the reforms folder.
+                </ul>
+                </p>    
+                <p>The files that are outside from the policyengine_uk folder are used to set up the development environment. Installation instructions are located along with other documentation in the docs folder.</p>
+                <p>The model supports multiple different input datasets provided by the user, one of which is the Family Resources Survey, containing microdata on household incomes across the UK. PolicyEngine UK enhances this dataset by fusing it to other surveys and reweighting it to minimize a comprehensive loss metric that measures the difference from an array of administrative totals.</p>
+            </div>
         </div>
+        <div class="button-container">
+            <a href="#" class="button">Code Repository</a>
+            <a href="#" class="button">User Documentation</a>
+            <a href="#" class="button">Contributor Documentation</a>
+            <a href="#" class="button">Webapp</a>
+            <a href="#" class="button">Recent Changes</a>
+        </div>
+        <section class="maintainers-section">
+            <h2>Maintainers:</h2>
+            <div class="maintainer-container">
+                <div class="maintainers-grid">
+                    <a href="link-for-maintainer-1" class="maintainer-card">
+                        <button class="maintainer-image-btn">
+                        <img src="../imgs/nw.jfif" alt="Maintainer 1 Name">
+                        </button>
+                        <p>Nikhil Woodruff</p>
+                    </a>
+                    <!-- ... Repeat above block for each maintainer -->
+                </div>
+            </div>
+        </section>
+        <div class="footer-banner">
+            <div class="footer-image">
+                <img src="../imgs/PSL.svg" alt="Your Image Description">
+            </div>
+            <div class="footer-text">
+                PSL is developed by a community of technical contributors. Learn how to contribute to library projects or add a new project to the library.
+            </div>
+            <div class="footer-buttons">
+                <a href="#" class="button">JOIN THE COMMUNITY</a>
+                <a href="#" class="button">DONATE TO PSL</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm text-center">
+                    <a href="https://twitter.com/pslmodels" class="fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/company/policy-simulation-library/" class="fa fa-linkedin"></a>
+                    <a href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q" class="fa fa-youtube"></a>
+                    <a href="https://github.com/pslmodels" class="fa fa-github" aria-hidden="true"></a>
+                </div>
+                <div class="col-sm"></div>
+            </div>
         </footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
