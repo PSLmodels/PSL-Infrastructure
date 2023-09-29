@@ -109,7 +109,6 @@ def render_template(template_path, **render_kwargs):
     template = Template(template_str)
     template.globals["make_id"] = make_id
     template.globals["make_links"] = make_links
-    render_kwargs["utils"] = utils
     return template.render(**render_kwargs)
 
 
