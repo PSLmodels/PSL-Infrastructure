@@ -1,134 +1,259 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html dir="ltr" lang="en">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="summary" name="twitter:card">
+         <meta content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png" name="twitter:image">
+          <meta content="Catalog" name="twitter:title"/>
+          <title>
+           PSL
+          </title>
+          <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1">
+          </script>
+          <script>
+           window.dataLayer = window.dataLayer || [];
+                  
+                  function gtag() {
+                      dataLayer.push(arguments);
+                  }
+                  gtag('js', new Date());
+                  gtag('config', 'UA-128365658-1');
+          </script>
+          <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+          <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet"/>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+          <link href="../CSS/catalog.css" rel="stylesheet"/>
+         </meta>
+        </meta>
+       </head>
 
-            gtag('config', 'UA-128365658-1');
-        </script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <meta charset="utf-8">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png"/>
-        <meta name="twitter:title" content="Catalog"/>
-        <title>PSL Models</title>
-        <!-- include bootstrap -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../CSS/catalog.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body id="page">
-        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:white">
-            <div>
-                <a href="../index.html" class="navbar-brand"><img src="../imgs/PSL.svg" height="40"></a>
-            </div>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdownMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="dropdownMenu">
-        <ul class="navbar-nav">
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Catalog
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                  <a class="dropdown-item" href="../Catalog/library_criteria.html">Criteria</a>  
-                  <a class="dropdown-item" href="../Catalog/index.html">Models</a>
-                </div>
-            </li>
-            <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Community
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                  <a class="dropdown-item" href="../Community/contribute.html">Contribute</a>  
-                  <a class="dropdown-item" href="http://discourse.pslmodels.org/">Forum</a>
-                  <a class="dropdown-item" href="../Community/initiatives.html">Initiatives</a>
-                  <a class="dropdown-item" href="../Community/council.html">Leadership Council</a>
-                  <a class="dropdown-item" href="../Newsletter/archive.html">Newsletter</a>
-                  <a class="dropdown-item" href="../Community/roadmap.html">Roadmap</a>
-                </div>
-            </li>
-            <li class="nav-item active"><a class="nav-link" href="../about.html">About</a></li>
-            <li class="nav-item active"><a class="nav-link" href="../events.html">Events</a></li>
-            <li class="nav-item active"><a class="nav-link" href="http://blog.pslmodels.org/">Blog</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://opencollective.com/psl">Donate</a></li>
-            <li class="nav-item active"><a class="nav-link" href="../shop.html">Shop</a></li>
-        </ul>
-            </div>
-            <span class="navbar-text" style="float:right; font-family:'Courier New', Courier, monospace; margin-right:2%">
-                Open Models == Better Policy
-            </span>
-        </nav>
+ <body id="page">
 
-        <div class="container" id="content">
-            <h1 style="margin-top:20px">Models</h1>
-            <br>
-            <div class="accordion" id="accordionParent">
-                <!-- Create a collapsible card for each model in PSL -->
-                
-                <div class="card">
-                    <div class="card-header" id="ParamTools" style="background-color:#e4e9ec">
-                            <h2>
-                                <a href="" style="color:inherit;" data-toggle="collapse" data-target="#ParamTools-collapse">ParamTools</a>
-                                <div class="float-right">
-                                    <button
-                                        class="btn collapse-button"
-                                        type="button"
-                                        data-toggle="collapse"
-                                        data-target="#ParamTools-collapse"
-                                        aria-expanded="false"
-                                        aria-controls="ParamTools-collapse"
-                                        style="margin-left:20px;">
-                                        <i class="far fa-plus-square" style="size:.5x;"></i>
-                                    </button>
-                                </div>
-                            </h2>
-                            <p>Library for parameter processing and validation with a focus on computational modeling projects</p>
-                    </div>
-                    <div class="collapse" id="ParamTools-collapse" aria-labelledby="" data-parent="#accordionParent">
-                        <div class="container">
-                            <p><p><strong>Define, update, and validate your model's parameters.</strong></p> <p>Install using pip:</p> <p><code>pip install paramtools</code></p> <p>Install using conda:</p> <p><code>conda install -c conda-forge paramtools</code></p> <h5>Usage</h5> <p>Subclass <code>paramtools.Parameters</code> and define your model's <a href="https://paramtools.dev/parameters">parameters</a>:</p> <p>```python import paramtools</p> <p>class Params(paramtools.Parameters):     defaults = {         "schema": {             "labels": {                 "date": {                     "type": "date",                     "validators": {                         "range": {                             "min": "2020-01-01",                             "max": "2021-01-01",                             "step": {"months": 1}                         }                     }                 }             },         },         "a": {             "title": "A",             "type": "int",             "value": [                 {"date": "2020-01-01", "value": 2},                 {"date": "2020-10-01", "value": 8},             ],             "validators": {                 "range" : {                     "min": 0, "max": "b"                 }             }         },         "b": {             "title": "B",             "type": "float",             "value": [{"date": "2020-01-01", "value": 10.5}]         }     } ```</p> <h3>Access parameter values</h3> <p>Access values using <code>.sel</code>:</p> <p>```python params = Params()</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8}, ]) </code></pre> <p>Look up parameter values using a pandas-like api:</p> <p>```python from datetime import date</p> <p>result = params.sel["a"]["date"] == date(2020, 1, 1) result ```</p> <pre><code>QueryResult([   {'date': datetime.date(2020, 1, 1), 'value': 2} ]) </code></pre> <p><code>python result.isel[0]["value"]</code></p> <pre><code>2 </code></pre> <h3>Adjust and validate parameter values</h3> <p>Add a new value:</p> <p>```python params.adjust({"a": [{"date": "2020-11-01", "value": 22}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre> <p>Update an existing value:</p> <p>```python params.adjust({"a": [{"date": "2020-01-01", "value": 3}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 3},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre> <p>Update all values:</p> <p>```python params.adjust({"a": 7})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 7},   {'date': datetime.date(2020, 10, 1), 'value': 7},   {'date': datetime.date(2020, 11, 1), 'value': 7}, ]) </code></pre> <p>Errors on values that are out of range:</p> <p><code>python params.adjust({"a": -1})</code></p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-8-f8f1b7f6cd9a&gt; in &lt;module&gt;     ----&gt; 1 params.adjust({"a": -1})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a -1 &lt; min 0 "         ]     } } </code></pre> <p>```python params = Params()</p> <p>params.adjust({"a": [{"date": "2020-01-01", "value": 11}]}) ```</p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-9-cc8a21f044d8&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"a": [{"date": "2020-01-01", "value": 11}]})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a[date=2020-01-01] 11 &gt; max 10.5 b[date=2020-01-01]"         ]     } } </code></pre> <p>Errors on invalid values:</p> <p>```python params = Params()</p> <p>params.adjust({"b": "abc"}) ```</p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-10-8373a2715e38&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"b": "abc"})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "b": [             "Not a valid number: abc."         ]     } } </code></pre> <h3>Extend parameter values using label definitions</h3> <p>Extend values using <code>label_to_extend</code>:</p> <p><code>python params = Params(label_to_extend="date")</code></p> <p><code>python params.sel["a"]</code></p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 5, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre> <p>Updates to values are carried through to future dates:</p> <p>```python params.adjust({"a": [{"date": "2020-4-01", "value": 9}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 11, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 9, '_auto': True}, ]) </code></pre> <p>Use <code>clobber</code> to only update values that were set automatically:</p> <p>```python params = Params(label_to_extend="date") params.adjust(     {"a": [{"date": "2020-4-01", "value": 9}]},     clobber=False, )</p> <h1>Sort parameter values by date for nicer output</h1> <p>params.sort_values() params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre> <h3>NumPy integration</h3> <p>Access values as NumPy arrays with <code>array_first</code>:</p> <p>```python params = Params(label_to_extend="date", array_first=True)</p> <p>params.a ```</p> <pre><code>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 8, 8, 8, 8]) </code></pre> <p><code>python params.a * params.b</code></p> <pre><code>array([21., 21., 21., 21., 21., 21., 21., 21., 21., 84., 84., 84., 84.]) </code></pre> <p>Only get the values that you want:</p> <p><code>python arr = params.to_array("a", date=["2020-01-01", "2020-11-01"]) arr</code></p> <pre><code>array([2, 8]) </code></pre> <p>Go back to a list of dictionaries:</p> <p><code>python params.from_array("a", arr, date=["2020-01-01", "2020-11-01"])</code></p> <pre><code>[{'date': datetime.date(2020, 1, 1), 'value': 2},  {'date': datetime.date(2020, 11, 1), 'value': 8}] </code></pre> <h5>Documentation</h5> <p>Full documentation available at <a href="https://paramtools.dev">paramtools.dev</a>.</p> <h5>Contributing</h5> <p>Contributions are welcome! Checkout <a href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> to get started.</p> <h5>Credits</h5> <p>ParamTools is built on top of the excellent <a href="https://github.com/marshmallow-code/marshmallow">marshmallow</a> JSON schema and validation framework. I encourage everyone to check out their repo and documentation. ParamTools was modeled off of <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator's</a> parameter processing and validation engine due to its maturity and sophisticated capabilities.</p></p>
-                            <h6>Maintainers</h6>
-                            <ul><li>Hank Doupe</li></ul>
-                            <p><a href="https://github.com/PSLmodels/ParamTools#readme">Code repository</a></p>
-                            <p><a href="https://paramtools.dev">User documentation</a>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top custom-navbar-bg">
+        <div class="navbar-brand-div">
+         <a class="navbar-brand logo-container" href="../index.html">
+          <img height="40" src="../imgs/PSL.png"/>
+         </a>
+        </div>
+        <button class="navbar-toggler" data-target="#dropdownMenu" data-toggle="collapse">
+         <span class="navbar-toggler-icon">
+         </span>
+        </button>
+        <div class="collapse navbar-collapse" id="dropdownMenu">
+         <ul class="navbar-nav">
+          <li class="nav-item active dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownBlog">
+            Catalog
+           </a>
+           <div aria-labelledby="navbarDropdownBlog" class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="../Catalog/library_criteria.html">
+             Criteria
+            </a>
+            <a class="dropdown-item" href="../Catalog/index.html">
+             Models
+            </a>
+           </div>
+          </li>
+          <li class="nav-item active dropdown">
+           <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownBlog">
+            Community
+           </a>
+           <div aria-labelledby="navbarDropdownBlog" class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="../Community/contribute.html">
+             Contribute
+            </a>
+            <a class="dropdown-item" href="http://discourse.pslmodels.org/">
+             Forum
+            </a>
+            <a class="dropdown-item" href="../Community/initiatives.html">
+             Initiatives
+            </a>
+            <a class="dropdown-item" href="../Community/council.html">
+             Leadership Council
+            </a>
+            <a class="dropdown-item" href="../Newsletter/archive.html">
+             Newsletter
+            </a>
+            <a class="dropdown-item" href="../Community/roadmap.html">
+             Roadmap
+            </a>
+           </div>
+          </li>
+          <li class="nav-item active">
+           <a class="nav-link" href="../about.html">
+            About
+           </a>
+          </li>
+          <li class="nav-item active">
+           <a class="nav-link" href="../events.html">
+            Events
+           </a>
+          </li>
+          <li class="nav-item active">
+           <a class="nav-link" href="http://blog.pslmodels.org/">
+            Blog
+           </a>
+          </li>
+          <li class="nav-item active">
+           <a class="nav-link" href="https://opencollective.com/psl">
+            Donate
+           </a>
+          </li>
+          <li class="nav-item active">
+           <a class="nav-link" href="../shop.html">
+            Shop
+           </a>
+          </li>
+         </ul>
+        </div>
+        <span class="navbar-text" style="float:right; font-family:'Courier New', Courier, monospace; margin-right:2%">
+         Open Models == Better Policy
+        </span>
+       </nav>
+     
+
+  <div class="banner">
+    <div class="banner-content">
+     <div class="banner-text">
+      <h1>
+        ParamTools
+      </h1>
+      <br/>
+      <h5>
+        <p>Library for parameter processing and validation with a focus on computational modeling projects</p>
+      </h5>
+     </div>
+     <div class="banner-image">
+      <img alt="ParamTools" src="../imgs/PSL.svg"/>
+     </div>
+    </div>
+   </div>
+
+   <div class="text-box">
+    <div class="box-header">
+    </div>
+    <div class="box-content">
+      <p><strong>Define, update, and validate your model's parameters.</strong></p> <p>Install using pip:</p> <p><code>pip install paramtools</code></p> <p>Install using conda:</p> <p><code>conda install -c conda-forge paramtools</code></p> <h5>Usage</h5> <p>Subclass <code>paramtools.Parameters</code> and define your model's <a href="https://paramtools.dev/parameters">parameters</a>:</p> <p>```python import paramtools</p> <p>class Params(paramtools.Parameters):     defaults = {         "schema": {             "labels": {                 "date": {                     "type": "date",                     "validators": {                         "range": {                             "min": "2020-01-01",                             "max": "2021-01-01",                             "step": {"months": 1}                         }                     }                 }             },         },         "a": {             "title": "A",             "type": "int",             "value": [                 {"date": "2020-01-01", "value": 2},                 {"date": "2020-10-01", "value": 8},             ],             "validators": {                 "range" : {                     "min": 0, "max": "b"                 }             }         },         "b": {             "title": "B",             "type": "float",             "value": [{"date": "2020-01-01", "value": 10.5}]         }     } ```</p> <h3>Access parameter values</h3> <p>Access values using <code>.sel</code>:</p> <p>```python params = Params()</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8}, ]) </code></pre> <p>Look up parameter values using a pandas-like api:</p> <p>```python from datetime import date</p> <p>result = params.sel["a"]["date"] == date(2020, 1, 1) result ```</p> <pre><code>QueryResult([   {'date': datetime.date(2020, 1, 1), 'value': 2} ]) </code></pre> <p><code>python result.isel[0]["value"]</code></p> <pre><code>2 </code></pre> <h3>Adjust and validate parameter values</h3> <p>Add a new value:</p> <p>```python params.adjust({"a": [{"date": "2020-11-01", "value": 22}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre> <p>Update an existing value:</p> <p>```python params.adjust({"a": [{"date": "2020-01-01", "value": 3}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 3},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre> <p>Update all values:</p> <p>```python params.adjust({"a": 7})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 7},   {'date': datetime.date(2020, 10, 1), 'value': 7},   {'date': datetime.date(2020, 11, 1), 'value': 7}, ]) </code></pre> <p>Errors on values that are out of range:</p> <p><code>python params.adjust({"a": -1})</code></p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-8-f8f1b7f6cd9a&gt; in &lt;module&gt;     ----&gt; 1 params.adjust({"a": -1})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a -1 &lt; min 0 "         ]     } } </code></pre> <p>```python params = Params()</p> <p>params.adjust({"a": [{"date": "2020-01-01", "value": 11}]}) ```</p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-9-cc8a21f044d8&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"a": [{"date": "2020-01-01", "value": 11}]})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a[date=2020-01-01] 11 &gt; max 10.5 b[date=2020-01-01]"         ]     } } </code></pre> <p>Errors on invalid values:</p> <p>```python params = Params()</p> <p>params.adjust({"b": "abc"}) ```</p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-10-8373a2715e38&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"b": "abc"})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "b": [             "Not a valid number: abc."         ]     } } </code></pre> <h3>Extend parameter values using label definitions</h3> <p>Extend values using <code>label_to_extend</code>:</p> <p><code>python params = Params(label_to_extend="date")</code></p> <p><code>python params.sel["a"]</code></p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 5, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre> <p>Updates to values are carried through to future dates:</p> <p>```python params.adjust({"a": [{"date": "2020-4-01", "value": 9}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 11, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 9, '_auto': True}, ]) </code></pre> <p>Use <code>clobber</code> to only update values that were set automatically:</p> <p>```python params = Params(label_to_extend="date") params.adjust(     {"a": [{"date": "2020-4-01", "value": 9}]},     clobber=False, )</p> <h1>Sort parameter values by date for nicer output</h1> <p>params.sort_values() params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre> <h3>NumPy integration</h3> <p>Access values as NumPy arrays with <code>array_first</code>:</p> <p>```python params = Params(label_to_extend="date", array_first=True)</p> <p>params.a ```</p> <pre><code>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 8, 8, 8, 8]) </code></pre> <p><code>python params.a * params.b</code></p> <pre><code>array([21., 21., 21., 21., 21., 21., 21., 21., 21., 84., 84., 84., 84.]) </code></pre> <p>Only get the values that you want:</p> <p><code>python arr = params.to_array("a", date=["2020-01-01", "2020-11-01"]) arr</code></p> <pre><code>array([2, 8]) </code></pre> <p>Go back to a list of dictionaries:</p> <p><code>python params.from_array("a", arr, date=["2020-01-01", "2020-11-01"])</code></p> <pre><code>[{'date': datetime.date(2020, 1, 1), 'value': 2},  {'date': datetime.date(2020, 11, 1), 'value': 8}] </code></pre> <h5>Documentation</h5> <p>Full documentation available at <a href="https://paramtools.dev">paramtools.dev</a>.</p> <h5>Contributing</h5> <p>Contributions are welcome! Checkout <a href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> to get started.</p> <h5>Credits</h5> <p>ParamTools is built on top of the excellent <a href="https://github.com/marshmallow-code/marshmallow">marshmallow</a> JSON schema and validation framework. I encourage everyone to check out their repo and documentation. ParamTools was modeled off of <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator's</a> parameter processing and validation engine due to its maturity and sophisticated capabilities.</p>
+    </div>
+   </div>
+
+   <div class="custom-section">
+    <div class="box">
+     <i class="fas fa-file-alt">
+     </i>
+     <h3>
+      Policy Area
+     </h3>
+     <p>
+        Some text about policy area...
+     </p>
+    </div>
+    <div class="box">
+     <i class="fas fa-globe">
+     </i>
+     <h3>
+      Geography
+     </h3>
+     <p>
+        Some text about geography...
+     </p>
+    </div>
+    <div class="box">
+     <i class="fas fa-code">
+     </i>
+     <h3>
+      Language
+     </h3>
+     <p>
+        Some text about language...
+     </p>
+    </div>
+   </div>
+
+   <div class="button-container">
+    <a class="button" href="#">
+     Code Repository
+    </a>
+    <a class="button" href="#">
+     User Documentation
+    </a>
+    <a class="button" href="#">
+     Contributor Documentation
+    </a>
+    <a class="button" href="#">
+     Webapp
+    </a>
+    <a class="button" href="#">
+     Recent Changes
+    </a>
+   </div>
+
+   <div class="button-container">
+       <p><a href="https://paramtools.dev">User documentation</a>
 </p><p><a href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md">Contributor documentation</a>
 </p><p><a href="https://github.com/PSLmodels/ParamTools/releases/latest">Recent changes</a>
-</p>
-                        </div>
-                        <script type="text/javascript">
-                            var url = document.location.toString();
-                            if ( url.match('#') ) {
-                                var section = $('#'+url.split('#')[1]+'-collapse');
-                                section.collapse('show');
-                            }
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
+</p></div>
 
-        <br><br>
-        <footer class="footer mt-auto py-2">
-        <div class="row mt-5 border-top">
-          <div class="col-sm"></div>
-          <div class="col-sm text-center">
-            <a href="https://twitter.com/pslmodels" class="fa fa-twitter"></a>
-            <a href="https://www.linkedin.com/company/policy-simulation-library/" class="fa fa-linkedin"></a>
-            <a href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q" class="fa fa-youtube"></a>
-            <a href="https://github.com/pslmodels" class="fa fa-github" aria-hidden="true"></a>
-          </div>
-          <div class="col-sm"></div>
-        </div>
-        </footer>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</html>
+   <section class="maintainers-section">
+    <h2>
+     Maintainers:
+    </h2>
+    <div class="maintainer-container">
+     <div class="maintainers-grid">
+      <a class="maintainer-card" href="#">
+       <button class="maintainer-image-btn">
+        <img alt="Maintainer 1" src="../imgs/psl.svg"/>
+       </button>
+       <p>
+        Maintainer 1
+       </p>
+      </a>
+     </div>
+    </div>
+   </section>
+
+  <div class="footer-banner">
+    <div class="footer-image">
+     <img alt="Your Image Description" src="../imgs/PSL.svg"/>
+    </div>
+    <div class="footer-text">
+     PSL is developed by a community of technical contributors. Learn how to contribute to library projects or add a new project to the library.
+    </div>
+    <div class="footer-buttons">
+     <a class="button" href="#">
+      JOIN THE COMMUNITY
+     </a>
+     <a class="button" href="#">
+      DONATE TO PSL
+     </a>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="row">
+     <div class="col-sm">
+     </div>
+     <div class="col-sm text-center">
+      <a class="fa fa-twitter" href="https://twitter.com/pslmodels">
+      </a>
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/company/policy-simulation-library/">
+      </a>
+      <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q">
+      </a>
+      <a aria-hidden="true" class="fa fa-github" href="https://github.com/pslmodels">
+      </a>
+     </div>
+     <div class="col-sm">
+     </div>
+    </div>
+   </footer>
+  </body>
+  <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+ </html>
