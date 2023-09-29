@@ -519,3 +519,15 @@ code {
   height: 100%;
   object-fit: cover;  /* Ensuring the image maintains its aspect ratio */
 }
+
+.col-sm.text-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.col-sm.text-center a.fa:hover {
+    text-decoration: none;
+    background-color: #f5f5f5; /* Lighter background */
+    color: black; /* Keeps the icon color unchanged */
+}
