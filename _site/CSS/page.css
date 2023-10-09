@@ -1,160 +1,161 @@
 /* CSS for the non-model pages */
-a,p {
-    font-family: "Helvetica";
+a,
+p {
+  font-family: "Helvetica";
 }
 
 #content a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
-#page{
-    background-color: #f9f9f9;
+#page {
+  background-color: #f9f9f9;
 }
 code {
-    color: inherit;
-    background-color: rgba(27,31,35,0.05);
+  color: inherit;
+  background-color: rgba(27, 31, 35, 0.05);
 }
-@media(min-width: 900px){
-    .sidenav{
-        width: 20%;
-        padding-right: 2%;
-        padding-left: 2%;
-        float: right;
-        background-color: #e4e9ec;
-        border-left: solid thin gray;
-        border-bottom: solid thin gray;
-    }
-    .news-marg{
-        margin-left: 18%;
-        position: absolute;
-        margin-top:-20px;
-    }
-    .twitter-card{
-        display: none;
-    }
-    .home-row{
-        margin-right:15%;
-    }
-    .home-container{
-        margin-right:23%;
-        width: 73%;
-        max-width: 2000px;
-    }
-    .email-form{
-        width: 405px !important;
-        margin-left: 10px;
-    }
-    .event-col{
-        padding-left: 50px;
-        margin-bottom: -50px;
-        border-right-style: solid;
-        border-right-color: lightgray;
-        border-right-width: thin;
-    }
-    .event-banner{
-        padding-top: 50px;
-        padding-left: 50px;
-    }
+@media (min-width: 900px) {
+  .sidenav {
+    width: 20%;
+    padding-right: 2%;
+    padding-left: 2%;
+    float: right;
+    background-color: #e4e9ec;
+    border-left: solid thin gray;
+    border-bottom: solid thin gray;
+  }
+  .news-marg {
+    margin-left: 18%;
+    position: absolute;
+    margin-top: -20px;
+  }
+  .twitter-card {
+    display: none;
+  }
+  .home-row {
+    margin-right: 15%;
+  }
+  .home-container {
+    margin-right: 23%;
+    width: 73%;
+    max-width: 2000px;
+  }
+  .email-form {
+    width: 405px !important;
+    margin-left: 10px;
+  }
+  .event-col {
+    padding-left: 50px;
+    margin-bottom: -50px;
+    border-right-style: solid;
+    border-right-color: lightgray;
+    border-right-width: thin;
+  }
+  .event-banner {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
 }
 @media (max-width: 900px) {
-    .event-picture{
-        display: none;
-    }
-    .archive{
-        display: none;
-    }
-    .sidenav{
-        display: none;
-    }
-    .navbar-text{
-        display: none;
-    }
-    .email-form{
-        width: 200px;
-        margin-left: 10px;
-    }
-    .event-col{
-        border-bottom-style: solid;
-        border-bottom-color: lightgray;
-        border-bottom-width: thin;
-    }
-}
-.navbar{
-    background-color: white;
-    border-bottom: solid thin gray;
-    box-shadow: 0px 1px 0px #c7c8c9;
-}
-a.event-link:link{
-    color:black;
-}
-a.event-link:hover{
-    color:black;
-    text-decoration: underline;
-}
-a.event-link:visited{
-    color:black;
-}
-.event-button{
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-.card-link{
-    color: black;
-}
-.card-header{
-    background-color: #e4e9ec;
-}
-a.card-link:hover{
-    color: black;
-    text-decoration: none;
-}
-a.btn:hover{
-    background-color: #d3dded;
-    color: black;
-}
-.card-home:hover{
-    background-color: #e4e9ec;
-}
-.btn-lg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  .event-picture {
+    display: none;
+  }
+  .archive {
+    display: none;
+  }
+  .sidenav {
+    display: none;
+  }
+  .navbar-text {
+    display: none;
+  }
+  .email-form {
     width: 200px;
+    margin-left: 10px;
+  }
+  .event-col {
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-bottom-width: thin;
+  }
 }
-.img-fluid{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+.navbar {
+  background-color: white;
+  border-bottom: solid thin gray;
+  box-shadow: 0px 1px 0px #c7c8c9;
+}
+a.event-link:link {
+  color: black;
+}
+a.event-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+a.event-link:visited {
+  color: black;
+}
+.event-button {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.card-link {
+  color: black;
+}
+.card-header {
+  background-color: #e4e9ec;
+}
+a.card-link:hover {
+  color: black;
+  text-decoration: none;
+}
+a.btn:hover {
+  background-color: #d3dded;
+  color: black;
+}
+.card-home:hover {
+  background-color: #e4e9ec;
+}
+.btn-lg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+.img-fluid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 .jumbotron {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 .newsletter-input {
-    border-radius: 5px;
-    border-color: lightgrey;
-    border-width: 1px;
-    border-style: solid;
-    margin-bottom: 5px;
-    padding: 5px;
+  border-radius: 5px;
+  border-color: lightgrey;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 #mc-embedded-subscribe {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 .asterisk {
-    color: red;
+  color: red;
 }
 #aboutlink {
-    font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 #subscribe {
-    margin-top: 20px;
-    font-size: 3.5vw;
+  margin-top: 20px;
+  font-size: 3.5vw;
 }
 .model-info a {
-    color: inherit;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
 }
 .fa {
   padding: 30px;
@@ -171,11 +172,11 @@ a.btn:hover{
 }
 
 .fa-twitter {
-  color: #55ACEE;
+  color: #55acee;
 }
 
 .fa-linkedin {
-  color: #5D6D7E;
+  color: #5d6d7e;
 }
 
 .fa-github {
@@ -183,5 +184,5 @@ a.btn:hover{
 }
 
 .fa-youtube {
-  color: #D98880;
+  color: #d98880;
 }

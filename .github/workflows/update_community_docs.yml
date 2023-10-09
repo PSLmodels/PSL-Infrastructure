@@ -4,37 +4,37 @@ on:
     branches:
       - master
     paths:
-      - 'Community/**.md'
-      - 'Catalog/**.md'
+      - "Community/**.md"
+      - "Catalog/**.md"
 
 jobs:
   build_community_pages:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
-    - name: Setup Miniconda
-      uses: conda-incubator/setup-miniconda@v2.0.1
-      with:
-        activate-environment: catalog-env
-        environment-file: environment.yml
-        python-version: 3.8
-        auto-activate-base: false
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2.0.1
+        with:
+          activate-environment: catalog-env
+          environment-file: environment.yml
+          python-version: 3.8
+          auto-activate-base: false
 
-    - name: Run shell script
-      working-directory: ./Tools/Page-Builder/
-      shell: bash -l {0}
-      run: |
-        sh make_pages.sh
+      - name: Run shell script
+        working-directory: ./Tools/Page-Builder/
+        shell: bash -l {0}
+        run: |
+          sh make_pages.sh
 
-    - name: Commit new changes
-      working-directory: ./
-      shell: bash -l {0}
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+      - name: Commit new changes
+        working-directory: ./
+        shell: bash -l {0}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
 
-        git add -A
-        git commit --allow-empty -m "Update PSL community pages on $(date +'%Y-%m-%d')"
-        git push
+          git add -A
+          git commit --allow-empty -m "Update PSL community pages on $(date +'%Y-%m-%d')"
+          git push
