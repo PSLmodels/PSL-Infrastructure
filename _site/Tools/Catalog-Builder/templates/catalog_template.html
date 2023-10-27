@@ -123,124 +123,27 @@
 </div>
 </div>
 <br/>
+
 <section class="models-section">
-<div class="model-container">
-<div class="models-grid">
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/Behavioral-Responses.png"/>
-</button>
-<p>
-        Behavioral-Responses
-      </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/capital-cost-recovery.png"/>
-</button>
-<p>
-            capital-cost-recovery
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/Cost-of-Capital-Calculator.png"/>
-</button>
-<p>
-            Cost-of-Capital-Calculator
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/DSGE.jl.jfif"/>
-</button>
-<p>
-            DSGE.jl
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/microdf.png"/>
-</button>
-<p>
-            microdf
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/OG-USA.png"/>
-</button>
-<p>
-            OG-USA
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/openfisca-uk.png"/>
-</button>
-<p>
-            openfisca-uk
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/ParamTools.png"/>
-</button>
-<p>
-            ParamTools
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/PCI-China.png"/>
-</button>
-<p>
-            PCI-China
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/policy-rules-database.png"/>
-</button>
-<p>
-            policy-rules-database
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/Tax-Brain.png"/>
-</button>
-<p>
-            Tax-Brain
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/Tax-Calculator.png"/>
-</button>
-<p>
-            Tax-Calculator
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/Tax-Cruncher.png"/>
-</button>
-<p>
-            Tax-Cruncher
-        </p>
-</a>
-<a class="model-card" href="./Behavioral-Responses.html">
-<button class="maintainer-image-btn">
-<img alt="Behavioral-Responses" src="../imgs/taxdata.png"/>
-</button>
-<p>
-            taxdata
-        </p>
-</a>
-</div>
-</div>
-</section>
+        <div class="model-container">
+            <div class="models-grid">
+                {% for project_name, project_data in catalog.items() %}
+                    <a class="model-card" href="{{ project_name }}.html">
+                        <button class="maintainer-image-btn">
+                            {% if project_data.get('image_url', {}).get('value') %}
+                                <img alt="{{ project_name }}" src="{{ project_data['image_url']['value'] }}"/>
+                            {% else %}
+                                <img alt="{{ project_name }}" src="../imgs/default.png"/>
+                            {% endif %}
+                        </button>
+                        <p>{{ project_name }}</p>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+       
+
 <div class="footer-banner">
 <div class="footer-image">
 <img alt="Your Image Description" src="../imgs/PSL.svg"/>
