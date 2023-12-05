@@ -545,3 +545,15 @@ code {
   background-color: #f5f5f5; /* Lighter background */
   color: black; /* Keeps the icon color unchanged */
 }
+
+.carousel-item {
+  width: 350px; /* Increase width */
+  height: auto; /* Adjust height as needed */
+  /* ... other styles ... */
+}
+
+.carousel-item h5, .carousel-item p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
