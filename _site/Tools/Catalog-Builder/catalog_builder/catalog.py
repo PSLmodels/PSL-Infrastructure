@@ -116,34 +116,43 @@ class CatalogBuilder:
                     "PSL_catalog.json",
                 )
                 cat_meta = json.loads(cat_meta)
-                self.catalog[project["repo"]]["name"] = {
-                    "value": project["repo"],
-                    "source": "",
-                }
-                self.repos[project["repo"]] = repo_url.format(
-                    project["org"], project["repo"]
-                )
-                for attr, config in cat_meta.items():
-                    if config["type"] == "github_file":
-                        value = utils.get_from_github_api(project, config)
-                        source = (
-                            f"https://github.com/{project['org']}/"
-                            f"{project['repo']}/blob/{project['branch']}/"
-                            f"{config['source']}"
-                        )
 
-                    elif config["type"] == "html":
-                        source = config["source"]
-                        value = config["data"]
-                    else:
-                        msg = (
-                            f"MISSING DATA: {project['repo']}, entry: "
-                            f"{attr}, {config}"
-                        )
-                        print(msg)
-                        source, value = None, None
-                    res = {"source": source, "value": value}
-                    self.catalog[project["repo"]][attr] = res
+                github_url = repo_url.format(project["org"], project["repo"])
+
+                if 'name' in cat_meta and isinstance(cat_meta['name'], str):
+                    self.catalog[project["repo"]] = cat_meta
+                    self.catalog[project["repo"]]['github_url'] = github_url
+                else:
+                        
+                    self.catalog[project["repo"]]["name"] = {
+                        "value": project["repo"],
+                        "source": "",
+                    }
+                    self.repos[project["repo"]] = repo_url.format(
+                        project["org"], project["repo"]
+                    )
+                    for attr, config in cat_meta.items():
+                        if config["type"] == "github_file":
+                            value = utils.get_from_github_api(project, config)
+                            source = (
+                                f"https://github.com/{project['org']}/"
+                                f"{project['repo']}/blob/{project['branch']}/"
+                                f"{config['source']}"
+                            )
+
+                        elif config["type"] == "html":
+                            source = config["source"]
+                            value = config["data"]
+                        else:
+                            msg = (
+                                f"MISSING DATA: {project['repo']}, entry: "
+                                f"{attr}, {config}"
+                            )
+                            print(msg)
+                            source, value = None, None
+                        res = {"source": source, "value": value}
+                        self.catalog[project["repo"]][attr] = res
+                    self.catalog[project["repo"]]['github_url'] = github_url
         else:
             print("Develop mode. Loading Catalog from catalog.json")
             json_path = os.path.join(self.index_dir, "catalog.json")
@@ -180,6 +189,7 @@ class CatalogBuilder:
         with open(pathout, "w") as out:
             out.write(rendered)
 
+        print(self.projects)
         for project in sorted(self.projects, key=lambda x: x["repo"].upper()):
             rendered = utils.render_template(
                 model_path, catalog=self.catalog, repos=self.repos, project=project['repo']
@@ -189,7 +199,7 @@ class CatalogBuilder:
             with open(pathout, "w") as out:
                 out.write(rendered)
 
-            print(f"SUCCESSFULLY CREated {pathout}")
+            print(f"SUCCESSFULLY Created {pathout}")
 
     def dump_catalog(self, output_path=None):
         """

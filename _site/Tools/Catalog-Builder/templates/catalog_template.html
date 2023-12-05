@@ -130,10 +130,10 @@
                 {% for project_name, project_data in catalog.items() %}
                     <a class="model-card" href="{{ project_name }}.html">
                         <button class="maintainer-image-btn">
-                            {% if project_data.get('image_url', {}).get('value') %}
-                                <img alt="{{ project_name }}" src="{{ project_data['image_url']['value'] }}"/>
+                            {% if project_data.img and project_data.banner_title %}
+                                <img alt="{{ project_data.banner_title }}" src="{{ project_data.img }}"/>
                             {% else %}
-                                <img alt="{{ project_name }}" src="../imgs/default.png"/>
+                                <img alt="{{ project_data.name.value }}" src="../imgs/default.png"/>
                             {% endif %}
                         </button>
                         <p>{{ project_name }}</p>

@@ -117,17 +117,23 @@
 
   <div class="banner">
     <div class="banner-content">
-     <div class="banner-text">
-      <h1>
-        {{ item.name.value }}
-      </h1>
-      <br/>
-      <h5>
-        {{ item.project_one_line.value }}
-      </h5>
-     </div>
+      <div class="banner-text">
+      {% if item.banner_title %}
+          <h1>{{ item.banner_title }}</h1>
+          <br>
+          <h5>{{ item.banner_subtitle }}</h5>
+      {% else %}
+          <h1>{{ item.name.value }}</h1>
+          <br>
+          <h5>{{ item.project_one_line.value }}</h5>
+      {% endif %}
+     </div><br>
      <div class="banner-image">
-      <img alt="{{ item.name.value }}" src="{{ (item.image | default({})).value | default('../imgs/PSL.svg') }}"/>
+      {% if item.img and item.banner_title %}
+          <img alt="{{ item.banner_title }}" src="{{ item.img }}"/>
+      {% else %}
+          <img alt="{{ item.name.value }}" src="../imgs/PSL.svg"/>
+      {% endif %}
      </div>
     </div>
    </div>
@@ -136,81 +142,117 @@
     <div class="box-header">
     </div>
     <div class="box-content">
-      {{ item.project_overview.value }}
+      {% if item.detailed_description %}
+            {{ item.detailed_description }}
+        {% else %}
+            {{ item.project_overview.value }}
+        {% endif %}
     </div>
    </div>
 
    <div class="custom-section">
+    {% if item.policy_area %}
     <div class="box">
      <i class="fas fa-file-alt">
      </i>
      <h3>
       Policy Area
      </h3>
-     <p>
-        {{ (item.policy_area | default({})).value | default('Some text about policy area...')}}
-     </p>
+     <p>{{ item.policy_area.split(', ') | join('<br/>') }}</p>
     </div>
+    {% endif %}
+
+    {% if item.geography %}
     <div class="box">
      <i class="fas fa-globe">
      </i>
      <h3>
       Geography
      </h3>
-     <p>
-        {{ (item.geography | default({})).value | default('Some text about geography...')}}
-     </p>
+     <p>{{ item.geography.split(', ') | join('<br/>') }}</p>
     </div>
+    {% endif %}
+
+    {% if item.language %}
     <div class="box">
      <i class="fas fa-code">
      </i>
      <h3>
       Language
      </h3>
-     <p>
-        {{ (item.language | default({})).value | default('Some text about language...')}}
-     </p>
+     <p>{{ item.language.split(', ') | join('<br/>') }}</p>
     </div>
+    {% endif %}
    </div>
 
    <div class="button-container">
-    <a class="button" href="#">
-     Code Repository
-    </a>
-    <a class="button" href="#">
-     User Documentation
-    </a>
-    <a class="button" href="#">
-     Contributor Documentation
-    </a>
-    <a class="button" href="#">
-     Webapp
-    </a>
-    <a class="button" href="#">
-     Recent Changes
-    </a>
-   </div>
-
-   <div class="button-container">
-       {{ make_links(item) }}</div>
-
-   <section class="maintainers-section">
-    <h2>
-     Maintainers:
-    </h2>
-    <div class="maintainer-container">
-     <div class="maintainers-grid">
-      <a class="maintainer-card" href="{{ (item.link_for_maintainer_1 | default({})).value | default('#')}}">
-       <button class="maintainer-image-btn">
-        <img alt="{{ (item.maintainer_1 | default({})).value | default('Maintainer 1')}}" src="{{ (item.maintainer_1_image | default({})).value | default('../imgs/psl.svg')}}"/>
-       </button>
-       <p>
-        {{ (item.maintainer_1 | default({})).value | default('Maintainer 1')}}
-       </p>
-      </a>
-     </div>
+        {% if item.links %}
+            {% if item.links.code_repository %}
+                <a class="button" href="{{ item.links.code_repository }}">Code Repository</a>
+            {% endif %}
+            {% if item.links.user_documentation %}
+                <a class="button" href="{{ item.links.user_documentation }}">User Documentation</a>
+            {% endif %}
+            {% if item.links.contributor_documentation %}
+                <a class="button" href="{{ item.links.contributor_documentation }}">Contributor Documentation</a>
+            {% endif %}
+            {% if item.links.webapp %}
+                <a class="button" href="{{ item.links.webapp }}">Webapp</a>
+            {% endif %}
+            {% if item.links.recent_changes %}
+                <a class="button" href="{{ item.links.recent_changes }}">Recent Changes</a>
+            {% endif %}
+        {% else %}
+            {{ make_links(item) }}
+        {% endif %}
     </div>
-   </section>
+
+    <section class="maintainers-section">
+      <h2>Maintainers:</h2>
+      <div class="maintainer-container">
+          <div class="maintainers-grid">
+              {% if item.maintainers %}
+              <!-- New format handling -->
+              {% for maintainer in item.maintainers %}
+                  <a class="maintainer-card" href="{{ maintainer.link }}">
+                      <button class="maintainer-image-btn">
+                          <img alt="{{ maintainer.name }}" src="{{ maintainer.image | default('../imgs/default-maintainer.jpg') }}"/>
+                      </button>
+                      <p>{{ maintainer.name }}</p>
+                  </a>
+              {% endfor %}
+              {% endif %}
+  
+              {% if item.core_maintainers %}
+              <!-- Core maintainers handling -->
+              {% set core_maintainers_list = parse_core_maintainers(item.core_maintainers.value) %}
+              {% for maintainer in core_maintainers_list %}
+                  {% if maintainer.link %}
+                      <a class="maintainer-card" href="{{ maintainer.link | safe }}">
+                          <button class="maintainer-image-btn">
+                              <img alt="{{ maintainer.name }}" src="{{ maintainer.image | default('../imgs/default-maintainer.jpg') }}"/>
+                          </button>
+                          <p>{{ maintainer.name }}</p>
+                      </a>
+                  {% else %}
+                      <div class="maintainer-card non-clickable">
+                          <button class="maintainer-image-btn">
+                              <img alt="{{ maintainer.name }}" src="{{ maintainer.image | default('../imgs/default-maintainer.jpg') }}"/>
+                          </button>
+                          <p>{{ maintainer.name }}</p>
+                      </div>
+                  {% endif %}
+              {% endfor %}
+              {% endif %}
+              
+          </div>
+      </div>
+  </section>
+  
+    
+  
+  
+  
 
   <div class="footer-banner">
     <div class="footer-image">

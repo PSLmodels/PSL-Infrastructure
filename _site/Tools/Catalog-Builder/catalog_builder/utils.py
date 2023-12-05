@@ -1,6 +1,5 @@
 import base64
 import json
-
 import markdown
 import requests
 import time
@@ -109,6 +108,8 @@ def render_template(template_path, **render_kwargs):
     template = Template(template_str)
     template.globals["make_id"] = make_id
     template.globals["make_links"] = make_links
+    template.globals["parse_core_maintainers"] = parse_core_maintainers
+    template.environment.filters['split'] = split_filter
     return template.render(**render_kwargs)
 
 
@@ -152,6 +153,39 @@ def make_id(name):
     name = name.replace('.', '')
     return "-".join(name.split())
 
+def split_filter(s, delimiter=None):
+    return s.split(delimiter)
+
+def parse_core_maintainers(html_content):
+    maintainers = []
+    email_pattern = re.compile(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b')
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    for item in soup.find_all('ul', recursive=False):
+        for elem in item.children:
+            if elem.name == 'li':
+                maintainer = {'name': '', 'link': None}
+                
+                if elem.find('a'):
+                    anchor = elem.find('a')
+                    maintainer['name'] = anchor.get_text(strip=True)
+                    maintainer['link'] = anchor.get('href')
+                else:
+                    text = elem.get_text(strip=True).split('\n')[0]
+                    maintainer['name'] = text
+
+                    sibling = elem.next_sibling
+                    if sibling and sibling.name == 'ul':
+                        nested_text = sibling.get_text(strip=True)
+                        email_match = email_pattern.search(nested_text)
+                        if email_match:
+                            email = email_match.group()
+                            maintainer['link'] = f'mailto:{email}'
+
+                if maintainer['name']:
+                    maintainers.append(maintainer)
+
+    return maintainers
 
 def make_links(item):
     """
@@ -161,7 +195,7 @@ def make_links(item):
         return value.startswith("<a") and value.endswith("/a>")
 
     def create_link(info, section_name):
-        link_str = "<p><a href=\"{}\">{}</a>\n</p>"
+        link_str = "<a class=\"button\" href=\"{}\">{}</a>"
         if info["source"]:
             if info["source"].startswith("http"):
                 return link_str.format(info["source"], section_name)

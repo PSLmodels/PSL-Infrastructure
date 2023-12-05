@@ -244,6 +244,11 @@ code {
 .maintainer-image-btn:hover img {
   opacity: 0.8;
 }
+.maintainer-card.non-clickable {
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+}
 @media (max-width: 900px) {
   .navbar-text {
     display: none;

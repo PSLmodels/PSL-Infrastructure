@@ -377,26 +377,26 @@
     },
     "openfisca-uk": {
         "name": "PolicyEngine UK",
-        "img": "path/to/image.jpg",
+        "img": "https://avatars.githubusercontent.com/u/88570531?s=200&v=4",
         "banner_title": "PolicyEngine UK",
         "banner_subtitle": "A static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.",
         "detailed_description": "PolicyEngine UK is PolicyEngine's microsimulation model of the UK tax-benefit system...",
         "policy_area": "Policy Reform, Tax Analysis",
         "geography": "Canada, United Kingdom, United States",
-        "language": "English",
+        "language": "Python",
         "maintainers": [
             {
                 "name": "Nikhil Woodruff",
-                "image": "path/to/image.jpg",
-                "link": "link-for-maintainer-1"
+                "image": "https://avatars.githubusercontent.com/u/35577657?v=4",
+                "link": "mailto:nikhil@policyengine.org"
             }
         ],
         "links": {
-            "code_repository": "link-to-code-repo",
-            "user_documentation": "link-to-user-docs",
-            "contributor_documentation": "link-to-contributor-docs",
-            "webapp": "link-to-webapp",
-            "recent_changes": "link-to-recent-changes"
+            "code_repository": "https://github.com/PolicyEngine/policyengine-uk",
+            "user_documentation": "https://policyengine.github.io/policyengine-uk/",
+            "contributor_documentation": "https://github.com/PolicyEngine/PolicyEngine-uk",
+            "webapp": "https://policyengine.org/uk/calculator",
+            "recent_changes": "https://github.com/PSLmodels/policyengine-uk/blob/master/CHANGELOG.md"
         }
     },
     "ParamTools": {
