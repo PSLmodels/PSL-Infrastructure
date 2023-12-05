@@ -26,6 +26,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="../CSS/catalog.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
    </meta>
   </meta>
  </head>
@@ -154,18 +156,10 @@
             <a class="twitter-timeline" href="https://twitter.com/PSLmodels">Tweets by PSLmodels</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
-        <div id="prCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" id="carousel-inner">
+        <div class="carousel-container">
+            <div id="prCarousel" class="slick-slider">
                 <!-- Carousel items will be inserted here dynamically -->
             </div>
-            <a class="carousel-control-prev" href="#prCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#prCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
 
         <!-- footer start -->
@@ -207,30 +201,39 @@
           </body>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
-    fetch('Catalog/prs.json')
-    .then(response => response.json())
-        .then(repos => {
-            const carouselInner = document.getElementById('carousel-inner');
-            let isFirstItem = true;
-
-            for (const [repoName, prs] of Object.entries(repos)) {
-                prs.forEach(pr => {
-                    const carouselItem = document.createElement('div');
-                    carouselItem.className = 'carousel-item' + (isFirstItem ? ' active' : '');
-                    isFirstItem = false;
-
-                    carouselItem.innerHTML = `
-                        <h5>${repoName}: ${pr.title}</h5>
-                        <p>${pr.body}</p>
-                        <a href="${pr.html_url}" target="_blank">View PR</a>
-                    `;
-                    carouselInner.appendChild(carouselItem);
-                });
-            }
-        })
-        .catch(error => console.error('Error loading PR data:', error));
-});
-          </script>
+                fetch('Catalog/prs.json')
+                    .then(response => response.json())
+                    .then(repos => {
+                        const carousel = document.getElementById('prCarousel');
+                        let carouselHtml = '';
+        
+                        for (const [repoName, prs] of Object.entries(repos)) {
+                            prs.forEach(pr => {
+                                carouselHtml += `
+                                    <div class="carousel-item">
+                                        <h5>${repoName}: ${pr.title}</h5>
+                                        <p>${pr.body}</p>
+                                        <a href="${pr.html_url}" target="_blank">View PR</a>
+                                    </div>`;
+                            });
+                        }
+        
+                        carousel.innerHTML = carouselHtml;
+        
+                        // Initialize Slick Carousel
+                        $('#prCarousel').slick({
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            // Add other options as needed
+                        });
+                    })
+                    .catch(error => console.error('Error loading PR data:', error));
+            });
+        </script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        
           <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
           </script>
           <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
