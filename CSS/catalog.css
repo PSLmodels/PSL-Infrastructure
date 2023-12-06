@@ -546,14 +546,72 @@ code {
   color: black; /* Keeps the icon color unchanged */
 }
 
-.carousel-item {
-  width: 350px; /* Increase width */
-  height: auto; /* Adjust height as needed */
-  /* ... other styles ... */
+.carousel-container {
+  margin: 2em auto;
+  max-width: 75%;
 }
 
-.carousel-item h5, .carousel-item p {
-  white-space: nowrap;
+.slick-slider .carousel-item {
+  margin: 5px 10px; 
+  padding: 20px; 
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: flex;
+  background-color: white;
+  box-shadow: var(--primary-box-shadow);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  align-items: center;
+  text-align: left;
+}
+
+.slick-slider .carousel-item .repo-logo {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.slick-slider .carousel-item .text-content {
+  flex-grow: 1; 
+}
+
+.slick-slider .carousel-item .repo-title,
+.slick-slider .carousel-item .pr-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.slick-slider .carousel-item .pr-title {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
+
+.slick-slider .carousel-item .pr-time {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* .slick-slider .carousel-item .pr-link-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.slick-slider .carousel-item .pr-link-button:hover {
+  background-color: #0056b3;
+} */

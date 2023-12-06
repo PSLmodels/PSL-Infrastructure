@@ -24,12 +24,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="../CSS/catalog.css" rel="stylesheet"/>
+    
     <!-- <link href="../CSS/page.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-   </meta>
+    <link href="./CSS/catalog.css" rel="stylesheet"/>
+    </meta>
   </meta>
  </head>
  <body id="page">
@@ -202,37 +203,62 @@
           </body>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
-                fetch('Catalog/prs.json')
-                    .then(response => response.json())
-                    .then(repos => {
-                        const carousel = document.getElementById('prCarousel');
-                        let carouselHtml = '';
-        
-                        for (const [repoName, prs] of Object.entries(repos)) {
-                            prs.forEach(pr => {
-                                carouselHtml += `
-                                    <div class="carousel-item">
-                                        <h5>${repoName}: ${pr.title}</h5>
-                                        <p>${pr.body}</p>
-                                        <a href="${pr.html_url}" target="_blank">View PR</a>
-                                    </div>`;
-                            });
-                        }
-        
-                        carousel.innerHTML = carouselHtml;
-        
-                        // Initialize Slick Carousel
-                        $('#prCarousel').slick({
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                            autoplay: true,
-                            autoplaySpeed: 2000,
-                            // Add other options as needed
-                        });
-                    })
-                    .catch(error => console.error('Error loading PR data:', error));
-            });
-        </script>
+  fetch('Catalog/prs.json')
+    .then(response => response.json())
+    .then(repos => {
+      const prCards = [];
+      for (const [repoName, prs] of Object.entries(repos)) {
+        for (const pr of prs) {
+          const createdAt = new Date(pr.created_at);
+          prCards.push({
+            repoName,
+            prTitle: pr.title,
+            createdAt,
+            html_url: pr.html_url,
+            img: pr.base.user.avatar_url
+          });
+        }
+      }
+
+      const sortedPrCards = prCards.sort((a, b) => {
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
+
+      const carousel = document.getElementById('prCarousel');
+      let carouselHtml = '';
+
+      for (const prCard of sortedPrCards) {
+        carouselHtml += `
+          <div class="carousel-item">
+            <img src="${prCard.img} Logo" alt="${prCard.repoName} Logo" class="repo-logo">
+            <div class="text-content">
+              <h5 class="repo-title">${prCard.repoName}:</h5><br>
+              <h4 class="pr-title">${prCard.prTitle}</h4>
+              <p>${prCard.createdAt.toLocaleDateString()}</p>
+              <a href="${prCard.html_url}" target="_blank" class="pr-link-button">View PR</a>
+            </div>
+          </div>
+        `;
+      }
+
+      carousel.innerHTML = carouselHtml;
+
+      $('#prCarousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 4000,
+        infinite: true,
+        cssEase: "linear",
+        // dots: true, // Add dots for navigation
+        adaptiveHeight: true // Adjust height based on the content
+      });
+    })
+    .catch(error => console.error('Error loading PR data:', error));
+});
+
+          </script>
           <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
           </script>
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
