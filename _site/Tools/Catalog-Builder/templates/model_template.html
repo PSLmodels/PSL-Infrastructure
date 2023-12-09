@@ -65,18 +65,18 @@
             <a class="dropdown-item" href="../Community/contribute.html">
              Contribute
             </a>
-            <a class="dropdown-item" href="http://discourse.pslmodels.org/">
+            <!-- <a class="dropdown-item" href="http://discourse.pslmodels.org/">
              Forum
-            </a>
+            </a> -->
             <a class="dropdown-item" href="../Community/initiatives.html">
              Initiatives
             </a>
             <a class="dropdown-item" href="../Community/council.html">
              Leadership Council
             </a>
-            <a class="dropdown-item" href="../Newsletter/archive.html">
+            <!-- <a class="dropdown-item" href="../Newsletter/archive.html">
              Newsletter
-            </a>
+            </a> -->
             <a class="dropdown-item" href="../Community/roadmap.html">
              Roadmap
             </a>
@@ -150,40 +150,43 @@
     </div>
    </div>
 
-   <div class="custom-section">
-    {% if item.policy_area %}
-    <div class="box">
-     <i class="fas fa-file-alt">
-     </i>
-     <h3>
-      Policy Area
-     </h3>
-     <p>{{ item.policy_area.split(', ') | join('<br/>') }}</p>
-    </div>
-    {% endif %}
+   {% set has_content = item.policy_area or item.geography or item.language %}
+   {% if has_content %}
+    <div class="custom-section">
+        {% if item.policy_area %}
+        <div class="box">
+        <i class="fas fa-file-alt">
+        </i>
+        <h3>
+        Policy Area
+        </h3>
+        <p>{{ item.policy_area.split(', ') | join('<br/>') }}</p>
+        </div>
+        {% endif %}
 
-    {% if item.geography %}
-    <div class="box">
-     <i class="fas fa-globe">
-     </i>
-     <h3>
-      Geography
-     </h3>
-     <p>{{ item.geography.split(', ') | join('<br/>') }}</p>
-    </div>
-    {% endif %}
+        {% if item.geography %}
+        <div class="box">
+        <i class="fas fa-globe">
+        </i>
+        <h3>
+        Geography
+        </h3>
+        <p>{{ item.geography.split(', ') | join('<br/>') }}</p>
+        </div>
+        {% endif %}
 
-    {% if item.language %}
-    <div class="box">
-     <i class="fas fa-code">
-     </i>
-     <h3>
-      Language
-     </h3>
-     <p>{{ item.language.split(', ') | join('<br/>') }}</p>
+        {% if item.language %}
+        <div class="box">
+        <i class="fas fa-code">
+        </i>
+        <h3>
+        Language
+        </h3>
+        <p>{{ item.language.split(', ') | join('<br/>') }}</p>
+        </div>
+        {% endif %}
     </div>
     {% endif %}
-   </div>
 
    <div class="button-container">
         {% if item.links %}
@@ -262,13 +265,13 @@
      PSL is developed by a community of technical contributors. Learn how to contribute to library projects or add a new project to the library.
     </div>
     <div class="footer-buttons">
-     <a class="button" href="#">
-      JOIN THE COMMUNITY
-     </a>
-     <a class="button" href="#">
-      DONATE TO PSL
-     </a>
-    </div>
+        <a class="button" href="../Community/contribute.html">
+         JOIN THE COMMUNITY
+        </a>
+        <a class="button" href="https://opencollective.com/psl">
+         DONATE TO PSL
+        </a>
+       </div>
    </div>
    <footer class="footer">
     <div class="row">
