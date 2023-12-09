@@ -3,7 +3,6 @@ import os
 import requests
 import argparse
 from collections import defaultdict
-
 from catalog_builder import utils
 
 
@@ -73,7 +72,8 @@ class CatalogBuilder:
         build_one=None,
     ):
         if projects is None:
-            p = os.path.join(self.CURRENT_PATH, "../../../Catalog/register.json")
+            p = os.path.join(self.CURRENT_PATH,
+                             "../../../Catalog/register.json")
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
@@ -124,7 +124,7 @@ class CatalogBuilder:
                     self.catalog[project["repo"]] = cat_meta
                     self.catalog[project["repo"]]['github_url'] = github_url
                 else:
-                        
+
                     self.catalog[project["repo"]]["name"] = {
                         "value": project["repo"],
                         "source": "",
@@ -154,7 +154,7 @@ class CatalogBuilder:
                         res = {"source": source, "value": value}
                         self.catalog[project["repo"]][attr] = res
                     self.catalog[project["repo"]]['github_url'] = github_url
-            
+
         else:
             print("Develop mode. Loading Catalog from catalog.json")
             json_path = os.path.join(self.index_dir, "catalog.json")
@@ -200,7 +200,6 @@ class CatalogBuilder:
             with open(pathout, "w") as out:
                 out.write(rendered)
 
-
     def dump_catalog(self, output_path=None):
         """
         Dumps `catalog` attribute to string. Optionally writes to the
@@ -221,13 +220,14 @@ class CatalogBuilder:
         for project in self.projects:
             owner, repo = project['org'], project['repo']
             url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
-            params = {'state': 'all', 'sort': 'created', 'direction': 'desc', 'per_page': 5}
+            params = {'state': 'all', 'sort': 'created',
+                      'direction': 'desc', 'per_page': 5}
             response = requests.get(url, params=params)
             if response.status_code == 200:
                 pr_data[project['repo']] = response.json()
             else:
                 pr_data[project['repo']] = []
-            
+
         with open(output_path, 'w') as f:
             json.dump(pr_data, f, indent=4)
         print("Latest PRs loaded.")
@@ -263,5 +263,5 @@ if __name__ == "__main__":
     cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
     cb.load_catalog()
     cb.write_pages()
-    # cb.fetch_and_store_recent_prs(os.path.join(cb.index_dir, "prs.json"))
+    cb.fetch_and_store_recent_prs(os.path.join(cb.index_dir, "prs.json"))
     cb.dump_catalog(os.path.join(cb.index_dir, "catalog.json"))

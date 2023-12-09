@@ -306,35 +306,35 @@ code {
     grid-template-columns: repeat(2, 1fr);
   }
   .slick-slider .carousel-item {
-    height: auto; /* Allows the item to grow with the content */
-    padding: 15px; /* Reduces padding on smaller screens */
+    height: auto;
+    padding: 15px;
   }
 
   .slick-slider .carousel-item .pr-title {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
   }
 
   .slick-slider .carousel-item .pr-time {
-    font-size: 13px; /* Adjust font size for smaller screens */
+    font-size: 13px;
   }
 
   .slick-slider .carousel-item .pr-link-button {
-    padding: 8px 12px; /* Adjust padding for smaller screens */
-    font-size: 14px; /* Adjust font size for smaller buttons */
+    padding: 8px 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 480px) {
   .slick-slider .carousel-item {
-    flex-direction: column; /* Stacks items vertically on very small screens */
-    align-items: flex-start; /* Align items to the start on small screens */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .slick-slider .carousel-item .repo-logo {
-    margin-bottom: 10px; /* Adds space between the image and the title */
+    margin-bottom: 10px;
   }
-  
+
   .slick-slider .carousel-item .text-content {
-    width: 100%; /* Allows the text content to fill the container */
+    width: 100%;
   }
 
   .models-grid,
@@ -527,49 +527,45 @@ code {
 }
 
 .models-section .card {
-  width: 23%; /* Adjusting the width to fit 4 cards */
-  margin: 1%; /* Providing a 1% margin around each card */
+  width: 23%;
+  margin: 1%;
 }
 
-/* Desktop devices */
 @media (min-width: 992px) {
   .models-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centering the cards, including those on the bottom row */
+    justify-content: center;
   }
 
   .model-card {
-    flex: 0 0 calc(25% - 4%); /* Making the cards larger to fit four across */
-    margin: 1%; /* 1% margin around each card */
+    flex: 0 0 calc(25% - 4%);
+    margin: 1%;
   }
 }
 
 .model-card img {
-  width: 100px; /* Fixed width for the image */
-  /* Fixed height for the image */
-  border-radius: 5px; /* Slightly rounded corners */
+  width: 100px;
+  border-radius: 5px;
 }
 
 .model-card .maintainer-image-btn {
-  /* Fixed width for the button */
-  /* Fixed height for the button */
-  border-radius: 5px; /* Slightly rounded corners */
-  background-color: transparent; /* Removing any background color */
-  border: 2px solid #3498db; /* Adding a light blue border */
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #3498db;
 }
 
 .model-card .maintainer-image-btn {
-  display: flex; /* Ensuring the button adapts to its content */
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0; /* Removing any padding */
+  padding: 0;
 }
 
 .model-card img {
-  width: 100%; /* Ensuring the image fills the button completely */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensuring the image maintains its aspect ratio */
+  object-fit: cover;
 }
 
 .col-sm.text-center {
@@ -580,8 +576,8 @@ code {
 
 .col-sm.text-center a.fa:hover {
   text-decoration: none;
-  background-color: #f5f5f5; /* Lighter background */
-  color: black; /* Keeps the icon color unchanged */
+  background-color: #f5f5f5;
+  color: black;
 }
 
 .carousel-container {
@@ -613,7 +609,7 @@ code {
 }
 
 .slick-slider .carousel-item .text-content {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .slick-slider .carousel-item .repo-title {

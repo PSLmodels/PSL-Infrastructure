@@ -11,11 +11,14 @@ import re
 # headers for requests to GitHub API
 HEADER = {'User-Agent': 'request'}
 
+
 class SectionHeadersDoNotExist(Exception):
     pass
 
+
 class URLFormatError(Exception):
     pass
+
 
 def pre_parser(text):
     """
@@ -153,19 +156,22 @@ def make_id(name):
     name = name.replace('.', '')
     return "-".join(name.split())
 
+
 def split_filter(s, delimiter=None):
     return s.split(delimiter)
 
+
 def parse_core_maintainers(html_content):
     maintainers = []
-    email_pattern = re.compile(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b')
+    email_pattern = re.compile(
+        r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b')
     soup = BeautifulSoup(html_content, 'html.parser')
-    
+
     for item in soup.find_all('ul', recursive=False):
         for elem in item.children:
             if elem.name == 'li':
                 maintainer = {'name': '', 'link': None}
-                
+
                 if elem.find('a'):
                     anchor = elem.find('a')
                     maintainer['name'] = anchor.get_text(strip=True)
@@ -186,6 +192,7 @@ def parse_core_maintainers(html_content):
                     maintainers.append(maintainer)
 
     return maintainers
+
 
 def make_links(item):
     """
