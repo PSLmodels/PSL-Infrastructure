@@ -169,6 +169,7 @@
       <img
         src="../imgs/PSL.svg"
         alt="PSL Logo"
+        class="img-fluid"
         style="width: auto; height: 350px"
       />
     </div>
@@ -178,7 +179,7 @@
         <i class="fas fa-info-circle"></i>
         <h3>About</h3>
         <p>
-          PSL is a collection of open source models and data preparation
+          PSL is a collection of open-source models and data preparation
           routines for policy analysis. Learn more about our organization and
           our mission.
         </p>
@@ -304,11 +305,26 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 0,
+            autoplaySpeed: 1,
             speed: 5000,
             infinite: true,
             cssEase: "linear",
-            adaptiveHeight: true, // Adjust height based on the content
+            adaptiveHeight: true,
+            responsive: [
+             {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  autoplaySpeed: 1,
+                  speed: 5000,
+                  infinite: true,
+                  cssEase: "linear",
+                  adaptiveHeight: true,
+                }
+              }
+            ]
           });
         })
         .catch((error) => console.error("Error loading PR data:", error));

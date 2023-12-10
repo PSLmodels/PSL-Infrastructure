@@ -307,20 +307,27 @@ code {
   }
   .slick-slider .carousel-item {
     height: auto;
-    padding: 15px;
+    width: auto;
+    padding: 10px;
   }
 
-  .slick-slider .carousel-item .pr-title {
-    font-size: 14px;
-  }
-
-  .slick-slider .carousel-item .pr-time {
-    font-size: 13px;
+  .slick-slider .carousel-item h3,
+  .slick-slider .carousel-item h4,
+  .slick-slider .carousel-item p {
+    font-size: smaller;
+    margin: 5px 0;
   }
 
   .slick-slider .carousel-item .pr-link-button {
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .slick-slider .carousel-item img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (max-width: 480px) {
@@ -582,6 +589,7 @@ code {
 
 .carousel-container {
   margin: 2em auto;
+  width: 100%;
   max-width: 75%;
 }
 
