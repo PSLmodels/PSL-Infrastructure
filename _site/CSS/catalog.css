@@ -476,6 +476,12 @@ code {
   margin: 0 10px;
   text-align: center;
   border-radius: 5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.custom-section .box:hover,
+.custom-section .box:focus-within {
+  transform: translateY(-10px);
+  box-shadow: var(--hover-box-shadow);
 }
 .custom-section .box h3 {
   margin-top: 10px;
