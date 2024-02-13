@@ -165,9 +165,39 @@
       </span>
     </nav>
 
+    <div class="banner">
+      <div class="banner-content">
+        <div class="banner-text">
+          <h1>{{ main_heading | safe }}</h1>
+        </div>
+        <br />
+        <div class="banner-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="main-heading"></div>
     <div class="text-box">
-      <div class="box-header"></div>
-      <div class="box-content">$body$</div>
+        <div class="box-header"></div>
+        <div class="box-content">{{ content | safe }}</div>
+    </div>
+
+    <div class="footer-banner">
+      <div class="footer-image">
+        <img alt="Your Image Description" src="../imgs/PSL.svg" />
+      </div>
+      <div class="footer-text">
+        PSL is developed by a community of technical contributors. Learn how to
+        contribute to library projects or add a new project to the library.
+      </div>
+      <div class="footer-buttons">
+        <a class="button" href="../Community/contribute.html">
+          JOIN THE COMMUNITY
+        </a>
+        <a class="button" href="https://opencollective.com/psl">
+          DONATE TO PSL
+        </a>
+      </div>
     </div>
 
     <footer class="footer">

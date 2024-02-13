@@ -1,6 +1,6 @@
 #!/bin/bash
-pandoc --template=template.html -o ../../Community/contribute.html ../../Community/contribute.md
-pandoc --template=template.html -o ../../Community/council.html ../../Community/council.md
-pandoc --template=template.html -o ../../Community/roadmap.html ../../Community/roadmap.md
-pandoc --template=template.html -o ../../Community/initiatives.html ../../Community/initiatives.md
-pandoc --template=template.html -o ../../Catalog/library_criteria.html ../../Catalog/library_criteria.md
+py ./page_builder.py ../../Community/contribute.md ../../Community/contribute.html
+py ./page_builder.py ../../Community/council.md ../../Community/council.html
+py ./page_builder.py ../../Community/roadmap.md ../../Community/roadmap.html
+py ./page_builder.py ../../Community/initiatives.md ../../Community/initiatives.html
+py ./page_builder.py ../../Catalog/library_criteria.md ../../Catalog/library_criteria.html

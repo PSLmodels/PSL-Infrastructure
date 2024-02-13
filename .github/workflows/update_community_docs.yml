@@ -26,6 +26,7 @@ jobs:
         working-directory: ./Tools/Page-Builder/
         shell: bash -l {0}
         run: |
+          pip install -r requirements.txt
           sh make_pages.sh
 
       - name: Commit new changes

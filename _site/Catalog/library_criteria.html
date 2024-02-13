@@ -165,65 +165,54 @@
       </span>
     </nav>
 
+    <div class="banner">
+      <div class="banner-content">
+        <div class="banner-text">
+          <h1><h1>PSL Project Criteria</h1></h1>
+        </div>
+        <br />
+        <div class="banner-image">
+        </div>
+      </div>
+    </div>
+
+    <div class="main-heading"></div>
     <div class="text-box">
-      <div class="box-header"></div>
-      <div class="box-content"><h1 id="psl-project-criteria">PSL Project
-Criteria</h1>
-<h2 id="summary">Summary</h2>
-<ol type="1">
+        <div class="box-header"></div>
+        <div class="box-content"><p><br/></p>
+<h2>Summary</h2>
+<ol>
 <li>Models must be transparent.</li>
-<li>Models should adopt organizational and interface recommendations for
-community and interoperability.</li>
+<li>Models should adopt organizational and interface recommendations for community and interoperability.</li>
 </ol>
-<h2 id="introduction">Introduction</h2>
-<p>Open-source modeling ensures that model results are reproducible,
-that experts around the world can collaborate to make models better, and
-that users can explore the parameter space for themselves. These
-outcomes systematically improve public policy decisionmaking.</p>
-<p>We have developed the criteria in this document to facilitate the
-growth of an open source public policy modeling ecosystem.</p>
-<h2 id="mandatory-criteria-for-transparency-and-quality">Mandatory
-Criteria for Transparency and Quality</h2>
-<p>Models must meet the following requirements for acceptance into the
-catalog:</p>
-<ol type="1">
-<li>Release under an OSI-approved open source license or the Creative
-Commons Public Domain Dedication (CC0).</li>
-<li>Make data publicly available, unless release is restricted by a
-third party.</li>
-<li>For any data that should not be disclosed, provide:
-<ul>
+<p><br/></p>
+<h2>Introduction</h2>
+<p>Open-source modeling ensures that model results are reproducible, that experts around the world can collaborate to make models better, and that users can explore the parameter space for themselves. These outcomes systematically improve public policy decisionmaking.</p>
+<p>We have developed the criteria in this document to facilitate the growth of an open source public policy modeling ecosystem.</p>
+<p><br/></p>
+<h2>Mandatory Criteria for Transparency and Quality</h2>
+<p>Models must meet the following requirements for acceptance into the catalog:</p>
+<ol>
+<li>Release under an OSI-approved open source license or the Creative Commons Public Domain Dedication (CC0).</li>
+<li>Make data publicly available, unless release is restricted by a third party.</li>
+<li>For any data that should not be disclosed, provide:</li>
 <li>A complete descriptive list of all data variables;</li>
-<li>Descriptive statistics for all data variables for such data
-(including averages, standard deviations, number of observations, and
-correlations to other variables), to the extent that the descriptive
-statistics do not violate the rule against disclosure;</li>
-<li>Contact information for the individual or entity who has
-unrestricted access to the data.</li>
-</ul></li>
-<li>Include unit tests and ensure that they sources code passes the
-tests.</li>
-<li>For at least one test, generate key outputs from source materials;
-the test must be run with every new version, and the outputs of the test
-must be checked into the repository.</li>
-<li>Report names and contact information for at least one
-maintainer.</li>
+<li>Descriptive statistics for all data variables for such data (including averages, standard deviations, number of observations, and correlations to other variables), to the extent that the descriptive statistics do not violate the rule against disclosure;</li>
+<li>Contact information for the individual or entity who has unrestricted access to the data.</li>
+<li>Include unit tests and ensure that they sources code passes the tests.</li>
+<li>For at least one test, generate key outputs from source materials; the test must be run with every new version, and the outputs of the test must be checked into the repository.</li>
+<li>Report names and contact information for at least one maintainer.</li>
 <li>Have a suggested citation.</li>
 <li>Have a project overview.</li>
 <li>Have installation instructions.</li>
 <li>Version control in <a href="http://github.com/">GitHub</a>.</li>
 <li>Adopt a consistent versioning scheme.</li>
-<li>Include a <code>PSL_catalog.json</code> configuration file in the
-project’s repository for cataloging these criteria. Specific
-instructions for creating this file can be found in the <a
-href="https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog">Catalog-Builder
-Documentation</a>.</li>
+<li>Include a <code>PSL_catalog.json</code> configuration file in the project's repository for cataloging these criteria. Specific instructions for creating this file can be found in the <a href="https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog">Catalog-Builder Documentation</a>.</li>
 </ol>
-<h2 id="recommended-community-criteria">Recommended Community
-Criteria</h2>
-<p>We also encourage, but do not require, projects to adopt the
-following practices:</p>
-<ol type="1">
+<p><br/></p>
+<h2>Recommended Community Criteria</h2>
+<p>We also encourage, but do not require, projects to adopt the following practices:</p>
+<ol>
 <li>Report code coverage.</li>
 <li>Use <a href="https://semver.org/">semantic versioning</a>.</li>
 <li>Display a public roadmap.</li>
@@ -234,32 +223,42 @@ following practices:</p>
 <li>List user citations and case studies.</li>
 <li>Include subject matter repository topics.</li>
 <li>Include a disclaimer.</li>
-<li>Track issues publicly (e.g. on GitHub).</li>
+<li>Track issues publicly (e.g. on GitHub).</li>
 <li>Show a changelog.</li>
 <li>Be written in an open source language.</li>
-<li>Add a “psl-cataloged” tag to the About section of the project’s
-GitHub repository.</li>
-<li>Follow a standard contributor workflow, such as <a
-href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub
-flow</a>.</li>
-<li>Include continuous integration tests to ensure that tests are
-passing for proposed changes in pull requests and to document publicly
-that all unit tests are passing.</li>
-<li>Adopt a consistent code formatting scheme, perhaps through an
-automated code formatter like <a
-href="https://black.readthedocs.io/en/stable/">Black</a>.</li>
+<li>Add a "psl-cataloged" tag to the About section of the project's GitHub repository.</li>
+<li>Follow a standard contributor workflow, such as <a href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub flow</a>.</li>
+<li>Include continuous integration tests to ensure that tests are passing for proposed changes in pull requests and to document publicly that all unit tests are passing.</li>
+<li>Adopt a consistent code formatting scheme, perhaps through an automated code formatter like <a href="https://black.readthedocs.io/en/stable/">Black</a>.</li>
 </ol>
-<h2 id="optional-additional-practices">Optional Additional
-Practices</h2>
+<p><br/></p>
+<h2>Optional Additional Practices</h2>
 <p>Projects may also consider the following:</p>
-<ol type="1">
+<ol>
 <li>Have a Stack Overflow channel.</li>
-<li>Include a “News” translation of the changelog for users.</li>
-<li>Include criteria for participating in cross-model PSL
-initiatives.</li>
+<li>Include a "News" translation of the changelog for users.</li>
+<li>Include criteria for participating in cross-model PSL initiatives.</li>
 <li>Include a link to a webapp version.</li>
 <li>Include a list of consultants.</li>
 </ol></div>
+    </div>
+
+    <div class="footer-banner">
+      <div class="footer-image">
+        <img alt="Your Image Description" src="../imgs/PSL.svg" />
+      </div>
+      <div class="footer-text">
+        PSL is developed by a community of technical contributors. Learn how to
+        contribute to library projects or add a new project to the library.
+      </div>
+      <div class="footer-buttons">
+        <a class="button" href="../Community/contribute.html">
+          JOIN THE COMMUNITY
+        </a>
+        <a class="button" href="https://opencollective.com/psl">
+          DONATE TO PSL
+        </a>
+      </div>
     </div>
 
     <footer class="footer">
