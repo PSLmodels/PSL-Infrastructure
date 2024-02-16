@@ -168,54 +168,66 @@
       </span>
     </nav>
 
-    <div class="text-box">
-      <div class="box-header"></div>
-      <div class="box-content">
-        <h1 style="margin-top: 20px">About</h1>
-        <br />
-        <p>
-          The Policy Simulation Library (PSL) is a collection of models and
-          other software for public-policy decisionmaking. PSL is developed by
-          independent projects that meet standards for transparency and
-          accessibility. The PSL community encourages collaborative contribution
-          and makes the tools it develops accessible to a diverse group of
-          users.
-        </p>
-        <p>
-          The PSL's online home for users is
-          <a href="https://www.pslmodels.org">https://www.pslmodels.org</a>.
-        </p>
-        <p>
-          If you would like to learn more about PSL plans, see our
-          <a href="Community/roadmap.html">roadmap</a>.
-        </p>
-        <p>
-          If you would like to make a technical contribution to PSL, please
-          review the <a href="Community/contribute.html">contributor guide</a>.
-        </p>
-        <p>
-          You can reach PSL developers and users to discuss how to get started
-          by opening an issue or joining the PSL Community
-          <a href="https://matrix.to/#/!oZnjlINzAXrgdzXEfZ:matrix.org"
-            >chat room</a
-          >.
-        </p>
-        <p>
-          PSL is governed by a
-          <a href="Community/council.html">leadership council</a> of project
-          representatives.
-        </p>
-        <p>
-          The PSL community is respectful, warm, and open to everyone. In order
-          to ensure that the project remain that way for all participants, we
-          have officially adopted the
-          <a href="https://numfocus.org/code-of-conduct"
-            >NumFOCUS Code of Conduct</a
-          >
-          as our own, with the exception that infractions should be reported to
-          a PSL leadership council member.
-        </p>
+    <div class="banner">
+        <div class="banner-content">
+          <div class="banner-text">
+            <h1>Who is using PSL?</h1>
+          </div>
+          <br />
+          <div class="banner-image">
+          </div>
+        </div>
       </div>
+
+    <div class="text-box">
+        <div class="box-header"></div>
+        <div class="box-content" style="text-align: center;">
+            <i class="fas fa-landmark" style="font-size: 3.5em; color: #3498db;"></i>
+            <br>
+            <h1>Government</h1>
+            <br>
+            <div class="user-grid-container" id="users-grid-government"></div>
+        </div>
+    </div>
+
+    <div class="text-box">
+        <div class="box-header"></div>
+        <div class="box-content" style="text-align: center;">
+            <i class="fas fa-brain" style="font-size: 3.5em; color: #3498db;"></i>
+            <h1>Think Tanks</h1>
+            <br>
+            <div class="user-grid-container" id="users-grid-think-tanks"></div>
+        </div>
+    </div>
+
+    <div class="text-box">
+        <div class="box-header"></div>
+        <div class="box-content" style="text-align: center;">
+            <i class="fas fa-graduation-cap" style="font-size: 3.5em; color: #3498db;"></i>
+            <h1>Academic</h1>
+            <br>
+            <div class="user-grid-container" id="users-grid-academic"></div>
+        </div>
+    </div>
+
+    <div class="text-box">
+        <div class="box-header"></div>
+        <div class="box-content" style="text-align: center;">
+            <i class="fas fa-newspaper" style="font-size: 3.5em; color: #3498db;"></i>
+            <h1>Journalism</h1>
+            <br>
+            <div class="user-grid-container" id="users-grid-journalism"></div>
+        </div>
+    </div>
+
+    <div class="text-box">
+        <div class="box-header"></div>
+        <div class="box-content" style="text-align: center;">
+            <i class="fas fa-building" style="font-size: 3.5em; color: #3498db;"></i>
+            <h1>Other Private Sector and NGOs</h1>
+            <br>
+            <div class="user-grid-container" id="users-grid-other"></div>
+        </div>
     </div>
 
     <footer class="footer">
@@ -243,6 +255,43 @@
         <div class="col-sm"></div>
       </div>
     </footer>
+
+    <script>
+
+        function loadUsers(category, containerId) {
+            fetch('users.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById(containerId);
+                    if (data[category]) {
+                        const sortedUsers = data[category].sort((a, b) => a.name.localeCompare(b.name));
+                        sortedUsers.forEach(function(user) {
+                            const item = document.createElement('div');
+                            item.className = 'user-grid-item';
+                            item.innerHTML = `<a href="${user.link}"><img src="${user.image}" alt="${user.name}"><p>${user.name}</p></a>`;
+                            container.appendChild(item);
+                        });
+                    } else {
+                        console.error(`Category ${category} not found.`);
+                        container.innerHTML = `<p>Category ${category} not found.</p>`;
+                    }
+                })
+            .catch(error => {
+                console.error('Error loading the users data:', error);
+                const container = document.getElementById(containerId);
+                container.innerHTML = '<p>Failed to load user data.</p>';
+            });
+        }
+
+        window.onload = function() {
+            loadUsers('government', 'users-grid-government');
+            loadUsers('think-tanks', 'users-grid-think-tanks');
+            loadUsers('academic', 'users-grid-academic');
+            loadUsers('journalism', 'users-grid-journalism');
+            loadUsers('other', 'users-grid-other');
+        }
+
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

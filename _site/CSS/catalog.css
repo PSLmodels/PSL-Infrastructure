@@ -665,3 +665,39 @@ code {
   background-color: var(--hover-button-color);
   box-shadow: var(--hover-box-shadow);
 }
+
+.user-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 5px;
+  justify-content: center;
+}
+
+.user-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 230px;
+}
+
+.user-grid-item img {
+  max-height: 70px;
+  width: auto;
+  max-width: 100%;
+}
+
+.user-grid-item p {
+  text-align: center;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.user-grid-item a {
+  color: gray; 
+  text-decoration: none; 
+}
+
+.user-grid-item a:hover, .user-grid-item a:focus {
+  text-decoration: underline; 
+}
