@@ -28,6 +28,7 @@ jobs:
           pip install -e .
           cd catalog_builder
           python catalog.py
+          python catalog.py --incubating
 
       - name: Commit new changes
         working-directory: ./

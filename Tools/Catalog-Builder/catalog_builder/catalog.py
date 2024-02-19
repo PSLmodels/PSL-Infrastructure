@@ -70,18 +70,21 @@ class CatalogBuilder:
         card_dir=None,
         develop=False,
         build_one=None,
+        incubating=False
     ):
+        self.incubating = incubating
         if projects is None:
-            p = os.path.join(self.CURRENT_PATH,
-                             "../../../Catalog/register.json")
+            if self.incubating:
+                folder = "../../../Incubating"
+            else:
+                folder = "../../../Catalog"
+            p = os.path.join(self.CURRENT_PATH, f"{folder}/register.json")
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
             self.projects = projects
 
-        self.index_dir = index_dir or os.path.join(
-            self.CURRENT_PATH, "../../../Catalog/"
-        )
+        self.index_dir = index_dir or os.path.join(self.CURRENT_PATH, folder)
 
         self.catalog = defaultdict(dict)
         self.repos = {}
@@ -176,17 +179,26 @@ class CatalogBuilder:
 
         Data is written to the `Web/pages` directory
         """
+        banner_title = "Incubating Projects" if self.incubating else "Models"
+        banner_one_liner = ("Discover our emerging projects and initiatives "
+                            "shaping the future of policy analysis."
+                            if self.incubating else
+                            "We have a collection of open-source models and data preparation "
+                            "routines for policy analysis.")
+
         models_path = os.path.join(
-            self.CURRENT_PATH, "../templates", "catalog_template.html"
-        )
+            self.CURRENT_PATH, "../templates", "catalog_template.html")
 
         model_path = os.path.join(
             self.CURRENT_PATH, "../templates", "model_template.html"
         )
 
-        rendered = utils.render_template(
-            models_path, catalog=self.catalog, repos=self.repos
-        )
+        rendered = utils.render_template(models_path,
+                                         catalog=self.catalog,
+                                         repos=self.repos,
+                                         banner_title=banner_title,
+                                         banner_one_liner=banner_one_liner)
+
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
@@ -259,8 +271,15 @@ if __name__ == "__main__":
         ),
         default=None,
     )
+    parser.add_argument(
+        "--incubating",
+        help="Build the catalog for incubating models.",
+        default=False,
+        action="store_true"
+    )
     args = parser.parse_args()
-    cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
+    cb = CatalogBuilder(develop=args.develop,
+                        build_one=args.build_one, incubating=args.incubating)
     cb.load_catalog()
     cb.write_pages()
     cb.fetch_and_store_recent_prs(os.path.join(cb.index_dir, "prs.json"))

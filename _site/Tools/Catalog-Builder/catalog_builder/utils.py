@@ -127,7 +127,8 @@ def _get_from_github_api(org, repo, branch, filename):
             "For more information, check out the catalog configuration "
             "docs: Tools/Catalog-Builder/README.md"
         )
-    url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
+    url = f"https://api.github.com/repos/{org}/{
+        repo}/contents/{filename}?ref={branch}"
     response = requests.request('GET', url, headers=HEADER)
     print(f"GET: {url} {response.status_code}")
     if response.status_code == 403:

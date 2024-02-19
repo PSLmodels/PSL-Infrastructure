@@ -97,6 +97,9 @@
                 Criteria
               </a>
               <a class="dropdown-item" href="../Catalog/index.html"> Models </a>
+              <a class="dropdown-item" href="../Incubating/index.html">
+                Incubating Projects
+              </a>
             </div>
           </li>
           <li class="nav-item active dropdown">
@@ -138,6 +141,9 @@
             <a class="nav-link" href="../about.html"> About </a>
           </li>
           <li class="nav-item active">
+            <a class="nav-link" href="../users.html"> PSL Users </a>
+          </li>
+          <li class="nav-item active">
             <a class="nav-link" href="../events.html"> Events </a>
           </li>
           <li class="nav-item active">
@@ -157,7 +163,7 @@
         class="navbar-text"
         style="
           float: right;
-          font-family: 'Courier New', Courier, monospace;
+          font-family: &quot;Courier New&quot;, Courier, monospace;
           margin-right: 2%;
         "
       >
@@ -171,15 +177,14 @@
           <h1>{{ main_heading | safe }}</h1>
         </div>
         <br />
-        <div class="banner-image">
-        </div>
+        <div class="banner-image"></div>
       </div>
     </div>
 
     <div class="main-heading"></div>
     <div class="text-box">
-        <div class="box-header"></div>
-        <div class="box-content">{{ content | safe }}</div>
+      <div class="box-header"></div>
+      <div class="box-content">{{ content | safe }}</div>
     </div>
 
     <div class="footer-banner">

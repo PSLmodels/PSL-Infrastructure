@@ -324,8 +324,9 @@ code {
   }
 
   .slick-slider .carousel-item img {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    max-width: 250px;
+    height: 75px;
     display: block;
     margin: 0 auto;
   }
@@ -476,7 +477,9 @@ code {
   margin: 0 10px;
   text-align: center;
   border-radius: 5px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .custom-section .box:hover,
 .custom-section .box:focus-within {
@@ -669,22 +672,23 @@ code {
 .user-grid-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 40px;
-  row-gap: 5px;
+  column-gap: 25px;
+  row-gap: 25px;
   justify-content: center;
 }
 
 .user-grid-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 230px;
+  vertical-align: bottom;
+  max-width: 250px;
 }
 
 .user-grid-item img {
-  max-height: 70px;
+  height: 75px;
   width: auto;
-  max-width: 100%;
+  max-width: 250px;
+  vertical-align: bottom;
 }
 
 .user-grid-item p {
@@ -694,10 +698,46 @@ code {
 }
 
 .user-grid-item a {
-  color: gray; 
-  text-decoration: none; 
+  color: gray;
+  text-decoration: none;
 }
 
-.user-grid-item a:hover, .user-grid-item a:focus {
-  text-decoration: underline; 
+.user-grid-item a:hover,
+.user-grid-item a:focus {
+  text-decoration: underline;
+}
+
+.separator {
+  border: 0;
+  height: 2px; /* Adjust thickness */
+  background-color: #3498db; /* Adjust color to match your design */
+  margin: 10px 250px; /* Adjust spacing around the separator */
+}
+
+#userCarousel .carousel-item img {
+  max-width: 300px; /* Adjust the width as needed */
+  height: 75px; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image if the carousel item has flex layout */
+}
+
+/* Adjust the carousel item styling specifically for the user logos carousel if needed */
+#userCarousel .carousel-item {
+  justify-content: center; /* Center items if using flex display */
+  padding: 15px; /* Adjust padding if needed */
+  height: auto; /* Make height auto to accommodate different image sizes */
+  text-align: center; /* Center the text content */
+  width: auto;
+}
+
+#userCarousel .carousel-item a {
+  color: gray;
+  text-decoration: none;
+}
+
+#userCarousel .carousel-item a:hover {
+  text-decoration: underline;
+}
+
+#userCarousel .carousel-item p {
+  margin-bottom: 5px;
 }

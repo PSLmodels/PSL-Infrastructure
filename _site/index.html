@@ -97,6 +97,9 @@
                 Criteria
               </a>
               <a class="dropdown-item" href="../Catalog/index.html"> Models </a>
+              <a class="dropdown-item" href="../Incubating/index.html">
+                Incubating Projects
+              </a>
             </div>
           </li>
           <li class="nav-item active dropdown">
@@ -118,8 +121,8 @@
                 Collaborate
               </a>
               <!-- <a class="dropdown-item" href="http://discourse.pslmodels.org/">
-         Forum
-        </a> -->
+        Forum
+       </a> -->
               <a class="dropdown-item" href="../Community/initiatives.html">
                 Initiatives
               </a>
@@ -127,8 +130,8 @@
                 Leadership Council
               </a>
               <!-- <a class="dropdown-item" href="../Newsletter/archive.html">
-         Newsletter
-        </a> -->
+        Newsletter
+       </a> -->
               <a class="dropdown-item" href="../Community/roadmap.html">
                 Roadmap
               </a>
@@ -136,6 +139,9 @@
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="../about.html"> About </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../users.html"> PSL Users </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="../events.html"> Events </a>
@@ -157,7 +163,7 @@
         class="navbar-text"
         style="
           float: right;
-          font-family: 'Courier New', Courier, monospace;
+          font-family: &quot;Courier New&quot;, Courier, monospace;
           margin-right: 2%;
         "
       >
@@ -176,7 +182,7 @@
 
     <div class="custom-section">
       <div class="box">
-        <a href="./about.html" style="color: inherit; text-decoration: none;">
+        <a href="./about.html" style="color: inherit; text-decoration: none">
           <i class="fas fa-info-circle"></i>
           <h3>About</h3>
           <p>
@@ -188,28 +194,40 @@
       </div>
 
       <div class="box">
-        <a href="./Catalog/index.html" style="color: inherit; text-decoration: none;">
+        <a
+          href="./Catalog/index.html"
+          style="color: inherit; text-decoration: none"
+        >
           <i class="fas fa-book"></i>
           <h3>Models Catalog</h3>
           <p>
             We have a collection of open-source models and data preparation
-            routines for policy analysis. Explore the various models and tools we
-            offer.
+            routines for policy analysis. Explore the various models and tools
+            we offer.
           </p>
         </a>
       </div>
 
       <div class="box">
-        <a href="./Community/contribute.html" style="color: inherit; text-decoration: none;">
+        <a
+          href="./Community/contribute.html"
+          style="color: inherit; text-decoration: none"
+        >
           <i class="fas fa-hands-helping"></i>
           <h3>Collaborate</h3>
           <p>
             PSL is developed by a community of technical contributors. Learn how
-            to contribute to library projects or add a new project to the library.
-            Find out how you can contribute and be a part of our community.
+            to contribute to library projects or add a new project to the
+            library. Find out how you can contribute and be a part of our
+            community.
           </p>
         </a>
       </div>
+    </div>
+
+    <div class="carousel-container">
+      <h2>Featured Users:</h2>
+      <div id="userCarousel" class="slick-slider"></div>
     </div>
 
     <div class="carousel-container">
@@ -317,7 +335,7 @@
             cssEase: "linear",
             adaptiveHeight: true,
             responsive: [
-             {
+              {
                 breakpoint: 1200,
                 settings: {
                   slidesToShow: 2,
@@ -328,12 +346,83 @@
                   infinite: true,
                   cssEase: "linear",
                   adaptiveHeight: true,
-                }
-              }
-            ]
+                },
+              },
+            ],
           });
         })
         .catch((error) => console.error("Error loading PR data:", error));
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]]; // ES6 destructuring assignment for swapping
+        }
+        return array;
+      }
+
+      fetch("users.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const logoCards = [];
+          for (const [category, users] of Object.entries(data)) {
+            for (const user of users) {
+              logoCards.push({
+                name: user.name,
+                image: user.image,
+                link: user.link, // Assuming each user object has a 'link' property
+              });
+            }
+          }
+
+          const sortedLogoCards = shuffle(logoCards);
+
+          const logoCarousel = document.getElementById("userCarousel");
+          let carouselHtml = "";
+
+          for (const logoCard of sortedLogoCards) {
+            carouselHtml += `
+            <div class="carousel-item">
+              <a href="${logoCard.link}" target="_blank">
+                <img src="${logoCard.image}" alt="${logoCard.name} Logo" class="logo-img">
+                <br>
+                <p class="logo-name">${logoCard.name}</p>
+              </a>
+            </div>
+          `;
+          }
+
+          logoCarousel.innerHTML = carouselHtml;
+
+          // Initialize carousel (example using Slick Carousel as in your PR carousel)
+          $("#userCarousel").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1,
+            speed: 5000,
+            infinite: true,
+            cssEase: "linear",
+            adaptiveHeight: false,
+            variableWidth: true,
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  autoplaySpeed: 1,
+                  speed: 8000,
+                  infinite: true,
+                  cssEase: "linear",
+                  adaptiveHeight: true,
+                },
+              },
+            ],
+          });
+        })
+        .catch((error) => console.error("Error loading user data:", error));
     });
   </script>
   <script

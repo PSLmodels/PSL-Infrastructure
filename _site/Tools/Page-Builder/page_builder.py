@@ -9,6 +9,7 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
+
 def extract_content(md_content):
     """Extracts the main heading from Markdown content."""
     lines = md_content.split('\n')
@@ -20,10 +21,11 @@ def extract_content(md_content):
     else:
         main_heading = ""
         content = md_content
-    
+
     main_heading_html = markdown.markdown(main_heading, extensions=['tables'])
     content_html = markdown.markdown(content, extensions=['tables'])
     return main_heading_html, content_html
+
 
 def convert_markdown_to_html(md_file_path):
     """Converts a Markdown file to HTML, extracting the main heading."""
@@ -31,17 +33,21 @@ def convert_markdown_to_html(md_file_path):
         md_content = md_file.read()
     return extract_content(md_content)
 
+
 def render_html_page(main_heading_html, content_html, output_path):
     """Renders the final HTML page using Jinja2"""
     template = env.get_template('template.html')
-    rendered_html = template.render(main_heading=main_heading_html, content=content_html)
+    rendered_html = template.render(
+        main_heading=main_heading_html, content=content_html)
     with open(output_path, 'w', encoding='utf-8') as html_file:
         html_file.write(rendered_html)
+
 
 def main(markdown_path, output_path):
     main_heading_html, content_html = convert_markdown_to_html(markdown_path)
     render_html_page(main_heading_html, content_html, output_path)
     print(f"Generated {output_path}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:

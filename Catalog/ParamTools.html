@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html dir="ltr" lang="en">
   <head>
@@ -84,6 +83,9 @@
                 Criteria
               </a>
               <a class="dropdown-item" href="../Catalog/index.html"> Models </a>
+              <a class="dropdown-item" href="../Incubating/index.html">
+                Incubating Projects
+              </a>
             </div>
           </li>
           <li class="nav-item active dropdown">
@@ -105,8 +107,8 @@
                 Collaborate
               </a>
               <!-- <a class="dropdown-item" href="http://discourse.pslmodels.org/">
-             Forum
-            </a> -->
+        Forum
+       </a> -->
               <a class="dropdown-item" href="../Community/initiatives.html">
                 Initiatives
               </a>
@@ -114,8 +116,8 @@
                 Leadership Council
               </a>
               <!-- <a class="dropdown-item" href="../Newsletter/archive.html">
-             Newsletter
-            </a> -->
+        Newsletter
+       </a> -->
               <a class="dropdown-item" href="../Community/roadmap.html">
                 Roadmap
               </a>
@@ -123,6 +125,9 @@
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="../about.html"> About </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../users.html"> PSL Users </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="../events.html"> Events </a>
@@ -144,7 +149,7 @@
         class="navbar-text"
         style="
           float: right;
-          font-family: 'Courier New', Courier, monospace;
+          font-family: &quot;Courier New&quot;, Courier, monospace;
           margin-right: 2%;
         "
       >
@@ -155,17 +160,18 @@
     <div class="banner">
       <div class="banner-content">
         <div class="banner-text">
-          
           <h1>ParamTools</h1>
           <br />
-          <h5><p>Library for parameter processing and validation with a focus on computational modeling projects</p></h5>
-          
+          <h5>
+            <p>
+              Library for parameter processing and validation with a focus on
+              computational modeling projects
+            </p>
+          </h5>
         </div>
         <br />
         <div class="banner-image">
-          
           <img alt="ParamTools" src="../imgs/PSL.svg" />
-          
         </div>
       </div>
     </div>
@@ -173,32 +179,168 @@
     <div class="text-box">
       <div class="box-header"></div>
       <div class="box-content">
-         <p><strong>Define, update, and validate your model's parameters.</strong></p> <p>Install using pip:</p> <p><code>pip install paramtools</code></p> <p>Install using conda:</p> <p><code>conda install -c conda-forge paramtools</code></p> <h5>Usage</h5> <p>Subclass <code>paramtools.Parameters</code> and define your model's <a href="https://paramtools.dev/parameters">parameters</a>:</p> <p>```python import paramtools</p> <p>class Params(paramtools.Parameters):     defaults = {         "schema": {             "labels": {                 "date": {                     "type": "date",                     "validators": {                         "range": {                             "min": "2020-01-01",                             "max": "2021-01-01",                             "step": {"months": 1}                         }                     }                 }             },         },         "a": {             "title": "A",             "type": "int",             "value": [                 {"date": "2020-01-01", "value": 2},                 {"date": "2020-10-01", "value": 8},             ],             "validators": {                 "range" : {                     "min": 0, "max": "b"                 }             }         },         "b": {             "title": "B",             "type": "float",             "value": [{"date": "2020-01-01", "value": 10.5}]         }     } ```</p> <h3>Access parameter values</h3> <p>Access values using <code>.sel</code>:</p> <p>```python params = Params()</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8}, ]) </code></pre> <p>Look up parameter values using a pandas-like api:</p> <p>```python from datetime import date</p> <p>result = params.sel["a"]["date"] == date(2020, 1, 1) result ```</p> <pre><code>QueryResult([   {'date': datetime.date(2020, 1, 1), 'value': 2} ]) </code></pre> <p><code>python result.isel[0]["value"]</code></p> <pre><code>2 </code></pre> <h3>Adjust and validate parameter values</h3> <p>Add a new value:</p> <p>```python params.adjust({"a": [{"date": "2020-11-01", "value": 22}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre> <p>Update an existing value:</p> <p>```python params.adjust({"a": [{"date": "2020-01-01", "value": 3}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 3},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre> <p>Update all values:</p> <p>```python params.adjust({"a": 7})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 7},   {'date': datetime.date(2020, 10, 1), 'value': 7},   {'date': datetime.date(2020, 11, 1), 'value': 7}, ]) </code></pre> <p>Errors on values that are out of range:</p> <p><code>python params.adjust({"a": -1})</code></p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-8-f8f1b7f6cd9a&gt; in &lt;module&gt;     ----&gt; 1 params.adjust({"a": -1})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a -1 &lt; min 0 "         ]     } } </code></pre> <p>```python params = Params()</p> <p>params.adjust({"a": [{"date": "2020-01-01", "value": 11}]}) ```</p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-9-cc8a21f044d8&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"a": [{"date": "2020-01-01", "value": 11}]})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a[date=2020-01-01] 11 &gt; max 10.5 b[date=2020-01-01]"         ]     } } </code></pre> <p>Errors on invalid values:</p> <p>```python params = Params()</p> <p>params.adjust({"b": "abc"}) ```</p> <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-10-8373a2715e38&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"b": "abc"})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "b": [             "Not a valid number: abc."         ]     } } </code></pre> <h3>Extend parameter values using label definitions</h3> <p>Extend values using <code>label_to_extend</code>:</p> <p><code>python params = Params(label_to_extend="date")</code></p> <p><code>python params.sel["a"]</code></p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 5, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre> <p>Updates to values are carried through to future dates:</p> <p>```python params.adjust({"a": [{"date": "2020-4-01", "value": 9}]})</p> <p>params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 11, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 9, '_auto': True}, ]) </code></pre> <p>Use <code>clobber</code> to only update values that were set automatically:</p> <p>```python params = Params(label_to_extend="date") params.adjust(     {"a": [{"date": "2020-4-01", "value": 9}]},     clobber=False, )</p> <h1>Sort parameter values by date for nicer output</h1> <p>params.sort_values() params.sel["a"] ```</p> <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre> <h3>NumPy integration</h3> <p>Access values as NumPy arrays with <code>array_first</code>:</p> <p>```python params = Params(label_to_extend="date", array_first=True)</p> <p>params.a ```</p> <pre><code>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 8, 8, 8, 8]) </code></pre> <p><code>python params.a * params.b</code></p> <pre><code>array([21., 21., 21., 21., 21., 21., 21., 21., 21., 84., 84., 84., 84.]) </code></pre> <p>Only get the values that you want:</p> <p><code>python arr = params.to_array("a", date=["2020-01-01", "2020-11-01"]) arr</code></p> <pre><code>array([2, 8]) </code></pre> <p>Go back to a list of dictionaries:</p> <p><code>python params.from_array("a", arr, date=["2020-01-01", "2020-11-01"])</code></p> <pre><code>[{'date': datetime.date(2020, 1, 1), 'value': 2},  {'date': datetime.date(2020, 11, 1), 'value': 8}] </code></pre> <h5>Documentation</h5> <p>Full documentation available at <a href="https://paramtools.dev">paramtools.dev</a>.</p> <h5>Contributing</h5> <p>Contributions are welcome! Checkout <a href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> to get started.</p> <h5>Credits</h5> <p>ParamTools is built on top of the excellent <a href="https://github.com/marshmallow-code/marshmallow">marshmallow</a> JSON schema and validation framework. I encourage everyone to check out their repo and documentation. ParamTools was modeled off of <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator's</a> parameter processing and validation engine due to its maturity and sophisticated capabilities.</p> 
+        <p>
+          <strong>Define, update, and validate your model's parameters.</strong>
+        </p>
+        <p>Install using pip:</p>
+        <p><code>pip install paramtools</code></p>
+        <p>Install using conda:</p>
+        <p><code>conda install -c conda-forge paramtools</code></p>
+        <h5>Usage</h5>
+        <p>
+          Subclass <code>paramtools.Parameters</code> and define your model's
+          <a href="https://paramtools.dev/parameters">parameters</a>:
+        </p>
+        <p>```python import paramtools</p>
+        <p>
+          class Params(paramtools.Parameters): defaults = { "schema": {
+          "labels": { "date": { "type": "date", "validators": { "range": {
+          "min": "2020-01-01", "max": "2021-01-01", "step": {"months": 1} } } }
+          }, }, "a": { "title": "A", "type": "int", "value": [ {"date":
+          "2020-01-01", "value": 2}, {"date": "2020-10-01", "value": 8}, ],
+          "validators": { "range" : { "min": 0, "max": "b" } } }, "b": {
+          "title": "B", "type": "float", "value": [{"date": "2020-01-01",
+          "value": 10.5}] } } ```
+        </p>
+        <h3>Access parameter values</h3>
+        <p>Access values using <code>.sel</code>:</p>
+        <p>```python params = Params()</p>
+        <p>params.sel["a"] ```</p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8}, ]) </code></pre>
+        <p>Look up parameter values using a pandas-like api:</p>
+        <p>```python from datetime import date</p>
+        <p>result = params.sel["a"]["date"] == date(2020, 1, 1) result ```</p>
+        <pre><code>QueryResult([   {'date': datetime.date(2020, 1, 1), 'value': 2} ]) </code></pre>
+        <p><code>python result.isel[0]["value"]</code></p>
+        <pre><code>2 </code></pre>
+        <h3>Adjust and validate parameter values</h3>
+        <p>Add a new value:</p>
+        <p>
+          ```python params.adjust({"a": [{"date": "2020-11-01", "value": 22}]})
+        </p>
+        <p>params.sel["a"] ```</p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre>
+        <p>Update an existing value:</p>
+        <p>
+          ```python params.adjust({"a": [{"date": "2020-01-01", "value": 3}]})
+        </p>
+        <p>params.sel["a"] ```</p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 3},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 22}, ]) </code></pre>
+        <p>Update all values:</p>
+        <p>```python params.adjust({"a": 7})</p>
+        <p>params.sel["a"] ```</p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 7},   {'date': datetime.date(2020, 10, 1), 'value': 7},   {'date': datetime.date(2020, 11, 1), 'value': 7}, ]) </code></pre>
+        <p>Errors on values that are out of range:</p>
+        <p><code>python params.adjust({"a": -1})</code></p>
+        <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-8-f8f1b7f6cd9a&gt; in &lt;module&gt;     ----&gt; 1 params.adjust({"a": -1})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a -1 &lt; min 0 "         ]     } } </code></pre>
+        <p>```python params = Params()</p>
+        <p>params.adjust({"a": [{"date": "2020-01-01", "value": 11}]}) ```</p>
+        <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-9-cc8a21f044d8&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"a": [{"date": "2020-01-01", "value": 11}]})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "a": [             "a[date=2020-01-01] 11 &gt; max 10.5 b[date=2020-01-01]"         ]     } } </code></pre>
+        <p>Errors on invalid values:</p>
+        <p>```python params = Params()</p>
+        <p>params.adjust({"b": "abc"}) ```</p>
+        <pre><code>    ---------------------------------------------------------------------------  ValidationError                           Traceback (most recent call last)  &lt;ipython-input-10-8373a2715e38&gt; in &lt;module&gt;       1 params = Params()       2     ----&gt; 3 params.adjust({"b": "abc"})   ~/Paramtools/paramtools/parameters.py in adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, clobber)     253             least one existing value item's corresponding label values.     254         """     --&gt; 255         return self._adjust(     256             params_or_path,     257             ignore_warnings=ignore_warnings,   ~/Paramtools/paramtools/parameters.py in _adjust(self, params_or_path, ignore_warnings, raise_errors, extend_adj, is_deserialized, clobber)     371             not ignore_warnings and has_warnings     372         ):     --&gt; 373             raise self.validation_error     374     375         # Update attrs for params that were adjusted.   ValidationError: {     "errors": {         "b": [             "Not a valid number: abc."         ]     } } </code></pre>
+        <h3>Extend parameter values using label definitions</h3>
+        <p>Extend values using <code>label_to_extend</code>:</p>
+        <p><code>python params = Params(label_to_extend="date")</code></p>
+        <p><code>python params.sel["a"]</code></p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 5, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre>
+        <p>Updates to values are carried through to future dates:</p>
+        <p>
+          ```python params.adjust({"a": [{"date": "2020-4-01", "value": 9}]})
+        </p>
+        <p>params.sel["a"] ```</p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 11, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 9, '_auto': True}, ]) </code></pre>
+        <p>
+          Use <code>clobber</code> to only update values that were set
+          automatically:
+        </p>
+        <p>
+          ```python params = Params(label_to_extend="date") params.adjust( {"a":
+          [{"date": "2020-4-01", "value": 9}]}, clobber=False, )
+        </p>
+        <h1>Sort parameter values by date for nicer output</h1>
+        <p>params.sort_values() params.sel["a"] ```</p>
+        <pre><code>Values([   {'date': datetime.date(2020, 1, 1), 'value': 2},   {'date': datetime.date(2020, 2, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 3, 1), 'value': 2, '_auto': True},   {'date': datetime.date(2020, 4, 1), 'value': 9},   {'date': datetime.date(2020, 5, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 6, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 7, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 8, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 9, 1), 'value': 9, '_auto': True},   {'date': datetime.date(2020, 10, 1), 'value': 8},   {'date': datetime.date(2020, 11, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2020, 12, 1), 'value': 8, '_auto': True},   {'date': datetime.date(2021, 1, 1), 'value': 8, '_auto': True}, ]) </code></pre>
+        <h3>NumPy integration</h3>
+        <p>Access values as NumPy arrays with <code>array_first</code>:</p>
+        <p>
+          ```python params = Params(label_to_extend="date", array_first=True)
+        </p>
+        <p>params.a ```</p>
+        <pre><code>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 8, 8, 8, 8]) </code></pre>
+        <p><code>python params.a * params.b</code></p>
+        <pre><code>array([21., 21., 21., 21., 21., 21., 21., 21., 21., 84., 84., 84., 84.]) </code></pre>
+        <p>Only get the values that you want:</p>
+        <p>
+          <code
+            >python arr = params.to_array("a", date=["2020-01-01",
+            "2020-11-01"]) arr</code
+          >
+        </p>
+        <pre><code>array([2, 8]) </code></pre>
+        <p>Go back to a list of dictionaries:</p>
+        <p>
+          <code
+            >python params.from_array("a", arr, date=["2020-01-01",
+            "2020-11-01"])</code
+          >
+        </p>
+        <pre><code>[{'date': datetime.date(2020, 1, 1), 'value': 2},  {'date': datetime.date(2020, 11, 1), 'value': 8}] </code></pre>
+        <h5>Documentation</h5>
+        <p>
+          Full documentation available at
+          <a href="https://paramtools.dev">paramtools.dev</a>.
+        </p>
+        <h5>Contributing</h5>
+        <p>
+          Contributions are welcome! Checkout
+          <a
+            href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md"
+            >CONTRIBUTING.md</a
+          >
+          to get started.
+        </p>
+        <h5>Credits</h5>
+        <p>
+          ParamTools is built on top of the excellent
+          <a href="https://github.com/marshmallow-code/marshmallow"
+            >marshmallow</a
+          >
+          JSON schema and validation framework. I encourage everyone to check
+          out their repo and documentation. ParamTools was modeled off of
+          <a href="https://github.com/PSLmodels/Tax-Calculator"
+            >Tax-Calculator's</a
+          >
+          parameter processing and validation engine due to its maturity and
+          sophisticated capabilities.
+        </p>
       </div>
     </div>
 
-    
-    
-
     <div class="button-container">
-       <a class="button" href="https://paramtools.dev">User documentation</a><a class="button" href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md">Contributor documentation</a><a class="button" href="https://github.com/PSLmodels/ParamTools/releases/latest">Recent changes</a> 
+      <a class="button" href="https://paramtools.dev">User documentation</a
+      ><a
+        class="button"
+        href="https://github.com/PSLmodels/ParamTools/blob/master/CONTRIBUTING.md"
+        >Contributor documentation</a
+      ><a
+        class="button"
+        href="https://github.com/PSLmodels/ParamTools/releases/latest"
+        >Recent changes</a
+      >
     </div>
 
     <section class="maintainers-section">
       <h2>Maintainers:</h2>
       <div class="maintainer-container">
         <div class="maintainers-grid">
-              
           <div class="maintainer-card non-clickable">
             <button class="maintainer-image-btn">
-              <img
-                alt="Hank Doupe"
-                src="../imgs/default-maintainer.jpg"
-              />
+              <img alt="Hank Doupe" src="../imgs/default-maintainer.jpg" />
             </button>
             <p>Hank Doupe</p>
           </div>
-            
         </div>
       </div>
     </section>
