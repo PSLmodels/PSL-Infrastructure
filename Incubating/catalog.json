@@ -1,214 +1,214 @@
 {
-  "Behavioral-Responses": {
-    "name": {
-      "value": "Behavioral-Responses",
-      "source": ""
+    "Behavioral-Responses": {
+        "name": {
+            "value": "Behavioral-Responses",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": null,
+            "value": "<p>Partial-equilibrium behavioral-responses module that works with Tax-Calculator</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
+            "value": "<p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by Tax-Calculator.  It provides two ways of doing this: (1) the <code>response</code> function, which contains higher-level logic that supports the Tax-Brain \"Partial Equilibrium Simulation\" capability and requires specification of only the elasticities, and (2) the <code>quantity_response</code> function, which contains lower-level logic that requires specification of the quantity whose response is to be estimated, requires specification of the marginal tax rates and elasticities to be used in the response calculation, and allows the response estimation to be conducted by subgroup with different elasticities for each subgroup.</p>"
+        },
+        "citation": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
+            "value": "<p>Please cite the source of your analysis as \"Behavioral-Responses release #.#.#, author's calculations.\" If you wish to link to Behavioral-Responses, https://PSLmodels.github.io/Behavioral-Responses/ is preferred. Additionally, we strongly recommend that you describe the elasticity parameters used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
+        },
+        "license": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/LICENSE.md",
+            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</p>"
+        },
+        "user_documentation": {
+            "source": null,
+            "value": "<a href=\"http://PSLmodels.github.io/Behavioral-Responses/index.html\">http://PSLmodels.github.io/Behavioral-Responses/index.html</a>"
+        },
+        "user_changelog": {
+            "source": null,
+            "value": null
+        },
+        "user_changelog_recent": {
+            "source": null,
+            "value": null
+        },
+        "dev_changelog": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/RELEASES.md",
+            "value": "<p>Go <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pulls?q=is%3Apr+is%3Aclosed\">here</a> for a complete commit history.</p> <h5>2020-09-22 Release 0.11.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/76\">#76</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li> <p>Compatibility with Python 3.8.    [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/74\">#74</a>   by Jason DeBacker]</p> </li> <li> <p>Test results updated for Tax-Calculator 3.0.0.    [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/74\">#74</a>   by Jason DeBacker]</p> </li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-10-31 Release 0.10.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/71\">#71</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>New capabilities for estimating differential behavioral responses   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/58\">#58</a>   by Max Ghenis]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-06-08 Release 0.9.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/63\">#63</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Use new Tax-Calculator 2.3 Records interface to get dump variables   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/63\">#63</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-05-13 Release 0.8.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/62\">#62</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Simplify extraction of variables from Calculator objects in <code>response</code> function   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/62\">#62</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-03-17 Release 0.7.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/52\">#52</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Simplify elasticities argument of the <code>response</code> function   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/51\">#51</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-02-22 Release 0.6.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/46\">#46</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Require taxcalc package for Tax-Calculator 1.0 or higher   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/46\">#46</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li> <p>Add optional dump argument to the <code>response</code> function   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/39\">#39</a>   by Martin Holmer responding to request by Matt Jensen and Anderson Frailey]</p> </li> <li> <p>Add <code>quantity_response</code> function that was formerly a Tax-Calculator utility function and that provides a lower-level behavioral response capability   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/43\">#43</a>   by Martin Holmer responding to suggestion by Max Ghenis]</p> </li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-12-14 Release 0.5.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/35\">#35</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Make behresp packages available for Python 3.7 as well as for Python 3.6   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/35\">#35</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-12-13 Release 0.4.1</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/33\">#33</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Add GitHub Travis-CI testing under Python 3.7   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/33\">#33</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-13 Release 0.4.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/21\">#21</a>)</p> <p><strong>API Changes</strong></p> <ul> <li> <p>Change documentation to state that Behavioral-Responses <code>behresp</code> packages are available <strong>only</strong> via the <code>PSLmodels</code> Anaconda Cloud channel   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/20\">#20</a>   by Martin Holmer]</p> </li> <li> <p>Remove <code>versioneer.py</code> and <code>taxcalc/_version.py</code> and related code now that Package-Builder is handling version specification   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/21\">#21</a>   by Martin Holmer]</p> </li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-06 Release 0.3.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/18\">#18</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Simplify specification of package dependencies   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/18\">#18</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-03 Release 0.2.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/15\">#15</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Make specification of required package versions comply with style in conda cheat sheet   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/15\">#15</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-01 Release 0.1.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/11\">#11</a>)</p> <p><strong>API Changes</strong></p> <ul> <li> <p>Copy Tax-Calculator top-level files to Behavioral-Responses repo   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/2\">#2</a>   by Martin Holmer]</p> </li> <li> <p>Move Tax-Calculator Behavior class logic/tests to Behavioral-Responses repo   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/3\">#3</a>   by Martin Holmer]</p> </li> <li> <p>Streamline tests to use less memory   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/8\">#8</a>   by Martin Holmer with assistance from Matt Jensen]</p> </li> <li> <p>Add user documentation for Behavioral-Responses package   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/11\">#11</a>   by Martin Holmer]</p> </li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul>"
+        },
+        "disclaimer": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
+            "value": "<p>Results will change as the underlying models improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess economic policy; when community-contributed improvements are incorporated, the model will produce different results.</p>"
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_overview": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
+            "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think is wrong with Behavioral-Responses.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think should be added to Behavioral-Responses.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"https://taxcalc.pslmodels.org/contributing/contributor_guide.html\">Tax-Calculator contributor guide</a> on how to fork and clone the Behavioral-Responses git repository. Before developing any code changes be sure to read completely the Tax-Calculator contributor guide and then read about the <a href=\"https://taxcalc.pslmodels.org/contributing/pr_workflow.html\">Tax-Calculator pull-request workflow</a>. When reading both documents, be sure to mentally substitute Behavioral-Response for Tax-Calculator and behresp for taxcalc.</p> <p>The Behavioral-Responses <a href=\"https://github.com/PSLmodels/Behavioral-Responses/blob/master/RELEASES.md#tax-calculator-release-history\">release history</a> provides a high-level summary of past pull requests and access to a complete list of merged, closed, and pending pull requests.</p>"
+        },
+        "contributor_guide": {
+            "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
+            "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think is wrong with Behavioral-Responses.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think should be added to Behavioral-Responses.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"https://taxcalc.pslmodels.org/contributing/contributor_guide.html\">Tax-Calculator contributor guide</a> on how to fork and clone the Behavioral-Responses git repository. Before developing any code changes be sure to read completely the Tax-Calculator contributor guide and then read about the <a href=\"https://taxcalc.pslmodels.org/contributing/pr_workflow.html\">Tax-Calculator pull-request workflow</a>. When reading both documents, be sure to mentally substitute Behavioral-Response for Tax-Calculator and behresp for taxcalc.</p> <p>The Behavioral-Responses <a href=\"https://github.com/PSLmodels/Behavioral-Responses/blob/master/RELEASES.md#tax-calculator-release-history\">release history</a> provides a high-level summary of past pull requests and access to a complete list of merged, closed, and pending pull requests.</p>"
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>"
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">https://github.com/PSLmodels/Behavioral-Responses/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">https://github.com/PSLmodels/Behavioral-Responses/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Matt Jensen</li></ul>"
+        },
+        "unit_test": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests\">https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests</a>"
+        },
+        "integration_test": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests\">https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests</a>"
+        }
     },
-    "project_one_line": {
-      "source": null,
-      "value": "<p>Partial-equilibrium behavioral-responses module that works with Tax-Calculator</p>"
+    "OG-USA": {
+        "name": {
+            "value": "OG-USA",
+            "source": ""
+        },
+        "project_one_line": {
+            "source": "https://github.com/PSLmodels/OG-USA",
+            "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"
+        },
+        "key_features": {
+            "source": null,
+            "value": null
+        },
+        "project_overview": {
+            "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
+            "value": "<p>OG-USA is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for the United States. OG-USA is built on the <a href=\"https://github.com/PSLmodels/OG-Core\">OG-Core</a> framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at <a href=\"https://pslmodels.github.io/OG-Core\">https://pslmodels.github.io/OG-Core</a> and documentation of the specific United States calibration of the model is available at <a href=\"https://pslmodels.github.io/OG-USA\">https://pslmodels.github.io/OG-USA</a>.</p>"
+        },
+        "citation": {
+            "source": "https://github.com/PSLmodels/OG-USA#citing-og-usa",
+            "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/PSLmodels/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
+        },
+        "license": {
+            "source": "https://github.com/PSLmodels/OG-USA/blob/master/LICENSE.md",
+            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+        },
+        "user_documentation": {
+            "source": "https://pslmodels.github.io/OG-USA/content/intro/intro.html",
+            "value": "<a href=\"https://pslmodels.github.io/OG-USA/content/intro/intro.html\">User documentation</a>"
+        },
+        "user_changelog": {
+            "source": null,
+            "value": null
+        },
+        "user_changelog_recent": {
+            "source": null,
+            "value": null
+        },
+        "dev_changelog": {
+            "source": null,
+            "value": null
+        },
+        "disclaimer": {
+            "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
+            "value": "<p>The organization of this repository will be changing rapidly, but the <code>OG-USA/examples/run_og_usa.py</code> script will be kept up to date to run with the master branch of this repo.</p> <h5>Core Maintainers</h5> <p>The core maintainers of the OG-Core repository are:</p> <ul> <li> <p><a href=\"https://www.jasondebacker.com/\">Jason DeBacker</a> (GitHub handle: <a href=\"https://github.com/jdebacker\">jdebacker</a>), Associate Professor, Department of Economics, Darla Moore School of Business, University of South Carolina; President, PSL Foundation; Vice President of Research and Co-founder, Open Research Group, Inc.</p> </li> <li> <p><a href=\"https://sites.google.com/site/rickecon/\">Richard W. Evans</a> (GitHub handle: <a href=\"https://github.com/rickecon\">rickecon</a>), Advisory Board Visiting Fellow, Center for Public Finance, Baker Institute for Public Policy at Rice University; President, Open Research Group, Inc.; Director, Open Source Economics Laboratory</p> </li> </ul>"
+        },
+        "user_case_studies": {
+            "source": null,
+            "value": null
+        },
+        "project_roadmap": {
+            "source": null,
+            "value": null
+        },
+        "contributor_overview": {
+            "source": "https://github.com/PSLmodels/OG-USA#usingcontributing-to-og-usa",
+            "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/PSLmodels/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/PSLmodels/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"
+        },
+        "contributor_guide": {
+            "source": null,
+            "value": null
+        },
+        "governance_overview": {
+            "source": null,
+            "value": null
+        },
+        "public_funding": {
+            "source": null,
+            "value": null
+        },
+        "link_to_webapp": {
+            "source": null,
+            "value": null
+        },
+        "public_issue_tracker": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/issues\">https://github.com/PSLmodels/OG-USA/issues</a>"
+        },
+        "public_qanda": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/issues\">https://github.com/PSLmodels/OG-USA/issues</a>"
+        },
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard W. Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"
+        },
+        "unit_test": {
+            "source": "https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests",
+            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests\">https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests</a>"
+        },
+        "integration_test": {
+            "source": "https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests",
+            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests\">https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests</a>"
+        }
     },
-    "key_features": {
-      "source": null,
-      "value": null
-    },
-    "project_overview": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
-      "value": "<p>Behavioral-Responses, which is part of the Policy Simulation Library (PSL) collection of USA tax models, estimates partial-equilibrium behavioral responses to changes in the US federal individual income and payroll tax system as simulated by Tax-Calculator.  It provides two ways of doing this: (1) the <code>response</code> function, which contains higher-level logic that supports the Tax-Brain \"Partial Equilibrium Simulation\" capability and requires specification of only the elasticities, and (2) the <code>quantity_response</code> function, which contains lower-level logic that requires specification of the quantity whose response is to be estimated, requires specification of the marginal tax rates and elasticities to be used in the response calculation, and allows the response estimation to be conducted by subgroup with different elasticities for each subgroup.</p>"
-    },
-    "citation": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
-      "value": "<p>Please cite the source of your analysis as \"Behavioral-Responses release #.#.#, author's calculations.\" If you wish to link to Behavioral-Responses, https://PSLmodels.github.io/Behavioral-Responses/ is preferred. Additionally, we strongly recommend that you describe the elasticity parameters used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
-    },
-    "license": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/LICENSE.md",
-      "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</p>"
-    },
-    "user_documentation": {
-      "source": null,
-      "value": "<a href=\"http://PSLmodels.github.io/Behavioral-Responses/index.html\">http://PSLmodels.github.io/Behavioral-Responses/index.html</a>"
-    },
-    "user_changelog": {
-      "source": null,
-      "value": null
-    },
-    "user_changelog_recent": {
-      "source": null,
-      "value": null
-    },
-    "dev_changelog": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/RELEASES.md",
-      "value": "<p>Go <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pulls?q=is%3Apr+is%3Aclosed\">here</a> for a complete commit history.</p> <h5>2020-09-22 Release 0.11.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/76\">#76</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li> <p>Compatibility with Python 3.8.    [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/74\">#74</a>   by Jason DeBacker]</p> </li> <li> <p>Test results updated for Tax-Calculator 3.0.0.    [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/74\">#74</a>   by Jason DeBacker]</p> </li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-10-31 Release 0.10.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/71\">#71</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>New capabilities for estimating differential behavioral responses   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/58\">#58</a>   by Max Ghenis]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-06-08 Release 0.9.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/63\">#63</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Use new Tax-Calculator 2.3 Records interface to get dump variables   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/63\">#63</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-05-13 Release 0.8.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/62\">#62</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Simplify extraction of variables from Calculator objects in <code>response</code> function   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/62\">#62</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-03-17 Release 0.7.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/52\">#52</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Simplify elasticities argument of the <code>response</code> function   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/51\">#51</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2019-02-22 Release 0.6.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/46\">#46</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Require taxcalc package for Tax-Calculator 1.0 or higher   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/46\">#46</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li> <p>Add optional dump argument to the <code>response</code> function   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/39\">#39</a>   by Martin Holmer responding to request by Matt Jensen and Anderson Frailey]</p> </li> <li> <p>Add <code>quantity_response</code> function that was formerly a Tax-Calculator utility function and that provides a lower-level behavioral response capability   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/43\">#43</a>   by Martin Holmer responding to suggestion by Max Ghenis]</p> </li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-12-14 Release 0.5.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/35\">#35</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Make behresp packages available for Python 3.7 as well as for Python 3.6   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/35\">#35</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-12-13 Release 0.4.1</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/33\">#33</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>None</li> </ul> <p><strong>New Features</strong></p> <ul> <li>Add GitHub Travis-CI testing under Python 3.7   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/33\">#33</a>   by Martin Holmer]</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-13 Release 0.4.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/21\">#21</a>)</p> <p><strong>API Changes</strong></p> <ul> <li> <p>Change documentation to state that Behavioral-Responses <code>behresp</code> packages are available <strong>only</strong> via the <code>PSLmodels</code> Anaconda Cloud channel   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/20\">#20</a>   by Martin Holmer]</p> </li> <li> <p>Remove <code>versioneer.py</code> and <code>taxcalc/_version.py</code> and related code now that Package-Builder is handling version specification   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/21\">#21</a>   by Martin Holmer]</p> </li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-06 Release 0.3.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/18\">#18</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Simplify specification of package dependencies   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/18\">#18</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-03 Release 0.2.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/15\">#15</a>)</p> <p><strong>API Changes</strong></p> <ul> <li>Make specification of required package versions comply with style in conda cheat sheet   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/15\">#15</a>   by Martin Holmer]</li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul> <h5>2018-11-01 Release 0.1.0</h5> <p>(last merged pull request is <a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/11\">#11</a>)</p> <p><strong>API Changes</strong></p> <ul> <li> <p>Copy Tax-Calculator top-level files to Behavioral-Responses repo   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/2\">#2</a>   by Martin Holmer]</p> </li> <li> <p>Move Tax-Calculator Behavior class logic/tests to Behavioral-Responses repo   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/3\">#3</a>   by Martin Holmer]</p> </li> <li> <p>Streamline tests to use less memory   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/8\">#8</a>   by Martin Holmer with assistance from Matt Jensen]</p> </li> <li> <p>Add user documentation for Behavioral-Responses package   [<a href=\"https://github.com/PSLmodels/Behavioral-Responses/pull/11\">#11</a>   by Martin Holmer]</p> </li> </ul> <p><strong>New Features</strong></p> <ul> <li>None</li> </ul> <p><strong>Bug Fixes</strong></p> <ul> <li>None</li> </ul>"
-    },
-    "disclaimer": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
-      "value": "<p>Results will change as the underlying models improve. A fundamental reason for adopting open source methods in this project is so that people from all backgrounds can contribute to the models that our society uses to assess economic policy; when community-contributed improvements are incorporated, the model will produce different results.</p>"
-    },
-    "user_case_studies": {
-      "source": null,
-      "value": null
-    },
-    "project_roadmap": {
-      "source": null,
-      "value": null
-    },
-    "contributor_overview": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
-      "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think is wrong with Behavioral-Responses.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think should be added to Behavioral-Responses.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"https://taxcalc.pslmodels.org/contributing/contributor_guide.html\">Tax-Calculator contributor guide</a> on how to fork and clone the Behavioral-Responses git repository. Before developing any code changes be sure to read completely the Tax-Calculator contributor guide and then read about the <a href=\"https://taxcalc.pslmodels.org/contributing/pr_workflow.html\">Tax-Calculator pull-request workflow</a>. When reading both documents, be sure to mentally substitute Behavioral-Response for Tax-Calculator and behresp for taxcalc.</p> <p>The Behavioral-Responses <a href=\"https://github.com/PSLmodels/Behavioral-Responses/blob/master/RELEASES.md#tax-calculator-release-history\">release history</a> provides a high-level summary of past pull requests and access to a complete list of merged, closed, and pending pull requests.</p>"
-    },
-    "contributor_guide": {
-      "source": "https://github.com/PSLmodels/Behavioral-Responses/blob/master/README.md",
-      "value": "<p>If you want to <strong>report a bug</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think is wrong with Behavioral-Responses.</p> <p>If you want to <strong>request an enhancement</strong>, create a new issue <a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">here</a> providing details on what you think should be added to Behavioral-Responses.</p> <p>If you want to <strong>propose code changes</strong>, follow the directions in the <a href=\"https://taxcalc.pslmodels.org/contributing/contributor_guide.html\">Tax-Calculator contributor guide</a> on how to fork and clone the Behavioral-Responses git repository. Before developing any code changes be sure to read completely the Tax-Calculator contributor guide and then read about the <a href=\"https://taxcalc.pslmodels.org/contributing/pr_workflow.html\">Tax-Calculator pull-request workflow</a>. When reading both documents, be sure to mentally substitute Behavioral-Response for Tax-Calculator and behresp for taxcalc.</p> <p>The Behavioral-Responses <a href=\"https://github.com/PSLmodels/Behavioral-Responses/blob/master/RELEASES.md#tax-calculator-release-history\">release history</a> provides a high-level summary of past pull requests and access to a complete list of merged, closed, and pending pull requests.</p>"
-    },
-    "governance_overview": {
-      "source": null,
-      "value": null
-    },
-    "public_funding": {
-      "source": null,
-      "value": null
-    },
-    "link_to_webapp": {
-      "source": null,
-      "value": "<a href=\"https://www.ospc.org/taxbrain/\">https://www.ospc.org/taxbrain/</a>"
-    },
-    "public_issue_tracker": {
-      "source": null,
-      "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">https://github.com/PSLmodels/Behavioral-Responses/issues</a>"
-    },
-    "public_qanda": {
-      "source": null,
-      "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/issues\">https://github.com/PSLmodels/Behavioral-Responses/issues</a>"
-    },
-    "core_maintainers": {
-      "source": null,
-      "value": "<ul><li>Matt Jensen</li></ul>"
-    },
-    "unit_test": {
-      "source": null,
-      "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests\">https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests</a>"
-    },
-    "integration_test": {
-      "source": null,
-      "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests\">https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests</a>"
+    "openfisca-uk": {
+        "name": "PolicyEngine UK",
+        "img": "https://avatars.githubusercontent.com/u/88570531?s=200&v=4",
+        "banner_title": "PolicyEngine UK",
+        "banner_subtitle": "A static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.",
+        "detailed_description": "PolicyEngine UK is PolicyEngine's microsimulation model of the UK tax-benefit system...",
+        "policy_area": "Policy Reform, Tax Analysis",
+        "geography": "Canada, United Kingdom, United States",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Nikhil Woodruff",
+                "image": "https://avatars.githubusercontent.com/u/35577657?v=4",
+                "link": "mailto:nikhil@policyengine.org"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PolicyEngine/policyengine-uk",
+            "user_documentation": "https://policyengine.github.io/policyengine-uk/",
+            "contributor_documentation": "https://github.com/PolicyEngine/PolicyEngine-uk",
+            "webapp": "https://policyengine.org/uk/calculator",
+            "recent_changes": "https://github.com/PSLmodels/policyengine-uk/blob/master/CHANGELOG.md"
+        }
     }
-  },
-  "OG-USA": {
-    "name": {
-      "value": "OG-USA",
-      "source": ""
-    },
-    "project_one_line": {
-      "source": "https://github.com/PSLmodels/OG-USA",
-      "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"
-    },
-    "key_features": {
-      "source": null,
-      "value": null
-    },
-    "project_overview": {
-      "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
-      "value": "<p>OG-USA is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for the United States. OG-USA is built on the <a href=\"https://github.com/PSLmodels/OG-Core\">OG-Core</a> framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at <a href=\"https://pslmodels.github.io/OG-Core\">https://pslmodels.github.io/OG-Core</a> and documentation of the specific United States calibration of the model is available at <a href=\"https://pslmodels.github.io/OG-USA\">https://pslmodels.github.io/OG-USA</a>.</p>"
-    },
-    "citation": {
-      "source": "https://github.com/PSLmodels/OG-USA#citing-og-usa",
-      "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/PSLmodels/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
-    },
-    "license": {
-      "source": "https://github.com/PSLmodels/OG-USA/blob/master/LICENSE.md",
-      "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-    },
-    "user_documentation": {
-      "source": "https://pslmodels.github.io/OG-USA/content/intro/intro.html",
-      "value": "<a href=\"https://pslmodels.github.io/OG-USA/content/intro/intro.html\">User documentation</a>"
-    },
-    "user_changelog": {
-      "source": null,
-      "value": null
-    },
-    "user_changelog_recent": {
-      "source": null,
-      "value": null
-    },
-    "dev_changelog": {
-      "source": null,
-      "value": null
-    },
-    "disclaimer": {
-      "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
-      "value": "<p>The organization of this repository will be changing rapidly, but the <code>OG-USA/examples/run_og_usa.py</code> script will be kept up to date to run with the master branch of this repo.</p> <h5>Core Maintainers</h5> <p>The core maintainers of the OG-Core repository are:</p> <ul> <li> <p><a href=\"https://www.jasondebacker.com/\">Jason DeBacker</a> (GitHub handle: <a href=\"https://github.com/jdebacker\">jdebacker</a>), Associate Professor, Department of Economics, Darla Moore School of Business, University of South Carolina; President, PSL Foundation; Vice President of Research and Co-founder, Open Research Group, Inc.</p> </li> <li> <p><a href=\"https://sites.google.com/site/rickecon/\">Richard W. Evans</a> (GitHub handle: <a href=\"https://github.com/rickecon\">rickecon</a>), Advisory Board Visiting Fellow, Center for Public Finance, Baker Institute for Public Policy at Rice University; President, Open Research Group, Inc.; Director, Open Source Economics Laboratory</p> </li> </ul>"
-    },
-    "user_case_studies": {
-      "source": null,
-      "value": null
-    },
-    "project_roadmap": {
-      "source": null,
-      "value": null
-    },
-    "contributor_overview": {
-      "source": "https://github.com/PSLmodels/OG-USA#usingcontributing-to-og-usa",
-      "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/PSLmodels/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/PSLmodels/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"
-    },
-    "contributor_guide": {
-      "source": null,
-      "value": null
-    },
-    "governance_overview": {
-      "source": null,
-      "value": null
-    },
-    "public_funding": {
-      "source": null,
-      "value": null
-    },
-    "link_to_webapp": {
-      "source": null,
-      "value": null
-    },
-    "public_issue_tracker": {
-      "source": null,
-      "value": "<a href=\"https://github.com/PSLmodels/OG-USA/issues\">https://github.com/PSLmodels/OG-USA/issues</a>"
-    },
-    "public_qanda": {
-      "source": null,
-      "value": "<a href=\"https://github.com/PSLmodels/OG-USA/issues\">https://github.com/PSLmodels/OG-USA/issues</a>"
-    },
-    "core_maintainers": {
-      "source": null,
-      "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard W. Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"
-    },
-    "unit_test": {
-      "source": "https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests",
-      "value": "<a href=\"https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests\">https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests</a>"
-    },
-    "integration_test": {
-      "source": "https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests",
-      "value": "<a href=\"https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests\">https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests</a>"
-    }
-  },
-  "openfisca-uk": {
-    "name": "PolicyEngine UK",
-    "img": "https://avatars.githubusercontent.com/u/88570531?s=200&v=4",
-    "banner_title": "PolicyEngine UK",
-    "banner_subtitle": "A static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.",
-    "detailed_description": "PolicyEngine UK is PolicyEngine's microsimulation model of the UK tax-benefit system...",
-    "policy_area": "Policy Reform, Tax Analysis",
-    "geography": "Canada, United Kingdom, United States",
-    "language": "Python",
-    "maintainers": [
-      {
-        "name": "Nikhil Woodruff",
-        "image": "https://avatars.githubusercontent.com/u/35577657?v=4",
-        "link": "mailto:nikhil@policyengine.org"
-      }
-    ],
-    "links": {
-      "code_repository": "https://github.com/PolicyEngine/policyengine-uk",
-      "user_documentation": "https://policyengine.github.io/policyengine-uk/",
-      "contributor_documentation": "https://github.com/PolicyEngine/PolicyEngine-uk",
-      "webapp": "https://policyengine.org/uk/calculator",
-      "recent_changes": "https://github.com/PSLmodels/policyengine-uk/blob/master/CHANGELOG.md"
-    }
-  }
 }

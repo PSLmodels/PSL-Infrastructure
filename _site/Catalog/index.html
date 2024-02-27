@@ -47,123 +47,12 @@
     <link href="../CSS/catalog.css" rel="stylesheet" />
   </head>
   <body id="page">
-    <nav
-      class="navbar navbar-expand-md navbar-dark sticky-top custom-navbar-bg"
-    >
-      <div class="navbar-brand-div">
-        <a class="navbar-brand logo-container" href="../index.html">
-          <img height="40" src="../imgs/PSL.png" />
-        </a>
-      </div>
-      <button
-        class="navbar-toggler"
-        data-target="#dropdownMenu"
-        data-toggle="collapse"
-      >
-        <span class="navbar-toggler-icon"> </span>
-      </button>
-      <div class="collapse navbar-collapse" id="dropdownMenu">
-        <ul class="navbar-nav">
-          <li class="nav-item active dropdown">
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              id="navbarDropdownBlog"
-            >
-              Catalog
-            </a>
-            <div
-              aria-labelledby="navbarDropdownBlog"
-              class="dropdown-menu dropdown-menu-right"
-            >
-              <a class="dropdown-item" href="../Catalog/library_criteria.html">
-                Criteria
-              </a>
-              <a class="dropdown-item" href="../Catalog/index.html"> Models </a>
-              <a class="dropdown-item" href="../Incubating/index.html">
-                Incubating Projects
-              </a>
-            </div>
-          </li>
-          <li class="nav-item active dropdown">
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              id="navbarDropdownBlog"
-            >
-              Community
-            </a>
-            <div
-              aria-labelledby="navbarDropdownBlog"
-              class="dropdown-menu dropdown-menu-right"
-            >
-              <a class="dropdown-item" href="../Community/contribute.html">
-                Collaborate
-              </a>
-              <!-- <a class="dropdown-item" href="http://discourse.pslmodels.org/">
-        Forum
-       </a> -->
-              <a class="dropdown-item" href="../Community/initiatives.html">
-                Initiatives
-              </a>
-              <a class="dropdown-item" href="../Community/council.html">
-                Leadership Council
-              </a>
-              <!-- <a class="dropdown-item" href="../Newsletter/archive.html">
-        Newsletter
-       </a> -->
-              <a class="dropdown-item" href="../Community/roadmap.html">
-                Roadmap
-              </a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../about.html"> About </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../users.html"> PSL Users </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../events.html"> Events </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="http://blog.pslmodels.org/"> Blog </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="https://opencollective.com/psl">
-              Donate
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../shop.html"> Shop </a>
-          </li>
-        </ul>
-      </div>
-      <span
-        class="navbar-text"
-        style="
-          float: right;
-          font-family: &quot;Courier New&quot;, Courier, monospace;
-          margin-right: 2%;
-        "
-      >
-        Open Models == Better Policy
-      </span>
-    </nav>
+    <div id="navbar"></div>
     <div class="banner">
       <div class="banner-content">
         <div class="banner-text">
           <h1>Models</h1>
-          <h5>
-            We have a collection of open-source models and data preparation
-            routines for policy analysis.
-          </h5>
+          <h5>We have a collection of open-source models and data preparation routines for policy analysis.</h5>
         </div>
       </div>
     </div>
@@ -172,152 +61,196 @@
     <section class="models-section">
       <div class="model-container">
         <div class="models-grid">
+          
           <a class="model-card" href="Behavioral-Responses.html">
             <button class="maintainer-image-btn">
-              <img alt="Behavioral-Responses" src="../imgs/default.png" />
+              
+              <img
+                alt="Behavioral-Responses"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>Behavioral-Responses</p>
           </a>
-
+          
           <a class="model-card" href="capital-cost-recovery.html">
             <button class="maintainer-image-btn">
-              <img alt="capital-cost-recovery" src="../imgs/default.png" />
+              
+              <img
+                alt="capital-cost-recovery"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>capital-cost-recovery</p>
           </a>
-
+          
           <a class="model-card" href="Cost-of-Capital-Calculator.html">
             <button class="maintainer-image-btn">
-              <img alt="Cost-of-Capital-Calculator" src="../imgs/default.png" />
+              
+              <img
+                alt="Cost-of-Capital-Calculator"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>Cost-of-Capital-Calculator</p>
           </a>
-
+          
           <a class="model-card" href="DSGE.jl.html">
             <button class="maintainer-image-btn">
-              <img alt="DSGE.jl" src="../imgs/default.png" />
+              
+              <img
+                alt="DSGE.jl"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>DSGE.jl</p>
           </a>
-
+          
           <a class="model-card" href="microdf.html">
             <button class="maintainer-image-btn">
-              <img alt="microdf" src="../imgs/default.png" />
+              
+              <img
+                alt="microdf"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>microdf</p>
           </a>
-
+          
           <a class="model-card" href="OG-USA.html">
             <button class="maintainer-image-btn">
-              <img alt="OG-USA" src="../imgs/default.png" />
+              
+              <img
+                alt="OG-USA"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>OG-USA</p>
           </a>
-
+          
           <a class="model-card" href="openfisca-uk.html">
             <button class="maintainer-image-btn">
+              
               <img
                 alt="PolicyEngine UK"
                 src="https://avatars.githubusercontent.com/u/88570531?s=200&v=4"
               />
+              
             </button>
             <p>openfisca-uk</p>
           </a>
-
+          
           <a class="model-card" href="ParamTools.html">
             <button class="maintainer-image-btn">
-              <img alt="ParamTools" src="../imgs/default.png" />
+              
+              <img
+                alt="ParamTools"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>ParamTools</p>
           </a>
-
+          
           <a class="model-card" href="PCI-China.html">
             <button class="maintainer-image-btn">
-              <img alt="PCI-China" src="../imgs/default.png" />
+              
+              <img
+                alt="PCI-China"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>PCI-China</p>
           </a>
-
+          
           <a class="model-card" href="policy-rules-database.html">
             <button class="maintainer-image-btn">
-              <img alt="policy-rules-database" src="../imgs/default.png" />
+              
+              <img
+                alt="policy-rules-database"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>policy-rules-database</p>
           </a>
-
+          
           <a class="model-card" href="Tax-Brain.html">
             <button class="maintainer-image-btn">
-              <img alt="Tax-Brain" src="../imgs/default.png" />
+              
+              <img
+                alt="Tax-Brain"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>Tax-Brain</p>
           </a>
-
+          
           <a class="model-card" href="Tax-Calculator.html">
             <button class="maintainer-image-btn">
-              <img alt="Tax-Calculator" src="../imgs/default.png" />
+              
+              <img
+                alt="Tax-Calculator"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>Tax-Calculator</p>
           </a>
-
+          
           <a class="model-card" href="Tax-Cruncher.html">
             <button class="maintainer-image-btn">
-              <img alt="Tax-Cruncher" src="../imgs/default.png" />
+              
+              <img
+                alt="Tax-Cruncher"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>Tax-Cruncher</p>
           </a>
-
+          
           <a class="model-card" href="taxdata.html">
             <button class="maintainer-image-btn">
-              <img alt="taxdata" src="../imgs/default.png" />
+              
+              <img
+                alt="taxdata"
+                src="../imgs/default.png"
+              />
+              
             </button>
             <p>taxdata</p>
           </a>
+          
         </div>
       </div>
     </section>
 
-    <div class="footer-banner">
-      <div class="footer-image">
-        <img alt="Your Image Description" src="../imgs/PSL.svg" />
-      </div>
-      <div class="footer-text">
-        PSL is developed by a community of technical contributors. Learn how to
-        contribute to library projects or add a new project to the library.
-      </div>
-      <div class="footer-buttons">
-        <a class="button" href="../Community/contribute.html">
-          JOIN THE COMMUNITY
-        </a>
-        <a class="button" href="https://opencollective.com/psl">
-          DONATE TO PSL
-        </a>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm text-center">
-          <a class="fa fa-twitter" href="https://twitter.com/pslmodels"> </a>
-          <a
-            class="fa fa-linkedin"
-            href="https://www.linkedin.com/company/policy-simulation-library/"
-          >
-          </a>
-          <a
-            class="fa fa-youtube"
-            href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q"
-          >
-          </a>
-          <a
-            aria-hidden="true"
-            class="fa fa-github"
-            href="https://github.com/pslmodels"
-          >
-          </a>
-        </div>
-        <div class="col-sm"></div>
-      </div>
-    </footer>
+    <div id="footer"></div>
+  </body>
+  <script>
+    {
+      fetch('/layout/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
+
+    fetch('/layout/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer').innerHTML = data;
+      });
+    }
+    </script>
   </body>
   <script
     crossorigin="anonymous"
