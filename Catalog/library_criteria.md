@@ -1,5 +1,7 @@
 # PSL Project Criteria
 
+A comprehensive guide to PSL Project Criteria focusing on transparency, quality, community engagement, and additional practices to foster an open-source public policy modeling ecosystem.
+
 ## Summary
 
 1. Models must be transparent.

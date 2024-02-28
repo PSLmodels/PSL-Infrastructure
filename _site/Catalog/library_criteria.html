@@ -61,305 +61,101 @@
     <link href="../CSS/catalog.css" rel="stylesheet" />
   </head>
   <body id="page">
-    <nav
-      class="navbar navbar-expand-md navbar-dark sticky-top custom-navbar-bg"
-    >
-      <div class="navbar-brand-div">
-        <a class="navbar-brand logo-container" href="../index.html">
-          <img height="40" src="../imgs/PSL.png" />
-        </a>
-      </div>
-      <button
-        class="navbar-toggler"
-        data-target="#dropdownMenu"
-        data-toggle="collapse"
-      >
-        <span class="navbar-toggler-icon"> </span>
-      </button>
-      <div class="collapse navbar-collapse" id="dropdownMenu">
-        <ul class="navbar-nav">
-          <li class="nav-item active dropdown">
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              id="navbarDropdownBlog"
-            >
-              Catalog
-            </a>
-            <div
-              aria-labelledby="navbarDropdownBlog"
-              class="dropdown-menu dropdown-menu-right"
-            >
-              <a class="dropdown-item" href="../Catalog/library_criteria.html">
-                Criteria
-              </a>
-              <a class="dropdown-item" href="../Catalog/index.html"> Models </a>
-              <a class="dropdown-item" href="../Incubating/index.html">
-                Incubating Projects
-              </a>
-            </div>
-          </li>
-          <li class="nav-item active dropdown">
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              id="navbarDropdownBlog"
-            >
-              Community
-            </a>
-            <div
-              aria-labelledby="navbarDropdownBlog"
-              class="dropdown-menu dropdown-menu-right"
-            >
-              <a class="dropdown-item" href="../Community/contribute.html">
-                Collaborate
-              </a>
-              <!-- <a class="dropdown-item" href="http://discourse.pslmodels.org/">
-        Forum
-       </a> -->
-              <a class="dropdown-item" href="../Community/initiatives.html">
-                Initiatives
-              </a>
-              <a class="dropdown-item" href="../Community/council.html">
-                Leadership Council
-              </a>
-              <!-- <a class="dropdown-item" href="../Newsletter/archive.html">
-        Newsletter
-       </a> -->
-              <a class="dropdown-item" href="../Community/roadmap.html">
-                Roadmap
-              </a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../about.html"> About </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../users.html"> PSL Users </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../events.html"> Events </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="http://blog.pslmodels.org/"> Blog </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="https://opencollective.com/psl">
-              Donate
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../shop.html"> Shop </a>
-          </li>
-        </ul>
-      </div>
-      <span
-        class="navbar-text"
-        style="
-          float: right;
-          font-family: &quot;Courier New&quot;, Courier, monospace;
-          margin-right: 2%;
-        "
-      >
-        Open Models == Better Policy
-      </span>
-    </nav>
+    <div id="navbar"></div>
 
     <div class="banner">
       <div class="banner-content">
         <div class="banner-text">
           <h1><h1>PSL Project Criteria</h1></h1>
+          <h5><h5>A comprehensive guide to PSL Project Criteria focusing on transparency, quality, community engagement, and additional practices to foster an open-source public policy modeling ecosystem.</h5></h5>
         </div>
         <br />
         <div class="banner-image"></div>
       </div>
     </div>
 
-    <div class="main-heading"></div>
     <div class="text-box">
       <div class="box-header"></div>
-      <div class="box-content">
-        <p><br /></p>
-        <h2>Summary</h2>
-        <ol>
-          <li>Models must be transparent.</li>
-          <li>
-            Models should adopt organizational and interface recommendations for
-            community and interoperability.
-          </li>
-        </ol>
-        <p><br /></p>
-        <h2>Introduction</h2>
-        <p>
-          Open-source modeling ensures that model results are reproducible, that
-          experts around the world can collaborate to make models better, and
-          that users can explore the parameter space for themselves. These
-          outcomes systematically improve public policy decisionmaking.
-        </p>
-        <p>
-          We have developed the criteria in this document to facilitate the
-          growth of an open source public policy modeling ecosystem.
-        </p>
-        <p><br /></p>
-        <h2>Mandatory Criteria for Transparency and Quality</h2>
-        <p>
-          Models must meet the following requirements for acceptance into the
-          catalog:
-        </p>
-        <ol>
-          <li>
-            Release under an OSI-approved open source license or the Creative
-            Commons Public Domain Dedication (CC0).
-          </li>
-          <li>
-            Make data publicly available, unless release is restricted by a
-            third party.
-          </li>
-          <li>For any data that should not be disclosed, provide:</li>
-          <li>A complete descriptive list of all data variables;</li>
-          <li>
-            Descriptive statistics for all data variables for such data
-            (including averages, standard deviations, number of observations,
-            and correlations to other variables), to the extent that the
-            descriptive statistics do not violate the rule against disclosure;
-          </li>
-          <li>
-            Contact information for the individual or entity who has
-            unrestricted access to the data.
-          </li>
-          <li>
-            Include unit tests and ensure that they sources code passes the
-            tests.
-          </li>
-          <li>
-            For at least one test, generate key outputs from source materials;
-            the test must be run with every new version, and the outputs of the
-            test must be checked into the repository.
-          </li>
-          <li>
-            Report names and contact information for at least one maintainer.
-          </li>
-          <li>Have a suggested citation.</li>
-          <li>Have a project overview.</li>
-          <li>Have installation instructions.</li>
-          <li>Version control in <a href="http://github.com/">GitHub</a>.</li>
-          <li>Adopt a consistent versioning scheme.</li>
-          <li>
-            Include a <code>PSL_catalog.json</code> configuration file in the
-            project's repository for cataloging these criteria. Specific
-            instructions for creating this file can be found in the
-            <a
-              href="https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog"
-              >Catalog-Builder Documentation</a
-            >.
-          </li>
-        </ol>
-        <p><br /></p>
-        <h2>Recommended Community Criteria</h2>
-        <p>
-          We also encourage, but do not require, projects to adopt the following
-          practices:
-        </p>
-        <ol>
-          <li>Report code coverage.</li>
-          <li>Use <a href="https://semver.org/">semantic versioning</a>.</li>
-          <li>Display a public roadmap.</li>
-          <li>Display contributor documentation and guidelines.</li>
-          <li>Hold regular office hours, webinars, or standing meetings.</li>
-          <li>List technical contributors.</li>
-          <li>List funders.</li>
-          <li>List user citations and case studies.</li>
-          <li>Include subject matter repository topics.</li>
-          <li>Include a disclaimer.</li>
-          <li>Track issues publicly (e.g. on GitHub).</li>
-          <li>Show a changelog.</li>
-          <li>Be written in an open source language.</li>
-          <li>
-            Add a "psl-cataloged" tag to the About section of the project's
-            GitHub repository.
-          </li>
-          <li>
-            Follow a standard contributor workflow, such as
-            <a
-              href="https://docs.github.com/en/get-started/quickstart/github-flow"
-              >GitHub flow</a
-            >.
-          </li>
-          <li>
-            Include continuous integration tests to ensure that tests are
-            passing for proposed changes in pull requests and to document
-            publicly that all unit tests are passing.
-          </li>
-          <li>
-            Adopt a consistent code formatting scheme, perhaps through an
-            automated code formatter like
-            <a href="https://black.readthedocs.io/en/stable/">Black</a>.
-          </li>
-        </ol>
-        <p><br /></p>
-        <h2>Optional Additional Practices</h2>
-        <p>Projects may also consider the following:</p>
-        <ol>
-          <li>Have a Stack Overflow channel.</li>
-          <li>Include a "News" translation of the changelog for users.</li>
-          <li>
-            Include criteria for participating in cross-model PSL initiatives.
-          </li>
-          <li>Include a link to a webapp version.</li>
-          <li>Include a list of consultants.</li>
-        </ol>
-      </div>
+      <div class="box-content"><h2>Summary</h2>
+<ol>
+<li>Models must be transparent.</li>
+<li>Models should adopt organizational and interface recommendations for community and interoperability.</li>
+</ol>
+<p><br></p>
+<h2>Introduction</h2>
+<p>Open-source modeling ensures that model results are reproducible, that experts around the world can collaborate to make models better, and that users can explore the parameter space for themselves. These outcomes systematically improve public policy decisionmaking.</p>
+<p>We have developed the criteria in this document to facilitate the growth of an open source public policy modeling ecosystem.</p>
+<p><br></p>
+<h2>Mandatory Criteria for Transparency and Quality</h2>
+<p>Models must meet the following requirements for acceptance into the catalog:</p>
+<ol>
+<li>Release under an OSI-approved open source license or the Creative Commons Public Domain Dedication (CC0).</li>
+<li>Make data publicly available, unless release is restricted by a third party.</li>
+<li>For any data that should not be disclosed, provide:</li>
+<li>A complete descriptive list of all data variables;</li>
+<li>Descriptive statistics for all data variables for such data (including averages, standard deviations, number of observations, and correlations to other variables), to the extent that the descriptive statistics do not violate the rule against disclosure;</li>
+<li>Contact information for the individual or entity who has unrestricted access to the data.</li>
+<li>Include unit tests and ensure that they sources code passes the tests.</li>
+<li>For at least one test, generate key outputs from source materials; the test must be run with every new version, and the outputs of the test must be checked into the repository.</li>
+<li>Report names and contact information for at least one maintainer.</li>
+<li>Have a suggested citation.</li>
+<li>Have a project overview.</li>
+<li>Have installation instructions.</li>
+<li>Version control in <a href="http://github.com/">GitHub</a>.</li>
+<li>Adopt a consistent versioning scheme.</li>
+<li>Include a <code>PSL_catalog.json</code> configuration file in the project's repository for cataloging these criteria. Specific instructions for creating this file can be found in the <a href="https://github.com/PSLmodels/PSL-Infrastructure/tree/master/Tools/Catalog-Builder#how-to-add-projects-to-the-catalog">Catalog-Builder Documentation</a>.</li>
+</ol>
+<p><br></p>
+<h2>Recommended Community Criteria</h2>
+<p>We also encourage, but do not require, projects to adopt the following practices:</p>
+<ol>
+<li>Report code coverage.</li>
+<li>Use <a href="https://semver.org/">semantic versioning</a>.</li>
+<li>Display a public roadmap.</li>
+<li>Display contributor documentation and guidelines.</li>
+<li>Hold regular office hours, webinars, or standing meetings.</li>
+<li>List technical contributors.</li>
+<li>List funders.</li>
+<li>List user citations and case studies.</li>
+<li>Include subject matter repository topics.</li>
+<li>Include a disclaimer.</li>
+<li>Track issues publicly (e.g. on GitHub).</li>
+<li>Show a changelog.</li>
+<li>Be written in an open source language.</li>
+<li>Add a "psl-cataloged" tag to the About section of the project's GitHub repository.</li>
+<li>Follow a standard contributor workflow, such as <a href="https://docs.github.com/en/get-started/quickstart/github-flow">GitHub flow</a>.</li>
+<li>Include continuous integration tests to ensure that tests are passing for proposed changes in pull requests and to document publicly that all unit tests are passing.</li>
+<li>Adopt a consistent code formatting scheme, perhaps through an automated code formatter like <a href="https://black.readthedocs.io/en/stable/">Black</a>.</li>
+</ol>
+<p><br></p>
+<h2>Optional Additional Practices</h2>
+<p>Projects may also consider the following:</p>
+<ol>
+<li>Have a Stack Overflow channel.</li>
+<li>Include a "News" translation of the changelog for users.</li>
+<li>Include criteria for participating in cross-model PSL initiatives.</li>
+<li>Include a link to a webapp version.</li>
+<li>Include a list of consultants.</li>
+</ol></div>
     </div>
 
-    <div class="footer-banner">
-      <div class="footer-image">
-        <img alt="Your Image Description" src="../imgs/PSL.svg" />
-      </div>
-      <div class="footer-text">
-        PSL is developed by a community of technical contributors. Learn how to
-        contribute to library projects or add a new project to the library.
-      </div>
-      <div class="footer-buttons">
-        <a class="button" href="../Community/contribute.html">
-          JOIN THE COMMUNITY
-        </a>
-        <a class="button" href="https://opencollective.com/psl">
-          DONATE TO PSL
-        </a>
-      </div>
-    </div>
+    <div id="footer"></div>
+  </body>
+  <script>
+    {
+      fetch('/layout/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
 
-    <footer class="footer">
-      <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm text-center">
-          <a class="fa fa-twitter" href="https://twitter.com/pslmodels"> </a>
-          <a
-            class="fa fa-linkedin"
-            href="https://www.linkedin.com/company/policy-simulation-library/"
-          >
-          </a>
-          <a
-            class="fa fa-youtube"
-            href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q"
-          >
-          </a>
-          <a
-            aria-hidden="true"
-            class="fa fa-github"
-            href="https://github.com/pslmodels"
-          >
-          </a>
-        </div>
-        <div class="col-sm"></div>
-      </div>
-    </footer>
+    fetch('/layout/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer').innerHTML = data;
+      });
+    }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

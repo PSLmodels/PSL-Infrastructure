@@ -1,5 +1,7 @@
 # PSL Leadership Council, Version 1.2.0
 
+Details on the PSL Leadership Council, including members, represented projects, bylaws for governance, and a log of council versions and updates.
+
 ## Council
 
 | Member           | Represented Project        | Email                       |

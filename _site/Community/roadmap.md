@@ -1,5 +1,7 @@
 # Roadmap
 
+Outline of PSL's strategic directions: from enhancing project visibility through citations and conferences to expanding the model catalog and launching a dedicated webinar series.
+
 - Aggregate project citations from maintainer-curated documents.
 - Facilitate PSL model representation at tech and academic conferences.
 - Consider and approve proposals for PSL initiatives.

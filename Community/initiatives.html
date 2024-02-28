@@ -61,245 +61,49 @@
     <link href="../CSS/catalog.css" rel="stylesheet" />
   </head>
   <body id="page">
-    <nav
-      class="navbar navbar-expand-md navbar-dark sticky-top custom-navbar-bg"
-    >
-      <div class="navbar-brand-div">
-        <a class="navbar-brand logo-container" href="../index.html">
-          <img height="40" src="../imgs/PSL.png" />
-        </a>
-      </div>
-      <button
-        class="navbar-toggler"
-        data-target="#dropdownMenu"
-        data-toggle="collapse"
-      >
-        <span class="navbar-toggler-icon"> </span>
-      </button>
-      <div class="collapse navbar-collapse" id="dropdownMenu">
-        <ul class="navbar-nav">
-          <li class="nav-item active dropdown">
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              id="navbarDropdownBlog"
-            >
-              Catalog
-            </a>
-            <div
-              aria-labelledby="navbarDropdownBlog"
-              class="dropdown-menu dropdown-menu-right"
-            >
-              <a class="dropdown-item" href="../Catalog/library_criteria.html">
-                Criteria
-              </a>
-              <a class="dropdown-item" href="../Catalog/index.html"> Models </a>
-              <a class="dropdown-item" href="../Incubating/index.html">
-                Incubating Projects
-              </a>
-            </div>
-          </li>
-          <li class="nav-item active dropdown">
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              id="navbarDropdownBlog"
-            >
-              Community
-            </a>
-            <div
-              aria-labelledby="navbarDropdownBlog"
-              class="dropdown-menu dropdown-menu-right"
-            >
-              <a class="dropdown-item" href="../Community/contribute.html">
-                Collaborate
-              </a>
-              <!-- <a class="dropdown-item" href="http://discourse.pslmodels.org/">
-        Forum
-       </a> -->
-              <a class="dropdown-item" href="../Community/initiatives.html">
-                Initiatives
-              </a>
-              <a class="dropdown-item" href="../Community/council.html">
-                Leadership Council
-              </a>
-              <!-- <a class="dropdown-item" href="../Newsletter/archive.html">
-        Newsletter
-       </a> -->
-              <a class="dropdown-item" href="../Community/roadmap.html">
-                Roadmap
-              </a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../about.html"> About </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../users.html"> PSL Users </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../events.html"> Events </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="http://blog.pslmodels.org/"> Blog </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="https://opencollective.com/psl">
-              Donate
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../shop.html"> Shop </a>
-          </li>
-        </ul>
-      </div>
-      <span
-        class="navbar-text"
-        style="
-          float: right;
-          font-family: &quot;Courier New&quot;, Courier, monospace;
-          margin-right: 2%;
-        "
-      >
-        Open Models == Better Policy
-      </span>
-    </nav>
+    <div id="navbar"></div>
 
     <div class="banner">
       <div class="banner-content">
         <div class="banner-text">
           <h1><h1>PSL Initiatives</h1></h1>
+          <h5><h5>Explore PSL Initiatives, strategic fundraising efforts for project development endorsed by the PSL Leadership Council, including current projects and how to propose new ones.</h5></h5>
         </div>
         <br />
         <div class="banner-image"></div>
       </div>
     </div>
 
-    <div class="main-heading"></div>
     <div class="text-box">
       <div class="box-header"></div>
-      <div class="box-content">
-        <p>
-          PSL Initiatives are fundraising initiatives for project development
-          that have the full support of the
-          <a href="council.html">PSL Leadership Council</a>.
-        </p>
-        <p><br /></p>
-        <h2>Current Initiatives</h2>
-        <p>
-          <strong>State tax modeling initiative:</strong> Develop
-          microsimulation models of state income and payroll tax systems that
-          work with the federal
-          <a href="https://github.com/PSLmodels/Tax-Calculator"
-            >Tax-Calculator</a
-          >
-          model to generate combined state and federal liability and model
-          interactions between state and federal taxes. In conjunction with
-          modeling efforts, PSL would produce data representative of taxpayers
-          in each state for use with these models. If you have questions or are
-          interested in supporting this initiative, please contact
-          <a href="mailto:donboyd5@gmail.com">Don Boyd</a>,
-          <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a>, or
-          <a href="mailto:rwevans@rice.edu">Richard Evans</a>.
-        </p>
-        <p>
-          <strong>Fundamental reform initiative:</strong> Enhance PSL-modeling
-          capabilities to include fundamental reforms to the tax system in the
-          United States. This includes modeling consumption taxes such as a
-          value added tax (VAT), carbon taxes, and taxes on wealth. These
-          enhancements include additional modules/functionality of existing
-          microsimulation and macroeconomic models in the PSL community such as
-          <a href="https://github.com/PSLmodels/Tax-Calculator"
-            >Tax-Calculator</a
-          >, <a href="https://github.com/PSLmodels/OG-USA">OG-USA</a>, and
-          <a href="https://github.com/PSLmodels/taxdata">taxdata</a>. If you
-          have questions or are interested in supporting this initiative, please
-          contact <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a>.
-        </p>
-        <p>
-          <strong>Tax modeling in India:</strong> With the support of the World
-          Bank, PSL community members provided more than eight weeks of training
-          to officers and analysts in the Ministry of Finance and the Tax Policy
-          Research Unit (TPRU) in India from 2018-2019. This initiative seeks to
-          raise funding to further support efforts to develop frontier models
-          that will improve the design of tax policy and the budgeting process
-          in India. Working alongside members of the Ministry of Finance and
-          TPRU, PSL members will build microsimulation and macroeconomic models
-          for the government of India that meet or exceed the capabilities of
-          organizations like the Congressional Budget Office and the Joint
-          Committee on taxation. The models will be built with open source
-          software and principles and government of India staff will be trained
-          to further develop and maintain the models into the indefinite future.
-          If you have questions or are interested in supporting this initiative,
-          please contact
-          <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a> or
-          <a href="rwevans@rice.edu">Richard Evans</a>.
-        </p>
-        <p><br /></p>
-        <h2>Proposing a new initiatives</h2>
-        <p>
-          If you are interested in proposing a PSL initiative for a new or
-          existing project in the PSL community, please contact PSL Foundation
-          President,
-          <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a> with the
-          following information: principal investigator(s) name and contact
-          information, name and link to new or existing model(s) involved in the
-          initiative, and a short description of the project (500 words or
-          less). After this information is submitted and reviewed, the PSL
-          Leadership Council will evaluate the proposed initiative.
-        </p>
-      </div>
+      <div class="box-content"><p>PSL Initiatives are fundraising initiatives for project development that have the full support of the <a href="council.html">PSL Leadership Council</a>.</p>
+<p><br></p>
+<h2>Current Initiatives</h2>
+<p><strong>State tax modeling initiative:</strong> Develop microsimulation models of state income and payroll tax systems that work with the federal <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a> model to generate combined state and federal liability and model interactions between state and federal taxes. In conjunction with modeling efforts, PSL would produce data representative of taxpayers in each state for use with these models. If you have questions or are interested in supporting this initiative, please contact <a href="mailto:donboyd5@gmail.com">Don Boyd</a>, <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a>, or <a href="mailto:rwevans@rice.edu">Richard Evans</a>.</p>
+<p><strong>Fundamental reform initiative:</strong> Enhance PSL-modeling capabilities to include fundamental reforms to the tax system in the United States. This includes modeling consumption taxes such as a value added tax (VAT), carbon taxes, and taxes on wealth. These enhancements include additional modules/functionality of existing microsimulation and macroeconomic models in the PSL community such as <a href="https://github.com/PSLmodels/Tax-Calculator">Tax-Calculator</a>, <a href="https://github.com/PSLmodels/OG-USA">OG-USA</a>, and <a href="https://github.com/PSLmodels/taxdata">taxdata</a>. If you have questions or are interested in supporting this initiative, please contact <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a>.</p>
+<p><strong>Tax modeling in India:</strong> With the support of the World Bank, PSL community members provided more than eight weeks of training to officers and analysts in the Ministry of Finance and the Tax Policy Research Unit (TPRU) in India from 2018-2019. This initiative seeks to raise funding to further support efforts to develop frontier models that will improve the design of tax policy and the budgeting process in India. Working alongside members of the Ministry of Finance and TPRU, PSL members will build microsimulation and macroeconomic models for the government of India that meet or exceed the capabilities of organizations like the Congressional Budget Office and the Joint Committee on taxation. The models will be built with open source software and principles and government of India staff will be trained to further develop and maintain the models into the indefinite future. If you have questions or are interested in supporting this initiative, please contact <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a> or <a href="rwevans@rice.edu">Richard Evans</a>.</p>
+<p><br></p>
+<h2>Proposing a new initiatives</h2>
+<p>If you are interested in proposing a PSL initiative for a new or existing project in the PSL community, please contact PSL Foundation President, <a href="mailto:jason.debacker@gmail.com">Jason DeBacker</a> with the following information: principal investigator(s) name and contact information, name and link to new or existing model(s) involved in the initiative, and a short description of the project (500 words or less). After this information is submitted and reviewed, the PSL Leadership Council will evaluate the proposed initiative.</p></div>
     </div>
 
-    <div class="footer-banner">
-      <div class="footer-image">
-        <img alt="Your Image Description" src="../imgs/PSL.svg" />
-      </div>
-      <div class="footer-text">
-        PSL is developed by a community of technical contributors. Learn how to
-        contribute to library projects or add a new project to the library.
-      </div>
-      <div class="footer-buttons">
-        <a class="button" href="../Community/contribute.html">
-          JOIN THE COMMUNITY
-        </a>
-        <a class="button" href="https://opencollective.com/psl">
-          DONATE TO PSL
-        </a>
-      </div>
-    </div>
+    <div id="footer"></div>
+  </body>
+  <script>
+    {
+      fetch('/layout/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
 
-    <footer class="footer">
-      <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm text-center">
-          <a class="fa fa-twitter" href="https://twitter.com/pslmodels"> </a>
-          <a
-            class="fa fa-linkedin"
-            href="https://www.linkedin.com/company/policy-simulation-library/"
-          >
-          </a>
-          <a
-            class="fa fa-youtube"
-            href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q"
-          >
-          </a>
-          <a
-            aria-hidden="true"
-            class="fa fa-github"
-            href="https://github.com/pslmodels"
-          >
-          </a>
-        </div>
-        <div class="col-sm"></div>
-      </div>
-    </footer>
+    fetch('/layout/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer').innerHTML = data;
+      });
+    }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

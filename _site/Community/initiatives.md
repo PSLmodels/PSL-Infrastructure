@@ -1,5 +1,7 @@
 # PSL Initiatives
 
+Explore PSL Initiatives, strategic fundraising efforts for project development endorsed by the PSL Leadership Council, including current projects and how to propose new ones.
+
 PSL Initiatives are fundraising initiatives for project development that have the full support of the [PSL Leadership Council](council.html).
 
 ## Current Initiatives

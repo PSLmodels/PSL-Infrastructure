@@ -1,5 +1,7 @@
 # Contributing to PSL
 
+Explore how to contribute to PSL, from technical enhancements to adding new models, and learn about the submission process and community engagement opportunities.
+
 You are welcome to contribute to PSL by making a technical contribution to PSL infrastructure like the website and Catalog-Builder, adding a model to the library, or contributing to one of the models already in the library.
 
 When you feel that you have made a valuable contribution, please add it to RELEASES.md. If you think PSL users should know about it, add it to NEWS.md. If your name is not already in contributors.md, add it.

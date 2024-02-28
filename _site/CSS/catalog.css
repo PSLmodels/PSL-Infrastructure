@@ -3,6 +3,19 @@
   --hover-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   --primary-button-color: rgb(12, 84, 124);
   --hover-button-color: rgb(8, 56, 81);
+  --font-family: "Roboto", sans-serif;
+  --link-color: gray;
+  --link-hover-color: black;
+  --separator-color: #3498db;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --footer-text-color: #fff;
+  --separator-height: 2px;
+  --button-text-color: white;
+  --border-color: #555;
+  --banner-background: url("../imgs/blurry-gradient-haikei.svg");
+  --icon-opacity: 0.7;
+  --icon-hover-opacity: 0.8;
 }
 *,
 *:before,
@@ -11,18 +24,22 @@
 }
 html {
   height: 100%;
+  font-size: 16px;
+}
+p {
+  font-size: 1.05rem;
 }
 body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: #f9f9f9;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
   overflow-x: hidden;
 }
 #content a {
-  color: black;
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 code {
@@ -35,7 +52,7 @@ code {
   width: 40px;
   text-align: center;
   text-decoration: none;
-  opacity: 0.7;
+  opacity: var(--icon-opacity);
 }
 .fa-twitter {
   color: #55acee;
@@ -44,7 +61,7 @@ code {
   color: #5d6d7e;
 }
 .fa-github {
-  color: #333;
+  color: var(--text-color);
 }
 .fa-youtube {
   color: #d98880;
@@ -53,14 +70,14 @@ code {
   background-color: var(--primary-button-color);
   border-bottom: none;
   box-shadow: 0px 1px 0px #c7c8c9;
-  color: white;
+  color: var(--button-text-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-text {
-  color: white;
+  color: var(--button-text-color);
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
@@ -69,10 +86,10 @@ code {
   text-decoration: none;
 }
 .logo-container {
-  background-color: white;
+  background-color: var(--button-text-color);
   padding: 3px 6px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--primary-box-shadow);
   transition: all 0.3s ease;
 }
 .logo-container:hover {
@@ -92,14 +109,14 @@ code {
   align-items: center;
 }
 .row.border-top {
-  border-color: #555;
+  border-color: var(--border-color);
 }
 .banner {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1vw 12vw;
-  background: center / cover url("../imgs/blurry-gradient-haikei.svg");
+  background: center / cover var(--banner-background);
 }
 .banner-content {
   display: flex;
@@ -113,6 +130,7 @@ code {
   text-align: left;
   flex: 1;
   padding: 0;
+  margin: 0;
 }
 .banner-image img {
   width: 100%;
@@ -120,17 +138,24 @@ code {
   height: auto;
   margin-top: 10px;
 }
+.banner h1, .banner h5 {
+  margin: 0;
+  padding-left: 0;
+  text-align: left;
+}
 .banner h1 {
   font-size: 70px;
   margin-bottom: 10px;
+  margin-left: -3px;
 }
 .banner h5 {
   font-size: 20px;
+  margin-top: 10px;
 }
 .text-box {
   width: 75%;
   margin: 25px auto;
-  background-color: white;
+  background-color: var(--button-text-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -147,6 +172,7 @@ code {
 }
 .box-content {
   padding: 10px 20px;
+  font-size: 1.05rem;
 }
 .button-container,
 .footer-buttons {
@@ -163,7 +189,7 @@ code {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 20px;
-  color: white;
+  color: var(--button-text-color);
   transition: all 0.3s ease;
   transform: scale(1);
   box-shadow: var(--primary-box-shadow);
@@ -173,10 +199,10 @@ code {
 .button:focus {
   transform: scale(1.05);
   box-shadow: var(--hover-box-shadow);
-  color: white;
+  color: var(--button-text-color);
 }
 .footer-buttons .button:first-child {
-  background-color: gray;
+  background-color: var(--link-color);
 }
 .models-section,
 .maintainers-section {
@@ -238,7 +264,7 @@ code {
   height: 100px;
   padding: 0;
   margin: 0 auto 10px;
-  border: 2px solid #3498db;
+  border: var(--separator-height) solid var(--separator-color);
   background: transparent;
   border-radius: 50%;
   cursor: pointer;
@@ -250,7 +276,7 @@ code {
   transition: opacity 0.2s ease;
 }
 .maintainer-image-btn:hover img {
-  opacity: 0.8;
+  opacity: var(--icon-hover-opacity);
 }
 .maintainer-card.non-clickable {
   cursor: default;
@@ -310,19 +336,16 @@ code {
     width: auto;
     padding: 10px;
   }
-
   .slick-slider .carousel-item h3,
   .slick-slider .carousel-item h4,
   .slick-slider .carousel-item p {
     font-size: smaller;
     margin: 5px 0;
   }
-
   .slick-slider .carousel-item .pr-link-button {
     padding: 8px 12px;
     font-size: 12px;
   }
-
   .slick-slider .carousel-item img {
     width: 100%;
     max-width: 250px;
@@ -336,15 +359,12 @@ code {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .slick-slider .carousel-item .repo-logo {
     margin-bottom: 10px;
   }
-
   .slick-slider .carousel-item .text-content {
     width: 100%;
   }
-
   .models-grid,
   .maintainers-grid {
     grid-template-columns: 1fr;
@@ -364,11 +384,8 @@ code {
 .footer .fa {
   margin: 0 15px;
   padding: 10px;
-
   border-radius: 50%;
-
   background-color: rgba(174, 163, 163, 0.2);
-
   transition: background-color 0.3s ease;
 }
 .footer .fa:hover {
@@ -376,7 +393,6 @@ code {
 }
 .footer .text-center {
   padding-top: 10px;
-
   padding-bottom: 10px;
 }
 .fa {
@@ -385,7 +401,7 @@ code {
   width: 40px;
   text-align: center;
   text-decoration: none;
-  opacity: 0.7;
+  opacity: var(--icon-opacity);
 }
 .fa:hover,
 .footer .fa:hover {
@@ -398,16 +414,14 @@ code {
   color: #5d6d7e;
 }
 .fa-github {
-  color: #333;
+  color: var(--text-color);
 }
 .fa-youtube {
   color: #d98880;
 }
 .footer {
-  background-color: #333;
-
-  color: #fff;
-
+  background-color: var(--text-color);
+  color: var(--footer-text-color);
   padding: 0;
   margin: 0;
   border: none;
@@ -471,7 +485,7 @@ code {
 }
 .custom-section .box {
   flex: 1;
-  background-color: white;
+  background-color: var(--button-text-color);
   box-shadow: var(--primary-box-shadow);
   padding: 20px;
   margin: 0 10px;
@@ -533,75 +547,63 @@ code {
   border-top: none;
 }
 .custom-section .box i {
-  color: #3498db;
+  color: var(--separator-color);
 }
-
 .models-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .models-section .card {
   width: 23%;
   margin: 1%;
 }
-
 @media (min-width: 992px) {
   .models-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .model-card {
     flex: 0 0 calc(25% - 4%);
     margin: 1%;
   }
 }
-
 .model-card img {
   width: 100px;
   border-radius: 5px;
 }
-
 .model-card .maintainer-image-btn {
   border-radius: 5px;
   background-color: transparent;
-  border: 2px solid #3498db;
+  border: var(--separator-height) solid var(--separator-color);
 }
-
 .model-card .maintainer-image-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
 }
-
 .model-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .col-sm.text-center {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
 }
-
 .col-sm.text-center a.fa:hover {
   text-decoration: none;
   background-color: #f5f5f5;
-  color: black;
+  color: var(--link-hover-color);
 }
-
 .carousel-container {
   margin: 2em auto;
   width: 100%;
   max-width: 75%;
 }
-
 .slick-slider .carousel-item {
   margin: 5px 10px;
   padding: 25px;
@@ -612,28 +614,24 @@ code {
   white-space: nowrap;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--button-text-color);
   box-shadow: var(--primary-box-shadow);
   border-radius: 5px;
   align-items: center;
   text-align: left;
 }
-
 .slick-slider .carousel-item .repo-logo {
   max-width: 80px;
   height: auto;
   margin-right: 20px;
 }
-
 .slick-slider .carousel-item .text-content {
   flex-grow: 1;
 }
-
 .slick-slider .carousel-item .repo-title {
   font-size: 18px;
   margin-bottom: 12px;
 }
-
 .slick-slider .carousel-item .pr-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -644,31 +642,27 @@ code {
   font-size: 15px;
   margin-bottom: 5px;
 }
-
 .slick-slider .carousel-item .pr-time {
   font-size: 14px;
   color: #666;
   margin-bottom: 10px;
 }
-
 .slick-slider .carousel-item .pr-link-button {
   display: block;
   text-align: center;
   padding: 10px 15px;
   background-color: var(--primary-button-color);
-  color: white;
+  color: var(--button-text-color);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.2s;
   box-shadow: var(--primary-box-shadow);
   margin-top: auto;
 }
-
 .slick-slider .carousel-item .pr-link-button:hover {
   background-color: var(--hover-button-color);
   box-shadow: var(--hover-box-shadow);
 }
-
 .user-grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -676,68 +670,67 @@ code {
   row-gap: 25px;
   justify-content: center;
 }
-
 .user-grid-item {
   display: flex;
   flex-direction: column;
   vertical-align: bottom;
   max-width: 250px;
 }
-
 .user-grid-item img {
   height: 75px;
   width: auto;
   max-width: 250px;
   vertical-align: bottom;
 }
-
 .user-grid-item p {
   text-align: center;
   word-wrap: break-word;
   hyphens: auto;
 }
-
 .user-grid-item a {
-  color: gray;
+  color: var(--link-color);
   text-decoration: none;
 }
-
 .user-grid-item a:hover,
 .user-grid-item a:focus {
   text-decoration: underline;
 }
-
 .separator {
   border: 0;
-  height: 2px; /* Adjust thickness */
-  background-color: #3498db; /* Adjust color to match your design */
-  margin: 10px 250px; /* Adjust spacing around the separator */
+  height: var(--separator-height);
+  background-color: var(--separator-color);
+  margin: 10px 250px;
 }
-
 #userCarousel .carousel-item img {
-  max-width: 300px; /* Adjust the width as needed */
-  height: 75px; /* Maintain aspect ratio */
-  margin: 0 auto; /* Center the image if the carousel item has flex layout */
+  max-width: 300px;
+  height: 75px;
+  margin: 0 auto;
 }
-
-/* Adjust the carousel item styling specifically for the user logos carousel if needed */
 #userCarousel .carousel-item {
-  justify-content: center; /* Center items if using flex display */
-  padding: 15px; /* Adjust padding if needed */
-  height: auto; /* Make height auto to accommodate different image sizes */
-  text-align: center; /* Center the text content */
+  justify-content: center;
+  padding: 15px;
+  height: auto;
+  text-align: center;
   width: auto;
 }
-
 #userCarousel .carousel-item a {
-  color: gray;
+  color: var(--link-color);
   text-decoration: none;
 }
-
 #userCarousel .carousel-item a:hover {
   text-decoration: underline;
 }
-
 #userCarousel .carousel-item p {
   margin-bottom: 5px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table, th, td {
+  border: 1px solid var(--link-hover-color);
+}
+th, td {
+  padding: 8px;
+  text-align: left;
 }
