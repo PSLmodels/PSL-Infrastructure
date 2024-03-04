@@ -210,8 +210,8 @@
     },
     {
       "name": "US Presidential Campaigns",
-      "image": "",
-      "link": ""
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/1200px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png",
+      "link": "https://en.wikipedia.org/wiki/United_States_presidential_election"
     }
   ]
 }
