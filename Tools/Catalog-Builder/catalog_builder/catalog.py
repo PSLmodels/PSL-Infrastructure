@@ -1,8 +1,8 @@
 import json
 import os
+import requests
 import argparse
 from collections import defaultdict
-
 from catalog_builder import utils
 
 
@@ -70,17 +70,21 @@ class CatalogBuilder:
         card_dir=None,
         develop=False,
         build_one=None,
+        incubating=False
     ):
+        self.incubating = incubating
         if projects is None:
-            p = os.path.join(self.CURRENT_PATH, "../../../Catalog/register.json")
+            if self.incubating:
+                folder = "../../../Incubating"
+            else:
+                folder = "../../../Catalog"
+            p = os.path.join(self.CURRENT_PATH, f"{folder}/register.json")
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
             self.projects = projects
 
-        self.index_dir = index_dir or os.path.join(
-            self.CURRENT_PATH, "../../../Catalog/"
-        )
+        self.index_dir = index_dir or os.path.join(self.CURRENT_PATH, folder)
 
         self.catalog = defaultdict(dict)
         self.repos = {}
@@ -116,34 +120,44 @@ class CatalogBuilder:
                     "PSL_catalog.json",
                 )
                 cat_meta = json.loads(cat_meta)
-                self.catalog[project["repo"]]["name"] = {
-                    "value": project["repo"],
-                    "source": "",
-                }
-                self.repos[project["repo"]] = repo_url.format(
-                    project["org"], project["repo"]
-                )
-                for attr, config in cat_meta.items():
-                    if config["type"] == "github_file":
-                        value = utils.get_from_github_api(project, config)
-                        source = (
-                            f"https://github.com/{project['org']}/"
-                            f"{project['repo']}/blob/{project['branch']}/"
-                            f"{config['source']}"
-                        )
 
-                    elif config["type"] == "html":
-                        source = config["source"]
-                        value = config["data"]
-                    else:
-                        msg = (
-                            f"MISSING DATA: {project['repo']}, entry: "
-                            f"{attr}, {config}"
-                        )
-                        print(msg)
-                        source, value = None, None
-                    res = {"source": source, "value": value}
-                    self.catalog[project["repo"]][attr] = res
+                github_url = repo_url.format(project["org"], project["repo"])
+
+                if 'name' in cat_meta and isinstance(cat_meta['name'], str):
+                    self.catalog[project["repo"]] = cat_meta
+                    self.catalog[project["repo"]]['github_url'] = github_url
+                else:
+
+                    self.catalog[project["repo"]]["name"] = {
+                        "value": project["repo"],
+                        "source": "",
+                    }
+                    self.repos[project["repo"]] = repo_url.format(
+                        project["org"], project["repo"]
+                    )
+                    for attr, config in cat_meta.items():
+                        if config["type"] == "github_file":
+                            value = utils.get_from_github_api(project, config)
+                            source = (
+                                f"https://github.com/{project['org']}/"
+                                f"{project['repo']}/blob/{project['branch']}/"
+                                f"{config['source']}"
+                            )
+
+                        elif config["type"] == "html":
+                            source = config["source"]
+                            value = config["data"]
+                        else:
+                            msg = (
+                                f"MISSING DATA: {project['repo']}, entry: "
+                                f"{attr}, {config}"
+                            )
+                            print(msg)
+                            source, value = None, None
+                        res = {"source": source, "value": value}
+                        self.catalog[project["repo"]][attr] = res
+                    self.catalog[project["repo"]]['github_url'] = github_url
+
         else:
             print("Develop mode. Loading Catalog from catalog.json")
             json_path = os.path.join(self.index_dir, "catalog.json")
@@ -165,16 +179,38 @@ class CatalogBuilder:
 
         Data is written to the `Web/pages` directory
         """
+        banner_title = "Incubating Projects" if self.incubating else "Models"
+        banner_one_liner = ("Discover our emerging projects and initiatives "
+                            "shaping the future of policy analysis."
+                            if self.incubating else
+                            "We have a collection of open-source models and data preparation "
+                            "routines for policy analysis.")
+
         models_path = os.path.join(
-            self.CURRENT_PATH, "../templates", "catalog_template.html"
+            self.CURRENT_PATH, "../templates", "catalog_template.html")
+
+        model_path = os.path.join(
+            self.CURRENT_PATH, "../templates", "model_template.html"
         )
 
-        rendered = utils.render_template(
-            models_path, catalog=self.catalog, repos=self.repos
-        )
+        rendered = utils.render_template(models_path,
+                                         catalog=self.catalog,
+                                         repos=self.repos,
+                                         banner_title=banner_title,
+                                         banner_one_liner=banner_one_liner)
+
         pathout = os.path.join(self.index_dir, "index.html")
         with open(pathout, "w") as out:
             out.write(rendered)
+
+        for project in sorted(self.projects, key=lambda x: x["repo"].upper()):
+            rendered = utils.render_template(
+                model_path, catalog=self.catalog, repos=self.repos, project=project['repo']
+            )
+
+            pathout = os.path.join(self.index_dir, f"{project['repo']}.html")
+            with open(pathout, "w") as out:
+                out.write(rendered)
 
     def dump_catalog(self, output_path=None):
         """
@@ -190,6 +226,23 @@ class CatalogBuilder:
             with open(output_path, "w") as f:
                 f.write(cat_json)
         return cat_json
+
+    def fetch_and_store_recent_prs(self, output_path):
+        pr_data = {}
+        for project in self.projects:
+            owner, repo = project['org'], project['repo']
+            url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
+            params = {'state': 'all', 'sort': 'created',
+                      'direction': 'desc', 'per_page': 5}
+            response = requests.get(url, params=params)
+            if response.status_code == 200:
+                pr_data[project['repo']] = response.json()
+            else:
+                pr_data[project['repo']] = []
+
+        with open(output_path, 'w') as f:
+            json.dump(pr_data, f, indent=4)
+        print("Latest PRs loaded.")
 
 
 if __name__ == "__main__":
@@ -218,8 +271,16 @@ if __name__ == "__main__":
         ),
         default=None,
     )
+    parser.add_argument(
+        "--incubating",
+        help="Build the catalog for incubating models.",
+        default=False,
+        action="store_true"
+    )
     args = parser.parse_args()
-    cb = CatalogBuilder(develop=args.develop, build_one=args.build_one)
+    cb = CatalogBuilder(develop=args.develop,
+                        build_one=args.build_one, incubating=args.incubating)
     cb.load_catalog()
     cb.write_pages()
+    cb.fetch_and_store_recent_prs(os.path.join(cb.index_dir, "prs.json"))
     cb.dump_catalog(os.path.join(cb.index_dir, "catalog.json"))

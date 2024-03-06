@@ -1,6 +1,5 @@
 import base64
 import json
-
 import markdown
 import requests
 import time
@@ -12,11 +11,14 @@ import re
 # headers for requests to GitHub API
 HEADER = {'User-Agent': 'request'}
 
+
 class SectionHeadersDoNotExist(Exception):
     pass
 
+
 class URLFormatError(Exception):
     pass
+
 
 def pre_parser(text):
     """
@@ -67,7 +69,7 @@ def parse_section(doc, section_start, section_end):
     --------
     HTML that was rendered from Markdown
     """
-    doc = doc.replace("#.#.#", "\#.\#.\#")
+    doc = doc.replace("#.#.#", r"\#.\#.\#")
     doc = pre_parser(doc)
     html = markdown.markdown(doc)
     html = html.replace('h2>', 'h5>')
@@ -109,6 +111,8 @@ def render_template(template_path, **render_kwargs):
     template = Template(template_str)
     template.globals["make_id"] = make_id
     template.globals["make_links"] = make_links
+    template.globals["parse_core_maintainers"] = parse_core_maintainers
+    template.environment.filters['split'] = split_filter
     return template.render(**render_kwargs)
 
 
@@ -123,7 +127,8 @@ def _get_from_github_api(org, repo, branch, filename):
             "For more information, check out the catalog configuration "
             "docs: Tools/Catalog-Builder/README.md"
         )
-    url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
+    url = f"https://api.github.com/repos/{org}/{
+        repo}/contents/{filename}?ref={branch}"
     response = requests.request('GET', url, headers=HEADER)
     print(f"GET: {url} {response.status_code}")
     if response.status_code == 403:
@@ -153,6 +158,43 @@ def make_id(name):
     return "-".join(name.split())
 
 
+def split_filter(s, delimiter=None):
+    return s.split(delimiter)
+
+
+def parse_core_maintainers(html_content):
+    maintainers = []
+    email_pattern = re.compile(
+        r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b')
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    for item in soup.find_all('ul', recursive=False):
+        for elem in item.children:
+            if elem.name == 'li':
+                maintainer = {'name': '', 'link': None}
+
+                if elem.find('a'):
+                    anchor = elem.find('a')
+                    maintainer['name'] = anchor.get_text(strip=True)
+                    maintainer['link'] = anchor.get('href')
+                else:
+                    text = elem.get_text(strip=True).split('\n')[0]
+                    maintainer['name'] = text
+
+                    sibling = elem.next_sibling
+                    if sibling and sibling.name == 'ul':
+                        nested_text = sibling.get_text(strip=True)
+                        email_match = email_pattern.search(nested_text)
+                        if email_match:
+                            email = email_match.group()
+                            maintainer['link'] = f'mailto:{email}'
+
+                if maintainer['name']:
+                    maintainers.append(maintainer)
+
+    return maintainers
+
+
 def make_links(item):
     """
     Returns either an HTML link or an empty string
@@ -161,7 +203,7 @@ def make_links(item):
         return value.startswith("<a") and value.endswith("/a>")
 
     def create_link(info, section_name):
-        link_str = "<p><a href=\"{}\">{}</a>\n</p>"
+        link_str = "<a class=\"button\" href=\"{}\">{}</a>"
         if info["source"]:
             if info["source"].startswith("http"):
                 return link_str.format(info["source"], section_name)

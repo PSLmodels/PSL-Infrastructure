@@ -1,162 +1,310 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="summary" name="twitter:card" />
+    <meta
+      content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png"
+      name="twitter:image"
+    />
+    <meta content="Catalog" name="twitter:title" />
+    <title>PSL</title>
+    <link rel="preload" href="/layout/navbar.html" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="/layout/footer.html" as="fetch" crossorigin="anonymous">
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-            gtag('config', 'UA-128365658-1');
-        </script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Home"/>
-        <meta name="twitter:image" content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png"/>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <title>PSL Home</title>
-        <!-- include bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="CSS/page.css">
-    </head>
-    <body id="page">
-        <nav class="navbar navbar-expand-md navbar-light sticky-top" style="background-color:white">
-            <div>
-                <a href="index.html" class="navbar-brand"><img src="imgs/PSL.svg" height="40"></a>
-            </div>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdownMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="dropdownMenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Catalog
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                          <a class="dropdown-item" href="Catalog/library_criteria.html">Criteria</a>  
-                          <a class="dropdown-item" href="Catalog/index.html">Models</a>
-                        </div>
-                    </li>
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Community
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                          <a class="dropdown-item" href="Community/contribute.html">Contribute</a>  
-                          <a class="dropdown-item" href="http://discourse.pslmodels.org/">Forum</a>
-                          <a class="dropdown-item" href="Community/initiatives.html">Initiatives</a>
-                          <a class="dropdown-item" href="Community/council.html">Leadership Council</a>
-                          <a class="dropdown-item" href="Newsletter/archive.html">Newsletter</a>
-                          <a class="dropdown-item" href="Community/roadmap.html">Roadmap</a>
-                        </div>
-                    </li>
-                    <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="events.html">Events</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="http://blog.pslmodels.org/">Blog</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="https://opencollective.com/psl">Donate</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="shop.html">Shop</a></li>
-                </ul>
-            </div>
-            <span class="navbar-text" style="float:right; font-family:'Courier New', Courier, monospace; margin-right:2%">
-                Open Models == Better Policy
-            </span>
-        </nav>
-        <div class="sidenav">
-             <a class="twitter-timeline" data-height="1000" href="https://twitter.com/PSLmodels?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter transparent">Tweets by PSLmodels</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div class="container home-container">
-            <div class="jumbotron" style="font-family:'Courier New', Courier, monospace">
-                <img src="imgs/PSL.svg" style="width:95%;" class="img-fluid" alt="Responsive image">
-                <a href="Catalog/index.html" class="btn btn-secondary btn-lg" id="aboutlink" style="font-family:sans-serif;">PSL Catalog</a>
-            </div>
-            <div class="row home-row" style="margin-left: 5%; margin-right: 5%">
-                <div class="col-lg-6" id="hover">
-                    <a href="about.html" class="card-link">
-                        <div class="card card-home text-center">
-                            <div class="card-header">
-                                About PSL
-                            </div>
-                            <div class="card-body">
-                                <p>PSL is a collection of open source models and data preparation routines for policy analysis.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a href="Community/contribute.html" class="card-link">
-                        <div class="card card-home text-center">
-                            <div class="card-header">
-                                Contribute
-                            </div>
-                            <div class="card-body">
-                                PSL is developed by a community of technical contributors. Learn how to contribute to library projects or add a new project to the library.
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6 twitter-card">
-                    <a href="https://twitter.com/PSLmodels" class="card-link">
-                        <div class="card text-center">
-                            <div class=card-header>
-                                News
-                            </div>
-                            <div class="card-body">
-                                <a class="twitter-timeline" href="https://twitter.com/PSLmodels?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter" data-tweet-limit="3">Tweets by PSLmodels</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!-- Begin Mailchimp Signup Form -->
-            <div id="mc_embed_signup">
-                <form action="https://policysimulationlibrary.us19.list-manage.com/subscribe/post?u=a5800eed8cadff70bf999bc29&amp;id=8437c6ae2f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll" style="text-align: center">
-                                <p id="subscribe" style="font-size: 18px; color: gray; margin-bottom: 5px; margin-top: 50px">Join the community</p>
-                        <div class="mc-field-group">
-                            <input style="width:200px" type="text" value="" name="MMERGE6" class="newsletter-input" id="mce-MMERGE6" placeholder="First Name">
-                            <input style="width:200px" type="text" value="" name="LNAME" class="newsletter-input" id="mce-LNAME" placeholder="Last Name">
-                        </div>
-                        <div class="mc-field-group">
-                            <input type="email" value="" name="EMAIL" class="email-form newsletter-input" id="mce-EMAIL" placeholder="Email">
-                            <label for="mce-EMAIL"><span class="asterisk">*</span></label>
-                        </div>
-                        <div id="mce-responses" class="clear">
-                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a5800eed8cadff70bf999bc29_8437c6ae2f" tabindex="-1" value=""></div>
-                        <div class="clear">
-                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary" style="margin-top:10px">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[6]='MMERGE6';ftypes[6]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-            <!--End mc_embed_signup-->
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-128365658-1");
+    </script>
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
 
-        </div>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link href="./CSS/catalog.css" rel="stylesheet" />
+  </head>
+  <body id="page">
+    <div id="navbar"></div>
 
-        <!-- footer start -->
-        <br><br>
-        <footer class="footer mt-auto py-2">
-        <div class="row mt-5 border-top">
-          <div class="col-sm"></div>
-          <div class="col-sm text-center">
-            <a href="https://twitter.com/pslmodels" class="fa fa-twitter"></a>
-            <a href="https://www.linkedin.com/company/policy-simulation-library/" class="fa fa-linkedin"></a>
-            <a href="https://www.youtube.com/channel/UCf7WWCuZHs_FFLjuBW4a4_Q" class="fa fa-youtube"></a>
-            <a href="https://github.com/pslmodels" class="fa fa-github" aria-hidden="true"></a>
+    <div style="text-align: center; padding: 20px">
+      <img
+        src="../imgs/PSL.svg"
+        alt="PSL Logo"
+        class="img-fluid"
+        style="width: auto; height: 350px"
+      />
+    </div>
+
+    <div class="custom-section">
+      <div class="box">
+        <a href="./about.html" style="color: inherit; text-decoration: none">
+          <i class="fas fa-info-circle"></i>
+          <h3>About</h3>
+          <p>
+            PSL is a collection of open-source models and data preparation
+            routines for policy analysis. Learn more about our organization and
+            our mission.
+          </p>
+        </a>
+      </div>
+
+      <div class="box">
+        <a
+          href="./Catalog/index.html"
+          style="color: inherit; text-decoration: none"
+        >
+          <i class="fas fa-book"></i>
+          <h3>Models Catalog</h3>
+          <p>
+            We have a collection of open-source models and data preparation
+            routines for policy analysis. Explore the various models and tools
+            we offer.
+          </p>
+        </a>
+      </div>
+
+      <div class="box">
+        <a
+          href="./Community/contribute.html"
+          style="color: inherit; text-decoration: none"
+        >
+          <i class="fas fa-hands-helping"></i>
+          <h3>Collaborate</h3>
+          <p>
+            PSL is developed by a community of technical contributors. Learn how
+            to contribute to library projects or add a new project to the
+            library. Find out how you can contribute and be a part of our
+            community.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <h2>Featured Users:</h2>
+      <div id="userCarousel" class="slick-slider"></div>
+    </div>
+
+    <div class="carousel-container">
+      <h2>Latest Pull Requests:</h2>
+      <div id="prCarousel" class="slick-slider"></div>
+    </div>
+    <div id="footer"></div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('/layout/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+
+      fetch('/layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+
+      fetch("Catalog/prs.json")
+        .then((response) => response.json())
+        .then((repos) => {
+          const prCards = [];
+          for (const [repoName, prs] of Object.entries(repos)) {
+            for (const pr of prs) {
+              const createdAt = new Date(pr.created_at);
+              prCards.push({
+                repoName,
+                prTitle: pr.title,
+                createdAt,
+                html_url: pr.html_url,
+                img: pr.base.user.avatar_url,
+              });
+            }
+          }
+
+          const sortedPrCards = prCards.sort((a, b) => {
+            return new Date(b.createdAt) - new Date(a.createdAt);
+          });
+
+          const carousel = document.getElementById("prCarousel");
+          let carouselHtml = "";
+
+          for (const prCard of sortedPrCards) {
+            carouselHtml += `
+          <div class="carousel-item">
+            <img src="${prCard.img} Logo" alt="${
+              prCard.repoName
+            } Logo" class="repo-logo">
+            <div class="text-content">
+              <h3 class="repo-title">${prCard.repoName}:</h3>
+              <h4 class="pr-title">${prCard.prTitle}</h4>
+              <p class="pr-time">${prCard.createdAt.toLocaleDateString()}</p>
+              <a href="${
+                prCard.html_url
+              }" target="_blank" class="pr-link-button">View PR</a>
+            </div>
           </div>
-          <div class="col-sm"></div>
-        </div>
-        </footer>
+        `;
+          }
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+          carousel.innerHTML = carouselHtml;
+
+          $("#prCarousel").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1,
+            speed: 8000,
+            infinite: true,
+            cssEase: "linear",
+            adaptiveHeight: true,
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  autoplaySpeed: 1,
+                  speed: 8000,
+                  infinite: true,
+                  cssEase: "linear",
+                  adaptiveHeight: true,
+                },
+              },
+            ],
+          });
+        })
+        .catch((error) => console.error("Error loading PR data:", error));
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]]; // ES6 destructuring assignment for swapping
+        }
+        return array;
+      }
+
+      fetch("users.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const logoCards = [];
+          for (const [category, users] of Object.entries(data)) {
+            for (const user of users) {
+              logoCards.push({
+                name: user.name,
+                image: user.image,
+                link: user.link, // Assuming each user object has a 'link' property
+              });
+            }
+          }
+
+          const sortedLogoCards = shuffle(logoCards);
+
+          const logoCarousel = document.getElementById("userCarousel");
+          let carouselHtml = "";
+
+          for (const logoCard of sortedLogoCards) {
+            carouselHtml += `
+            <div class="carousel-item">
+              <a href="${logoCard.link}" target="_blank">
+                <img src="${logoCard.image}" alt="${logoCard.name} Logo" class="logo-img">
+                <br>
+                <p class="logo-name">${logoCard.name}</p>
+              </a>
+            </div>
+          `;
+          }
+
+          logoCarousel.innerHTML = carouselHtml;
+
+          // Initialize carousel (example using Slick Carousel as in your PR carousel)
+          $("#userCarousel").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1,
+            speed: 5000,
+            infinite: true,
+            cssEase: "linear",
+            adaptiveHeight: false,
+            variableWidth: true,
+            responsive: [
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  autoplaySpeed: 1,
+                  speed: 8000,
+                  infinite: true,
+                  cssEase: "linear",
+                  adaptiveHeight: true,
+                },
+              },
+            ],
+          });
+        })
+        .catch((error) => console.error("Error loading user data:", error));
+    });
+  </script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  ></script>
 </html>

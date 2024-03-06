@@ -16,7 +16,6 @@ If you would like to make a technical contribution to PSL, please review the [co
 
 You can reach PSL developers and users to discuss how to get started by opening an issue or joining the PSL Community [chat room](https://matrix.to/#/!oZnjlINzAXrgdzXEfZ:matrix.org).
 
-PSL is governed by a [leadership council](https://github.com/PSLmodels/PSL/blob/master/Community/council.md) of project representatives. 
+PSL is governed by a [leadership council](https://github.com/PSLmodels/PSL/blob/master/Community/council.md) of project representatives.
 
-The PSL community is respectful, warm, and open to everyone. In order to ensure that the project remain that way for all participants, we have officially adopted the [NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct) as our own, with the exception that infractions should be reported to a PSL leadership council member. 
-
+The PSL community is respectful, warm, and open to everyone. In order to ensure that the project remain that way for all participants, we have officially adopted the [NumFOCUS Code of Conduct](https://numfocus.org/code-of-conduct) as our own, with the exception that infractions should be reported to a PSL leadership council member.

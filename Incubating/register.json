@@ -1,0 +1,17 @@
+[
+  {
+    "org": "PSLmodels",
+    "repo": "OG-USA",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "Behavioral-Responses",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "openfisca-uk",
+    "branch": "master"
+  }
+]
