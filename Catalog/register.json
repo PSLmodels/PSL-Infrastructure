@@ -6,6 +6,11 @@
   },
   {
     "org": "PSLmodels",
+    "repo": "OG-Core",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
     "repo": "Cost-of-Capital-Calculator",
     "branch": "master"
   },
