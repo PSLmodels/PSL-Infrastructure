@@ -51,8 +51,7 @@ def mock_gh_api(mock_markdown_doc, mock_catalog_meta, monkeypatch):
     """
 
     def _gh_api(org, repo, branch, filename):
-        url = f"https://api.github.com/repos/{org}/{
-            repo}/contents/{filename}?ref={branch}"
+        url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
         response = requests.get(url)
         return response.text
 
