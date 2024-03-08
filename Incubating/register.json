@@ -6,6 +6,11 @@
   },
   {
     "org": "PSLmodels",
+    "repo": "ui_calculator",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
     "repo": "CGE",
     "branch": "master"
   },
@@ -32,6 +37,21 @@
   {
     "org": "PSLmodels",
     "repo": "OG-UK",
+    "branch": "master"
+  },
+  {
+    "org": "Revenue-Academy",
+    "repo": "OG-MYS",
+    "branch": "master"
+  },
+  {
+    "org": "Revenue-Academy",
+    "repo": "OG-IND",
+    "branch": "master"
+  },
+  {
+    "org": "EAPD-DRB",
+    "repo": "OG-ZAF",
     "branch": "master"
   },
   {
