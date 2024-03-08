@@ -5,5 +5,7 @@ dependencies:
   - bs4
   - jinja2
   - requests
-  - requests_mock
   - pandoc
+  - pip
+pip:
+  - requests_mock
