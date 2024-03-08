@@ -6,7 +6,7 @@
       "link": "https://www.cbo.gov/"
     },
     {
-      "name": "Office of Tax Analysis, Treasury",
+      "name": "Office of Tax Analysis, U.S. Treasury",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Seal_of_the_United_States_Department_of_the_Treasury.svg/600px-Seal_of_the_United_States_Department_of_the_Treasury.svg.png",
       "link": "https://home.treasury.gov/policy-issues/tax-policy/office-of-tax-analysis"
     },
@@ -31,12 +31,12 @@
       "link": "https://www.congress.gov/"
     },
     {
-      "name": "Senate Finance, United States Congress",
+      "name": "Senate Finance Committee, United States Congress",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Seal_of_the_United_States_Senate.svg/138px-Seal_of_the_United_States_Senate.svg.png",
       "link": "https://www.finance.senate.gov/"
     },
     {
-      "name": "Ways and Means, United States Congress",
+      "name": "Ways and Means Committee, United States Congress",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ways_and_Means_%28118th_Congress%29.svg/250px-Ways_and_Means_%28118th_Congress%29.svg.png",
       "link": "https://waysandmeans.house.gov/"
     }
@@ -73,7 +73,7 @@
       "link": "https://www.thecgo.org/"
     },
     {
-      "name": "Committee for Responsible Federal Budget",
+      "name": "Committee for a Responsible Federal Budget",
       "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Committee_Responsible_Federal_Budget_Logo.jpg",
       "link": "https://www.crfb.org/"
     },
@@ -130,7 +130,7 @@
       "link": "https://www.wisconsin.edu/"
     },
     {
-      "name": "University of Virgninia",
+      "name": "University of Virginia",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/University_of_Virginia_Rotunda_logo.svg/800px-University_of_Virginia_Rotunda_logo.svg.png",
       "link": "https://www.virginia.edu/"
     },
@@ -194,7 +194,7 @@
       "link": "https://www.un.org/en/"
     },
     {
-      "name": "Eurpoean Commission",
+      "name": "European Commission",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/European_Commission.svg/1280px-European_Commission.svg.png",
       "link": "https://commission.europa.eu/index_en"
     },
