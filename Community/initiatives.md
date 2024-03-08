@@ -1,5 +1,7 @@
 # PSL Initiatives
 
+Explore PSL Initiatives, strategic fundraising efforts for project development endorsed by the PSL Leadership Council, including current projects and how to propose new ones.
+
 PSL Initiatives are fundraising initiatives for project development that have the full support of the [PSL Leadership Council](council.html).
 
 ## Current Initiatives
@@ -13,4 +15,3 @@ PSL Initiatives are fundraising initiatives for project development that have th
 ## Proposing a new initiatives
 
 If you are interested in proposing a PSL initiative for a new or existing project in the PSL community, please contact PSL Foundation President, [Jason DeBacker](mailto:jason.debacker@gmail.com) with the following information: principal investigator(s) name and contact information, name and link to new or existing model(s) involved in the initiative, and a short description of the project (500 words or less). After this information is submitted and reviewed, the PSL Leadership Council will evaluate the proposed initiative.
-

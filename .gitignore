@@ -6,6 +6,7 @@ __pycache__/
 .pytest_cache/
 htmlcov/
 .coverage
+.coverage.*
 
 # Sphinx documentation
 read-the-docs/_build/
@@ -13,4 +14,48 @@ read-the-docs/_build/
 # Mac OS X
 *.DS_Store
 
+# Egg-info directories
 *.egg-info/
+*.egg
+
+# Jekyll build output
+/_site/
+/.jekyll-cache/
+
+# Python virtual environments
+/venv/
+
+# Node modules
+/node_modules/
+
+# IDE and editor directories
+/.idea/
+/.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating system files
+Thumbs.db
+
+# Python
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables and configuration files
+.env
+config/settings.yml
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+
+# Logs
+logs/
+*.log
+
+# Others
+*.sqlite3
+*.sqlitedb

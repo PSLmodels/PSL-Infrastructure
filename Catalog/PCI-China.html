@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="summary" name="twitter:card" />
+    <meta
+      content="http://pslmodels.org/imgs/PolicySimLibrary-1000px.png"
+      name="twitter:image"
+    />
+    <meta content="Catalog" name="twitter:title" />
+    <title>PSL</title>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=UA-128365658-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-128365658-1");
+    </script>
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="../CSS/catalog.css" rel="stylesheet" />
+  </head>
+
+  <body id="page">
+    <div id="navbar"></div>
+
+    <div class="banner">
+      <div class="banner-content">
+        <div class="banner-text">
+          
+          <h1>PCI-China</h1>
+          <br />
+          <h5><p>A machine learning project that analyzes state-run media to predict policy changes.</p></h5>
+          
+        </div>
+        <br />
+        <div class="banner-image">
+          
+          <img alt="PCI-China" src="../imgs/PSL.svg" />
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="text-box">
+      <div class="box-header"></div>
+      <div class="box-content">
+         <p>China's industrialization process has long been a product of government direction, be it coercive central planning or ambitious industrial policy. For the first time in the literature, we develop a quantitative indicator of China's policy priorities over a long period of time, which we call the Policy Change Index for China (PCI-China). The PCI-China is a leading indicator that runs from 1951 to the most recent quarter and can be updated in the future. In other words, the PCI-China not only helps us understand the past of China's industrialization but also allows us to make short-term predictions about its future directions.</p> <p>The design of the PCI-China has two building blocks: (1) it takes as input data the full text of the <em>People's Daily</em> --- the official newspaper of the Communist Party of China --- since it was founded in 1946; (2) it employs a set of machine learning techniques to "read" the articles and detect changes in the way the newspaper prioritizes policy issues.</p> <p>The source of the PCI-China's predictive power rests on the fact that the <em>People's Daily</em> is at the nerve center of China's propaganda system and that propaganda changes often precede policy changes. Before the great transformation from the central planning under Mao to the economic reform program after Mao, for example, considerable efforts were made by the Chinese government to promote the idea of reform, move public opinion, and mobilize resources toward the new agenda. Therefore, by detecting (real-time) changes in propaganda, the PCI-China is, effectively, predicting (future) changes in policy.</p> <p>For details about the methodology and findings of this project, please see the following research paper:</p> <ul> <li>Chan, Julian TszKin and Weifeng Zhong. 2019. "Reading China: Predicting Policy Change with Machine Learning." <a href="https://www.aei.org/research-products/working-paper/reading-china-predicting-policy-change-with-machine-learning/">AEI Economics Working Paper No. 2018-11</a> (latest version available <a href="https://policychangeindex.org/pdf/Reading_China.pdf">here</a>).</li> </ul> 
+      </div>
+    </div>
+
+    
+    
+
+    <div class="button-container">
+       <a class="button" href="https://github.com/PSLmodels/PCI/blob/master/README.md">User documentation</a><a class="button" href="https://github.com/PSLmodels/PCI-China/blob/master/README.md">Contributor documentation</a> 
+    </div>
+
+    <section class="maintainers-section">
+      <h2>Maintainers:</h2>
+      <div class="maintainer-container">
+        <div class="maintainers-grid">
+              
+          <div class="maintainer-card non-clickable">
+            <button class="maintainer-image-btn">
+              <img
+                alt="Julian TszKin Chan"
+                src="../imgs/default-maintainer.jpg"
+              />
+            </button>
+            <p>Julian TszKin Chan</p>
+          </div>
+            
+          <div class="maintainer-card non-clickable">
+            <button class="maintainer-image-btn">
+              <img
+                alt="Weifeng Zhong"
+                src="../imgs/default-maintainer.jpg"
+              />
+            </button>
+            <p>Weifeng Zhong</p>
+          </div>
+            
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+  <script>
+    {
+      fetch('/layout/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
+
+    fetch('/layout/footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('footer').innerHTML = data;
+      });
+    }
+    </script>
+  </body>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  ></script>
+</html>

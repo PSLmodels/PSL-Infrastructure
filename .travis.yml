@@ -19,4 +19,4 @@ install:
 
 # command to run tests
 script:
-- cd catalog_builder && pytest tests/ -v
+  - cd catalog_builder && pytest tests/ -v

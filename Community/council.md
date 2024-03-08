@@ -1,21 +1,22 @@
 # PSL Leadership Council, Version 1.2.0
 
+Details on the PSL Leadership Council, including members, represented projects, bylaws for governance, and a log of council versions and updates.
+
 ## Council
 
-| Member          | Represented Project        | Email                    |
-|-----------------|----------------------------|--------------------------|
-| Daniel Bunn     | capital-cost-recovery      | dbunn@taxfoundation.org  |
-| Jason DeBacker  | Cost-of-Capital-Calculator | jason.debacker@gmail.com |
-| Henry Doupe     | ParamTools                 | henrymdoupe@gmail.com    |
-| Richard Evans   | OG-USA                     | rickecon@gmail.com       |
-| Anderson Frailey| Tax-Brain                  | andersonfrailey@gmail.com|
-| Martin Holmer   | Tax-Calculator             | martin.holmer@gmail.com  |
-| Matt Jensen     | PSL-Infrastructure         | matt.h.jensen@gmail.com  |
-| Peter Metz      | Tax-Cruncher               | pmetzdc@gmail.com        |
-| Weifeng Zhong   | PCI-China                  | weifeng@weifengzhong.com |
-| Max Ghenis      | microdf                    | mghenis@gmail.com        |
-| Nikhil Woodruff | OpenFisca-UK               | nikhil.woodruff@outlook.com |
-
+| Member           | Represented Project        | Email                       |
+| ---------------- | -------------------------- | --------------------------- |
+| Daniel Bunn      | capital-cost-recovery      | dbunn@taxfoundation.org     |
+| Jason DeBacker   | Cost-of-Capital-Calculator | jason.debacker@gmail.com    |
+| Henry Doupe      | ParamTools                 | henrymdoupe@gmail.com       |
+| Richard Evans    | OG-USA                     | rickecon@gmail.com          |
+| Anderson Frailey | Tax-Brain                  | andersonfrailey@gmail.com   |
+| Martin Holmer    | Tax-Calculator             | martin.holmer@gmail.com     |
+| Matt Jensen      | PSL-Infrastructure         | matt.h.jensen@gmail.com     |
+| Peter Metz       | Tax-Cruncher               | pmetzdc@gmail.com           |
+| Weifeng Zhong    | PCI-China                  | weifeng@weifengzhong.com    |
+| Max Ghenis       | microdf                    | mghenis@gmail.com           |
+| Nikhil Woodruff  | OpenFisca-UK               | nikhil.woodruff@outlook.com |
 
 ## Bylaws
 

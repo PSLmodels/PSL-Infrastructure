@@ -1,6 +1,6 @@
 #!/bin/bash
-pandoc -s -o ../../Community/contribute.html ../../Community/contribute.md -H head.html -B nav.html -A footer.html --css ../../CSS/page.css
-pandoc -s -o ../../Community/council.html ../../Community/council.md -H head.html -B nav.html -A footer.html --css ../../CSS/page.css
-pandoc -s -o ../../Community/roadmap.html ../../Community/roadmap.md -H head.html -B nav.html -A footer.html --css ../../CSS/page.css
-pandoc -s -o ../../Community/initiatives.html ../../Community/initiatives.md -H head.html -B nav.html -A footer.html --css ../../CSS/page.css
-pandoc -s -o ../../Catalog/library_criteria.html ../../Catalog/library_criteria.md -H head.html -B nav.html -A footer.html --css ../../CSS/page.css
+py ./page_builder.py ../../Community/contribute.md ../../Community/contribute.html
+py ./page_builder.py ../../Community/council.md ../../Community/council.html
+py ./page_builder.py ../../Community/roadmap.md ../../Community/roadmap.html
+py ./page_builder.py ../../Community/initiatives.md ../../Community/initiatives.html
+py ./page_builder.py ../../Catalog/library_criteria.md ../../Catalog/library_criteria.html
