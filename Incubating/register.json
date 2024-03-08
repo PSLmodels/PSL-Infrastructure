@@ -1,17 +1,102 @@
 [
   {
     "org": "PSLmodels",
-    "repo": "OG-USA",
+    "repo": "Inverse-Optimal-Tax",
     "branch": "master"
   },
   {
     "org": "PSLmodels",
-    "repo": "Behavioral-Responses",
+    "repo": "ui_calculator",
     "branch": "master"
   },
   {
     "org": "PSLmodels",
-    "repo": "openfisca-uk",
+    "repo": "CGE",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "Business-Taxation",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "Git-Tutorial",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "PCI-Crackdown",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "PCI-Outbreak",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "OG-UK",
+    "branch": "master"
+  },
+  {
+    "org": "Revenue-Academy",
+    "repo": "OG-MYS",
+    "branch": "master"
+  },
+  {
+    "org": "Revenue-Academy",
+    "repo": "OG-IND",
+    "branch": "master"
+  },
+  {
+    "org": "EAPD-DRB",
+    "repo": "OG-ZAF",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "Federal-State-Tax",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "Border-Adjustment-Calculator",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "scf",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "examples",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "PUF-State-Distribution",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "C-TAM",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "PFL-CM",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "COVID-MCS",
+    "branch": "master"
+  },
+  {
+    "org": "PSLmodels",
+    "repo": "Taxes-Investment-Growth",
     "branch": "master"
   }
 ]
