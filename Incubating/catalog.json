@@ -91,124 +91,72 @@
         "integration_test": {
             "source": null,
             "value": "<a href=\"https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests\">https://github.com/PSLmodels/Behavioral-Responses/tree/master/behresp/tests</a>"
-        }
+        },
+        "github_url": "https://github.com/PSLmodels/Behavioral-Responses"
     },
     "OG-USA": {
+        "name": "OG-USA",
+        "img": "https://raw.githubusercontent.com/PSLmodels/OG-USA/master/docs/OG-USA_logo.png",
+        "banner_title": "OG-USA",
+        "banner_subtitle": "Large-scale open source overlapping generations model of US fiscal policy",
+        "detailed_description": "https://raw.githubusercontent.com/PSLmodels/OG-USA/master/README.md",
+        "policy_area": "Policy analysis, policy reform, fiscal policy, tax, benefits, social security, public finance, macroeconomic analysis, general equilibrium, dynamic scoring, overlapping generations, OG, OLG",
+        "geography": "USA",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Richard W. Evans",
+                "image": "https://github.com/rickecon.png",
+                "link": "https://github.com/rickecon"
+            },
+            {
+                "name": "Jason DeBacker",
+                "image": "https://github.com/jdebacker.png",
+                "link": "https://github.com/jdebacker"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/OG-USA",
+            "user_documentation": "https://pslmodels.github.io/OG-USA",
+            "contributor_documentation": "https://pslmodels.github.io/OG-USA/content/contributing/contributor_guide.html",
+            "webapp": "forthcoming",
+            "recent_changes": "https://github.com/PSLmodels/OG-USA/blob/master/CHANGELOG.md"
+        },
+        "github_url": "https://github.com/PSLmodels/OG-USA"
+    },
+    "openfisca-uk": {
         "name": {
-            "value": "OG-USA",
+            "value": "openfisca-uk",
             "source": ""
         },
         "project_one_line": {
-            "source": "https://github.com/PSLmodels/OG-USA",
-            "value": "<p>Overlapping-Generations Model for Evaluating Fiscal Policy in the United States</p>"
-        },
-        "key_features": {
             "source": null,
-            "value": null
+            "value": "<p>PolicyEngine UK is a static microsimulation model of the UK Tax-Benefit system.</p>"
         },
         "project_overview": {
-            "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
-            "value": "<p>OG-USA is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for the United States. OG-USA is built on the <a href=\"https://github.com/PSLmodels/OG-Core\">OG-Core</a> framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at <a href=\"https://pslmodels.github.io/OG-Core\">https://pslmodels.github.io/OG-Core</a> and documentation of the specific United States calibration of the model is available at <a href=\"https://pslmodels.github.io/OG-USA\">https://pslmodels.github.io/OG-USA</a>.</p>"
+            "source": null,
+            "value": "<a href=\"https://github.com/PolicyEngine/policyengine-uk\">What is PolicyEngine-UK?</a>"
         },
-        "citation": {
-            "source": "https://github.com/PSLmodels/OG-USA#citing-og-usa",
-            "value": "<p>Please cite the source of your analysis as \"OG-USA release #.#.#, author's calculations.\" If you wish to link to OG-USA, https://github.com/PSLmodels/OG-USA is preferred. Additionally, we strongly recommend that you describe the input data used, and provide a link to the materials required to replicate your analysis or, at least, note that those materials are available upon request.</p>"
-        },
-        "license": {
-            "source": "https://github.com/PSLmodels/OG-USA/blob/master/LICENSE.md",
-            "value": "<p>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+        "core_maintainers": {
+            "source": null,
+            "value": "<ul><li>Nikhil Woodruff</li><ul><li>email: nikhil@policyengine.org</li></ul>"
         },
         "user_documentation": {
-            "source": "https://pslmodels.github.io/OG-USA/content/intro/intro.html",
-            "value": "<a href=\"https://pslmodels.github.io/OG-USA/content/intro/intro.html\">User documentation</a>"
-        },
-        "user_changelog": {
             "source": null,
-            "value": null
+            "value": "<a href=\"https://policyengine.github.io/policyengine-uk/\"></a>"
+        },
+        "contributor_overview": {
+            "source": null,
+            "value": "<a href=\"https://github.com/PolicyEngine/PolicyEngine-uk\"></a>"
         },
         "user_changelog_recent": {
             "source": null,
-            "value": null
-        },
-        "dev_changelog": {
-            "source": null,
-            "value": null
-        },
-        "disclaimer": {
-            "source": "https://github.com/PSLmodels/OG-USA/blob/master/README.md",
-            "value": "<p>The organization of this repository will be changing rapidly, but the <code>OG-USA/examples/run_og_usa.py</code> script will be kept up to date to run with the master branch of this repo.</p> <h5>Core Maintainers</h5> <p>The core maintainers of the OG-Core repository are:</p> <ul> <li> <p><a href=\"https://www.jasondebacker.com/\">Jason DeBacker</a> (GitHub handle: <a href=\"https://github.com/jdebacker\">jdebacker</a>), Associate Professor, Department of Economics, Darla Moore School of Business, University of South Carolina; President, PSL Foundation; Vice President of Research and Co-founder, Open Research Group, Inc.</p> </li> <li> <p><a href=\"https://sites.google.com/site/rickecon/\">Richard W. Evans</a> (GitHub handle: <a href=\"https://github.com/rickecon\">rickecon</a>), Advisory Board Visiting Fellow, Center for Public Finance, Baker Institute for Public Policy at Rice University; President, Open Research Group, Inc.; Director, Open Source Economics Laboratory</p> </li> </ul>"
-        },
-        "user_case_studies": {
-            "source": null,
-            "value": null
-        },
-        "project_roadmap": {
-            "source": null,
-            "value": null
-        },
-        "contributor_overview": {
-            "source": "https://github.com/PSLmodels/OG-USA#usingcontributing-to-og-usa",
-            "value": "<p>If you want to report a <b>bug</b>, create a new issue <a href=\"https://github.com/PSLmodels/OG-USA/issues\">here</a> providing details on what you think is wrong with OG-USA.</p><p>If you want to request <b>an enhancement</b>, create a new issue <a href=\"https://github.com/PSLmodels/OG-USA/issues\">here</a> providing details on what you think should be added to OG-USA. </p>"
-        },
-        "contributor_guide": {
-            "source": null,
-            "value": null
-        },
-        "governance_overview": {
-            "source": null,
-            "value": null
-        },
-        "public_funding": {
-            "source": null,
-            "value": null
+            "value": "<a href=\"https://github.com/PSLmodels/policyengine-uk/blob/master/CHANGELOG.md\"></a>"
         },
         "link_to_webapp": {
             "source": null,
             "value": null
         },
-        "public_issue_tracker": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/issues\">https://github.com/PSLmodels/OG-USA/issues</a>"
-        },
-        "public_qanda": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/issues\">https://github.com/PSLmodels/OG-USA/issues</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li><a href=\"https://sites.google.com/site/rickecon/\">Richard W. Evans</a></li><li><a href=\"http://jasondebacker.com\">Jason DeBacker</a></li></ul>"
-        },
-        "unit_test": {
-            "source": "https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests",
-            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests\">https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests</a>"
-        },
-        "integration_test": {
-            "source": "https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests",
-            "value": "<a href=\"https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests\">https://github.com/PSLmodels/OG-USA/tree/master/ogusa/tests</a>"
-        }
-    },
-    "openfisca-uk": {
-        "name": "PolicyEngine UK",
-        "img": "https://avatars.githubusercontent.com/u/88570531?s=200&v=4",
-        "banner_title": "PolicyEngine UK",
-        "banner_subtitle": "A static microsimulation model of the UK Tax-Benefit system using the OpenFisca framework.",
-        "detailed_description": "PolicyEngine UK is PolicyEngine's microsimulation model of the UK tax-benefit system...",
-        "policy_area": "Policy Reform, Tax Analysis",
-        "geography": "Canada, United Kingdom, United States",
-        "language": "Python",
-        "maintainers": [
-            {
-                "name": "Nikhil Woodruff",
-                "image": "https://avatars.githubusercontent.com/u/35577657?v=4",
-                "link": "mailto:nikhil@policyengine.org"
-            }
-        ],
-        "links": {
-            "code_repository": "https://github.com/PolicyEngine/policyengine-uk",
-            "user_documentation": "https://policyengine.github.io/policyengine-uk/",
-            "contributor_documentation": "https://github.com/PolicyEngine/PolicyEngine-uk",
-            "webapp": "https://policyengine.org/uk/calculator",
-            "recent_changes": "https://github.com/PSLmodels/policyengine-uk/blob/master/CHANGELOG.md"
-        }
+        "github_url": "https://github.com/PSLmodels/openfisca-uk"
     }
 }
