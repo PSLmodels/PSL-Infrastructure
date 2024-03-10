@@ -576,7 +576,8 @@ code {
 .model-card .maintainer-image-btn {
   border-radius: 5px;
   background-color: transparent;
-  border: var(--separator-height) solid var(--separator-color);
+  /* border: var(--separator-height) solid var(--separator-color); */
+  border: transparent;
 }
 .model-card .maintainer-image-btn {
   display: flex;
@@ -585,8 +586,10 @@ code {
   padding: 0;
 }
 .model-card img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  max-width: 100px;
+  height: auto ;
   object-fit: cover;
 }
 .col-sm.text-center {
