@@ -8,9 +8,6 @@ from jinja2 import Template
 
 import re
 
-# headers for requests to GitHub API
-HEADER = {'User-Agent': 'request'}
-
 
 class SectionHeadersDoNotExist(Exception):
     pass
@@ -116,7 +113,7 @@ def render_template(template_path, **render_kwargs):
     return template.render(**render_kwargs)
 
 
-def _get_from_github_api(org, repo, branch, filename):
+def _get_from_github_api(org, repo, branch, filename, header):
     """
     Read data from github api. Ht to @andersonfrailey for decoding the response
     """
@@ -128,15 +125,15 @@ def _get_from_github_api(org, repo, branch, filename):
             "docs: Tools/Catalog-Builder/README.md"
         )
     url = f"https://api.github.com/repos/{org}/{repo}/contents/{filename}?ref={branch}"
-    response = requests.request('GET', url, headers=HEADER)
+    response = requests.request('GET', url, headers=header)
     print(f"GET: {url} {response.status_code}")
-    if response.status_code == 403:
+    if response.status_code in [403, 404, 429]:
         time.sleep(60.5)
-        response = requests.request('GET', url, headers=HEADER)
+        response = requests.request('GET', url, headers=header)
         print(f"Second try at GET: {url} {response.status_code}")
-        if response.status_code == 403:
+        if response.status_code in [403, 404, 429]:
             # if waiting a minute doesn't work, then we're probably rate limited
-            assert "hit rate limit" == 403
+            assert "hit rate limit" in [403, 404, 429]
     assert response.status_code == 200
     sanatized_content = response.json()["content"].replace("\n", "")
     encoded_content = sanatized_content.encode()
@@ -145,9 +142,9 @@ def _get_from_github_api(org, repo, branch, filename):
     return text
 
 
-def get_from_github_api(project, config):
+def get_from_github_api(project, config, header):
     text = _get_from_github_api(
-        project["org"], project["repo"], project["branch"], config["source"]
+        project["org"], project["repo"], project["branch"], config["source"], header
     )
     return parse_section(text, config["start_header"], config["end_header"])
 

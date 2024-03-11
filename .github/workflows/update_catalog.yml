@@ -27,8 +27,8 @@ jobs:
         run: |
           pip install -e .
           cd catalog_builder
-          python catalog.py
-          python catalog.py --incubating
+          python catalog.py ${{ secrets.GITHUB_TOKEN }}
+          python catalog.py ${{ secrets.GITHUB_TOKEN }} --incubating
 
       - name: Commit new changes
         working-directory: ./

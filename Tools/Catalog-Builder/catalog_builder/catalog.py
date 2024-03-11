@@ -2,6 +2,8 @@ import json
 import os
 import requests
 import argparse
+import time
+import sys
 from collections import defaultdict
 from catalog_builder import utils
 
@@ -70,9 +72,11 @@ class CatalogBuilder:
         card_dir=None,
         develop=False,
         build_one=None,
-        incubating=False
+        incubating=False,
+        header=None,
     ):
         self.incubating = incubating
+        self.header=header
         if projects is None:
             if self.incubating:
                 folder = "../../../Incubating"
@@ -96,12 +100,14 @@ class CatalogBuilder:
                     self.projects = [project]
                     success = True
                     break
+                time.sleep(60.6)
             if not success:
                 raise ProjectDoesNotExist(
                     ("{0} is not in register.json or " "projects if provided.").format(
                         build_one
                     )
                 )
+                time.sleep(60.6)
 
     def load_catalog(self):
         """
@@ -113,13 +119,17 @@ class CatalogBuilder:
         repo_url = "https://github.com/{}/{}"  # Used to build repo links
         if not self.develop:
             for project in sorted(self.projects, key=lambda x: x["repo"].upper()):
+                # try:
                 cat_meta = utils._get_from_github_api(
                     project["org"],
                     project["repo"],
                     project["branch"],
                     "PSL_catalog.json",
+                    self.header,
                 )
                 cat_meta = json.loads(cat_meta)
+                # except:
+                #     continue
 
                 github_url = repo_url.format(project["org"], project["repo"])
 
@@ -137,7 +147,7 @@ class CatalogBuilder:
                     )
                     for attr, config in cat_meta.items():
                         if config["type"] == "github_file":
-                            value = utils.get_from_github_api(project, config)
+                            value = utils.get_from_github_api(project, config, self.header)
                             source = (
                                 f"https://github.com/{project['org']}/"
                                 f"{project['repo']}/blob/{project['branch']}/"
@@ -247,6 +257,7 @@ class CatalogBuilder:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument('token', help='GitHub API token')  # positional arg
     parser.add_argument(
         "--develop",
         help=(
@@ -278,8 +289,10 @@ if __name__ == "__main__":
         action="store_true"
     )
     args = parser.parse_args()
+    HEADER = {'User-Agent': 'request', 'Authorization': 'token ' + args.token}
     cb = CatalogBuilder(develop=args.develop,
-                        build_one=args.build_one, incubating=args.incubating)
+                        build_one=args.build_one, incubating=args.incubating,
+                        header=HEADER)
     cb.load_catalog()
     cb.write_pages()
     cb.fetch_and_store_recent_prs(os.path.join(cb.index_dir, "prs.json"))
