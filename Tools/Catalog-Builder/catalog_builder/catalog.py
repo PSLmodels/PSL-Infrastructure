@@ -72,9 +72,11 @@ class CatalogBuilder:
         card_dir=None,
         develop=False,
         build_one=None,
-        incubating=False
+        incubating=False,
+        header=None,
     ):
         self.incubating = incubating
+        self.header=header
         if projects is None:
             if self.incubating:
                 folder = "../../../Incubating"
@@ -123,7 +125,7 @@ class CatalogBuilder:
                     project["repo"],
                     project["branch"],
                     "PSL_catalog.json",
-                    HEADER,
+                    self.header,
                 )
                 cat_meta = json.loads(cat_meta)
                 # except:
@@ -145,7 +147,7 @@ class CatalogBuilder:
                     )
                     for attr, config in cat_meta.items():
                         if config["type"] == "github_file":
-                            value = utils.get_from_github_api(project, config, HEADER)
+                            value = utils.get_from_github_api(project, config, self.header)
                             source = (
                                 f"https://github.com/{project['org']}/"
                                 f"{project['repo']}/blob/{project['branch']}/"
@@ -289,7 +291,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     HEADER = {'User-Agent': 'request', 'Authorization': 'token ' + args.token}
     cb = CatalogBuilder(develop=args.develop,
-                        build_one=args.build_one, incubating=args.incubating)
+                        build_one=args.build_one, incubating=args.incubating,
+                        header=HEADER)
     cb.load_catalog()
     cb.write_pages()
     cb.fetch_and_store_recent_prs(os.path.join(cb.index_dir, "prs.json"))
