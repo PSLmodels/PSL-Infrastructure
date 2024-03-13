@@ -55,8 +55,8 @@
     "branch": "master"
   },
   {
-    "org": "PSLmodels",
-    "repo": "openfisca-uk",
+    "org": "PolicyEngine",
+    "repo": "policyengine-uk",
     "branch": "master"
   },
   {
