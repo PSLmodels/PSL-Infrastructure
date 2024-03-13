@@ -3,5 +3,15 @@
     "org": "PSLmodels",
     "repo": "InverseOptimalTax",
     "branch": "main"
+  },
+  {
+    "org": "Revenue-Academy",
+    "repo": "OG-IND",
+    "branch": "main"
+  },
+  {
+    "org": "Revenue-Academy",
+    "repo": "OG-MYS",
+    "branch": "main"
   }
 ]
