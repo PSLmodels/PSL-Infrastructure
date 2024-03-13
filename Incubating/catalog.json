@@ -28,5 +28,85 @@
             "recent_changes": ""
         },
         "github_url": "https://github.com/PSLmodels/InverseOptimalTax"
+    },
+    "OG-IND": {
+        "name": "OG-IND",
+        "img": "https://raw.githubusercontent.com/Revenue-Academy/OG-IND/blob/main/docs/OG-IND_logo.png",
+        "banner_title": "OG-IND",
+        "banner_subtitle": "A large-scale, open source, overlapping generations model of India",
+        "detailed_description": "OG-IND is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for India. OG-IND is built on the OG-Core framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at https://pslmodels.github.io/OG-Core and documentation of the specific Indian calibration of the model will be available soon.",
+        "policy_area": "Fiscal policy, Macroeconomics, Demographics",
+        "geography": "India",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Richard W. Evans",
+                "image": "https://github.com/rickecon.png",
+                "link": "https://github.com/rickecon"
+            },
+            {
+                "name": "Jason DeBacker",
+                "image": "https://github.com/jdebacker.png",
+                "link": "https://github.com/jdebacker"
+            },
+            {
+                "name": "Sebastian James",
+                "image": "https://github.com/sebastiansajie.png",
+                "link": "https://github.com/sebastiansajie"
+            },
+            {
+                "name": "Rajiv Kumar",
+                "image": "https://github.com/rajivkumar1975.png",
+                "link": "https://github.com/rajivkumar1975"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/Revenue-Academy/OG-IND",
+            "user_documentation": "https://revenue-academy.github.io/OG-IND/content/intro/intro.html",
+            "contributor_documentation": "https://revenue-academy.github.io/OG-IND/content/contributing/contributor_guide.html",
+            "webapp": "",
+            "recent_changes": ""
+        },
+        "github_url": "https://github.com/Revenue-Academy/OG-IND"
+    },
+    "OG-MYS": {
+        "name": "OG-MYS",
+        "img": "https://raw.githubusercontent.com/Revenue-Academy/OG-MYS/blob/main/docs/OG-MYS_logo.png",
+        "banner_title": "OG-MYS",
+        "banner_subtitle": "A large-scale, open source, overlapping generations model of Malaysia",
+        "detailed_description": "OG-MYS is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for Malaysia. OG-MYS is built on the OG-Core framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at https://pslmodels.github.io/OG-Core and documentation of the specific Malaysian calibration of the model will be available soon.",
+        "policy_area": "Fiscal policy, Macroeconomics, Demographics",
+        "geography": "Malaysia",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Richard W. Evans",
+                "image": "https://github.com/rickecon.png",
+                "link": "https://github.com/rickecon"
+            },
+            {
+                "name": "Jason DeBacker",
+                "image": "https://github.com/jdebacker.png",
+                "link": "https://github.com/jdebacker"
+            },
+            {
+                "name": "Sebastian James",
+                "image": "https://github.com/sebastiansajie.png",
+                "link": "https://github.com/sebastiansajie"
+            },
+            {
+                "name": "Rajiv Kumar",
+                "image": "https://github.com/rajivkumar1975.png",
+                "link": "https://github.com/rajivkumar1975"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/Revenue-Academy/OG-MYS",
+            "user_documentation": "",
+            "contributor_documentation": "",
+            "webapp": "",
+            "recent_changes": ""
+        },
+        "github_url": "https://github.com/Revenue-Academy/OG-MYS"
     }
 }
