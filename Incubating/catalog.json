@@ -31,7 +31,7 @@
     },
     "OG-IND": {
         "name": "OG-IND",
-        "img": "https://raw.githubusercontent.com/Revenue-Academy/OG-IND/blob/main/docs/OG-IND_logo.png",
+        "img": "https://github.com/Revenue-Academy/OG-IND/blob/main/docs/OG-IND_logo.png?raw=true",
         "banner_title": "OG-IND",
         "banner_subtitle": "A large-scale, open source, overlapping generations model of India",
         "detailed_description": "OG-IND is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for India. OG-IND is built on the OG-Core framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at https://pslmodels.github.io/OG-Core and documentation of the specific Indian calibration of the model will be available soon.",
@@ -71,7 +71,7 @@
     },
     "OG-MYS": {
         "name": "OG-MYS",
-        "img": "https://raw.githubusercontent.com/Revenue-Academy/OG-MYS/blob/main/docs/OG-MYS_logo.png",
+        "img": "https://avatars.githubusercontent.com/u/44992936?s=200&v=4",
         "banner_title": "OG-MYS",
         "banner_subtitle": "A large-scale, open source, overlapping generations model of Malaysia",
         "detailed_description": "OG-MYS is an overlapping-generations (OG) model that allows for dynamic general equilibrium analysis of fiscal policy for Malaysia. OG-MYS is built on the OG-Core framework. The model output includes changes in macroeconomic aggregates (GDP, investment, consumption), wages, interest rates, and the stream of tax revenues over time. Regularly updated documentation of the model theory--its output, and solution method--and the Python API is available at https://pslmodels.github.io/OG-Core and documentation of the specific Malaysian calibration of the model will be available soon.",
