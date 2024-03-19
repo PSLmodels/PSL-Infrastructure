@@ -76,19 +76,18 @@ class CatalogBuilder:
         header=None,
     ):
         self.incubating = incubating
-        self.header=header
+        self.header = header
+        if self.incubating:
+            folder = "../../../Incubating"
+        else:
+            folder = "../../../Catalog"
+        self.index_dir = index_dir or os.path.join(self.CURRENT_PATH, folder)
         if projects is None:
-            if self.incubating:
-                folder = "../../../Incubating"
-            else:
-                folder = "../../../Catalog"
             p = os.path.join(self.CURRENT_PATH, f"{folder}/register.json")
             with open(p, "r") as f:
                 self.projects = json.loads(f.read())
         else:
             self.projects = projects
-
-        self.index_dir = index_dir or os.path.join(self.CURRENT_PATH, folder)
 
         self.catalog = defaultdict(dict)
         self.repos = {}

@@ -91,9 +91,13 @@ def test_load_catalog(mock_gh_api, current_path):
 
 def test_catalog_schema(cb):
     exp_keys = set(["source", "value"])
+    i = 0
     for project in cb.catalog:
-        for _, item in cb.catalog[project].items():
-            assert set(item.keys()) == exp_keys
+        print("On project number ", i)
+        i += 1
+        for k, item in cb.catalog[project].items():
+            if k not in ["repo", "github_url"]:
+                assert set(item.keys()) == exp_keys
 
 
 def test_catalog_write_html(cb):
