@@ -13,5 +13,10 @@
     "org": "Revenue-Academy",
     "repo": "OG-MYS",
     "branch": "main"
+  },
+  {
+    "org": "EAPD-DRB",
+    "repo": "OG-ZAF",
+    "branch": "main"
   }
 ]
