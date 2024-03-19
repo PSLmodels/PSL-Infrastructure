@@ -596,207 +596,133 @@
         },
         "github_url": "https://github.com/PolicyEngine/policyengine-uk"
     },
+    "policyengine-us": {
+        "name": "PolicyEngine US",
+        "img": "https://github.com/PolicyEngine/policyengine-app/blob/master/src/images/logos/policyengine/banners/facebook.png?raw=true",
+        "banner_title": "PolicyEngine US",
+        "banner_subtitle": "A tax-benefit microsimulation model for the United States.",
+        "detailed_description": "PolicyEngine US models rules for tax and benefit programs federally, in states, and in local governments. It also includes procedures to generate and enhance microdata for economic policy analysis.",
+        "policy_area": "Policy Reform, Tax Analysis",
+        "geography": "US",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Max Ghenis",
+                "image": "https://policyengine.org/static/media/max-ghenis.536762d4b2439bf591f5.png",
+                "link": "mailto:max@policyengine.org"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/policyengine/policyengine-us",
+            "user_documentation": "https://policyengine.github.io/policyengine-us/",
+            "contributor_documentation": "https://github.com/PolicyEngine/policyengine-us/blob/master/README.md",
+            "webapp": "https://policyengine.org/us",
+            "recent_changes": "https://github.com/PolicyEngine/policyengine-us/blob/master/CHANGELOG.md"
+        },
+        "github_url": "https://github.com/PolicyEngine/policyengine-us"
+    },
     "Tax-Brain": {
-        "name": {
-            "value": "Tax-Brain",
-            "source": ""
-        },
-        "project_one_line": {
-            "source": "https://github.com/PSLmodels/Tax-Brain",
-            "value": "<p>Integrator package for multiple open source tax models</p>"
-        },
-        "key_features": {
-            "source": null,
-            "value": null
-        },
-        "project_overview": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/README.md",
-            "value": "<p>Tax-Brain makes it easy for users to simulate the US tax system by providing a single interface for multiple tax models. Currently, Tax-Brain interfaces with <a href=\"https://github.com/PSLmodels/Tax-Calculator\">Tax-Calculator</a> and <a href=\"https://github.com/PSLmodels/Behavioral-Responses\">Behavioral-Responses</a>. Additional models will be added in the near future to expand Tax-Brain's capabilities to include modeling business taxation and running dynamic general equilibrium simulations.</p> <p>To learn more about how Tax-Brain works, see <a href=\"http://taxbrain.pslmodels.org\">the Tax-Brain documentation</a>.</p>"
-        },
-        "citation": {
-            "source": null,
-            "value": null
-        },
-        "license": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/LICENSE.txt",
-            "value": "<p>MIT</p>"
-        },
-        "user_documentation": {
-            "source": "http://taxbrain.pslmodels.org/content/intro.html",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/USAGE.md</a>"
-        },
-        "user_changelog": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/releases",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/releases\">https://github.com/PSLmodels/Tax-Brain/releases</a>"
-        },
-        "user_changelog_recent": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/RELEASES.md",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/releases/latest\">https://github.com/PSLmodels/Tax-Brain/releases/latest</a>"
-        },
-        "dev_changelog": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/releases",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/releases\">https://github.com/PSLmodels/Tax-Brain/releases</a>"
-        },
-        "disclaimer": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/README.md",
-            "value": "<p>Tax-brain and its underlying models are constantly being improved upon. For that reason, the results output by Tax-Brain may differ over time. It is strongly suggested that the user make note of which version of Tax-Brain, they are using when reporting their results.</p>"
-        },
-        "user_case_studies": {
-            "source": null,
-            "value": null
-        },
-        "project_roadmap": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/ROADMAP.md",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/ROADMAP.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/ROADMAP.md</a>"
-        },
-        "contributor_overview": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md",
-            "value": "<p>Contributions to Tax-Brain are always welcome. To contribute, open a <a href=\"https://github.com/PSLmodels/Tax-Brain/pulls\">pull request (PR)</a> with your changes and any associated tests. In this PR, please describe what your change does and link to any relevant issues and discussions.</p> <h5>Feature Requests</h5> <p>To request a feature, please open an <a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">issue</a> describing the desired feature and it's use cases.</p> <h5>Bug Reports</h5> <p>To report a bug in Tax-Brain, open an <a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">issue</a> describing the bug. Please include the code needed to reproduce the bug.</p> <h5>Developer Setup</h5> <p>Start by forking and cloning the Tax-Brain repo. Next, run the following commands in the terminal to create and activate the developer conda environment:</p> <p><code>bash cd Tax-Brain conda env create -f environment.yml conda activate taxbrain-dev</code></p>"
-        },
-        "contributor_guide": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md\">https://github.com/PSLmodels/Tax-Brain/blob/master/CONTRIBUTING.md</a>"
-        },
-        "governance_overview": {
-            "source": null,
-            "value": null
-        },
-        "public_funding": {
-            "source": null,
-            "value": null
-        },
-        "link_to_webapp": {
-            "source": null,
-            "value": "<a href=\"https://www.compmodels.org/PSLmodels/Tax-Brain/\">Tax-Brain</a>"
-        },
-        "public_issue_tracker": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">https://github.com/PSLmodels/Tax-Brain/issues</a>"
-        },
-        "public_qanda": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/issues\">https://github.com/PSLmodels/Tax-Brain/issues</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li>Anderson Frailey</li></ul>"
-        },
-        "unit_test": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests\">https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests</a>"
-        },
-        "integration_test": {
-            "source": "https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests\">https://github.com/PSLmodels/Tax-Brain/tree/master/taxbrain/tests</a>"
+        "name": "Tax-Brain",
+        "img": "https://github.com/PSLmodels/Tax-Brain/blob/master/docs/taxbrain.png?raw=true",
+        "banner_title": "Tax-Brain",
+        "banner_subtitle": "A Python package that wraps multiple economic models in one easy to use interface",
+        "detailed_description": "Tax-Brain makes it easy for users to simulate the US tax system by providing a single interface for multiple tax models. Currently, Tax-Brain interfaces with Tax-Calculator and Behavioral-Responses. Additional models will be added in the near future to expand Tax-Brain's capabilities to include modeling business taxation and running dynamic general equilibrium simulations.",
+        "policy_area": "Tax Microsimulation, Revenue Estimation, Distributional Analysis",
+        "geography": "United States",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Anderson Frailey",
+                "image": "https://avatars.githubusercontent.com/u/20684675?v=4",
+                "link": "https://github.com/andersonfrailey"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/Tax-Brain",
+            "user_documentation": "http://taxbrain.pslmodels.org/",
+            "contributor_documentation": "http://taxbrain.pslmodels.org/content/contributing/contributor_guide.html",
+            "webapp": "",
+            "recent_changes": "https://github.com/PSLmodels/Tax-Brain/blob/master/RELEASES.md"
         },
         "github_url": "https://github.com/PSLmodels/Tax-Brain"
     },
     "Tax-Calculator": {
-        "name": {
-            "value": "Tax-Calculator",
-            "source": ""
-        },
-        "project_one_line": {
-            "source": null,
-            "value": "<p>Tax-Calculator is an open-source microsimulation model for static analysis of USA federal income and payroll taxes.</p>"
-        },
-        "project_overview": {
-            "source": null,
-            "value": "<a href=\"https://PSLmodels.github.io/Tax-Calculator/\">What is Tax-Calculator?</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li>Jason DeBacker</li><li>Henry Doupe</li><li>Anderson Frailey</li><li>Matt Jensen</li></ul>"
-        },
-        "user_documentation": {
-            "source": null,
-            "value": "<a href=\"http://PSLmodels.github.io/Tax-Calculator/\"></a>"
-        },
-        "contributor_overview": {
-            "source": null,
-            "value": "<a href=\"https://pslmodels.github.io/Tax-Calculator/contributing/contributor_guide.html\"></a>"
-        },
-        "user_changelog_recent": {
-            "source": null,
-            "value": "<a href=\"https://pslmodels.github.io/Tax-Calculator/about/changes.html\"></a>"
-        },
-        "link_to_webapp": {
-            "source": null,
-            "value": null
+        "name": "Tax-Calculator",
+        "img": "",
+        "banner_title": "Tax-Calculator",
+        "banner_subtitle": "USA Federal Individual Income and Payroll Tax Microsimulation Model",
+        "detailed_description": "Tax-Calculator is an open-source microsimulation model for static analysis of USA federal income and payroll taxes.",
+        "policy_area": "Tax Microsimulation, Revenue Estimation, Distributional Analysis",
+        "geography": "United States",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Jason DeBacker",
+                "image": "https://github.com/jdebacker.png",
+                "link": "https://github.com/jdebacker"
+            },
+            {
+                "name": "Matthew Jensen",
+                "image": "https://avatars.githubusercontent.com/u/8301092?v=4",
+                "link": "https://github.com/MattHJensen/"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/Tax-Calculator",
+            "user_documentation": "https://taxcalc.pslmodels.org/",
+            "contributor_documentation": "https://taxcalc.pslmodels.org/contributing/contributor_guide.html",
+            "webapp": "",
+            "recent_changes": "https://taxcalc.pslmodels.org/about/releases.html"
         },
         "github_url": "https://github.com/PSLmodels/Tax-Calculator"
     },
     "Tax-Cruncher": {
-        "name": {
-            "value": "Tax-Cruncher",
-            "source": ""
-        },
-        "project_one_line": {
-            "source": "https://github.com/PSLmodels/Tax-Cruncher",
-            "value": "<p>Calculates federal tax liabilities from individual data under different policy proposals</p>"
-        },
-        "project_overview": {
-            "source": "https://github.com/PSLmodels/Tax-Cruncher/blob/master/README.md",
-            "value": "<p>Tax-Cruncher calculates federal tax liabilities from individual data under different policy scenarios. </p> <p>Tax-Cruncher accepts inputs similar to NBER's <a href=\"https://users.nber.org/~taxsim/taxsim27/\">TAXSIM Version 27</a>, converts those inputs to a format usable by <a href=\"https://github.com/PSLmodels/Tax-Calculator\">Tax-Calculator</a>, and uses Tax-Calculator capabilities to analyze the user-provided data under various tax policy proposals.</p> <p>Tax-Cruncher's web application is hosted on <a href=\"https://compute.studio/PSLmodels/Tax-Cruncher/\">Compute Studio</a>. The code that powers the web application can be found in this repository in the <a href=\"https://github.com/PSLmodels/Tax-Cruncher/tree/master/cs-config\">cs-config</a> directory.</p>"
-        },
-        "user_documentation": {
-            "source": "https://github.com/PSLmodels/Tax-Cruncher#how-to-use-tax-cruncher",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Cruncher#how-to-use-tax-cruncher\">https://github.com/PSLmodels/Tax-Cruncher#how-to-use-tax-cruncher</a>"
-        },
-        "user_changelog_recent": {
-            "source": "https://github.com/PSLmodels/Tax-Cruncher/releases",
-            "value": "<a href=\"https://github.com/PSLmodels/Tax-Cruncher/releases\">https://github.com/PSLmodels/Tax-Cruncher/releases</a>"
-        },
-        "contributor_overview": {
-            "source": null,
-            "value": null
-        },
-        "link_to_webapp": {
-            "source": null,
-            "value": "<a href=\"https://www.compmodels.org/PSLmodels/Tax-Cruncher/\">Tax-Cruncher</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li>Peter Metz</li></ul>"
+        "name": "Tax-Cruncher",
+        "img": "",
+        "banner_title": "Tax-Cruncher",
+        "banner_subtitle": "",
+        "detailed_description": "Calculates federal tax liabilities from individual data under a range of policy scenarios.",
+        "policy_area": "Tax Microsimulation, Revenue Estimation, Distributional Analysis",
+        "geography": "United States",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Peter Metz",
+                "image": "https://avatars.githubusercontent.com/u/43755005?v=4",
+                "link": "https://github.com/Peter-Metz"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/tax-cruncher",
+            "user_documentation": "https://github.com/PSLmodels/Tax-Cruncher/blob/master/docs/Introduction-to-Tax-Cruncher.pdf",
+            "contributor_documentation": "",
+            "webapp": "",
+            "recent_changes": "https://github.com/PSLmodels/Tax-Cruncher/releases"
         },
         "github_url": "https://github.com/PSLmodels/Tax-Cruncher"
     },
     "taxdata": {
-        "name": {
-            "value": "taxdata",
-            "source": ""
-        },
-        "project_one_line": {
-            "source": null,
-            "value": "<p>The TaxData project prepares microdata files to be used by Tax-Calculator</p>"
-        },
-        "project_overview": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/taxdata/blob/master/README.md\">TaxData Overview</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li>Anderson Frailey</li></ul>"
-        },
-        "user_documentation": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/taxdata/tree/master/doc\"></a>"
-        },
-        "contributor_overview": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/taxdata/blob/master/CONTRIBUTING.md\"></a>"
-        },
-        "user_changelog": {
-            "source": "https://github.com/PSLmodels/taxdata/releases",
-            "value": "<a href=\"https://github.com/PSLmodels/taxdata/releases\">https://github.com/PSLmodels/taxdata/releases</a>"
-        },
-        "user_changelog_recent": {
-            "source": "https://github.com/PSLmodels/taxdata/releases",
-            "value": "<a href=\"https://github.com/PSLmodels/taxdata/releases\"></a>"
-        },
-        "link_to_webapp": {
-            "source": null,
-            "value": null
+        "name": "taxdata",
+        "img": "",
+        "banner_title": "taxdata",
+        "banner_subtitle": "A Python package to prepare tax microsimulation data",
+        "detailed_description": "The TaxData project prepares microdata for use with the Tax-Calculator microsimulation project.",
+        "policy_area": "Tax Microsimulation, Revenue Estimation, Distributional Analysis",
+        "geography": "United States",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Anderson Frailey",
+                "image": "https://avatars.githubusercontent.com/u/20684675?v=4",
+                "link": "https://github.com/andersonfrailey"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/taxdata",
+            "user_documentation": "http://pslmodels.github.io/taxdata/",
+            "contributor_documentation": "http://pslmodels.github.io/taxdata/content/contributing/CONTRIBUTING.html",
+            "webapp": "",
+            "recent_changes": "https://github.com/PSLmodels/taxdata/releases"
         },
         "github_url": "https://github.com/PSLmodels/taxdata"
     }
