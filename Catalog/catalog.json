@@ -112,37 +112,27 @@
         "github_url": "https://github.com/FRBNY-DSGE/DSGE.jl"
     },
     "microdf": {
-        "name": {
-            "value": "microdf",
-            "source": ""
-        },
-        "project_one_line": {
-            "source": null,
-            "value": "<p>microdf is a Python package for analyzing economic microdata as pandas DataFrames, with special functions for Tax-Calculator.</p>"
-        },
-        "project_overview": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/microdf\">What is microdf?</a>"
-        },
-        "core_maintainers": {
-            "source": null,
-            "value": "<ul><li>Max Ghenis</li><ul><li>email: max@ubicenter.org</li></ul>"
-        },
-        "user_documentation": {
-            "source": null,
-            "value": "<a href=\"http://pslmodels.github.io/microdf/\"></a>"
-        },
-        "contributor_overview": {
-            "source": null,
-            "value": "<a href=\"http://github.com/PSLmodels/microdf/\"></a>"
-        },
-        "user_changelog_recent": {
-            "source": null,
-            "value": "<a href=\"https://github.com/PSLmodels/microdf/releases\"></a>"
-        },
-        "link_to_webapp": {
-            "source": null,
-            "value": null
+        "name": "microdf",
+        "img": "https://github.com/PSLmodels/microdf/blob/master/docs/microdf_logo.png?raw=true",
+        "banner_title": "microdf",
+        "banner_subtitle": "Analysis tools for working with survey microdata as DataFrames",
+        "detailed_description": "microdf is a Python package for analyzing economic microdata as pandas DataFrames, with special functions for handling sampling weights.",
+        "policy_area": "Survey data, data analysis",
+        "geography": "Not specific",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Max Ghenis",
+                "image": "https://policyengine.org/static/media/max-ghenis.536762d4b2439bf591f5.png",
+                "link": "mailto:max@policyengine.org"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/microdf",
+            "user_documentation": "http://pslmodels.github.io/microdf/",
+            "contributor_documentation": "",
+            "webapp": "",
+            "recent_changes": "https://github.com/PSLmodels/microdf/releases"
         },
         "github_url": "https://github.com/PSLmodels/microdf"
     },
