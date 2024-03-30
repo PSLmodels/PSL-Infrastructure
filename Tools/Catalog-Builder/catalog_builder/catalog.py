@@ -4,9 +4,11 @@ import requests
 import argparse
 import time
 import sys
+import logging
 from collections import defaultdict
 from catalog_builder import utils
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class ProjectDoesNotExist(Exception):
     pass
@@ -118,55 +120,64 @@ class CatalogBuilder:
         repo_url = "https://github.com/{}/{}"  # Used to build repo links
         if not self.develop:
             for project in sorted(self.projects, key=lambda x: x["repo"].upper()):
-                # try:
-                cat_meta = utils._get_from_github_api(
-                    project["org"],
-                    project["repo"],
-                    project["branch"],
-                    "PSL_catalog.json",
-                    self.header,
-                )
-                cat_meta = json.loads(cat_meta)
-                # except:
-                #     continue
-
-                github_url = repo_url.format(project["org"], project["repo"])
-
-                if 'name' in cat_meta and isinstance(cat_meta['name'], str):
-                    self.catalog[project["repo"]] = cat_meta
-                    self.catalog[project["repo"]]['github_url'] = github_url
-                else:
-
-                    self.catalog[project["repo"]]["name"] = {
-                        "value": project["repo"],
-                        "source": "",
-                    }
-                    self.repos[project["repo"]] = repo_url.format(
-                        project["org"], project["repo"]
+                try:
+                    cat_meta = utils._get_from_github_api(
+                        project["org"],
+                        project["repo"],
+                        project["branch"],
+                        "PSL_catalog.json",
+                        self.header,
                     )
-                    for attr, config in cat_meta.items():
-                        if config["type"] == "github_file":
-                            value = utils.get_from_github_api(project, config, self.header)
-                            source = (
-                                f"https://github.com/{project['org']}/"
-                                f"{project['repo']}/blob/{project['branch']}/"
-                                f"{config['source']}"
-                            )
+                    cat_meta = json.loads(cat_meta) # This might raise a ValueError if cat_meta is malformed
 
-                        elif config["type"] == "html":
-                            source = config["source"]
-                            value = config["data"]
-                        else:
-                            msg = (
-                                f"MISSING DATA: {project['repo']}, entry: "
-                                f"{attr}, {config}"
-                            )
-                            print(msg)
-                            source, value = None, None
-                        res = {"source": source, "value": value}
-                        self.catalog[project["repo"]][attr] = res
-                    self.catalog[project["repo"]]['github_url'] = github_url
+                    github_url = repo_url.format(project["org"], project["repo"])
 
+                    if 'name' in cat_meta and isinstance(cat_meta['name'], str):
+                        self.catalog[project["repo"]] = cat_meta
+                        self.catalog[project["repo"]]['github_url'] = github_url
+                    else:
+
+                        self.catalog[project["repo"]]["name"] = {
+                            "value": project["repo"],
+                            "source": "",
+                        }
+                        self.repos[project["repo"]] = repo_url.format(
+                            project["org"], project["repo"]
+                        )
+                        for attr, config in cat_meta.items():
+                            if config["type"] == "github_file":
+                                value = utils.get_from_github_api(project, config, self.header)
+                                source = (
+                                    f"https://github.com/{project['org']}/"
+                                    f"{project['repo']}/blob/{project['branch']}/"
+                                    f"{config['source']}"
+                                )
+
+                            elif config["type"] == "html":
+                                source = config["source"]
+                                value = config["data"]
+                            else:
+                                msg = (
+                                    f"MISSING DATA: {project['repo']}, entry: "
+                                    f"{attr}, {config}"
+                                )
+                                print(msg)
+                                source, value = None, None
+                            res = {"source": source, "value": value}
+                            self.catalog[project["repo"]][attr] = res
+                        self.catalog[project["repo"]]['github_url'] = github_url
+                except requests.exceptions.HTTPError as e:
+                    # Handle cases where the GitHub API request fails (e.g., rate limits, missing file)
+                    logging.warning(f"Skipping {project['repo']} due to HTTPError: {e}")
+                    continue
+                except ValueError as e:
+                    # Handle cases where JSON is malformed
+                    logging.warning(f"Skipping {project['repo']} due to JSON Error: {e}")
+                    continue
+                except Exception as e:
+                    # Handle any other unexpected errors
+                    logging.error(f"An unexpected error occurred for {project['repo']}: {e}")
+                    continue
         else:
             print("Develop mode. Loading Catalog from catalog.json")
             json_path = os.path.join(self.index_dir, "catalog.json")
