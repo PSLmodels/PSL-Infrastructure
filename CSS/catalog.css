@@ -705,9 +705,11 @@ code {
   margin: 10px 250px;
 }
 #userCarousel .carousel-item img {
-  max-width: 300px;
+  width: 100%;
+  max-width: 400px;
   height: 75px;
   margin: 0 auto;
+  object-fit: contain;
 }
 #userCarousel .carousel-item {
   justify-content: center;
