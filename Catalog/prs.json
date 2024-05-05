@@ -7002,10 +7002,10 @@
             },
             "body": "Add code to handle `tmd.csv` in a manner like `puf.csv` is handled.\r\n\r\nThe `tmd.csv.gz` file contains 2021 data and has its own `tmd_weights.csv.gz` file beginning with 2021 weights.\r\n\r\nBoth these `tmd` files are created in the [tax-microdata repository](https://github.com/PSLmodels/tax-microdata-benchmarking).\r\n\r\n",
             "created_at": "2024-04-18T20:33:57Z",
-            "updated_at": "2024-05-03T17:31:19Z",
+            "updated_at": "2024-05-04T23:56:32Z",
             "closed_at": null,
             "merged_at": null,
-            "merge_commit_sha": "51e2a89be367023495c0b708497c2a7016757ba0",
+            "merge_commit_sha": "69baeeb34bd28c48d32845b5aeb672ed1260f14e",
             "assignee": null,
             "assignees": [],
             "requested_reviewers": [
@@ -7038,11 +7038,11 @@
             "review_comments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/pulls/2740/comments",
             "review_comment_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/pulls/comments{/number}",
             "comments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/issues/2740/comments",
-            "statuses_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/statuses/975b5a4dfb3a8a58d9a1d5eb6b36445df6d3280b",
+            "statuses_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/statuses/1b027d80c22ffd94a68077b8950ce21e385d182e",
             "head": {
                 "label": "martinholmer:add-tmd",
                 "ref": "add-tmd",
-                "sha": "975b5a4dfb3a8a58d9a1d5eb6b36445df6d3280b",
+                "sha": "1b027d80c22ffd94a68077b8950ce21e385d182e",
                 "user": {
                     "login": "martinholmer",
                     "id": 12170745,
@@ -7131,13 +7131,13 @@
                     "deployments_url": "https://api.github.com/repos/martinholmer/Tax-Calculator/deployments",
                     "created_at": "2023-12-31T17:20:17Z",
                     "updated_at": "2024-02-04T16:51:10Z",
-                    "pushed_at": "2024-05-03T16:47:05Z",
+                    "pushed_at": "2024-05-04T23:31:53Z",
                     "git_url": "git://github.com/martinholmer/Tax-Calculator.git",
                     "ssh_url": "git@github.com:martinholmer/Tax-Calculator.git",
                     "clone_url": "https://github.com/martinholmer/Tax-Calculator.git",
                     "svn_url": "https://github.com/martinholmer/Tax-Calculator",
                     "homepage": "https://taxcalc.pslmodels.org",
-                    "size": 1332489,
+                    "size": 1337288,
                     "stargazers_count": 0,
                     "watchers_count": 0,
                     "language": "Python",
@@ -7262,7 +7262,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/deployments",
                     "created_at": "2014-07-29T17:49:09Z",
                     "updated_at": "2024-04-25T16:27:22Z",
-                    "pushed_at": "2024-05-03T16:47:06Z",
+                    "pushed_at": "2024-05-04T23:31:54Z",
                     "git_url": "git://github.com/PSLmodels/Tax-Calculator.git",
                     "ssh_url": "git@github.com:PSLmodels/Tax-Calculator.git",
                     "clone_url": "https://github.com/PSLmodels/Tax-Calculator.git",
@@ -7332,7 +7332,7 @@
                     "href": "https://api.github.com/repos/PSLmodels/Tax-Calculator/pulls/2740/commits"
                 },
                 "statuses": {
-                    "href": "https://api.github.com/repos/PSLmodels/Tax-Calculator/statuses/975b5a4dfb3a8a58d9a1d5eb6b36445df6d3280b"
+                    "href": "https://api.github.com/repos/PSLmodels/Tax-Calculator/statuses/1b027d80c22ffd94a68077b8950ce21e385d182e"
                 }
             },
             "author_association": "COLLABORATOR",
@@ -7481,13 +7481,13 @@
                     "deployments_url": "https://api.github.com/repos/martinholmer/Tax-Calculator/deployments",
                     "created_at": "2023-12-31T17:20:17Z",
                     "updated_at": "2024-02-04T16:51:10Z",
-                    "pushed_at": "2024-05-03T16:47:05Z",
+                    "pushed_at": "2024-05-04T23:31:53Z",
                     "git_url": "git://github.com/martinholmer/Tax-Calculator.git",
                     "ssh_url": "git@github.com:martinholmer/Tax-Calculator.git",
                     "clone_url": "https://github.com/martinholmer/Tax-Calculator.git",
                     "svn_url": "https://github.com/martinholmer/Tax-Calculator",
                     "homepage": "https://taxcalc.pslmodels.org",
-                    "size": 1332489,
+                    "size": 1337288,
                     "stargazers_count": 0,
                     "watchers_count": 0,
                     "language": "Python",
@@ -7612,7 +7612,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/deployments",
                     "created_at": "2014-07-29T17:49:09Z",
                     "updated_at": "2024-04-25T16:27:22Z",
-                    "pushed_at": "2024-05-03T16:47:06Z",
+                    "pushed_at": "2024-05-04T23:31:54Z",
                     "git_url": "git://github.com/PSLmodels/Tax-Calculator.git",
                     "ssh_url": "git@github.com:PSLmodels/Tax-Calculator.git",
                     "clone_url": "https://github.com/PSLmodels/Tax-Calculator.git",
@@ -7962,7 +7962,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/deployments",
                     "created_at": "2014-07-29T17:49:09Z",
                     "updated_at": "2024-04-25T16:27:22Z",
-                    "pushed_at": "2024-05-03T16:47:06Z",
+                    "pushed_at": "2024-05-04T23:31:54Z",
                     "git_url": "git://github.com/PSLmodels/Tax-Calculator.git",
                     "ssh_url": "git@github.com:PSLmodels/Tax-Calculator.git",
                     "clone_url": "https://github.com/PSLmodels/Tax-Calculator.git",
@@ -8202,13 +8202,13 @@
                     "deployments_url": "https://api.github.com/repos/martinholmer/Tax-Calculator/deployments",
                     "created_at": "2023-12-31T17:20:17Z",
                     "updated_at": "2024-02-04T16:51:10Z",
-                    "pushed_at": "2024-05-03T16:47:05Z",
+                    "pushed_at": "2024-05-04T23:31:53Z",
                     "git_url": "git://github.com/martinholmer/Tax-Calculator.git",
                     "ssh_url": "git@github.com:martinholmer/Tax-Calculator.git",
                     "clone_url": "https://github.com/martinholmer/Tax-Calculator.git",
                     "svn_url": "https://github.com/martinholmer/Tax-Calculator",
                     "homepage": "https://taxcalc.pslmodels.org",
-                    "size": 1332489,
+                    "size": 1337288,
                     "stargazers_count": 0,
                     "watchers_count": 0,
                     "language": "Python",
@@ -8333,7 +8333,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/deployments",
                     "created_at": "2014-07-29T17:49:09Z",
                     "updated_at": "2024-04-25T16:27:22Z",
-                    "pushed_at": "2024-05-03T16:47:06Z",
+                    "pushed_at": "2024-05-04T23:31:54Z",
                     "git_url": "git://github.com/PSLmodels/Tax-Calculator.git",
                     "ssh_url": "git@github.com:PSLmodels/Tax-Calculator.git",
                     "clone_url": "https://github.com/PSLmodels/Tax-Calculator.git",
@@ -8552,13 +8552,13 @@
                     "deployments_url": "https://api.github.com/repos/martinholmer/Tax-Calculator/deployments",
                     "created_at": "2023-12-31T17:20:17Z",
                     "updated_at": "2024-02-04T16:51:10Z",
-                    "pushed_at": "2024-05-03T16:47:05Z",
+                    "pushed_at": "2024-05-04T23:31:53Z",
                     "git_url": "git://github.com/martinholmer/Tax-Calculator.git",
                     "ssh_url": "git@github.com:martinholmer/Tax-Calculator.git",
                     "clone_url": "https://github.com/martinholmer/Tax-Calculator.git",
                     "svn_url": "https://github.com/martinholmer/Tax-Calculator",
                     "homepage": "https://taxcalc.pslmodels.org",
-                    "size": 1332489,
+                    "size": 1337288,
                     "stargazers_count": 0,
                     "watchers_count": 0,
                     "language": "Python",
@@ -8683,7 +8683,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/Tax-Calculator/deployments",
                     "created_at": "2014-07-29T17:49:09Z",
                     "updated_at": "2024-04-25T16:27:22Z",
-                    "pushed_at": "2024-05-03T16:47:06Z",
+                    "pushed_at": "2024-05-04T23:31:54Z",
                     "git_url": "git://github.com/PSLmodels/Tax-Calculator.git",
                     "ssh_url": "git@github.com:PSLmodels/Tax-Calculator.git",
                     "clone_url": "https://github.com/PSLmodels/Tax-Calculator.git",
@@ -17820,7 +17820,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -17845,7 +17845,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -17962,7 +17962,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -17987,7 +17987,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -18234,7 +18234,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -18259,7 +18259,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -18376,7 +18376,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -18401,7 +18401,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -18750,7 +18750,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -18775,7 +18775,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -19012,7 +19012,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19037,7 +19037,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -19154,7 +19154,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19179,7 +19179,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -19426,7 +19426,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19451,7 +19451,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -19568,7 +19568,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 259,
+                    "open_issues_count": 260,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19593,7 +19593,7 @@
                     ],
                     "visibility": "public",
                     "forks": 23,
-                    "open_issues": 259,
+                    "open_issues": 260,
                     "watchers": 22,
                     "default_branch": "master"
                 }
@@ -19903,7 +19903,7 @@
                     "deployments_url": "https://api.github.com/repos/PolicyEngine/policyengine-us/deployments",
                     "created_at": "2021-06-23T16:35:58Z",
                     "updated_at": "2024-05-02T21:17:53Z",
-                    "pushed_at": "2024-05-03T23:24:02Z",
+                    "pushed_at": "2024-05-04T21:29:51Z",
                     "git_url": "git://github.com/PolicyEngine/policyengine-us.git",
                     "ssh_url": "git@github.com:PolicyEngine/policyengine-us.git",
                     "clone_url": "https://github.com/PolicyEngine/policyengine-us.git",
@@ -19919,11 +19919,11 @@
                     "has_wiki": true,
                     "has_pages": true,
                     "has_discussions": true,
-                    "forks_count": 158,
+                    "forks_count": 159,
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 907,
+                    "open_issues_count": 908,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19946,8 +19946,8 @@
                         "united-states"
                     ],
                     "visibility": "public",
-                    "forks": 158,
-                    "open_issues": 907,
+                    "forks": 159,
+                    "open_issues": 908,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20255,7 +20255,7 @@
                     "deployments_url": "https://api.github.com/repos/PolicyEngine/policyengine-us/deployments",
                     "created_at": "2021-06-23T16:35:58Z",
                     "updated_at": "2024-05-02T21:17:53Z",
-                    "pushed_at": "2024-05-03T23:24:02Z",
+                    "pushed_at": "2024-05-04T21:29:51Z",
                     "git_url": "git://github.com/PolicyEngine/policyengine-us.git",
                     "ssh_url": "git@github.com:PolicyEngine/policyengine-us.git",
                     "clone_url": "https://github.com/PolicyEngine/policyengine-us.git",
@@ -20271,11 +20271,11 @@
                     "has_wiki": true,
                     "has_pages": true,
                     "has_discussions": true,
-                    "forks_count": 158,
+                    "forks_count": 159,
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 907,
+                    "open_issues_count": 908,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20298,8 +20298,8 @@
                         "united-states"
                     ],
                     "visibility": "public",
-                    "forks": 158,
-                    "open_issues": 907,
+                    "forks": 159,
+                    "open_issues": 908,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20476,7 +20476,7 @@
                     "deployments_url": "https://api.github.com/repos/PolicyEngine/policyengine-us/deployments",
                     "created_at": "2021-06-23T16:35:58Z",
                     "updated_at": "2024-05-02T21:17:53Z",
-                    "pushed_at": "2024-05-03T23:24:02Z",
+                    "pushed_at": "2024-05-04T21:29:51Z",
                     "git_url": "git://github.com/PolicyEngine/policyengine-us.git",
                     "ssh_url": "git@github.com:PolicyEngine/policyengine-us.git",
                     "clone_url": "https://github.com/PolicyEngine/policyengine-us.git",
@@ -20492,11 +20492,11 @@
                     "has_wiki": true,
                     "has_pages": true,
                     "has_discussions": true,
-                    "forks_count": 158,
+                    "forks_count": 159,
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 907,
+                    "open_issues_count": 908,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20519,8 +20519,8 @@
                         "united-states"
                     ],
                     "visibility": "public",
-                    "forks": 158,
-                    "open_issues": 907,
+                    "forks": 159,
+                    "open_issues": 908,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20617,7 +20617,7 @@
                     "deployments_url": "https://api.github.com/repos/PolicyEngine/policyengine-us/deployments",
                     "created_at": "2021-06-23T16:35:58Z",
                     "updated_at": "2024-05-02T21:17:53Z",
-                    "pushed_at": "2024-05-03T23:24:02Z",
+                    "pushed_at": "2024-05-04T21:29:51Z",
                     "git_url": "git://github.com/PolicyEngine/policyengine-us.git",
                     "ssh_url": "git@github.com:PolicyEngine/policyengine-us.git",
                     "clone_url": "https://github.com/PolicyEngine/policyengine-us.git",
@@ -20633,11 +20633,11 @@
                     "has_wiki": true,
                     "has_pages": true,
                     "has_discussions": true,
-                    "forks_count": 158,
+                    "forks_count": 159,
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 907,
+                    "open_issues_count": 908,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20660,8 +20660,8 @@
                         "united-states"
                     ],
                     "visibility": "public",
-                    "forks": 158,
-                    "open_issues": 907,
+                    "forks": 159,
+                    "open_issues": 908,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20969,7 +20969,7 @@
                     "deployments_url": "https://api.github.com/repos/PolicyEngine/policyengine-us/deployments",
                     "created_at": "2021-06-23T16:35:58Z",
                     "updated_at": "2024-05-02T21:17:53Z",
-                    "pushed_at": "2024-05-03T23:24:02Z",
+                    "pushed_at": "2024-05-04T21:29:51Z",
                     "git_url": "git://github.com/PolicyEngine/policyengine-us.git",
                     "ssh_url": "git@github.com:PolicyEngine/policyengine-us.git",
                     "clone_url": "https://github.com/PolicyEngine/policyengine-us.git",
@@ -20985,11 +20985,11 @@
                     "has_wiki": true,
                     "has_pages": true,
                     "has_discussions": true,
-                    "forks_count": 158,
+                    "forks_count": 159,
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 907,
+                    "open_issues_count": 908,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -21012,8 +21012,8 @@
                         "united-states"
                     ],
                     "visibility": "public",
-                    "forks": 158,
-                    "open_issues": 907,
+                    "forks": 159,
+                    "open_issues": 908,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -21321,7 +21321,7 @@
                     "deployments_url": "https://api.github.com/repos/PolicyEngine/policyengine-us/deployments",
                     "created_at": "2021-06-23T16:35:58Z",
                     "updated_at": "2024-05-02T21:17:53Z",
-                    "pushed_at": "2024-05-03T23:24:02Z",
+                    "pushed_at": "2024-05-04T21:29:51Z",
                     "git_url": "git://github.com/PolicyEngine/policyengine-us.git",
                     "ssh_url": "git@github.com:PolicyEngine/policyengine-us.git",
                     "clone_url": "https://github.com/PolicyEngine/policyengine-us.git",
@@ -21337,11 +21337,11 @@
                     "has_wiki": true,
                     "has_pages": true,
                     "has_discussions": true,
-                    "forks_count": 158,
+                    "forks_count": 159,
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 907,
+                    "open_issues_count": 908,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -21364,8 +21364,8 @@
                         "united-states"
                     ],
                     "visibility": "public",
-                    "forks": 158,
-                    "open_issues": 907,
+                    "forks": 159,
+                    "open_issues": 908,
                     "watchers": 94,
                     "default_branch": "master"
                 }
