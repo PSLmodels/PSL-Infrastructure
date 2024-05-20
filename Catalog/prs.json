@@ -1801,10 +1801,10 @@
             },
             "body": "This PR will make the following changes:\r\n\r\n1. Add another form for individual income tax functions from [Heathcote, Storesletten, and Violante (*QJE*, 2017)](https://academic.oup.com/qje/article-abstract/132/4/1693/3884644).  It's helpful to add these because they are simple to estimate (one can use OLS), allow for progressive taxes, and are widely used in the macroeconomics literature.\r\n2. Improve the choice of starting values when minimizing tax functions via weighted, non-linear least squares.",
             "created_at": "2024-05-18T19:11:27Z",
-            "updated_at": "2024-05-18T19:32:54Z",
+            "updated_at": "2024-05-20T01:14:46Z",
             "closed_at": null,
             "merged_at": null,
-            "merge_commit_sha": "dae3ff4ff8f6266aabde85ce4f1674ee5d814f4d",
+            "merge_commit_sha": "e701542b2608d18948b847156d1219c16c2c8e2c",
             "assignee": null,
             "assignees": [],
             "requested_reviewers": [],
@@ -1816,11 +1816,11 @@
             "review_comments_url": "https://api.github.com/repos/PSLmodels/OG-Core/pulls/932/comments",
             "review_comment_url": "https://api.github.com/repos/PSLmodels/OG-Core/pulls/comments{/number}",
             "comments_url": "https://api.github.com/repos/PSLmodels/OG-Core/issues/932/comments",
-            "statuses_url": "https://api.github.com/repos/PSLmodels/OG-Core/statuses/e4f7775ee7248351df06e525399486e9533609af",
+            "statuses_url": "https://api.github.com/repos/PSLmodels/OG-Core/statuses/7ffda26f6de2a88caf4975cf3ae8ec0f35133300",
             "head": {
                 "label": "jdebacker:min_methods",
                 "ref": "min_methods",
-                "sha": "e4f7775ee7248351df06e525399486e9533609af",
+                "sha": "7ffda26f6de2a88caf4975cf3ae8ec0f35133300",
                 "user": {
                     "login": "jdebacker",
                     "id": 10715924,
@@ -1909,7 +1909,7 @@
                     "deployments_url": "https://api.github.com/repos/jdebacker/OG-Core/deployments",
                     "created_at": "2015-06-23T19:16:54Z",
                     "updated_at": "2024-05-17T13:28:53Z",
-                    "pushed_at": "2024-05-18T19:06:24Z",
+                    "pushed_at": "2024-05-20T00:53:43Z",
                     "git_url": "git://github.com/jdebacker/OG-Core.git",
                     "ssh_url": "git@github.com:jdebacker/OG-Core.git",
                     "clone_url": "https://github.com/jdebacker/OG-Core.git",
@@ -2040,7 +2040,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/OG-Core/deployments",
                     "created_at": "2015-01-29T14:33:14Z",
                     "updated_at": "2024-05-16T21:43:43Z",
-                    "pushed_at": "2024-05-18T19:11:28Z",
+                    "pushed_at": "2024-05-20T00:53:45Z",
                     "git_url": "git://github.com/PSLmodels/OG-Core.git",
                     "ssh_url": "git@github.com:PSLmodels/OG-Core.git",
                     "clone_url": "https://github.com/PSLmodels/OG-Core.git",
@@ -2108,7 +2108,7 @@
                     "href": "https://api.github.com/repos/PSLmodels/OG-Core/pulls/932/commits"
                 },
                 "statuses": {
-                    "href": "https://api.github.com/repos/PSLmodels/OG-Core/statuses/e4f7775ee7248351df06e525399486e9533609af"
+                    "href": "https://api.github.com/repos/PSLmodels/OG-Core/statuses/7ffda26f6de2a88caf4975cf3ae8ec0f35133300"
                 }
             },
             "author_association": "MEMBER",
@@ -2257,7 +2257,7 @@
                     "deployments_url": "https://api.github.com/repos/jdebacker/OG-Core/deployments",
                     "created_at": "2015-06-23T19:16:54Z",
                     "updated_at": "2024-05-17T13:28:53Z",
-                    "pushed_at": "2024-05-18T19:06:24Z",
+                    "pushed_at": "2024-05-20T00:53:43Z",
                     "git_url": "git://github.com/jdebacker/OG-Core.git",
                     "ssh_url": "git@github.com:jdebacker/OG-Core.git",
                     "clone_url": "https://github.com/jdebacker/OG-Core.git",
@@ -2388,7 +2388,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/OG-Core/deployments",
                     "created_at": "2015-01-29T14:33:14Z",
                     "updated_at": "2024-05-16T21:43:43Z",
-                    "pushed_at": "2024-05-18T19:11:28Z",
+                    "pushed_at": "2024-05-20T00:53:45Z",
                     "git_url": "git://github.com/PSLmodels/OG-Core.git",
                     "ssh_url": "git@github.com:PSLmodels/OG-Core.git",
                     "clone_url": "https://github.com/PSLmodels/OG-Core.git",
@@ -2605,7 +2605,7 @@
                     "deployments_url": "https://api.github.com/repos/jdebacker/OG-Core/deployments",
                     "created_at": "2015-06-23T19:16:54Z",
                     "updated_at": "2024-05-17T13:28:53Z",
-                    "pushed_at": "2024-05-18T19:06:24Z",
+                    "pushed_at": "2024-05-20T00:53:43Z",
                     "git_url": "git://github.com/jdebacker/OG-Core.git",
                     "ssh_url": "git@github.com:jdebacker/OG-Core.git",
                     "clone_url": "https://github.com/jdebacker/OG-Core.git",
@@ -2736,7 +2736,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/OG-Core/deployments",
                     "created_at": "2015-01-29T14:33:14Z",
                     "updated_at": "2024-05-16T21:43:43Z",
-                    "pushed_at": "2024-05-18T19:11:28Z",
+                    "pushed_at": "2024-05-20T00:53:45Z",
                     "git_url": "git://github.com/PSLmodels/OG-Core.git",
                     "ssh_url": "git@github.com:PSLmodels/OG-Core.git",
                     "clone_url": "https://github.com/PSLmodels/OG-Core.git",
@@ -2953,7 +2953,7 @@
                     "deployments_url": "https://api.github.com/repos/jdebacker/OG-Core/deployments",
                     "created_at": "2015-06-23T19:16:54Z",
                     "updated_at": "2024-05-17T13:28:53Z",
-                    "pushed_at": "2024-05-18T19:06:24Z",
+                    "pushed_at": "2024-05-20T00:53:43Z",
                     "git_url": "git://github.com/jdebacker/OG-Core.git",
                     "ssh_url": "git@github.com:jdebacker/OG-Core.git",
                     "clone_url": "https://github.com/jdebacker/OG-Core.git",
@@ -3084,7 +3084,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/OG-Core/deployments",
                     "created_at": "2015-01-29T14:33:14Z",
                     "updated_at": "2024-05-16T21:43:43Z",
-                    "pushed_at": "2024-05-18T19:11:28Z",
+                    "pushed_at": "2024-05-20T00:53:45Z",
                     "git_url": "git://github.com/PSLmodels/OG-Core.git",
                     "ssh_url": "git@github.com:PSLmodels/OG-Core.git",
                     "clone_url": "https://github.com/PSLmodels/OG-Core.git",
@@ -3301,7 +3301,7 @@
                     "deployments_url": "https://api.github.com/repos/jdebacker/OG-Core/deployments",
                     "created_at": "2015-06-23T19:16:54Z",
                     "updated_at": "2024-05-17T13:28:53Z",
-                    "pushed_at": "2024-05-18T19:06:24Z",
+                    "pushed_at": "2024-05-20T00:53:43Z",
                     "git_url": "git://github.com/jdebacker/OG-Core.git",
                     "ssh_url": "git@github.com:jdebacker/OG-Core.git",
                     "clone_url": "https://github.com/jdebacker/OG-Core.git",
@@ -3432,7 +3432,7 @@
                     "deployments_url": "https://api.github.com/repos/PSLmodels/OG-Core/deployments",
                     "created_at": "2015-01-29T14:33:14Z",
                     "updated_at": "2024-05-16T21:43:43Z",
-                    "pushed_at": "2024-05-18T19:11:28Z",
+                    "pushed_at": "2024-05-20T00:53:45Z",
                     "git_url": "git://github.com/PSLmodels/OG-Core.git",
                     "ssh_url": "git@github.com:PSLmodels/OG-Core.git",
                     "clone_url": "https://github.com/PSLmodels/OG-Core.git",
@@ -19734,7 +19734,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19758,7 +19758,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -19875,7 +19875,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -19899,7 +19899,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20117,7 +20117,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20141,7 +20141,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20258,7 +20258,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20282,7 +20282,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20479,7 +20479,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20503,7 +20503,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20620,7 +20620,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20644,7 +20644,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -20972,7 +20972,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -20996,7 +20996,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -21193,7 +21193,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -21217,7 +21217,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
@@ -21334,7 +21334,7 @@
                     "mirror_url": null,
                     "archived": false,
                     "disabled": false,
-                    "open_issues_count": 905,
+                    "open_issues_count": 909,
                     "license": {
                         "key": "agpl-3.0",
                         "name": "GNU Affero General Public License v3.0",
@@ -21358,7 +21358,7 @@
                     ],
                     "visibility": "public",
                     "forks": 159,
-                    "open_issues": 905,
+                    "open_issues": 909,
                     "watchers": 94,
                     "default_branch": "master"
                 }
