@@ -15,6 +15,11 @@
     "branch": "main"
   },
   {
+    "org": "PSLmodels",
+    "repo": "OG-UK",
+    "branch": "main"
+  },
+  {
     "org": "EAPD-DRB",
     "repo": "OG-ZAF",
     "branch": "main"
