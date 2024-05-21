@@ -1,7 +1,7 @@
 {
   "project_one_line": {
-    "start_header": null,
-    "end_header": null,
+    "start_header": "",
+    "end_header": "",
     "source": "https://github.com/noorg/TestProject",
     "type": "html",
     "data": "<p>Short description of project, probably under 100 characters</p>"
@@ -11,144 +11,144 @@
     "end_header": "Key Features",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "key_features": {
     "start_header": "Key Features",
     "end_header": "Citation",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "citation": {
     "start_header": "Citation",
     "end_header": "License",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "license": {
     "start_header": "License",
     "end_header": "User Documentation",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "user_documentation": {
     "start_header": "User Documentation",
     "end_header": "User Changelog",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "user_changelog": {
     "start_header": "User Changelog",
     "end_header": "User Changelog Recent",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "user_changelog_recent": {
     "start_header": "User Changelog Recent",
     "end_header": "Dev Changelog",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "dev_changelog": {
     "start_header": "Dev Changelog",
     "end_header": "Disclaimer",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "disclaimer": {
     "start_header": "Disclaimer",
     "end_header": "User Case Studies",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "user_case_studies": {
     "start_header": "User Case Studies",
     "end_header": "Project Roadmap",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "project_roadmap": {
     "start_header": "Project Roadmap",
     "end_header": "Contributor Overview",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "contributor_overview": {
     "start_header": "Contributor Overview",
     "end_header": "Contributor Guide",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "contributor_guide": {
     "start_header": "Contributor Guide",
     "end_header": "Governance Overview",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "governance_overview": {
     "start_header": "Governance Overview",
     "end_header": "Public Funding",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "public_funding": {
     "start_header": "Public Funding",
     "end_header": "Link to webapp",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "link_to_webapp": {
     "start_header": "Link to webapp",
     "end_header": "Link to public issue tracker",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "public_issue_tracker": {
     "start_header": "Link to public issue tracker",
     "end_header": "Link to public question/answer site",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "public_qanda": {
     "start_header": "Link to public question/answer site",
-    "end_header": null,
+    "end_header": "",
     "source": "markdown.md",
     "type": "github_file",
-    "data": null
+    "data": ""
   },
   "core_maintainers": {
-    "start_header": null,
-    "end_header": null,
+    "start_header": "",
+    "end_header": "",
     "data": "<ul><li>John Smith</li>",
-    "source": null,
+    "source": "",
     "type": "html"
   },
   "unit_test": {
-    "start_header": null,
-    "end_header": null,
+    "start_header": "",
+    "end_header": "",
     "data": "<a href=\"https://github.com/noorg/TestProject/tests\">https://github.com/noorg/TestProject/tests</a>",
     "source": "https://github.com/noorg/TestProject/tests",
     "type": "html"
   },
   "integration_test": {
-    "start_header": null,
-    "end_header": null,
+    "start_header": "",
+    "end_header": "",
     "data": "<a href=\"https://github.com/noorg/TestProject/tests\">https://github.com/noorg/TestProject/tests</a>",
     "source": "https://github.com/noorg/TestProject/tests",
     "type": "html"
