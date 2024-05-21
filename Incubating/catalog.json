@@ -109,6 +109,41 @@
         },
         "github_url": "https://github.com/Revenue-Academy/OG-MYS"
     },
+    "OG-UK": {
+        "name": "OG-UK",
+        "img": "https://raw.githubusercontent.com/PSLmodels/OG-UK/main/docs/OG-UK_logo.png",
+        "banner_title": "OG-UK",
+        "banner_subtitle": "Large-scale open source overlapping generations model of UK fiscal policy",
+        "detailed_description": "https://raw.githubusercontent.com/PSLmodels/OG-UK/main/README.md",
+        "policy_area": "Policy analysis, policy reform, fiscal policy, tax, benefits, social security, public finance, macroeconomic analysis, general equilibrium, dynamic scoring, overlapping generations, OG, OLG",
+        "geography": "USA",
+        "language": "Python",
+        "maintainers": [
+            {
+                "name": "Richard W. Evans",
+                "image": "https://github.com/rickecon.png",
+                "link": "https://github.com/rickecon"
+            },
+            {
+                "name": "Jason DeBacker",
+                "image": "https://github.com/jdebacker.png",
+                "link": "https://github.com/jdebacker"
+            },
+            {
+                "name": "Jon Pycroft",
+                "image": "https://avatars.githubusercontent.com/u/65815956?v=4",
+                "link": "https://github.com/jpycroft/"
+            }
+        ],
+        "links": {
+            "code_repository": "https://github.com/PSLmodels/OG-UK",
+            "user_documentation": "https://pslmodels.github.io/OG-UK",
+            "contributor_documentation": "https://pslmodels.github.io/OG-UK/content/contributing/contributor_guide.html",
+            "webapp": "",
+            "recent_changes": "https://github.com/PSLmodels/OG-UK/blob/main/CHANGELOG.md"
+        },
+        "github_url": "https://github.com/PSLmodels/OG-UK"
+    },
     "OG-ZAF": {
         "name": "OG-ZAF",
         "img": "https://github.com/EAPD-DRB/OG-ZAF/blob/main/docs/OG-ZAF_logo.png?raw=true",
