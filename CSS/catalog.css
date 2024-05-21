@@ -681,9 +681,9 @@ code {
 }
 .user-grid-item img {
   height: 75px;
-  width: auto;
-  max-width: 250px;
-  vertical-align: bottom;
+  width: 100%;
+  max-width: 400px;
+  object-fit: contain;
 }
 .user-grid-item p {
   text-align: center;
@@ -705,9 +705,11 @@ code {
   margin: 10px 250px;
 }
 #userCarousel .carousel-item img {
-  max-width: 300px;
+  width: 100%;
+  max-width: 400px;
   height: 75px;
   margin: 0 auto;
+  object-fit: contain;
 }
 #userCarousel .carousel-item {
   justify-content: center;
